@@ -1,2 +1,2 @@
 # dopetrans
- Provice info about FlaskCWG translation repos
+ Provide info about FlaskCWG translation repos
