@@ -5,7 +5,7 @@ repos = ['es', 'fr'] # temporal, walk org repos
 Octo = Octodir()
 
 target = 'https://github.com/flaskcwg/flask-docs-{lang}/tree/main/docs/locales/{lang}'
-folder = 'docs' # Current working directory
+folder = 'for_deploy/docs' # Current working directory
 
 os.makedirs(folder, exist_ok=True)
 for lang in repos:
