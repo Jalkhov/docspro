@@ -10,7 +10,7 @@ badge_url = 'https://shields.io/badge/translated-{cov}%25-green'
 
 def download_docs():
     Octo = Octodir()
-    os.makedirs('data', exist_ok=True) # Create folder for jsons and badges
+    os.makedirs('for_deploy/data', exist_ok=True) # Create folder for jsons and badges
     os.makedirs(folder, exist_ok=True)
     for lang in repos:
         lng = lang[0]
