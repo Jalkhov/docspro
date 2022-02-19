@@ -14,7 +14,7 @@ img_badge = '![Progress]({img_url})'
 def get_badges():
     return os.listdir("for_deploy/badge")
 
-def gen_badges_table(data):
+def gen_badges_table():
     table = PrettyTable()
     table.set_style(MARKDOWN)
     table.field_names = ["Preview", "Code", "SVG"]
