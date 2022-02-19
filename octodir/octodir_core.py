@@ -4,7 +4,39 @@ import urllib.request
 
 import requests
 from tqdm import tqdm
+import polib
 
+good_headers = """\
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.0.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-27 07:20-0400\n"
+"PO-Revision-Date: 2022-02-15 21:58-0400\n"
+"Language-Team: es_LA <pedrotorcattsoto@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+"Last-Translator: Pedro Torcatt <pedrotorcattsoto@gmail.com>\n"
+"Language: es\n"
+"X-Generator: Poedit 3.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"""
+
+good_metadata = {'Content-Transfer-Encoding': '8bit',
+                 'Content-Type': 'text/plain; charset=UTF-8',
+                 'Generated-By': 'Babel 2.9.1',
+                 'Language': 'xd',
+                 'Language-Team': 'es_LA <pedrotorcattsoto@gmail.com>',
+                 'Last-Translator': 'Pedro Torcatt <pedrotorcattsoto@gmail.com>',
+                 'MIME-Version': '1.0',
+                 'PO-Revision-Date': '2022-02-15 21:58-0400',
+                 'POT-Creation-Date': '2021-05-27 07:20-0400',
+                 'Plural-Forms': 'nplurals=2; plural=(n != 1);',
+                 'Project-Id-Version': 'Flask 2.0.x',
+                 'Report-Msgid-Bugs-To': '',
+                 'X-Generator': 'Poedit 3.0'}
 
 class repo_info:
     repo = None
@@ -20,6 +52,15 @@ class api_urls:
 class OctodirException(Exception):
     pass
 
+
+def fix_headers(pofile):
+    """
+    This fix .po headers for work with
+    alexkiro/i18n-coverage action
+    """
+    file = polib.pofile(pofile)
+    file.metadata['Language'] = good_metadata
+    file.save(pofile)
 
 def mkdirs(path):
     if not os.path.isdir(path):
@@ -97,7 +138,6 @@ class Octodir(object):
         return response
 
     def __check_valid_output(self):
-        print(self.output_folder)
         if os.path.isdir(self.output_folder):
             return True
         else:
@@ -131,8 +171,13 @@ class Octodir(object):
 
                     # Check output dir variable
                     mkdirs(os.path.join(self.output_folder, os.path.dirname(ndir)))
+
                     urllib.request.urlretrieve(
                         i[1], os.path.join(self.output_folder, ndir))
+
+                    pofile = os.path.join(self.output_folder, ndir)
+                    fix_headers(pofile)
+
                 pbar.update(1)
 
     def dowload_folder(self, folder_url, output_folder):

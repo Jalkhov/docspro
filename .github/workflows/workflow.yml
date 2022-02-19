@@ -25,12 +25,6 @@ jobs:
       - name: Run script 🏃
         run: python main.py
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.3
-        with:
-          branch: translation_data # The branch the action should deploy to.
-          folder: for_deploy # The folder the action should deploy.
-
       - name: Check i18n coverage
         uses: alexkiro/i18n-coverage@v1.0.0
         with:
@@ -38,3 +32,9 @@ jobs:
           translations-path: 'for_deploy/**/**.po'
       - name: Get the coverage
         run: python main.py ${{ steps.i18nCoverage.outputs.coverage }}
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.3
+        with:
+          branch: translation_data # The branch the action should deploy to.
+          folder: for_deploy # The folder the action should deploy.
