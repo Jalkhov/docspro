@@ -22,16 +22,17 @@ jobs:
       - name: Install requirements ⚙️
         run: python -m pip install -r requirements.txt
 
-      - name: Run script 🏃
-        run: python main.py
+      - name: Download folders
+        run: python main.py --download
 
       - name: Check i18n coverage
         uses: alexkiro/i18n-coverage@v1.0.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           translations-path: 'for_deploy/**/**.po'
+
       - name: Get the coverage
-        run: python main.py ${{ steps.i18nCoverage.outputs.coverage }}
+        run: python main.py --jsons ${{ steps.i18nCoverage.outputs.coverage }}
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.3

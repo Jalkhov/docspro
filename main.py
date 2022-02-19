@@ -17,11 +17,11 @@ def download_docs():
 def generate_jsons():
 	pass
 
-def main():
-	if sys.argv[1:]:
-		print(sys.argv[0])
-	else:
+def main(args):
+	if len(args) > 1 and args[1] == "--download":
 		download_docs()
+	elif len(args) > 1 and args[1] == "--jsons"::
+		print(args)
 
 if __name__ == '__main__':
-	main()
+	main(sys.argv)
