@@ -9,15 +9,15 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-05-27 07:20-0400\n"
 "PO-Revision-Date: 2022-02-15 21:58-0400\n"
+"Last-Translator: Pedro Torcatt <pedrotorcattsoto@gmail.com>\n"
 "Language-Team: es_LA <pedrotorcattsoto@gmail.com>\n"
+"Language: xd\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
-"Last-Translator: Pedro Torcatt <pedrotorcattsoto@gmail.com>\n"
-"Language: es\n"
-"X-Generator: Poedit 3.0\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.9.1\n"
+"X-Generator: Poedit 3.0\n"
 
 #: ../../installation.rst:2
 msgid "Installation"
@@ -29,34 +29,36 @@ msgstr "Versión de Python"
 
 #: ../../installation.rst:8
 msgid ""
-"We recommend using the latest version of Python. Flask supports Python 3.6 and "
-"newer."
+"We recommend using the latest version of Python. Flask supports Python 3.6 "
+"and newer."
 msgstr ""
-"Recomendamos utilizar la última versión de Python. Flask soporta Python 3.6 y "
-"posteriores."
+"Recomendamos utilizar la última versión de Python. Flask soporta Python 3.6 "
+"y posteriores."
 
 #: ../../installation.rst:13
 msgid "Dependencies"
 msgstr "Dependencias"
 
 #: ../../installation.rst:15
-msgid "These distributions will be installed automatically when installing Flask."
+msgid ""
+"These distributions will be installed automatically when installing Flask."
 msgstr "Estas distribuciones se instalarán automáticamente al instalar Flask."
 
 #: ../../installation.rst:17
 msgid ""
-"`Werkzeug`_ implements WSGI, the standard Python interface between applications "
-"and servers."
+"`Werkzeug`_ implements WSGI, the standard Python interface between "
+"applications and servers."
 msgstr ""
-"`Werkzeug`_ implementa WSGI, la interfaz estándar de Python entre aplicaciones "
-"y servidores."
+"`Werkzeug`_ implementa WSGI, la interfaz estándar de Python entre "
+"aplicaciones y servidores."
 
 #: ../../installation.rst:19
 msgid ""
-"`Jinja`_ is a template language that renders the pages your application serves."
+"`Jinja`_ is a template language that renders the pages your application "
+"serves."
 msgstr ""
-"`Jinja`_ es un lenguaje de plantillas que renderiza las páginas que sirve tu "
-"aplicación."
+"`Jinja`_ es un lenguaje de plantillas que renderiza las páginas que sirve tu"
+" aplicación."
 
 #: ../../installation.rst:21
 msgid ""
@@ -68,16 +70,16 @@ msgstr ""
 
 #: ../../installation.rst:23
 msgid ""
-"`ItsDangerous`_ securely signs data to ensure its integrity. This is used to "
-"protect Flask's session cookie."
+"`ItsDangerous`_ securely signs data to ensure its integrity. This is used to"
+" protect Flask's session cookie."
 msgstr ""
-"`ItsDangerous`_ firma de forma segura los datos para asegurar su integridad. Se "
-"utiliza para proteger la cookie de sesión de Flask."
+"`ItsDangerous`_ firma de forma segura los datos para asegurar su integridad."
+" Se utiliza para proteger la cookie de sesión de Flask."
 
 #: ../../installation.rst:25
 msgid ""
-"`Click`_ is a framework for writing command line applications. It provides the "
-"``flask`` command and allows adding custom management commands."
+"`Click`_ is a framework for writing command line applications. It provides "
+"the ``flask`` command and allows adding custom management commands."
 msgstr ""
 "`Click`_ es un marco para escribir aplicaciones de línea de comandos. "
 "Proporciona el comando ``flask`` y permite añadir comandos de gestión "
@@ -89,11 +91,11 @@ msgstr "Dependencias opcionales"
 
 #: ../../installation.rst:38
 msgid ""
-"These distributions will not be installed automatically. Flask will detect and "
-"use them if you install them."
+"These distributions will not be installed automatically. Flask will detect "
+"and use them if you install them."
 msgstr ""
-"Estas distribuciones no se instalarán automáticamente. Flask las detectará y "
-"utilizará si usted las instala."
+"Estas distribuciones no se instalarán automáticamente. Flask las detectará y"
+" utilizará si usted las instala."
 
 #: ../../installation.rst:41
 msgid "`Blinker`_ provides support for :doc:`signals`."
@@ -112,8 +114,7 @@ msgid ""
 "`Watchdog`_ provides a faster, more efficient reloader for the development "
 "server."
 msgstr ""
-"`Watchdog`_ proporciona un recargador más rápido y eficiente para el servidor "
-"de\n"
+"`Watchdog`_ proporciona un recargador más rápido y eficiente para el servidor de\n"
 "  de desarrollo."
 
 #: ../../installation.rst:53
@@ -122,8 +123,8 @@ msgstr "Entornos virtuales"
 
 #: ../../installation.rst:55
 msgid ""
-"Use a virtual environment to manage the dependencies for your project, both in "
-"development and in production."
+"Use a virtual environment to manage the dependencies for your project, both "
+"in development and in production."
 msgstr ""
 "Utilice un entorno virtual para gestionar las dependencias de su proyecto, "
 "tanto en desarrollo como en producción."
@@ -131,20 +132,21 @@ msgstr ""
 #: ../../installation.rst:58
 msgid ""
 "What problem does a virtual environment solve? The more Python projects you "
-"have, the more likely it is that you need to work with different versions of "
-"Python libraries, or even Python itself. Newer versions of libraries for one "
-"project can break compatibility in another project."
+"have, the more likely it is that you need to work with different versions of"
+" Python libraries, or even Python itself. Newer versions of libraries for "
+"one project can break compatibility in another project."
 msgstr ""
 "¿Qué problema resuelve un entorno virtual? Cuantos más proyectos de Python "
 "tengas, más probable es que necesites trabajar con diferentes versiones de "
-"librerías de Python, o incluso con el propio Python. Las nuevas versiones de "
-"las librerías para un proyecto pueden romper la compatibilidad en otro proyecto."
+"librerías de Python, o incluso con el propio Python. Las nuevas versiones de"
+" las librerías para un proyecto pueden romper la compatibilidad en otro "
+"proyecto."
 
 #: ../../installation.rst:63
 msgid ""
-"Virtual environments are independent groups of Python libraries, one for each "
-"project. Packages installed for one project will not affect other projects or "
-"the operating system's packages."
+"Virtual environments are independent groups of Python libraries, one for "
+"each project. Packages installed for one project will not affect other "
+"projects or the operating system's packages."
 msgstr ""
 "Los entornos virtuales son grupos independientes de bibliotecas Python, uno "
 "para cada proyecto. Los paquetes instalados para un proyecto no afectarán a "
@@ -152,7 +154,8 @@ msgstr ""
 
 #: ../../installation.rst:67
 msgid ""
-"Python comes bundled with the :mod:`venv` module to create virtual environments."
+"Python comes bundled with the :mod:`venv` module to create virtual "
+"environments."
 msgstr "Python viene con el módulo :mod:`venv` para crear entornos virtuales."
 
 #: ../../installation.rst:74
@@ -176,13 +179,15 @@ msgid "Activate the environment"
 msgstr "Activar el entorno"
 
 #: ../../installation.rst:102
-msgid "Before you work on your project, activate the corresponding environment:"
+msgid ""
+"Before you work on your project, activate the corresponding environment:"
 msgstr "Antes de trabajar en su proyecto, active el entorno correspondiente:"
 
 #: ../../installation.rst:118
 msgid ""
 "Your shell prompt will change to show the name of the activated environment."
-msgstr "El prompt del shell cambiará para mostrar el nombre del entorno activado."
+msgstr ""
+"El prompt del shell cambiará para mostrar el nombre del entorno activado."
 
 #: ../../installation.rst:123
 msgid "Install Flask"
@@ -190,14 +195,16 @@ msgstr "Instalar Flask"
 
 #: ../../installation.rst:125
 msgid ""
-"Within the activated environment, use the following command to install Flask:"
+"Within the activated environment, use the following command to install "
+"Flask:"
 msgstr ""
-"Dentro del entorno activado, utilice el siguiente comando para instalar Flask:"
+"Dentro del entorno activado, utilice el siguiente comando para instalar "
+"Flask:"
 
 #: ../../installation.rst:132
 msgid ""
-"Flask is now installed. Check out the :doc:`/quickstart` or go to the :doc:"
-"`Documentation Overview </index>`."
+"Flask is now installed. Check out the :doc:`/quickstart` or go to the "
+":doc:`Documentation Overview </index>`."
 msgstr ""
-"Flask ya está instalado. Consulta el :doc:`/quickstart` o ve al :doc:`Resumen "
-"de la documentación </index>`."
+"Flask ya está instalado. Consulta el :doc:`/quickstart` o ve al "
+":doc:`Resumen de la documentación </index>`."

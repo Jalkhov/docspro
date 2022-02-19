@@ -6,16 +6,19 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 2.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-01 02:27-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: fr_FR <victor.levieux@gmail.com>\n"
+"POT-Creation-Date: 2021-05-27 07:20-0400\n"
+"PO-Revision-Date: 2022-02-15 21:58-0400\n"
+"Last-Translator: Pedro Torcatt <pedrotorcattsoto@gmail.com>\n"
+"Language-Team: es_LA <pedrotorcattsoto@gmail.com>\n"
+"Language: xd\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.9.1\n"
+"X-Generator: Poedit 3.0\n"
 
 #: ../../patterns/methodoverrides.rst:2
 msgid "Adding HTTP Method Overrides"
@@ -30,9 +33,9 @@ msgstr ""
 
 #: ../../patterns/methodoverrides.rst:8
 msgid ""
-"The way this works is by letting the client do an HTTP POST request and "
-"set the ``X-HTTP-Method-Override`` header. Then the method is replaced "
-"with the header value before being passed to Flask."
+"The way this works is by letting the client do an HTTP POST request and set "
+"the ``X-HTTP-Method-Override`` header. Then the method is replaced with the "
+"header value before being passed to Flask."
 msgstr ""
 
 #: ../../patterns/methodoverrides.rst:12

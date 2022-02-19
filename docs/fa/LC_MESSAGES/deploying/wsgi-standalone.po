@@ -6,16 +6,19 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 2.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-08 08:56+0330\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: fa <ahmdparsh129@gmail.com>\n"
+"POT-Creation-Date: 2021-05-27 07:20-0400\n"
+"PO-Revision-Date: 2022-02-15 21:58-0400\n"
+"Last-Translator: Pedro Torcatt <pedrotorcattsoto@gmail.com>\n"
+"Language-Team: es_LA <pedrotorcattsoto@gmail.com>\n"
+"Language: xd\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.9.1\n"
+"X-Generator: Poedit 3.0\n"
 
 #: ../../deploying/wsgi-standalone.rst:2
 msgid "Standalone WSGI Containers"
@@ -23,10 +26,10 @@ msgstr ""
 
 #: ../../deploying/wsgi-standalone.rst:4
 msgid ""
-"There are popular servers written in Python that contain WSGI "
-"applications and serve HTTP.  These servers stand alone when they run; "
-"you can proxy to them from your web server.  Note the section on :ref"
-":`deploying-proxy-setups` if you run into issues."
+"There are popular servers written in Python that contain WSGI applications "
+"and serve HTTP.  These servers stand alone when they run; you can proxy to "
+"them from your web server.  Note the section on :ref:`deploying-proxy-"
+"setups` if you run into issues."
 msgstr ""
 
 #: ../../deploying/wsgi-standalone.rst:10
@@ -35,17 +38,17 @@ msgstr ""
 
 #: ../../deploying/wsgi-standalone.rst:12
 msgid ""
-"`Gunicorn`_ 'Green Unicorn' is a WSGI HTTP Server for UNIX. It's a pre-"
-"fork worker model ported from Ruby's Unicorn project. It supports both "
-"`eventlet`_ and `greenlet`_. Running a Flask application on this server "
-"is quite simple::"
+"`Gunicorn`_ 'Green Unicorn' is a WSGI HTTP Server for UNIX. It's a pre-fork "
+"worker model ported from Ruby's Unicorn project. It supports both "
+"`eventlet`_ and `greenlet`_. Running a Flask application on this server is "
+"quite simple::"
 msgstr ""
 
 #: ../../deploying/wsgi-standalone.rst:18
 msgid ""
-"`Gunicorn`_ provides many command-line options -- see ``gunicorn -h``. "
-"For example, to run a Flask application with 4 worker processes (``-w "
-"4``) binding to localhost port 4000 (``-b 127.0.0.1:4000``)::"
+"`Gunicorn`_ provides many command-line options -- see ``gunicorn -h``. For "
+"example, to run a Flask application with 4 worker processes (``-w 4``) "
+"binding to localhost port 4000 (``-b 127.0.0.1:4000``)::"
 msgstr ""
 
 #: ../../deploying/wsgi-standalone.rst:24
@@ -61,8 +64,8 @@ msgstr ""
 
 #: ../../deploying/wsgi-standalone.rst:37
 msgid ""
-"`uWSGI`_ is a fast application server written in C. It is very "
-"configurable which makes it more complicated to setup than gunicorn."
+"`uWSGI`_ is a fast application server written in C. It is very configurable "
+"which makes it more complicated to setup than gunicorn."
 msgstr ""
 
 #: ../../deploying/wsgi-standalone.rst:40
@@ -71,8 +74,7 @@ msgstr ""
 
 #: ../../deploying/wsgi-standalone.rst:44
 msgid ""
-"For a more optimized setup, see :doc:`configuring uWSGI and NGINX "
-"<uwsgi>`."
+"For a more optimized setup, see :doc:`configuring uWSGI and NGINX <uwsgi>`."
 msgstr ""
 
 #: ../../deploying/wsgi-standalone.rst:50
@@ -82,8 +84,8 @@ msgstr ""
 #: ../../deploying/wsgi-standalone.rst:52
 msgid ""
 "`Gevent`_ is a coroutine-based Python networking library that uses "
-"`greenlet`_ to provide a high-level synchronous API on top of `libev`_ "
-"event loop::"
+"`greenlet`_ to provide a high-level synchronous API on top of `libev`_ event"
+" loop::"
 msgstr ""
 
 #: ../../deploying/wsgi-standalone.rst:67
@@ -93,23 +95,23 @@ msgstr ""
 #: ../../deploying/wsgi-standalone.rst:69
 msgid ""
 "`Twisted Web`_ is the web server shipped with `Twisted`_, a mature, non-"
-"blocking event-driven networking library. Twisted Web comes with a "
-"standard WSGI container which can be controlled from the command line "
-"using the ``twistd`` utility::"
+"blocking event-driven networking library. Twisted Web comes with a standard "
+"WSGI container which can be controlled from the command line using the "
+"``twistd`` utility::"
 msgstr ""
 
 #: ../../deploying/wsgi-standalone.rst:76
 msgid ""
-"This example will run a Flask application called ``app`` from a module "
-"named ``myproject``."
+"This example will run a Flask application called ``app`` from a module named"
+" ``myproject``."
 msgstr ""
 
 #: ../../deploying/wsgi-standalone.rst:79
 msgid ""
-"Twisted Web supports many flags and options, and the ``twistd`` utility "
-"does as well; see ``twistd -h`` and ``twistd web -h`` for more "
-"information. For example, to run a Twisted Web server in the foreground, "
-"on port 8080, with an application from ``myproject``::"
+"Twisted Web supports many flags and options, and the ``twistd`` utility does"
+" as well; see ``twistd -h`` and ``twistd web -h`` for more information. For "
+"example, to run a Twisted Web server in the foreground, on port 8080, with "
+"an application from ``myproject``::"
 msgstr ""
 
 #: ../../deploying/wsgi-standalone.rst:92
@@ -119,25 +121,25 @@ msgstr ""
 #: ../../deploying/wsgi-standalone.rst:94
 msgid ""
 "If you deploy your application using one of these servers behind an HTTP "
-"proxy you will need to rewrite a few headers in order for the application"
-" to work. The two problematic values in the WSGI environment usually are "
+"proxy you will need to rewrite a few headers in order for the application to"
+" work. The two problematic values in the WSGI environment usually are "
 "``REMOTE_ADDR`` and ``HTTP_HOST``.  You can configure your httpd to pass "
-"these headers, or you can fix them in middleware.  Werkzeug ships a fixer"
-" that will solve some common setups, but you might want to write your own"
-" WSGI middleware for specific setups."
+"these headers, or you can fix them in middleware.  Werkzeug ships a fixer "
+"that will solve some common setups, but you might want to write your own "
+"WSGI middleware for specific setups."
 msgstr ""
 
 #: ../../deploying/wsgi-standalone.rst:102
 msgid ""
-"Here's a simple nginx configuration which proxies to an application "
-"served on localhost at port 8000, setting appropriate headers:"
+"Here's a simple nginx configuration which proxies to an application served "
+"on localhost at port 8000, setting appropriate headers:"
 msgstr ""
 
 #: ../../deploying/wsgi-standalone.rst:126
 msgid ""
-"If your httpd is not providing these headers, the most common setup "
-"invokes the host being set from ``X-Forwarded-Host`` and the remote "
-"address from ``X-Forwarded-For``::"
+"If your httpd is not providing these headers, the most common setup invokes "
+"the host being set from ``X-Forwarded-Host`` and the remote address from "
+"``X-Forwarded-For``::"
 msgstr ""
 
 #: ../../deploying/wsgi-standalone.rst:133
@@ -146,13 +148,13 @@ msgstr ""
 
 #: ../../deploying/wsgi-standalone.rst:135
 msgid ""
-"Please keep in mind that it is a security issue to use such a middleware "
-"in a non-proxy setup because it will blindly trust the incoming headers "
-"which might be forged by malicious clients."
+"Please keep in mind that it is a security issue to use such a middleware in "
+"a non-proxy setup because it will blindly trust the incoming headers which "
+"might be forged by malicious clients."
 msgstr ""
 
 #: ../../deploying/wsgi-standalone.rst:139
 msgid ""
-"If you want to rewrite the headers from another header, you might want to"
-" use a fixer like this::"
+"If you want to rewrite the headers from another header, you might want to "
+"use a fixer like this::"
 msgstr ""

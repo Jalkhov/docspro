@@ -6,16 +6,19 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 2.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-05-25 19:31+0800\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: zh_CN <withlihui@gmail.com>\n"
+"POT-Creation-Date: 2021-05-27 07:20-0400\n"
+"PO-Revision-Date: 2022-02-15 21:58-0400\n"
+"Last-Translator: Pedro Torcatt <pedrotorcattsoto@gmail.com>\n"
+"Language-Team: es_LA <pedrotorcattsoto@gmail.com>\n"
+"Language: xd\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.9.1\n"
+"X-Generator: Poedit 3.0\n"
 
 #: ../../debugging.rst:2
 msgid "Debugging Application Errors"
@@ -27,10 +30,10 @@ msgstr ""
 
 #: ../../debugging.rst:8
 msgid ""
-"**Do not run the development server, or enable the built-in debugger, in "
-"a production environment.** The debugger allows executing arbitrary "
-"Python code from the browser. It's protected by a pin, but that should "
-"not be relied on for security."
+"**Do not run the development server, or enable the built-in debugger, in a "
+"production environment.** The debugger allows executing arbitrary Python "
+"code from the browser. It's protected by a pin, but that should not be "
+"relied on for security."
 msgstr ""
 
 #: ../../debugging.rst:13
@@ -54,9 +57,9 @@ msgstr ""
 
 #: ../../debugging.rst:26
 msgid ""
-"The built-in Werkzeug development server provides a debugger which shows "
-"an interactive traceback in the browser when an unhandled error occurs "
-"during a request. This debugger should only be used during development."
+"The built-in Werkzeug development server provides a debugger which shows an "
+"interactive traceback in the browser when an unhandled error occurs during a"
+" request. This debugger should only be used during development."
 msgstr ""
 
 msgid "screenshot of debugger in action"
@@ -64,17 +67,17 @@ msgstr ""
 
 #: ../../debugging.rst:37
 msgid ""
-"The debugger allows executing arbitrary Python code from the browser. It "
-"is protected by a pin, but still represents a major security risk. Do not"
-" run the development server or debugger in a production environment."
+"The debugger allows executing arbitrary Python code from the browser. It is "
+"protected by a pin, but still represents a major security risk. Do not run "
+"the development server or debugger in a production environment."
 msgstr ""
 
 #: ../../debugging.rst:42
 msgid ""
-"To enable the debugger, run the development server with the ``FLASK_ENV``"
-" environment variable set to ``development``. This puts Flask in debug "
-"mode, which changes how it handles some errors, and enables the debugger "
-"and reloader."
+"To enable the debugger, run the development server with the ``FLASK_ENV`` "
+"environment variable set to ``development``. This puts Flask in debug mode, "
+"which changes how it handles some errors, and enables the debugger and "
+"reloader."
 msgstr ""
 
 #: ../../debugging.rst:49 ../../debugging.rst:102
@@ -91,10 +94,10 @@ msgstr ""
 
 #: ../../debugging.rst:70
 msgid ""
-"``FLASK_ENV`` can only be set as an environment variable. When running "
-"from Python code, passing ``debug=True`` enables debug mode, which is "
-"mostly equivalent. Debug mode can be controled separately from "
-"``FLASK_ENV`` with the ``FLASK_DEBUG`` environment variable as well."
+"``FLASK_ENV`` can only be set as an environment variable. When running from "
+"Python code, passing ``debug=True`` enables debug mode, which is mostly "
+"equivalent. Debug mode can be controled separately from ``FLASK_ENV`` with "
+"the ``FLASK_DEBUG`` environment variable as well."
 msgstr ""
 
 #: ../../debugging.rst:79
@@ -112,17 +115,17 @@ msgstr ""
 #: ../../debugging.rst:88
 msgid ""
 "External debuggers, such as those provided by IDEs, can offer a more "
-"powerful debugging experience than the built-in debugger. They can also "
-"be used to step through code during a request before an error is raised, "
-"or if no error is raised. Some even have a remote mode so you can debug "
-"code running on another machine."
+"powerful debugging experience than the built-in debugger. They can also be "
+"used to step through code during a request before an error is raised, or if "
+"no error is raised. Some even have a remote mode so you can debug code "
+"running on another machine."
 msgstr ""
 
 #: ../../debugging.rst:94
 msgid ""
-"When using an external debugger, the app should still be in debug mode, "
-"but it can be useful to disable the built-in debugger and reloader, which"
-" can interfere."
+"When using an external debugger, the app should still be in debug mode, but "
+"it can be useful to disable the built-in debugger and reloader, which can "
+"interfere."
 msgstr ""
 
 #: ../../debugging.rst:98
@@ -135,9 +138,9 @@ msgstr ""
 
 #: ../../debugging.rst:129
 msgid ""
-"Disabling these isn't required, an external debugger will continue to "
-"work with the following caveats. If the built-in debugger is not "
-"disabled, it will catch unhandled exceptions before the external debugger"
-" can. If the reloader is not disabled, it could cause an unexpected "
-"reload if code changes during debugging."
+"Disabling these isn't required, an external debugger will continue to work "
+"with the following caveats. If the built-in debugger is not disabled, it "
+"will catch unhandled exceptions before the external debugger can. If the "
+"reloader is not disabled, it could cause an unexpected reload if code "
+"changes during debugging."
 msgstr ""

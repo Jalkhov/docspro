@@ -6,16 +6,19 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 2.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-01 02:27-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: fr_FR <victor.levieux@gmail.com>\n"
+"POT-Creation-Date: 2021-05-27 07:20-0400\n"
+"PO-Revision-Date: 2022-02-15 21:58-0400\n"
+"Last-Translator: Pedro Torcatt <pedrotorcattsoto@gmail.com>\n"
+"Language-Team: es_LA <pedrotorcattsoto@gmail.com>\n"
+"Language: xd\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.9.1\n"
+"X-Generator: Poedit 3.0\n"
 
 #: ../../../CONTRIBUTING.rst:2
 msgid "How to contribute to Flask"
@@ -31,20 +34,19 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:10
 msgid ""
-"Please don't use the issue tracker for this. The issue tracker is a tool "
-"to address bugs and feature requests in Flask itself. Use one of the "
-"following resources for questions about using Flask or issues with your "
-"own code:"
+"Please don't use the issue tracker for this. The issue tracker is a tool to "
+"address bugs and feature requests in Flask itself. Use one of the following "
+"resources for questions about using Flask or issues with your own code:"
 msgstr ""
 
 #: ../../../CONTRIBUTING.rst:15
-msgid "The ``#questions`` channel on our Discord chat: https://discord.gg/pallets"
+msgid ""
+"The ``#questions`` channel on our Discord chat: https://discord.gg/pallets"
 msgstr ""
 
 #: ../../../CONTRIBUTING.rst:17
 msgid ""
-"The mailing list flask@python.org for long term discussion or larger "
-"issues."
+"The mailing list flask@python.org for long term discussion or larger issues."
 msgstr ""
 
 #: ../../../CONTRIBUTING.rst:19
@@ -71,22 +73,20 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:33
 msgid ""
-"If possible, include a `minimal reproducible example`_ to help us "
-"identify the issue. This also helps check that the issue is not with your"
-" own code."
+"If possible, include a `minimal reproducible example`_ to help us identify "
+"the issue. This also helps check that the issue is not with your own code."
 msgstr ""
 
 #: ../../../CONTRIBUTING.rst:36
 msgid ""
-"Describe what actually happened. Include the full traceback if there was "
-"an exception."
+"Describe what actually happened. Include the full traceback if there was an "
+"exception."
 msgstr ""
 
 #: ../../../CONTRIBUTING.rst:38
 msgid ""
 "List your Python and Flask versions. If possible, check if this issue is "
-"already fixed in the latest releases or the latest code in the "
-"repository."
+"already fixed in the latest releases or the latest code in the repository."
 msgstr ""
 
 #: ../../../CONTRIBUTING.rst:46
@@ -95,11 +95,11 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:48
 msgid ""
-"If there is not an open issue for what you want to submit, prefer opening"
-" one for discussion before working on a PR. You can work on any issue "
-"that doesn't have an open PR linked to it or a maintainer assigned to it."
-" These show up in the sidebar. No need to ask if you can work on an issue"
-" that interests you."
+"If there is not an open issue for what you want to submit, prefer opening "
+"one for discussion before working on a PR. You can work on any issue that "
+"doesn't have an open PR linked to it or a maintainer assigned to it. These "
+"show up in the sidebar. No need to ask if you can work on an issue that "
+"interests you."
 msgstr ""
 
 #: ../../../CONTRIBUTING.rst:54
@@ -114,8 +114,8 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:59
 msgid ""
-"Include tests if your patch adds or changes code. Make sure the test "
-"fails without your patch."
+"Include tests if your patch adds or changes code. Make sure the test fails "
+"without your patch."
 msgstr ""
 
 #: ../../../CONTRIBUTING.rst:61
@@ -126,9 +126,8 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:63
 msgid ""
-"Add an entry in ``CHANGES.rst``. Use the same style as other entries. "
-"Also include ``.. versionchanged::`` inline changelogs in relevant "
-"docstrings."
+"Add an entry in ``CHANGES.rst``. Use the same style as other entries. Also "
+"include ``.. versionchanged::`` inline changelogs in relevant docstrings."
 msgstr ""
 
 #: ../../../CONTRIBUTING.rst:72
@@ -157,9 +156,9 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:91
 msgid ""
-"Add your fork as a remote to push your work to. Replace ``{username}`` "
-"with your username. This names the remote \"fork\", the default Pallets "
-"remote is \"origin\"."
+"Add your fork as a remote to push your work to. Replace ``{username}`` with "
+"your username. This names the remote \"fork\", the default Pallets remote is"
+" \"origin\"."
 msgstr ""
 
 #: ../../../CONTRIBUTING.rst:99
@@ -179,7 +178,8 @@ msgid "Upgrade pip and setuptools."
 msgstr ""
 
 #: ../../../CONTRIBUTING.rst:123
-msgid "Install the development dependencies, then install Flask in editable mode."
+msgid ""
+"Install the development dependencies, then install Flask in editable mode."
 msgstr ""
 
 #: ../../../CONTRIBUTING.rst:130
@@ -192,9 +192,9 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:147
 msgid ""
-"Create a branch to identify the issue you would like to work on. If "
-"you're submitting a bug or documentation fix, branch off of the latest "
-"\".x\" branch."
+"Create a branch to identify the issue you would like to work on. If you're "
+"submitting a bug or documentation fix, branch off of the latest \".x\" "
+"branch."
 msgstr ""
 
 #: ../../../CONTRIBUTING.rst:156
@@ -204,20 +204,20 @@ msgid ""
 msgstr ""
 
 #: ../../../CONTRIBUTING.rst:164
-msgid "Using your favorite editor, make your changes, `committing as you go`_."
+msgid ""
+"Using your favorite editor, make your changes, `committing as you go`_."
 msgstr ""
 
 #: ../../../CONTRIBUTING.rst:166
 msgid ""
-"Include tests that cover any code changes you make. Make sure the test "
-"fails without your patch. Run the tests as described below."
+"Include tests that cover any code changes you make. Make sure the test fails"
+" without your patch. Run the tests as described below."
 msgstr ""
 
 #: ../../../CONTRIBUTING.rst:168
 msgid ""
-"Push your commits to your fork on GitHub and `create a pull request`_. "
-"Link to the issue being addressed with ``fixes #123`` in the pull "
-"request."
+"Push your commits to your fork on GitHub and `create a pull request`_. Link "
+"to the issue being addressed with ``fixes #123`` in the pull request."
 msgstr ""
 
 #: ../../../CONTRIBUTING.rst:181
@@ -231,8 +231,8 @@ msgstr ""
 #: ../../../CONTRIBUTING.rst:189
 msgid ""
 "This runs the tests for the current environment, which is usually "
-"sufficient. CI will run the full suite when you submit your pull request."
-" You can run the full test suite with tox if you don't want to wait."
+"sufficient. CI will run the full suite when you submit your pull request. "
+"You can run the full test suite with tox if you don't want to wait."
 msgstr ""
 
 #: ../../../CONTRIBUTING.rst:200
@@ -242,8 +242,8 @@ msgstr ""
 #: ../../../CONTRIBUTING.rst:202
 msgid ""
 "Generating a report of lines that do not have test coverage can indicate "
-"where to start contributing. Run ``pytest`` using ``coverage`` and "
-"generate a report."
+"where to start contributing. Run ``pytest`` using ``coverage`` and generate "
+"a report."
 msgstr ""
 
 #: ../../../CONTRIBUTING.rst:212

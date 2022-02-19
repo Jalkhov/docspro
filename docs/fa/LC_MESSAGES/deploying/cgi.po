@@ -6,16 +6,19 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Flask 2.1.x\n"
+"Project-Id-Version: Flask 2.0.x\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-08 08:56+0330\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: fa <ahmdparsh129@gmail.com>\n"
+"POT-Creation-Date: 2021-05-27 07:20-0400\n"
+"PO-Revision-Date: 2022-02-15 21:58-0400\n"
+"Last-Translator: Pedro Torcatt <pedrotorcattsoto@gmail.com>\n"
+"Language-Team: es_LA <pedrotorcattsoto@gmail.com>\n"
+"Language: xd\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "Generated-By: Babel 2.9.1\n"
+"X-Generator: Poedit 3.0\n"
 
 #: ../../deploying/cgi.rst:2
 msgid "CGI"
@@ -23,9 +26,8 @@ msgstr ""
 
 #: ../../deploying/cgi.rst:4
 msgid ""
-"If all other deployment methods do not work, CGI will work for sure. CGI "
-"is supported by all major servers but usually has a sub-optimal "
-"performance."
+"If all other deployment methods do not work, CGI will work for sure. CGI is "
+"supported by all major servers but usually has a sub-optimal performance."
 msgstr ""
 
 #: ../../deploying/cgi.rst:8
@@ -40,18 +42,18 @@ msgstr ""
 
 #: ../../deploying/cgi.rst:13
 msgid ""
-"Please make sure in advance that any ``app.run()`` calls you might have "
-"in your application file are inside an ``if __name__ == '__main__':`` "
-"block or moved to a separate file.  Just make sure it's not called "
-"because this will always start a local WSGI server which we do not want "
-"if we deploy that application to CGI / app engine."
+"Please make sure in advance that any ``app.run()`` calls you might have in "
+"your application file are inside an ``if __name__ == '__main__':`` block or "
+"moved to a separate file.  Just make sure it's not called because this will "
+"always start a local WSGI server which we do not want if we deploy that "
+"application to CGI / app engine."
 msgstr ""
 
 #: ../../deploying/cgi.rst:19
 msgid ""
-"With CGI, you will also have to make sure that your code does not contain"
-" any ``print`` statements, or that ``sys.stdout`` is overridden by "
-"something that doesn't write into the HTTP response."
+"With CGI, you will also have to make sure that your code does not contain "
+"any ``print`` statements, or that ``sys.stdout`` is overridden by something "
+"that doesn't write into the HTTP response."
 msgstr ""
 
 #: ../../deploying/cgi.rst:24
@@ -70,9 +72,9 @@ msgstr ""
 
 #: ../../deploying/cgi.rst:38
 msgid ""
-"Usually there are two ways to configure the server.  Either just copy the"
-" ``.cgi`` into a :file:`cgi-bin` (and use `mod_rewrite` or something "
-"similar to rewrite the URL) or let the server point to the file directly."
+"Usually there are two ways to configure the server.  Either just copy the "
+"``.cgi`` into a :file:`cgi-bin` (and use `mod_rewrite` or something similar "
+"to rewrite the URL) or let the server point to the file directly."
 msgstr ""
 
 #: ../../deploying/cgi.rst:42
