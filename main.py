@@ -14,7 +14,7 @@ def download_docs():
 		lng = lang[0]
 		dlc = lang[1]
 
-		print("> Downloading: ", lang.upper())
+		print("> Downloading: ", lng.upper())
 		Octo.dowload_folder(target.format(lang=lng, dial=dlc), folder)
 
 def generate_jsons():
