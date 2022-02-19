@@ -53,13 +53,13 @@ class OctodirException(Exception):
     pass
 
 
-def fix_headers(pofile):
+def fix_meta(pofile):
     """
-    This fix .po headers for work with
+    This fix .po metadata for work with
     alexkiro/i18n-coverage action
     """
     file = polib.pofile(pofile)
-    file.metadata['Language'] = good_metadata
+    file.metadata = good_metadata
     file.save(pofile)
 
 def mkdirs(path):
@@ -176,7 +176,7 @@ class Octodir(object):
                         i[1], os.path.join(self.output_folder, ndir))
 
                     pofile = os.path.join(self.output_folder, ndir)
-                    fix_headers(pofile)
+                    fix_meta(pofile)
 
                 pbar.update(1)
 

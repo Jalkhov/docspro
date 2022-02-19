@@ -1,3 +1,4 @@
 click==7.1.2
 requests==2.25.1
 tqdm==4.54.0
+polib==1.1.1
