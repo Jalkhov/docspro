@@ -19,6 +19,7 @@ def gen_badges_table():
     table.set_style(MARKDOWN)
     table.field_names = ["Preview", "Code", "SVG"]
     badges = get_badges()
+    print(badges)
     for badge in badges:
         table.add_row([f"badge/{badge}", img_badge.format(img_url=badge), badge])
     return table
@@ -43,7 +44,7 @@ def generate_index():
         content = template.read()
 
         with open('README.md', 'w') as output:
-            content = content.format(table=table.get_html_string())
+            content = content.format(table=table)
             output.write(content)
 
     with open(f'for_deploy/index.html', 'w') as outfile:
