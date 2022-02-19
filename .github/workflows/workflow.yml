@@ -32,7 +32,7 @@ jobs:
           translations-path: 'for_deploy/**/**.po'
 
       - name: Get the coverage
-        run: python main.py --jsons ${{ steps.i18nCoverage.outputs.coverage }}
+        run: python main.py --jsons {{ steps.i18nCoverage.outputs }}
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.3
