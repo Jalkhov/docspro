@@ -10,5 +10,14 @@ This project is a small temporary whim and will be archived when the translation
 
 Image codes for badges:
 
-| Preview | Code | SVG |
-|:-------:|:----:|:---:|
+<table>
+    <thead>
+        <tr>
+            <th>Preview</th>
+            <th>Code</th>
+            <th>SVG</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
