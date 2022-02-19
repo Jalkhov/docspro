@@ -20,7 +20,7 @@ def generate_jsons():
 def main(args):
 	if len(args) > 1 and args[1] == "--download":
 		download_docs()
-	elif len(args) > 1 and args[1] == "--jsons"::
+	elif len(args) > 1 and args[1] == "--jsons":
 		print(args)
 
 if __name__ == '__main__':
