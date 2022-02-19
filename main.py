@@ -25,7 +25,7 @@ def generate_jsons(lang, cov):
         outfile.write(json_string)
 
 def generate_badge(lang, cov):
-    svg_data = requests.get(badge_url.format(cov)).text
+    svg_data = requests.get(badge_url.format(cov=cov)).text
     with open(f'data/{lang}_progress.svg', 'w') as file:
         file.write(svg_data)
 
