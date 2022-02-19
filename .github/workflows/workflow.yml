@@ -31,11 +31,6 @@ jobs:
           branch: translation_data # The branch the action should deploy to.
           folder: for_deploy # The folder the action should deploy.
 
-  i18n-coverage:
-    runs-on: ubuntu-latest
-    name: Check i18n coverage
-    steps:
-      - uses: actions/checkout@v2
       - name: Check i18n coverage
         uses: alexkiro/i18n-coverage@v1.0.0
         with:
