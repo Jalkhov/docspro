@@ -18,13 +18,21 @@ def download_docs():
 
         Octo.dowload_folder(target.format(lang=lng, dial=dlc), folder)
 
+def round_cov(cov):
+    return "%.2f" % (float(cov))
+
+def generate_index():
+    with open(f'for_deploy/index.html', 'w') as outfile:
+        outfile.write("<h1>Docspro</h1>")
+
 def generate_jsons(lang, cov):
-    cov = "%.2f" % (float(cov))
+    cov round_cov(cov)
     json_string = json.dumps({'cov':cov})
     with open(f'for_deploy/data/{lang}_cov.json', 'w') as outfile:
         outfile.write(json_string)
 
 def generate_badge(lang, cov):
+    cov round_cov(cov)
     svg_data = requests.get(badge_url.format(cov=cov)).text
     with open(f'for_deploy/data/{lang}_progress.svg', 'w') as file:
         file.write(svg_data)
@@ -33,6 +41,7 @@ def generate_badge(lang, cov):
 def main(args):
     if len(args) > 1 and args[1] == "--download":
         download_docs()
+        generate_index()
     else:
         lang = args[1].split('--')[1]
         cov = args[2]
