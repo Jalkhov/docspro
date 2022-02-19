@@ -2,8 +2,8 @@ from octodir import Octodir
 import os, sys
 import json
 
-repos = ['es', 'fr', 'zh', 'fa'] # temporal, walk org repos
-target = 'https://github.com/flaskcwg/flask-docs-{lang}/tree/main/docs/locales/{lang}'
+repos = [['es', 'es'], ['fr', 'fr'], ['zh', 'zh_CN'], ['fa', 'fa']] # temporal, walk org repos
+target = 'https://github.com/flaskcwg/flask-docs-{lang}/tree/main/docs/locales/{dial}'
 folder = 'for_deploy/docs' # Current working directory
 
 def download_docs():
@@ -11,8 +11,11 @@ def download_docs():
 
 	os.makedirs(folder, exist_ok=True)
 	for lang in repos:
+		lng = lang[0]
+		dlc = lang[1]
+
 		print("> Downloading: ", lang.upper())
-		Octo.dowload_folder(target.format(lang=lang), folder)
+		Octo.dowload_folder(target.format(lang=lng, dial=dlc), folder)
 
 def generate_jsons():
 	pass

@@ -47,7 +47,7 @@ jobs:
         uses: alexkiro/i18n-coverage@v1.0.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          translations-path: 'for_deploy/docs/zh/**/**.po'
+          translations-path: 'for_deploy/docs/zh_CN/**/**.po'
 
       # CHECK FA COVERAGE
       - name: Check FA coverage
@@ -57,16 +57,16 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           translations-path: 'for_deploy/docs/fa/**/**.po'
 
-      - name: Get the coverage
+      - name: Get ES coverage
         run: python main.py --jsons ${{ steps.esCoverage.outputs.coverage }}
 
-      - name: Get the coverage
+      - name: Get FR coverage
         run: python main.py --jsons ${{ steps.frCoverage.outputs.coverage }}
 
-      - name: Get the coverage
+      - name: Get ZH coverage
         run: python main.py --jsons ${{ steps.zhCoverage.outputs.coverage }}
 
-      - name: Get the coverage
+      - name: Get FA coverage
         run: python main.py --jsons ${{ steps.faCoverage.outputs.coverage }}
 
       - name: Deploy 🚀
