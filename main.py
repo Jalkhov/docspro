@@ -21,12 +21,12 @@ def download_docs():
 def generate_jsons(lang, cov):
     cov = "%.2f" % (float(cov))
     json_string = json.dumps({'cov':cov})
-    with open(f'data/{lang}_cov.json', 'w') as outfile:
+    with open(f'for_deploy/data/{lang}_cov.json', 'w') as outfile:
         outfile.write(json_string)
 
 def generate_badge(lang, cov):
     svg_data = requests.get(badge_url.format(cov=cov)).text
-    with open(f'data/{lang}_progress.svg', 'w') as file:
+    with open(f'for_deploy/data/{lang}_progress.svg', 'w') as file:
         file.write(svg_data)
 
 
