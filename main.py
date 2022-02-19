@@ -26,13 +26,13 @@ def generate_index():
         outfile.write("<h1>Docspro</h1>")
 
 def generate_jsons(lang, cov):
-    cov round_cov(cov)
+    cov = round_cov(cov)
     json_string = json.dumps({'cov':cov})
     with open(f'for_deploy/data/{lang}_cov.json', 'w') as outfile:
         outfile.write(json_string)
 
 def generate_badge(lang, cov):
-    cov round_cov(cov)
+    cov = round_cov(cov)
     svg_data = requests.get(badge_url.format(cov=cov)).text
     with open(f'for_deploy/data/{lang}_progress.svg', 'w') as file:
         file.write(svg_data)
