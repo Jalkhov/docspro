@@ -43,7 +43,7 @@ def generate_index():
         content = template.read()
 
         with open('README.md', 'w') as output:
-            content = content.format(table=table)
+            content = content.format(table=table.get_html_string())
             output.write(content)
 
     with open(f'for_deploy/index.html', 'w') as outfile:
