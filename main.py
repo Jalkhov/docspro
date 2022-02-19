@@ -20,6 +20,8 @@ def generate_jsons():
 def main():
 	if sys.argv[1:]:
 		print(sys.argv[0])
+	else:
+		download_docs()
 
 if __name__ == '__main__':
 	main()

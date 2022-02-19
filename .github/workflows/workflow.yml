@@ -42,4 +42,4 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           translations-path: 'for_deploy/**/**.po'
       - name: Get the coverage
-        run: echo "The coverage was ${{ steps.i18nCoverage.outputs.coverage }}"
+        run: python main.py ${{ steps.i18nCoverage.outputs.coverage }}
