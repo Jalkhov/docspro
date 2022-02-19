@@ -24,7 +24,7 @@ def generate_jsons(lang, cov):
 def main(args):
 	if len(args) > 1 and args[1] == "--download":
 		download_docs()
-	elif:
+	else:
 		lang = args[1].split('--')[1]
 		cov = args[2]
 		generate_jsons(lang, cov)
