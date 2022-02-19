@@ -25,15 +25,49 @@ jobs:
       - name: Download folders
         run: python main.py --download
 
-      - name: Check i18n coverage
-        id: i18nCoverage
+      # CHECK ES COVERAGE
+      - name: Check ES coverage
+        id: esCoverage
         uses: alexkiro/i18n-coverage@v1.0.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          translations-path: 'for_deploy/**/**.po'
+          translations-path: 'for_deploy/es/**.po'
+
+      # CHECK FR COVERAGE
+      - name: Check FR coverage
+        id: frCoverage
+        uses: alexkiro/i18n-coverage@v1.0.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          translations-path: 'for_deploy/fr/**.po'
+
+      # CHECK ZH COVERAGE
+      - name: Check ZH coverage
+        id: zhCoverage
+        uses: alexkiro/i18n-coverage@v1.0.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          translations-path: 'for_deploy/zh/**.po'
+
+      # CHECK FA COVERAGE
+      - name: Check FA coverage
+        id: faCoverage
+        uses: alexkiro/i18n-coverage@v1.0.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          translations-path: 'for_deploy/fa/**.po'
 
       - name: Get the coverage
-        run: python main.py --jsons ${{ steps.i18nCoverage.outputs }}
+        run: python main.py --jsons ${{ steps.esCoverage.outputs.coverage }}
+
+      - name: Get the coverage
+        run: python main.py --jsons ${{ steps.frCoverage.outputs.coverage }}
+
+      - name: Get the coverage
+        run: python main.py --jsons ${{ steps.zhCoverage.outputs.coverage }}
+
+      - name: Get the coverage
+        run: python main.py --jsons ${{ steps.faCoverage.outputs.coverage }}
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.3
