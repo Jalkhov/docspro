@@ -10,3 +10,5 @@ This project is a small temporary whim and will be archived when the translation
 
 Image codes for badges:
 
+| Preview | Code | SVG |
+|:-------:|:----:|:---:|
