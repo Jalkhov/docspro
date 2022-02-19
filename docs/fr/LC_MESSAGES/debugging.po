@@ -1,0 +1,191 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <victor.levieux@gmail.com>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-01 02:27-0500\n"
+"PO-Revision-Date: 2021-08-03 23:37-0500\n"
+"Language-Team: fr_FR <victor.levieux@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+"Last-Translator: Victor LEVIEUX <victor.levieux@gmail.com>\n"
+"Language: fr\n"
+"X-Generator: Poedit 3.0\n"
+
+#: ../../debugging.rst:2
+msgid "Debugging Application Errors"
+msgstr "Débogage des erreurs d'application"
+
+#: ../../debugging.rst:6
+msgid "In Production"
+msgstr "En cours de production"
+
+#: ../../debugging.rst:8
+msgid ""
+"**Do not run the development server, or enable the built-in debugger, in a "
+"production environment.** The debugger allows executing arbitrary Python "
+"code from the browser. It's protected by a pin, but that should not be "
+"relied on for security."
+msgstr ""
+"**N'exécutez pas le serveur de développement ou n'activez pas le débogueur "
+"intégré dans un environnement de production.** Le débogueur permet "
+"d'exécuter du code Python arbitraire depuis le navigateur. Il est protégé "
+"par un PIN, mais il ne faut pas s'y fier pour la sécurité."
+
+#: ../../debugging.rst:13
+msgid ""
+"Use an error logging tool, such as Sentry, as described in :ref:`error-"
+"logging-tools`, or enable logging and notifications as described in :doc:`/"
+"logging`."
+msgstr ""
+"Utilisez un outil de journalisation des erreurs, tel que Sentry, comme "
+"décrit dans :ref:`error-logging-tools`, ou activez la journalisation et les "
+"notifications comme décrit dans :doc:`/logging`."
+
+#: ../../debugging.rst:17
+msgid ""
+"If you have access to the server, you could add some code to start an "
+"external debugger if ``request.remote_addr`` matches your IP. Some IDE "
+"debuggers also have a remote mode so breakpoints on the server can be "
+"interacted with locally. Only enable a debugger temporarily."
+msgstr ""
+"Si vous avez accès au serveur, vous pouvez ajouter du code pour lancer un "
+"débogueur externe si ``request.remote_addr`` correspond à votre IP. "
+"Certains débogueurs IDE disposent également d'un mode distant, ce qui "
+"permet d'interagir localement avec les points d'arrêt sur le serveur. "
+"N'activez le débogueur que temporairement."
+
+#: ../../debugging.rst:24
+msgid "The Built-In Debugger"
+msgstr "Le débogueur intégré"
+
+#: ../../debugging.rst:26
+msgid ""
+"The built-in Werkzeug development server provides a debugger which shows an "
+"interactive traceback in the browser when an unhandled error occurs during "
+"a request. This debugger should only be used during development."
+msgstr ""
+"Le serveur de développement intégré de Werkzeug fournit un débogueur qui "
+"affiche un retour de trace interactif dans le navigateur lorsqu'une erreur "
+"non gérée survient lors d'une requête. Ce débogueur ne doit être utilisé "
+"que pendant le développement."
+
+msgid "screenshot of debugger in action"
+msgstr "capture d'écran du débogueur en action"
+
+#: ../../debugging.rst:37
+msgid ""
+"The debugger allows executing arbitrary Python code from the browser. It is "
+"protected by a pin, but still represents a major security risk. Do not run "
+"the development server or debugger in a production environment."
+msgstr ""
+"Le débogueur permet d'exécuter du code Python arbitraire depuis le "
+"navigateur. Il est protégé par un PIN, mais représente tout de même un "
+"risque de sécurité important. N'exécutez pas le serveur de développement ou "
+"le débogueur dans un environnement de production."
+
+#: ../../debugging.rst:42
+msgid ""
+"To enable the debugger, run the development server with the ``FLASK_ENV`` "
+"environment variable set to ``development``. This puts Flask in debug mode, "
+"which changes how it handles some errors, and enables the debugger and "
+"reloader."
+msgstr ""
+"Pour activer le débogueur, exécutez le serveur de développement avec la "
+"variable d'environnement ``FLASK_ENV`` définie sur ``development``. Cela "
+"met Flask en mode débogage, ce qui change la façon dont il gère certaines "
+"erreurs, et active le débogueur et le *reloader*."
+
+#: ../../debugging.rst:49 ../../debugging.rst:102
+msgid "Bash"
+msgstr "Bash"
+
+#: ../../debugging.rst:56 ../../debugging.rst:109
+msgid "CMD"
+msgstr "CMD"
+
+#: ../../debugging.rst:63 ../../debugging.rst:116
+msgid "Powershell"
+msgstr "Powershell"
+
+#: ../../debugging.rst:70
+msgid ""
+"``FLASK_ENV`` can only be set as an environment variable. When running from "
+"Python code, passing ``debug=True`` enables debug mode, which is mostly "
+"equivalent. Debug mode can be controled separately from ``FLASK_ENV`` with "
+"the ``FLASK_DEBUG`` environment variable as well."
+msgstr ""
+"``FLASK_ENV`` ne peut être défini que comme une variable d'environnement. "
+"Lorsque vous exécutez du code Python, passer ``debug=True`` active le mode "
+"débogage, ce qui est pratiquement équivalent. Le mode débogage peut être "
+"contrôlé séparément de ``FLASK_ENV`` avec la variable d'environnement "
+"``FLASK_DEBUG``."
+
+#: ../../debugging.rst:79
+msgid ""
+":doc:`/server` and :doc:`/cli` have more information about running the "
+"debugger, debug mode, and development mode. More information about the "
+"debugger can be found in the `Werkzeug documentation <https://werkzeug."
+"palletsprojects.com/debug/>`__."
+msgstr ""
+":doc:`/server` et :doc:`/cli` ont plus d'informations sur l'exécution du "
+"débogueur, le mode débogage et le mode développement. Plus d'informations "
+"sur le débogueur peuvent être trouvées dans la documentation `Werkzeug "
+"<https://werkzeug.palletsprojects.com/debug/>`__."
+
+#: ../../debugging.rst:86
+msgid "External Debuggers"
+msgstr "Débogueurs externes"
+
+#: ../../debugging.rst:88
+msgid ""
+"External debuggers, such as those provided by IDEs, can offer a more "
+"powerful debugging experience than the built-in debugger. They can also be "
+"used to step through code during a request before an error is raised, or if "
+"no error is raised. Some even have a remote mode so you can debug code "
+"running on another machine."
+msgstr ""
+"Les débogueurs externes, tels que ceux fournis par les IDE, peuvent offrir "
+"une expérience de débogage plus puissante que le débogueur intégré. Ils "
+"peuvent également être utilisés pour parcourir le code pendant une requête "
+"avant qu'une erreur ne soit levée, ou si aucune erreur n'est levée. "
+"Certains disposent même d'un mode distant qui vous permet de déboguer du "
+"code exécuté depuis une autre machine."
+
+#: ../../debugging.rst:94
+msgid ""
+"When using an external debugger, the app should still be in debug mode, but "
+"it can be useful to disable the built-in debugger and reloader, which can "
+"interfere."
+msgstr ""
+"Lorsque vous utilisez un débogueur externe, l'application doit toujours "
+"être en mode débogage, mais il peut être utile de désactiver le débogueur "
+"et le reloader intégrés, qui peuvent interférer."
+
+#: ../../debugging.rst:98
+msgid "When running from the command line:"
+msgstr "Lorsqu'il est exécuté à partir de la ligne de commande :"
+
+#: ../../debugging.rst:123
+msgid "When running from Python:"
+msgstr "Lors de l'exécution à partir de Python :"
+
+#: ../../debugging.rst:129
+msgid ""
+"Disabling these isn't required, an external debugger will continue to work "
+"with the following caveats. If the built-in debugger is not disabled, it "
+"will catch unhandled exceptions before the external debugger can. If the "
+"reloader is not disabled, it could cause an unexpected reload if code "
+"changes during debugging."
+msgstr ""
+"Il n'est pas nécessaire de les désactiver, un débogueur externe continuera "
+"à fonctionner avec les réserves suivantes. Si le débogueur intégré n'est "
+"pas désactivé, il attrapera les exceptions non gérées avant le débogueur "
+"externe. Si le reloader n'est pas désactivé, il peut provoquer un "
+"rechargement inattendu si le code change pendant le débogage."

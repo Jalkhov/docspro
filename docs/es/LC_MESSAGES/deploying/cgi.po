@@ -1,0 +1,118 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <pedrotorcattsoto@gmail.com>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.0.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-27 07:20-0400\n"
+"PO-Revision-Date: 2022-02-15 21:58-0400\n"
+"Language-Team: es_LA <pedrotorcattsoto@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+"Last-Translator: Pedro Torcatt <pedrotorcattsoto@gmail.com>\n"
+"Language: es\n"
+"X-Generator: Poedit 3.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../deploying/cgi.rst:2
+msgid "CGI"
+msgstr "CGI"
+
+#: ../../deploying/cgi.rst:4
+msgid ""
+"If all other deployment methods do not work, CGI will work for sure. CGI is "
+"supported by all major servers but usually has a sub-optimal performance."
+msgstr ""
+"Si todos los demás métodos de despliegue no funcionan, CGI funcionará con "
+"seguridad. CGI es soportado por todos los principales servidores, pero suele "
+"tener un rendimiento sub-óptimo."
+
+#: ../../deploying/cgi.rst:8
+msgid ""
+"This is also the way you can use a Flask application on Google's `App "
+"Engine`_, where execution happens in a CGI-like environment."
+msgstr ""
+"Esta es también la forma en que se puede utilizar una aplicación Flask en el "
+"`App Engine`_ de Google, donde la ejecución ocurre en un entorno similar a CGI."
+
+#: ../../deploying/cgi.rst:11 ../../deploying/fastcgi.rst:10
+#: ../../deploying/mod_wsgi.rst:6 ../../deploying/uwsgi.rst:13
+msgid "Watch Out"
+msgstr "Cuidado"
+
+#: ../../deploying/cgi.rst:13
+msgid ""
+"Please make sure in advance that any ``app.run()`` calls you might have in "
+"your application file are inside an ``if __name__ == '__main__':`` block or "
+"moved to a separate file.  Just make sure it's not called because this will "
+"always start a local WSGI server which we do not want if we deploy that "
+"application to CGI / app engine."
+msgstr ""
+"Por favor, asegúrese de antemano que cualquier llamada a ``app.run()`` que "
+"pueda tener en su archivo de aplicación esté dentro de un bloque ``if __name__ "
+"== '__main__':`` o que se mueva a un archivo separado.  Sólo asegúrate de que "
+"no se llama porque esto siempre iniciará un servidor WSGI local que no "
+"queremos si desplegamos esa aplicación a CGI / app engine."
+
+#: ../../deploying/cgi.rst:19
+msgid ""
+"With CGI, you will also have to make sure that your code does not contain any "
+"``print`` statements, or that ``sys.stdout`` is overridden by something that "
+"doesn't write into the HTTP response."
+msgstr ""
+"Con CGI, también tendrás que asegurarte de que tu código no contenga ninguna "
+"sentencia ``print``, o que ``sys.stdout`` sea anulado por algo que no escriba "
+"en la respuesta HTTP."
+
+#: ../../deploying/cgi.rst:24
+msgid "Creating a `.cgi` file"
+msgstr "Creación de un archivo `.cgi`"
+
+#: ../../deploying/cgi.rst:26
+msgid ""
+"First you need to create the CGI application file.  Let's call it :file:"
+"`yourapplication.cgi`::"
+msgstr ""
+"Primero hay que crear el archivo de la aplicación CGI.  Llamémoslo :file:"
+"`tuaplicacion.cgi`::"
+
+#: ../../deploying/cgi.rst:36
+msgid "Server Setup"
+msgstr "Configuración del servidor"
+
+#: ../../deploying/cgi.rst:38
+msgid ""
+"Usually there are two ways to configure the server.  Either just copy the ``."
+"cgi`` into a :file:`cgi-bin` (and use `mod_rewrite` or something similar to "
+"rewrite the URL) or let the server point to the file directly."
+msgstr ""
+"Normalmente hay dos maneras de configurar el servidor.  O bien se copia el ``."
+"cgi`` en un archivo :file:`cgi-bin` (y se usa `mod_rewrite` o algo similar "
+"para reescribir la URL) o se deja que el servidor apunte al archivo "
+"directamente."
+
+#: ../../deploying/cgi.rst:42
+msgid "In Apache for example you can put something like this into the config:"
+msgstr "En Apache, por ejemplo, puedes poner algo como esto en la configuración:"
+
+#: ../../deploying/cgi.rst:48
+msgid ""
+"On shared webhosting, though, you might not have access to your Apache config. "
+"In this case, a file called ``.htaccess``, sitting in the public directory you "
+"want your app to be available, works too but the ``ScriptAlias`` directive "
+"won't work in that case:"
+msgstr ""
+"Sin embargo, en un alojamiento web compartido, es posible que no tengas acceso "
+"a tu configuración de Apache. En este caso, un archivo llamado ``.htaccess``, "
+"situado en el directorio público en el que quieres que tu aplicación esté "
+"disponible, también funciona, pero la directiva ``ScriptAlias`` no funcionará "
+"en ese caso:"
+
+#: ../../deploying/cgi.rst:59
+msgid "For more information consult the documentation of your webserver."
+msgstr "Para más información consulte la documentación de su servidor web."

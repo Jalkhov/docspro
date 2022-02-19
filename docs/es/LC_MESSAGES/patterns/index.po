@@ -1,0 +1,49 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <pedrotorcattsoto@gmail.com>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.0.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-27 07:20-0400\n"
+"PO-Revision-Date: 2022-02-15 21:58-0400\n"
+"Language-Team: es_LA <pedrotorcattsoto@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+"Last-Translator: Pedro Torcatt <pedrotorcattsoto@gmail.com>\n"
+"Language: es\n"
+"X-Generator: Poedit 3.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../patterns/index.rst:2
+msgid "Patterns for Flask"
+msgstr "Patrones para Flask"
+
+#: ../../patterns/index.rst:4
+msgid ""
+"Certain features and interactions are common enough that you will find them in "
+"most web applications. For example, many applications use a relational database "
+"and user authentication. They will open a database connection at the beginning "
+"of the request and get the information for the logged in user. At the end of "
+"the request, the database connection is closed."
+msgstr ""
+"Ciertas características e interacciones son lo suficientemente comunes como "
+"para encontrarlas en la mayoría de las aplicaciones web. Por ejemplo, muchas "
+"aplicaciones utilizan una base de datos relacional y la autenticación del "
+"usuario. Abrirán una conexión a la base de datos al principio de la petición y "
+"obtendrán la información del usuario conectado. Al final de la solicitud, la "
+"conexión a la base de datos se cierra."
+
+#: ../../patterns/index.rst:11
+msgid ""
+"These types of patterns may be a bit outside the scope of Flask itself, but "
+"Flask makes it easy to implement them. Some common patterns are collected in "
+"the following pages."
+msgstr ""
+"Estos tipos de patrones pueden estar un poco fuera del alcance de Flask en sí, "
+"pero Flask facilita su implementación. En las siguientes páginas se recogen "
+"algunos patrones comunes."

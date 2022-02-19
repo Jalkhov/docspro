@@ -1,0 +1,216 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <victor.levieux@gmail.com>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-01 02:27-0500\n"
+"PO-Revision-Date: 2021-08-31 07:52+0200\n"
+"Language-Team: fr_FR <victor.levieux@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+"Last-Translator: Mindiell <mindiell@mindiell.net>\n"
+"Language: fr\n"
+"X-Generator: Poedit 3.0\n"
+
+#: ../../logging.rst:2
+msgid "Logging"
+msgstr "Journalisation"
+
+#: ../../logging.rst:4
+msgid ""
+"Flask uses standard Python :mod:`logging`. Messages about your Flask "
+"application are logged with :meth:`app.logger <flask.Flask.logger>`, "
+"which takes the same name as :attr:`app.name <flask.Flask.name>`. This "
+"logger can also be used to log your own messages."
+msgstr ""
+"Flask utilise le module Python :mod:`logging` standard. Les messages de "
+"votre application Flask sont transmis via la méthode :meth:`app.logger "
+"<flask.Flask.logger>` qui utilise le même nom que :attr:`app.name <flask."
+"Flask.name>`. Ce logger peut également être utilisé pour enregistrer vos "
+"propres messages."
+
+#: ../../logging.rst:23
+msgid ""
+"If you don't configure logging, Python's default log level is usually "
+"'warning'. Nothing below the configured level will be visible."
+msgstr ""
+"Si vous ne configurez pas la journalisation, le niveau de log par défaut "
+"de Python est généralement \"warning\". Aucun message dont le niveau est "
+"situé sous celui configuré ne sera enregistré."
+
+#: ../../logging.rst:28
+msgid "Basic Configuration"
+msgstr "Configuration de base"
+
+#: ../../logging.rst:30
+msgid ""
+"When you want to configure logging for your project, you should do it as "
+"soon as possible when the program starts. If :meth:`app.logger <flask."
+"Flask.logger>` is accessed before logging is configured, it will add a "
+"default handler. If possible, configure logging before creating the "
+"application object."
+msgstr ""
+"Lorsque vous souhaitez configurer la journalisation de votre projet, "
+"vous devez le faire dès que possible lorsque l'application démarre. Si "
+"la méthode :meth:`app.logger <flask.Flask.logger>` est appelée avant que "
+"la journalisation soit configurée, elle utilisera le gestionnaire par "
+"défaut. Il est donc recommandé de configurer la journalisation avant "
+"même la création de l'objet application."
+
+#: ../../logging.rst:35
+msgid ""
+"This example uses :func:`~logging.config.dictConfig` to create a logging "
+"configuration similar to Flask's default, except for all logs::"
+msgstr ""
+"Cet exemple utilise :func:`~logging.config.dictConfig` afin de créer une "
+"configuration similaire à celle par défaut de Flask pour l'ensemble de "
+"la journalisation::"
+
+#: ../../logging.rst:60
+msgid "Default Configuration"
+msgstr "Configuration par défaut"
+
+#: ../../logging.rst:62
+msgid ""
+"If you do not configure logging yourself, Flask will add a :class:"
+"`~logging.StreamHandler` to :meth:`app.logger <flask.Flask.logger>` "
+"automatically. During requests, it will write to the stream specified by "
+"the WSGI server in ``environ['wsgi.errors']`` (which is usually :data:"
+"`sys.stderr`). Outside a request, it will log to :data:`sys.stderr`."
+msgstr ""
+"Si vous ne configurez pas la journalisation, Flask ajoutera "
+"automatiquement un :class:`~logging.StreamHandler` à la méthode :meth:"
+"`app.logger <flask.Flask.logger>`. Lors de chaque appel à une requête, "
+"il écrira alors dans le flux spécifié par le serveur WSGI via "
+"``environ['wsgi.errors']`` (qui vaut en général :data:`sys.stderr`). "
+"Hors des appels aux requêtes, il écrira sur :data:`sys.stderr`."
+
+#: ../../logging.rst:70
+msgid "Removing the Default Handler"
+msgstr "Supprimer le gestionnaire par défaut"
+
+#: ../../logging.rst:72
+msgid ""
+"If you configured logging after accessing :meth:`app.logger <flask.Flask."
+"logger>`, and need to remove the default handler, you can import and "
+"remove it::"
+msgstr ""
+"Si vous configurez la journalisation après avoir accédé à la méthode :"
+"meth:`app.logger <flask.Flask.logger>`, et que vous souhaitez retirer le "
+"gestionnaire par défaut, vous pouvez l'importez pour le supprimer::"
+
+#: ../../logging.rst:82
+msgid "Email Errors to Admins"
+msgstr "Envoyer les erreurs par mail aux admins"
+
+#: ../../logging.rst:84
+msgid ""
+"When running the application on a remote server for production, you "
+"probably won't be looking at the log messages very often. The WSGI "
+"server will probably send log messages to a file, and you'll only check "
+"that file if a user tells you something went wrong."
+msgstr ""
+"Lorsque l'application est exécutée sur un serveur de production, il est "
+"sans doute peu vraisemblable que vous regarderez les messages de logs "
+"régulièrement. Le serveur WSGI enverra probablement les messages dans un "
+"fichier qui ne sera alors exploité que lorsqu'un utilisateur signalera "
+"qu'un problème est survenu."
+
+#: ../../logging.rst:89
+msgid ""
+"To be proactive about discovering and fixing bugs, you can configure a :"
+"class:`logging.handlers.SMTPHandler` to send an email when errors and "
+"higher are logged. ::"
+msgstr ""
+"Afin d'être proactif sur les problèmes, vous pouvez configurer un "
+"gestionnaire SMTP :class:`logging.handlers.SMTPHandler` afin de "
+"transmettre les messages de niveau \"erreur\" et plus par mail. ::"
+
+#: ../../logging.rst:110
+msgid ""
+"This requires that you have an SMTP server set up on the same server. "
+"See the Python docs for more information about configuring the handler."
+msgstr ""
+"Cela nécessite un serveur SMTP configuré sur le même serveur. Voir la "
+"documentation Python pour plus d'informations sur la configuration de ce "
+"gestionnaire."
+
+#: ../../logging.rst:115
+msgid "Injecting Request Information"
+msgstr "Ajouter des informations de la Requête"
+
+#: ../../logging.rst:117
+msgid ""
+"Seeing more information about the request, such as the IP address, may "
+"help debugging some errors. You can subclass :class:`logging.Formatter` "
+"to inject your own fields that can be used in messages. You can change "
+"the formatter for Flask's default handler, the mail handler defined "
+"above, or any other handler. ::"
+msgstr ""
+"Avoir plus d'information à propos de la requête traitée, comme une "
+"adresse IP, peut vous aider à résoudre vos problèmes. Vous pouvez créer "
+"une sous-classe de :class:`logging.Formatter` afin d'injecter vos "
+"propres données dans les messages. Vous pouvez adapter le formatage du "
+"gestionnaire par défaut de Flask, le gestionnaire par mail défini ci-"
+"dessus, ou n'importe quel autre. ::"
+
+#: ../../logging.rst:146
+msgid "Other Libraries"
+msgstr "Autres librairies"
+
+#: ../../logging.rst:148
+msgid ""
+"Other libraries may use logging extensively, and you want to see "
+"relevant messages from those logs too. The simplest way to do this is to "
+"add handlers to the root logger instead of only the app logger. ::"
+msgstr ""
+"D'autres librairies peuvent utiliser la journalisation et il est alors "
+"nécessaire de récupérer leurs messages. La manière la plus simple est "
+"d'ajouter des gestionnaires au logger racine en plus de celui de "
+"l'application. ::"
+
+#: ../../logging.rst:158
+msgid ""
+"Depending on your project, it may be more useful to configure each "
+"logger you care about separately, instead of configuring only the root "
+"logger. ::"
+msgstr ""
+"Cependant, et suivant votre projet, il peut être plus intéressant de "
+"configurer chaque logger séparément au lieu d'utiliser seulement le "
+"logger racine. ::"
+
+#: ../../logging.rst:171
+msgid "Werkzeug"
+msgstr "Werkzeug"
+
+#: ../../logging.rst:173
+msgid ""
+"Werkzeug logs basic request/response information to the ``'werkzeug'`` "
+"logger. If the root logger has no handlers configured, Werkzeug adds a :"
+"class:`~logging.StreamHandler` to its logger."
+msgstr ""
+"Werkzeug utilise son propre logger ``'werkzeug'`` pour écrire les "
+"informations basiques des requêtes et des réponses. Si le logger racine "
+"n'a pas de gestionnaire configuré, Werkzeug ajoute une classe :class:"
+"`~logging.StreamHandler` à son logger."
+
+#: ../../logging.rst:179
+msgid "Flask Extensions"
+msgstr "Les extensions Flask"
+
+#: ../../logging.rst:181
+msgid ""
+"Depending on the situation, an extension may choose to log to :meth:`app."
+"logger <flask.Flask.logger>` or its own named logger. Consult each "
+"extension's documentation for details."
+msgstr ""
+"Certaines extensions peuvent choisir d'utiliser la méthode :meth:`app."
+"logger <flask.Flask.logger>` ou bien leur propre logger pour leur "
+"journalisation. Il est nécessaire de vérifier la documentation de chaque "
+"extension pour les détails à ce sujet."

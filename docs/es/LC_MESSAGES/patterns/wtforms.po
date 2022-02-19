@@ -1,0 +1,168 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <pedrotorcattsoto@gmail.com>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.0.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-27 07:20-0400\n"
+"PO-Revision-Date: 2022-02-15 21:58-0400\n"
+"Language-Team: es_LA <pedrotorcattsoto@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+"Last-Translator: Pedro Torcatt <pedrotorcattsoto@gmail.com>\n"
+"Language: es\n"
+"X-Generator: Poedit 3.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../patterns/wtforms.rst:2
+msgid "Form Validation with WTForms"
+msgstr "Validación de formularios con WTForms"
+
+#: ../../patterns/wtforms.rst:4
+msgid ""
+"When you have to work with form data submitted by a browser view, code quickly "
+"becomes very hard to read.  There are libraries out there designed to make this "
+"process easier to manage.  One of them is `WTForms`_ which we will handle "
+"here.  If you find yourself in the situation of having many forms, you might "
+"want to give it a try."
+msgstr ""
+"Cuando tienes que trabajar con datos de formularios enviados por una vista del "
+"navegador, el código se vuelve rápidamente muy difícil de leer. Existen "
+"librerías diseñadas para hacer este proceso más fácil de manejar. Una de ellas "
+"es `WTForms`_ que manejaremos aquí. Si te encuentras en la situación de tener "
+"muchos formularios, quizás quieras probarla."
+
+#: ../../patterns/wtforms.rst:10
+msgid ""
+"When you are working with WTForms you have to define your forms as classes "
+"first.  I recommend breaking up the application into multiple modules (:doc:"
+"`packages`) for that and adding a separate module for the forms."
+msgstr ""
+"Cuando se trabaja con WTForms hay que definir primero los formularios como "
+"clases. Recomiendo dividir la aplicación en múltiples módulos (:doc:`packages`) "
+"para ello y añadir un módulo separado para los formularios."
+
+#: ../../patterns/wtforms.rst:15
+msgid "Getting the most out of WTForms with an Extension"
+msgstr "Sacar el máximo partido a WTForms con una extensión"
+
+#: ../../patterns/wtforms.rst:17
+msgid ""
+"The `Flask-WTF`_ extension expands on this pattern and adds a few little "
+"helpers that make working with forms and Flask more fun.  You can get it from "
+"`PyPI <https://pypi.org/project/Flask-WTF/>`_."
+msgstr ""
+"La extensión `Flask-WTF`_ amplía este patrón y añade algunos pequeños ayudantes "
+"que hacen que trabajar con formularios y Flask sea más divertido. Puedes "
+"conseguirla en `PyPI <https://pypi.org/project/Flask-WTF/>`_."
+
+#: ../../patterns/wtforms.rst:25
+msgid "The Forms"
+msgstr "Los formularios"
+
+#: ../../patterns/wtforms.rst:27
+msgid "This is an example form for a typical registration page::"
+msgstr "Este es un ejemplo de formulario para una página de registro típica::"
+
+#: ../../patterns/wtforms.rst:42
+msgid "In the View"
+msgstr "En la vista"
+
+#: ../../patterns/wtforms.rst:44
+msgid "In the view function, the usage of this form looks like this::"
+msgstr "En la función de la vista, el uso de esta forma se ve así::"
+
+#: ../../patterns/wtforms.rst:57
+msgid ""
+"Notice we're implying that the view is using SQLAlchemy here (:doc:"
+"`sqlalchemy`), but that's not a requirement, of course.  Adapt the code as "
+"necessary."
+msgstr ""
+"Fíjate que aquí estamos implicando que la vista está usando SQLAlchemy (:doc:"
+"`sqlalchemy`), pero eso no es un requisito, por supuesto. Adapta el código como "
+"sea necesario."
+
+#: ../../patterns/wtforms.rst:61
+msgid "Things to remember:"
+msgstr "Cosas para recordar:"
+
+#: ../../patterns/wtforms.rst:63
+msgid ""
+"create the form from the request :attr:`~flask.request.form` value if the data "
+"is submitted via the HTTP ``POST`` method and :attr:`~flask.request.args` if "
+"the data is submitted as ``GET``."
+msgstr ""
+"crear el formulario a partir del valor de la solicitud :attr:`~flask.request."
+"form` si los datos se envían a través del método HTTP ``POST`` y :attr:`~flask."
+"request.args` si los datos se envían como ``GET``."
+
+#: ../../patterns/wtforms.rst:66
+msgid ""
+"to validate the data, call the :func:`~wtforms.form.Form.validate` method, "
+"which will return ``True`` if the data validates, ``False`` otherwise."
+msgstr ""
+"para validar los datos, llama al método :func:`~wtforms.form.Form.validate`, "
+"que devolverá ``True`` si los datos se validan, ``False`` en caso contrario."
+
+#: ../../patterns/wtforms.rst:69
+msgid "to access individual values from the form, access `form.<NAME>.data`."
+msgstr ""
+"para acceder a valores individuales del formulario, accede a `form.<NAME>.data`."
+
+#: ../../patterns/wtforms.rst:72
+msgid "Forms in Templates"
+msgstr "Formularios en plantillas"
+
+#: ../../patterns/wtforms.rst:74
+msgid ""
+"Now to the template side.  When you pass the form to the templates, you can "
+"easily render them there.  Look at the following example template to see how "
+"easy this is.  WTForms does half the form generation for us already. To make it "
+"even nicer, we can write a macro that renders a field with label and a list of "
+"errors if there are any."
+msgstr ""
+"Ahora al lado de las plantillas. Cuando pasas el formulario a las plantillas, "
+"puedes fácilmente renderizarlas allí. Mira la siguiente plantilla de ejemplo "
+"para ver lo fácil que es esto. WTForms ya hace la mitad de la generación de "
+"formularios por nosotros. Para hacerlo aún más bonito, podemos escribir una "
+"macro que renderice un campo con etiqueta y una lista de errores si los hay."
+
+#: ../../patterns/wtforms.rst:80
+msgid "Here's an example :file:`_formhelpers.html` template with such a macro:"
+msgstr ""
+"Aquí hay un ejemplo de plantilla :file:`_formhelpers.html` con dicha macro:"
+
+#: ../../patterns/wtforms.rst:97
+msgid ""
+"This macro accepts a couple of keyword arguments that are forwarded to WTForm's "
+"field function, which renders the field for us.  The keyword arguments will be "
+"inserted as HTML attributes.  So, for example, you can call ``render_field(form."
+"username, class='username')`` to add a class to the input element.  Note that "
+"WTForms returns standard Python strings, so we have to tell Jinja2 that this "
+"data is already HTML-escaped with the ``|safe`` filter."
+msgstr ""
+"Esta macro acepta un par de argumentos de palabras clave que se envían a la "
+"función de campo de WTForm, que renderiza el campo por nosotros. Los argumentos "
+"de la palabra clave serán insertados como atributos HTML. Así, por ejemplo, "
+"puedes llamar a ``render_field(form.username, class='username')`` para añadir "
+"una clase al elemento de entrada. Ten en cuenta que WTForms devuelve cadenas "
+"estándar de Python, por lo que tenemos que decirle a Jinja2 que estos datos ya "
+"están escaneados en HTML con el filtro ``|safe``."
+
+#: ../../patterns/wtforms.rst:105
+msgid ""
+"Here is the :file:`register.html` template for the function we used above, "
+"which takes advantage of the :file:`_formhelpers.html` template:"
+msgstr ""
+"Aquí está la plantilla :file:`register.html` para la función que usamos arriba, "
+"que aprovecha la plantilla :file:`_formhelpers.html`:"
+
+#: ../../patterns/wtforms.rst:122
+msgid "For more information about WTForms, head over to the `WTForms website`_."
+msgstr ""
+"Para obtener más información sobre WTForms, visite el sitio web de `WTForms`_."

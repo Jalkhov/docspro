@@ -1,0 +1,185 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <pedrotorcattsoto@gmail.com>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.0.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-27 07:20-0400\n"
+"PO-Revision-Date: 2022-02-15 21:58-0400\n"
+"Language-Team: es_LA <pedrotorcattsoto@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+"Last-Translator: Pedro Torcatt <pedrotorcattsoto@gmail.com>\n"
+"Language: es\n"
+"X-Generator: Poedit 3.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../server.rst:4
+msgid "Development Server"
+msgstr "Servidor de desarrollo"
+
+#: ../../server.rst:6
+msgid ""
+"Flask provides a ``run`` command to run the application with a "
+"development server. In development mode, this server provides an "
+"interactive debugger and will reload when code is changed."
+msgstr ""
+"Flask proporciona un comando ``run`` para ejecutar la aplicación con un "
+"servidor de desarrollo. En el modo de desarrollo, este servidor "
+"proporciona un depurador interactivo y se recargará cuando se cambie el "
+"código."
+
+#: ../../server.rst:12
+msgid ""
+"Do not use the development server when deploying to production. It is "
+"intended for use only during local development. It is not designed to be "
+"particularly efficient, stable, or secure."
+msgstr ""
+"No utilice el servidor de desarrollo cuando lo despliegue en producción. "
+"Está pensado para ser utilizado sólo durante el desarrollo local. No "
+"está diseñado para ser particularmente eficiente, estable o seguro."
+
+#: ../../server.rst:16
+msgid "See :doc:`/deploying/index` for deployment options."
+msgstr "Ver :doc:`/deploying/index` para las opciones de despliegue."
+
+#: ../../server.rst:19
+msgid "Command Line"
+msgstr "Línea de comandos"
+
+#: ../../server.rst:21
+msgid ""
+"The ``flask run`` command line script is the recommended way to run the "
+"development server. It requires setting the ``FLASK_APP`` environment "
+"variable to point to your application, and ``FLASK_ENV=development`` to "
+"fully enable development mode."
+msgstr ""
+"El script de línea de comandos ``flask run`` es la forma recomendada "
+"para ejecutar el servidor de desarrollo. Requiere establecer la variable "
+"de entorno ``FLASK_APP`` para que apunte a su aplicación, y "
+"``FLASK_ENV=development`` para activar completamente el modo de "
+"desarrollo."
+
+#: ../../server.rst:28
+msgid "Bash"
+msgstr ""
+
+#: ../../server.rst:36
+msgid "CMD"
+msgstr ""
+
+#: ../../server.rst:44
+msgid "Powershell"
+msgstr ""
+
+#: ../../server.rst:52
+msgid ""
+"This enables the development environment, including the interactive "
+"debugger and reloader, and then starts the server on http://"
+"localhost:5000/. Use ``flask run --help`` to see the available options, "
+"and  :doc:`/cli` for detailed instructions about configuring and using "
+"the CLI."
+msgstr ""
+"Esto habilita el entorno de desarrollo, incluyendo el depurador "
+"interactivo y el recargador, y luego inicia el servidor en http://"
+"localhost:5000/. Utilice ``flask run --help`` para ver las opciones "
+"disponibles, y :doc:`/cli` para obtener instrucciones detalladas sobre "
+"la configuración y el uso de la CLI."
+
+#: ../../server.rst:60
+msgid ""
+"Prior to Flask 1.0 the ``FLASK_ENV`` environment variable was not "
+"supported and you needed to enable debug mode by exporting "
+"``FLASK_DEBUG=1``. This can still be used to control debug mode, but you "
+"should prefer setting the development environment as shown above."
+msgstr ""
+"Antes de Flask 1.0 la variable de entorno ``FLASK_ENV`` no estaba "
+"soportada y era necesario activar el modo de depuración exportando "
+"``FLASK_DEBUG=1``. Esto todavía se puede utilizar para controlar el modo "
+"de depuración, pero es preferible configurar el entorno de desarrollo "
+"como se muestra arriba."
+
+#: ../../server.rst:68
+msgid "Lazy or Eager Loading"
+msgstr "Carga lenta o urgente"
+
+#: ../../server.rst:70
+msgid ""
+"When using the ``flask run`` command with the reloader, the server will "
+"continue to run even if you introduce syntax errors or other "
+"initialization errors into the code. Accessing the site will show the "
+"interactive debugger for the error, rather than crashing the server. "
+"This feature is called \"lazy loading\"."
+msgstr ""
+"Cuando se utiliza el comando ``flask run`` con el recargador, el "
+"servidor continuará funcionando incluso si se introducen errores de "
+"sintaxis u otros errores de inicialización en el código. El acceso al "
+"sitio mostrará el depurador interactivo para el error, en lugar de "
+"bloquear el servidor. Esta característica se llama carga lenta o \"lazy "
+"loading\"."
+
+#: ../../server.rst:76
+msgid ""
+"If a syntax error is already present when calling ``flask run``, it will "
+"fail immediately and show the traceback rather than waiting until the "
+"site is accessed. This is intended to make errors more visible initially "
+"while still allowing the server to handle errors on reload."
+msgstr ""
+"Si hay un error de sintaxis cuando se llama a ``flask run``, fallará "
+"inmediatamente y mostrará el rastro en lugar de esperar hasta que se "
+"acceda al sitio. Esto pretende hacer que los errores sean más visibles "
+"al principio, al tiempo que permite al servidor manejar los errores en "
+"la recarga."
+
+#: ../../server.rst:81
+msgid ""
+"To override this behavior and always fail immediately, even on reload, "
+"pass the ``--eager-loading`` option. To always keep the server running, "
+"even on the initial call, pass ``--lazy-loading``."
+msgstr ""
+"Para anular este comportamiento y fallar siempre inmediatamente, incluso "
+"en la recarga, pase la opción ``--eager-loading``. Para mantener siempre "
+"el servidor en funcionamiento, incluso en la llamada inicial, pasa ``--"
+"lazy-loading``."
+
+#: ../../server.rst:87
+msgid "In Code"
+msgstr "En Código"
+
+#: ../../server.rst:89
+msgid ""
+"As an alternative to the ``flask run`` command, the development server "
+"can also be started from Python with the :meth:`Flask.run` method. This "
+"method takes arguments similar to the CLI options to control the server. "
+"The main difference from the CLI command is that the server will crash "
+"if there are errors when reloading."
+msgstr ""
+"Como alternativa al comando ``flask run``, el servidor de desarrollo "
+"también puede iniciarse desde Python con el método :meth:`Flask.run`. "
+"Este método toma argumentos similares a las opciones de la CLI para "
+"controlar el servidor. La principal diferencia con el comando CLI es que "
+"el servidor se bloqueará si hay errores al recargar."
+
+#: ../../server.rst:95
+msgid ""
+"``debug=True`` can be passed to enable the debugger and reloader, but "
+"the ``FLASK_ENV=development`` environment variable is still required to "
+"fully enable development mode."
+msgstr ""
+"Se puede pasar ``debug=True`` para activar el depurador y el recargador, "
+"pero la variable de entorno ``FLASK_ENV=development`` sigue siendo "
+"necesaria para activar completamente el modo de desarrollo."
+
+#: ../../server.rst:99
+msgid ""
+"Place the call in a main block, otherwise it will interfere when trying "
+"to import and run the application with a production server later."
+msgstr ""
+"Coloque la llamada en un bloque principal, de lo contrario interferirá "
+"al intentar importar y ejecutar la aplicación con un servidor de "
+"producción más tarde."

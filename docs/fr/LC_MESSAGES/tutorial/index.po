@@ -1,0 +1,109 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <victor.levieux@gmail.com>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-01 02:27-0500\n"
+"PO-Revision-Date: 2021-07-01 03:54-0500\n"
+"Language-Team: fr_FR <victor.levieux@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Last-Translator: Victor LEVIEUX <victor.levieux@gmail.com>\n"
+"Language: fr\n"
+"X-Generator: Poedit 3.0\n"
+
+#: ../../tutorial/index.rst:4
+msgid "Contents:"
+msgstr "Contenu :"
+
+#: ../../tutorial/index.rst:2
+msgid "Tutorial"
+msgstr "Tutoriel"
+
+#: ../../tutorial/index.rst:20
+msgid ""
+"This tutorial will walk you through creating a basic blog application "
+"called Flaskr. Users will be able to register, log in, create posts, and "
+"edit or delete their own posts. You will be able to package and install "
+"the application on other computers."
+msgstr ""
+"Ce tutoriel vous guidera dans la création d'une application de blog de "
+"base appelée Flaskr. Les utilisateurs pourront s'inscrire, se connecter, "
+"créer des messages, et modifier ou supprimer leurs propres messages. "
+"Vous serez en mesure d'emballer et d'installer l'application sur "
+"d'autres ordinateurs."
+
+msgid "screenshot of index page"
+msgstr "capture d'écran de la page d'index"
+
+#: ../../tutorial/index.rst:30
+msgid ""
+"It's assumed that you're already familiar with Python. The `official "
+"tutorial`_ in the Python docs is a great way to learn or review first."
+msgstr ""
+"Il est supposé que vous êtes déjà familier avec Python. Le `tutoriel "
+"officiel`_ dans les docs Python est un excellent moyen d'apprendre ou de "
+"réviser d'abord."
+
+#: ../../tutorial/index.rst:35
+msgid ""
+"While it's designed to give a good starting point, the tutorial doesn't "
+"cover all of Flask's features. Check out the :doc:`/quickstart` for an "
+"overview of what Flask can do, then dive into the docs to find out more. "
+"The tutorial only uses what's provided by Flask and Python. In another "
+"project, you might decide to use :doc:`/extensions` or other libraries "
+"to make some tasks simpler."
+msgstr ""
+"Bien qu'il soit conçu pour donner un bon point de départ, le tutoriel ne "
+"couvre pas toutes les fonctionnalités de Flask. Consultez la section :"
+"doc:`/quickstart` pour avoir un aperçu de ce que Flask peut faire, puis "
+"plongez dans la documentation pour en savoir plus. Le tutoriel utilise "
+"uniquement ce qui est fourni par Flask et Python. Dans un autre projet, "
+"vous pourriez décider d'utiliser des :doc:`/extensions` ou d'autres "
+"bibliothèques pour simplifier certaines tâches."
+
+msgid "screenshot of login page"
+msgstr "capture d'écran de la page de connexion"
+
+#: ../../tutorial/index.rst:47
+msgid ""
+"Flask is flexible. It doesn't require you to use any particular project "
+"or code layout. However, when first starting, it's helpful to use a more "
+"structured approach. This means that the tutorial will require a bit of "
+"boilerplate up front, but it's done to avoid many common pitfalls that "
+"new developers encounter, and it creates a project that's easy to expand "
+"on. Once you become more comfortable with Flask, you can step out of "
+"this structure and take full advantage of Flask's flexibility."
+msgstr ""
+"Flask est flexible. Il ne vous oblige pas à utiliser un projet ou une "
+"disposition de code particuliers. Cependant, au début, il est utile "
+"d'utiliser une approche plus structurée. Cela signifie que le tutoriel "
+"nécessitera un peu de code passe-partout au départ, mais cela permet "
+"d'éviter de nombreux pièges courants que rencontrent les nouveaux "
+"développeurs et de créer un projet facile à développer. Lorsque vous "
+"serez plus à l'aise avec Flask, vous pourrez sortir de cette structure "
+"et profiter pleinement de la flexibilité de Flask."
+
+msgid "screenshot of edit page"
+msgstr "capture d'écran de la page d'édition"
+
+#: ../../tutorial/index.rst:60
+msgid ""
+":gh:`The tutorial project is available as an example in the Flask "
+"repository <examples/tutorial>`, if you want to compare your project "
+"with the final product as you follow the tutorial."
+msgstr ""
+":gh:`Le projet tutoriel est disponible en tant qu'exemple dans le dépôt "
+"Flask <examples/tutorial>`, si vous voulez comparer votre projet avec le "
+"produit final en suivant le tutoriel."
+
+#: ../../tutorial/index.rst:64
+msgid "Continue to :doc:`layout`."
+msgstr "Passez à :doc:`layout`."

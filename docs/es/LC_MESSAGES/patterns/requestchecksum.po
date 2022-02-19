@@ -1,0 +1,71 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <pedrotorcattsoto@gmail.com>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.0.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-27 07:20-0400\n"
+"PO-Revision-Date: 2022-02-15 21:58-0400\n"
+"Language-Team: es_LA <pedrotorcattsoto@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+"Last-Translator: Pedro Torcatt <pedrotorcattsoto@gmail.com>\n"
+"Language: es\n"
+"X-Generator: Poedit 3.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../patterns/requestchecksum.rst:2
+msgid "Request Content Checksums"
+msgstr "Solicitar checksums de contenido"
+
+#: ../../patterns/requestchecksum.rst:4
+msgid ""
+"Various pieces of code can consume the request data and preprocess it. For "
+"instance JSON data ends up on the request object already read and processed, "
+"form data ends up there as well but goes through a different code path.  This "
+"seems inconvenient when you want to calculate the checksum of the incoming "
+"request data.  This is necessary sometimes for some APIs."
+msgstr ""
+"Varias piezas de código pueden consumir los datos de la solicitud y "
+"preprocesarlos. Por ejemplo, los datos JSON terminan en el objeto de la "
+"petición ya leídos y procesados, los datos de los formularios también terminan "
+"allí pero pasan por una ruta de código diferente. Esto parece un inconveniente "
+"cuando se quiere calcular la suma de comprobación de los datos de la solicitud "
+"entrante. Esto es necesario a veces para algunas APIs."
+
+#: ../../patterns/requestchecksum.rst:11
+msgid ""
+"Fortunately this is however very simple to change by wrapping the input stream."
+msgstr ""
+"Afortunadamente, esto es muy sencillo de cambiar envolviendo el flujo de "
+"entrada."
+
+#: ../../patterns/requestchecksum.rst:14
+msgid ""
+"The following example calculates the SHA1 checksum of the incoming data as it "
+"gets read and stores it in the WSGI environment::"
+msgstr ""
+"El siguiente ejemplo calcula el checksum SHA1 de los datos entrantes a medida "
+"que se leen y los almacena en el entorno WSGI::"
+
+#: ../../patterns/requestchecksum.rst:41
+msgid ""
+"To use this, all you need to do is to hook the calculating stream in before the "
+"request starts consuming data.  (Eg: be careful accessing ``request.form`` or "
+"anything of that nature.  ``before_request_handlers`` for instance should be "
+"careful not to access it)."
+msgstr ""
+"Para usar esto, todo lo que necesitas hacer es enganchar el flujo de cálculo "
+"antes de que la solicitud comience a consumir datos. (Por ejemplo: Ten cuidado "
+"al acceder a ``request.form`` o cualquier cosa de esa naturaleza.  "
+"``before_request_handlers`` por ejemplo hay que tener cuidado de no acceder a "
+"él)."
+
+#: ../../patterns/requestchecksum.rst:46
+msgid "Example usage::"
+msgstr "Ejemplo de uso::"

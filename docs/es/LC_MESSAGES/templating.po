@@ -1,0 +1,362 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <pedrotorcattsoto@gmail.com>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.0.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-27 07:20-0400\n"
+"PO-Revision-Date: 2022-02-15 21:58-0400\n"
+"Language-Team: es_LA <pedrotorcattsoto@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+"Last-Translator: Pedro Torcatt <pedrotorcattsoto@gmail.com>\n"
+"Language: es\n"
+"X-Generator: Poedit 3.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../templating.rst:2
+msgid "Templates"
+msgstr "Plantillas"
+
+#: ../../templating.rst:4
+msgid ""
+"Flask leverages Jinja2 as its template engine.  You are obviously free to "
+"use a different template engine, but you still have to install Jinja2 to "
+"run Flask itself.  This requirement is necessary to enable rich "
+"extensions. An extension can depend on Jinja2 being present."
+msgstr ""
+"Flask utiliza Jinja2 como motor de plantillas. Obviamente, usted es libre "
+"de utilizar un motor de plantillas diferente, pero todavía tiene que "
+"instalar Jinja2 para ejecutar Flask en sí. Este requisito es necesario "
+"para habilitar extensiones ricas. Una extensión puede depender de que "
+"Jinja2 esté presente."
+
+#: ../../templating.rst:9
+msgid ""
+"This section only gives a very quick introduction into how Jinja2 is "
+"integrated into Flask.  If you want information on the template engine's "
+"syntax itself, head over to the official `Jinja2 Template Documentation "
+"<https://jinja.palletsprojects.com/templates/>`_ for more information."
+msgstr ""
+"Esta sección sólo da una introducción muy rápida de cómo Jinja2 está "
+"integrado en Flask.  Si quieres información sobre la sintaxis del motor de "
+"plantillas, dirígete a la documentación oficial de `Jinja2 Template "
+"Documentation <https://jinja.palletsprojects.com/templates/>`_ para más "
+"información."
+
+#: ../../templating.rst:16
+msgid "Jinja Setup"
+msgstr "Configuración de Jinja"
+
+#: ../../templating.rst:18
+msgid "Unless customized, Jinja2 is configured by Flask as follows:"
+msgstr ""
+"A menos que se personalice, Jinja2 es configurado por Flask como sigue:"
+
+#: ../../templating.rst:20
+msgid ""
+"autoescaping is enabled for all templates ending in ``.html``, ``.htm``, "
+"``.xml`` as well as ``.xhtml`` when using :func:`~flask.templating."
+"render_template`."
+msgstr ""
+"el autoescapado está habilitado para todas las plantillas que terminan en "
+"``.html``, ``.htm``, ``.xml`` así como ``.xhtml`` cuando se utiliza :func:"
+"`~flask.templating.render_template`."
+
+#: ../../templating.rst:23
+msgid ""
+"autoescaping is enabled for all strings when using :func:`~flask."
+"templating.render_template_string`."
+msgstr ""
+"se activa el autoescapado para todas las cadenas cuando se utiliza :func:"
+"`~flask.templating.render_template_string`."
+
+#: ../../templating.rst:25
+msgid ""
+"a template has the ability to opt in/out autoescaping with the ``{% "
+"autoescape %}`` tag."
+msgstr ""
+"una plantilla tiene la capacidad de optar por el autoescapado con la "
+"etiqueta ``{% autoescape %}``."
+
+#: ../../templating.rst:27
+msgid ""
+"Flask inserts a couple of global functions and helpers into the Jinja2 "
+"context, additionally to the values that are present by default."
+msgstr ""
+"Flask inserta un par de funciones globales y ayudantes en el contexto de "
+"Jinja2, además de los valores que están presentes por defecto."
+
+#: ../../templating.rst:32
+msgid "Standard Context"
+msgstr "Contexto estándar"
+
+#: ../../templating.rst:34
+msgid ""
+"The following global variables are available within Jinja2 templates by "
+"default:"
+msgstr ""
+"Las siguientes variables globales están disponibles en las plantillas de "
+"Jinja2 por defecto:"
+
+#: ../../templating.rst:40
+msgid "The current configuration object (:data:`flask.config`)"
+msgstr "El objeto de configuración actual (:data:`flask.config`)"
+
+#: ../../templating.rst:44
+msgid "This is now always available, even in imported templates."
+msgstr "Ahora está siempre disponible, incluso en las plantillas importadas."
+
+#: ../../templating.rst:50
+msgid ""
+"The current request object (:class:`flask.request`).  This variable is "
+"unavailable if the template was rendered without an active request context."
+msgstr ""
+"El objeto de solicitud actual (:class:`flask.request`). Esta variable no "
+"está disponible si la plantilla se renderizó sin un contexto de solicitud "
+"activo."
+
+#: ../../templating.rst:57
+msgid ""
+"The current session object (:class:`flask.session`).  This variable is "
+"unavailable if the template was rendered without an active request context."
+msgstr ""
+"El objeto de sesión actual (:class:`flask.session`). Esta variable no está "
+"disponible si la plantilla se renderizó sin un contexto de solicitud "
+"activo."
+
+#: ../../templating.rst:64
+msgid ""
+"The request-bound object for global variables (:data:`flask.g`).  This "
+"variable is unavailable if the template was rendered without an active "
+"request context."
+msgstr ""
+"El objeto vinculado a la solicitud para las variables globales (:data:"
+"`flask.g`). Esta variable no está disponible si la plantilla se renderizó "
+"sin un contexto de solicitud activo."
+
+#: ../../templating.rst:71
+msgid "The :func:`flask.url_for` function."
+msgstr "La función :func:`flask.url_for`."
+
+#: ../../templating.rst:76
+msgid "The :func:`flask.get_flashed_messages` function."
+msgstr "La función :func:`flask.get_flashed_messages`."
+
+#: ../../templating.rst:78
+msgid "The Jinja Context Behavior"
+msgstr "El comportamiento del contexto Jinja"
+
+#: ../../templating.rst:80
+msgid ""
+"These variables are added to the context of variables, they are not global "
+"variables.  The difference is that by default these will not show up in "
+"the context of imported templates.  This is partially caused by "
+"performance considerations, partially to keep things explicit."
+msgstr ""
+"Estas variables se añaden al contexto de las variables, no son variables "
+"globales. La diferencia es que por defecto no aparecerán en el contexto de "
+"las plantillas importadas. Esto se debe en parte a consideraciones de "
+"rendimiento, y en parte para mantener las cosas explícitas."
+
+#: ../../templating.rst:85
+msgid ""
+"What does this mean for you?  If you have a macro you want to import, that "
+"needs to access the request object you have two possibilities:"
+msgstr ""
+"¿Qué significa esto para usted? Si tienes una macro que quieres importar, "
+"que necesita acceder al objeto de petición tienes dos posibilidades:"
+
+#: ../../templating.rst:88
+msgid ""
+"you explicitly pass the request to the macro as parameter, or the "
+"attribute of the request object you are interested in."
+msgstr ""
+"pasas explícitamente la solicitud a la macro como parámetro, o el atributo "
+"del objeto de solicitud que te interesa."
+
+#: ../../templating.rst:90
+msgid "you import the macro \"with context\"."
+msgstr "importas la macro \"with context\"."
+
+#: ../../templating.rst:92
+msgid "Importing with context looks like this:"
+msgstr "La importación with context tiene este aspecto:"
+
+#: ../../templating.rst:100
+msgid "Controlling Autoescaping"
+msgstr "Controlar el autoescapado"
+
+#: ../../templating.rst:102
+msgid ""
+"Autoescaping is the concept of automatically escaping special characters "
+"for you.  Special characters in the sense of HTML (or XML, and thus XHTML) "
+"are ``&``, ``>``, ``<``, ``\"`` as well as ``'``.  Because these "
+"characters carry specific meanings in documents on their own you have to "
+"replace them by so called \"entities\" if you want to use them for text.  "
+"Not doing so would not only cause user frustration by the inability to use "
+"these characters in text, but can also lead to security problems.  (see :"
+"ref:`security-xss`)"
+msgstr ""
+"Autoescaping es el concepto de escapar automáticamente los caracteres "
+"especiales para usted.  Los caracteres especiales en el sentido de HTML (o "
+"XML, y por tanto XHTML) son ``&``, ``>``, ``<``, ``\"`` así como ``'``. "
+"Dado que estos caracteres tienen un significado específico en los "
+"documentos por sí mismos, hay que sustituirlos por las llamadas \"entidades"
+"\" si se quiere utilizarlos para el texto. No hacerlo así no sólo causaría "
+"la frustración del usuario por la imposibilidad de utilizar estos "
+"caracteres en el texto, sino que también puede dar lugar a problemas de "
+"seguridad. (véase :ref:`security-xss`)"
+
+#: ../../templating.rst:111
+msgid ""
+"Sometimes however you will need to disable autoescaping in templates. This "
+"can be the case if you want to explicitly inject HTML into pages, for "
+"example if they come from a system that generates secure HTML like a "
+"markdown to HTML converter."
+msgstr ""
+"Sin embargo, a veces necesitarás desactivar el autoescapado en las "
+"plantillas. Este puede ser el caso si quieres inyectar explícitamente HTML "
+"en las páginas, por ejemplo si vienen de un sistema que genera HTML seguro "
+"como un convertidor de markdown a HTML."
+
+#: ../../templating.rst:116
+msgid "There are three ways to accomplish that:"
+msgstr "Hay tres maneras de lograrlo:"
+
+#: ../../templating.rst:118
+msgid ""
+"In the Python code, wrap the HTML string in a :class:`~flask.Markup` "
+"object before passing it to the template.  This is in general the "
+"recommended way."
+msgstr ""
+"En el código Python, envuelva la cadena HTML en un objeto :class:`~flask."
+"Markup` antes de pasarlo a la plantilla. Esta es la forma recomendada en "
+"general."
+
+#: ../../templating.rst:121
+msgid ""
+"Inside the template, use the ``|safe`` filter to explicitly mark a string "
+"as safe HTML (``{{ myvariable|safe }}``)"
+msgstr ""
+"Dentro de la plantilla, utilice el filtro ``|safe`` para marcar "
+"explícitamente una cadena como HTML seguro (``{{ myvariable|safe }}``)"
+
+#: ../../templating.rst:123
+msgid "Temporarily disable the autoescape system altogether."
+msgstr "Desactivar temporalmente el sistema de autoescape por completo."
+
+#: ../../templating.rst:125
+msgid ""
+"To disable the autoescape system in templates, you can use the ``{% "
+"autoescape %}`` block:"
+msgstr ""
+"Para desactivar el sistema de autoescape en las plantillas, puede utilizar "
+"el bloque ``{% autoescape %}``:"
+
+#: ../../templating.rst:135
+msgid ""
+"Whenever you do this, please be very cautious about the variables you are "
+"using in this block."
+msgstr ""
+"Siempre que haga esto, tenga mucho cuidado con las variables que utiliza "
+"en este bloque."
+
+#: ../../templating.rst:141
+msgid "Registering Filters"
+msgstr "Registro de filtros"
+
+#: ../../templating.rst:143
+msgid ""
+"If you want to register your own filters in Jinja2 you have two ways to do "
+"that.  You can either put them by hand into the :attr:`~flask.Flask."
+"jinja_env` of the application or use the :meth:`~flask.Flask."
+"template_filter` decorator."
+msgstr ""
+"Si quieres registrar tus propios filtros en Jinja2 tienes dos formas de "
+"hacerlo. Puedes ponerlos a mano en el :attr:`~flask.Flask.jinja_env` de la "
+"aplicación o utilizar el decorador :meth:`~flask.Flask.template_filter`."
+
+#: ../../templating.rst:148
+msgid "The two following examples work the same and both reverse an object::"
+msgstr ""
+"Los dos ejemplos siguientes funcionan igual y ambos invierten un objeto::"
+
+#: ../../templating.rst:158
+msgid ""
+"In case of the decorator the argument is optional if you want to use the "
+"function name as name of the filter.  Once registered, you can use the "
+"filter in your templates in the same way as Jinja2's builtin filters, for "
+"example if you have a Python list in context called `mylist`::"
+msgstr ""
+"En el caso del decorador el argumento es opcional si quieres usar el "
+"nombre de la función como nombre del filtro. Una vez registrado, puedes "
+"usar el filtro en tus plantillas de la misma manera que los filtros "
+"incorporados de Jinja2, por ejemplo si tienes una lista de Python en "
+"contexto llamada `mylist`::"
+
+#: ../../templating.rst:168
+msgid "Context Processors"
+msgstr "Procesadores de contexto"
+
+#: ../../templating.rst:170
+msgid ""
+"To inject new variables automatically into the context of a template, "
+"context processors exist in Flask.  Context processors run before the "
+"template is rendered and have the ability to inject new values into the "
+"template context.  A context processor is a function that returns a "
+"dictionary.  The keys and values of this dictionary are then merged with "
+"the template context, for all templates in the app::"
+msgstr ""
+"Para inyectar nuevas variables automáticamente en el contexto de una "
+"plantilla, existen procesadores de contexto en Flask. Los procesadores de "
+"contexto se ejecutan antes de que la plantilla sea renderizada y tienen la "
+"capacidad de inyectar nuevos valores en el contexto de la plantilla. Un "
+"procesador de contexto es una función que devuelve un diccionario. Las "
+"claves y valores de este diccionario se fusionan con el contexto de la "
+"plantilla, para todas las plantillas de la aplicación::"
+
+#: ../../templating.rst:181
+msgid ""
+"The context processor above makes a variable called `user` available in "
+"the template with the value of `g.user`.  This example is not very "
+"interesting because `g` is available in templates anyways, but it gives an "
+"idea how this works."
+msgstr ""
+"El procesador de contexto anterior hace que una variable llamada `user` "
+"esté disponible en la plantilla con el valor de `g.user`. Este ejemplo no "
+"es muy interesante porque `g` está disponible en las plantillas de todos "
+"modos, pero da una idea de cómo funciona."
+
+#: ../../templating.rst:186
+msgid ""
+"Variables are not limited to values; a context processor can also make "
+"functions available to templates (since Python allows passing around "
+"functions)::"
+msgstr ""
+"Las variables no se limitan a los valores; un procesador de contexto "
+"también puede hacer que las funciones estén disponibles para las "
+"plantillas (ya que Python permite pasar alrededor de las funciones)::"
+
+#: ../../templating.rst:196
+msgid ""
+"The context processor above makes the `format_price` function available to "
+"all templates::"
+msgstr ""
+"El procesador de contexto anterior hace que la función `format_price` esté "
+"disponible para todas las plantillas::"
+
+#: ../../templating.rst:201
+msgid ""
+"You could also build `format_price` as a template filter (see :ref:"
+"`registering-filters`), but this demonstrates how to pass functions in a "
+"context processor."
+msgstr ""
+"También podría construir `format_price` como un filtro de plantilla (ver :"
+"ref:`registering-filters`), pero esto demuestra cómo pasar funciones en un "
+"procesador de contexto."

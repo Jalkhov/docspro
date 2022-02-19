@@ -1,0 +1,330 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <pedrotorcattsoto@gmail.com>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.0.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-27 07:20-0400\n"
+"PO-Revision-Date: 2022-02-15 21:58-0400\n"
+"Language-Team: es_LA <pedrotorcattsoto@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+"Last-Translator: Pedro Torcatt <pedrotorcattsoto@gmail.com>\n"
+"Language: es\n"
+"X-Generator: Poedit 3.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../deploying/mod_wsgi.rst:2
+msgid "mod_wsgi (Apache)"
+msgstr "mod_wsgi (Apache)"
+
+#: ../../deploying/mod_wsgi.rst:4
+msgid "If you are using the `Apache`_ webserver, consider using `mod_wsgi`_."
+msgstr ""
+"Si está utilizando el servidor web `Apache`_, considere el uso de `mod_wsgi`_."
+
+#: ../../deploying/mod_wsgi.rst:8
+msgid ""
+"Please make sure in advance that any ``app.run()`` calls you might have in "
+"your application file are inside an ``if __name__ == '__main__':`` block or "
+"moved to a separate file.  Just make sure it's not called because this will "
+"always start a local WSGI server which we do not want if we deploy that "
+"application to mod_wsgi."
+msgstr ""
+"Por favor, asegúrate de antemano de que cualquier llamada a ``app.run()`` que "
+"puedas tener en tu archivo de aplicación esté dentro de un bloque ``if "
+"__name__ == '__main__':`` o se mueva a un archivo separado.  Sólo asegúrese de "
+"que no se llama porque esto siempre iniciará un servidor WSGI local que no "
+"queremos si desplegamos esa aplicación a mod_wsgi."
+
+#: ../../deploying/mod_wsgi.rst:17
+msgid "Installing `mod_wsgi`"
+msgstr "Instalación de `mod_wsgi`"
+
+#: ../../deploying/mod_wsgi.rst:19
+msgid ""
+"If you don't have `mod_wsgi` installed yet you have to either install it using "
+"a package manager or compile it yourself.  The mod_wsgi `installation "
+"instructions`_ cover source installations on UNIX systems."
+msgstr ""
+"Si todavía no tienes instalado `mod_wsgi` tienes que instalarlo usando un "
+"gestor de paquetes o compilarlo tú mismo.  Las `instrucciones de instalación`_ "
+"de mod_wsgi cubren las instalaciones de origen en sistemas UNIX."
+
+#: ../../deploying/mod_wsgi.rst:23
+msgid ""
+"If you are using Ubuntu/Debian you can apt-get it and activate it as follows:"
+msgstr "Si estás usando Ubuntu/Debian puedes apt-get y activarlo como sigue:"
+
+#: ../../deploying/mod_wsgi.rst:30
+msgid ""
+"If you are using a yum based distribution (Fedora, OpenSUSE, etc..) you can "
+"install it as follows:"
+msgstr ""
+"Si está utilizando una distribución basada en yum (Fedora, OpenSUSE, etc.) "
+"puede instalarlo de la siguiente manera:"
+
+#: ../../deploying/mod_wsgi.rst:37
+msgid ""
+"On FreeBSD install `mod_wsgi` by compiling the `www/mod_wsgi` port or by using "
+"pkg_add:"
+msgstr ""
+"En FreeBSD instale `mod_wsgi` compilando el port `www/mod_wsgi` o usando "
+"pkg_add:"
+
+#: ../../deploying/mod_wsgi.rst:44
+msgid ""
+"If you are using pkgsrc you can install `mod_wsgi` by compiling the `www/ap2-"
+"wsgi` package."
+msgstr ""
+"Si está usando pkgsrc puede instalar `mod_wsgi` compilando el paquete `www/ap2-"
+"wsgi`."
+
+#: ../../deploying/mod_wsgi.rst:47
+msgid ""
+"If you encounter segfaulting child processes after the first apache reload you "
+"can safely ignore them.  Just restart the server."
+msgstr ""
+"Si se encuentra con procesos hijo que fallan después de la primera recarga de "
+"apache, puede ignorarlos con seguridad.  Simplemente reinicie el servidor."
+
+#: ../../deploying/mod_wsgi.rst:51
+msgid "Creating a `.wsgi` file"
+msgstr "Creación de un archivo `.wsgi`."
+
+#: ../../deploying/mod_wsgi.rst:53
+msgid ""
+"To run your application you need a :file:`yourapplication.wsgi` file. This "
+"file contains the code `mod_wsgi` is executing on startup to get the "
+"application object.  The object called `application` in that file is then used "
+"as application."
+msgstr ""
+"Para ejecutar su aplicación necesita un archivo :file:`tuaplicacion.wsgi`. "
+"Este archivo contiene el código que `mod_wsgi` ejecuta al inicio para obtener "
+"el objeto de la aplicación.  El objeto llamado `aplicacion` en ese archivo se "
+"utiliza entonces como aplicación."
+
+#: ../../deploying/mod_wsgi.rst:58
+msgid "For most applications the following file should be sufficient::"
+msgstr ""
+"Para la mayoría de las aplicaciones el siguiente archivo debería ser "
+"suficiente::"
+
+#: ../../deploying/mod_wsgi.rst:62
+msgid ""
+"If a factory function is used in a :file:`__init__.py` file, then the function "
+"should be imported::"
+msgstr ""
+"Si se utiliza una función de fábrica en un archivo :file:`__init__.py`, "
+"entonces la función debe ser importada::"
+
+#: ../../deploying/mod_wsgi.rst:67
+msgid ""
+"If you don't have a factory function for application creation but a singleton "
+"instance you can directly import that one as `application`."
+msgstr ""
+"Si no tienes una función de fábrica para la creación de aplicaciones sino una "
+"instancia singleton puedes importar directamente esa como `aplicacion`."
+
+#: ../../deploying/mod_wsgi.rst:70
+msgid ""
+"Store that file somewhere that you will find it again (e.g.: :file:`/var/www/"
+"yourapplication`) and make sure that `yourapplication` and all the libraries "
+"that are in use are on the python load path.  If you don't want to install it "
+"system wide consider using a `virtual python`_ instance.  Keep in mind that "
+"you will have to actually install your application into the virtualenv as "
+"well.  Alternatively there is the option to just patch the path in the ``."
+"wsgi`` file before the import::"
+msgstr ""
+"Guarde ese archivo en algún lugar donde pueda encontrarlo de nuevo (por "
+"ejemplo: :file:`/var/www/tuaplicacion`) y asegúrese de que `tuaplicacion` y "
+"todas las librerías que están en uso están en la ruta de carga de python.  Si "
+"no quieres instalarlo en todo el sistema considera usar una instancia `virtual "
+"de python`_.  Tenga en cuenta que tendrá que instalar su aplicación en el "
+"virtualenv también.  Alternativamente existe la opción de simplemente parchear "
+"la ruta en el archivo ``.wsgi`` antes de la importación::"
+
+#: ../../deploying/mod_wsgi.rst:84
+msgid ""
+"The last thing you have to do is to create an Apache configuration file for "
+"your application.  In this example we are telling `mod_wsgi` to execute the "
+"application under a different user for security reasons:"
+msgstr ""
+"Lo último que tienes que hacer es crear un archivo de configuración de Apache "
+"para tu aplicación.  En este ejemplo le estamos diciendo a `mod_wsgi` que "
+"ejecute la aplicación bajo un usuario diferente por razones de seguridad:"
+
+#: ../../deploying/mod_wsgi.rst:104
+msgid ""
+"Note: WSGIDaemonProcess isn't implemented in Windows and Apache will refuse to "
+"run with the above configuration. On a Windows system, eliminate those lines:"
+msgstr ""
+"Nota: WSGIDaemonProcess no está implementado en Windows y Apache se negará a "
+"funcionar con la configuración anterior. En un sistema Windows, elimine esas "
+"líneas:"
+
+#: ../../deploying/mod_wsgi.rst:118
+msgid ""
+"Note: There have been some changes in access control configuration for `Apache "
+"2.4`_."
+msgstr ""
+"Nota: Ha habido algunos cambios en la configuración del control de acceso para "
+"`Apache 2.4`_."
+
+#: ../../deploying/mod_wsgi.rst:123
+msgid ""
+"Most notably, the syntax for directory permissions has changed from httpd 2.2"
+msgstr ""
+"En particular, la sintaxis de los permisos de directorio ha cambiado con "
+"respecto a httpd 2.2"
+
+#: ../../deploying/mod_wsgi.rst:130
+msgid "to httpd 2.4 syntax"
+msgstr "a la sintaxis de httpd 2.4"
+
+#: ../../deploying/mod_wsgi.rst:137
+msgid "For more information consult the `mod_wsgi documentation`_."
+msgstr "Para más información consulte la `documentación de mod_wsgi`_."
+
+#: ../../deploying/mod_wsgi.rst:145
+msgid "Troubleshooting"
+msgstr "Solución de problemas"
+
+#: ../../deploying/mod_wsgi.rst:147
+msgid "If your application does not run, follow this guide to troubleshoot:"
+msgstr ""
+"Si su aplicación no se ejecuta, siga esta guía para solucionar el problema:"
+
+#: ../../deploying/mod_wsgi.rst:153
+msgid "**Problem:** application does not run, errorlog shows SystemExit ignored"
+msgstr ""
+"**Problema:** la aplicación no se ejecuta, el registro de errores muestra "
+"SystemExit ignored"
+
+#: ../../deploying/mod_wsgi.rst:150
+msgid ""
+"You have an ``app.run()`` call in your application file that is not guarded by "
+"an ``if __name__ == '__main__':`` condition.  Either remove that :meth:`~flask."
+"Flask.run` call from the file and move it into a separate :file:`run.py` file "
+"or put it into such an if block."
+msgstr ""
+"Tienes una llamada ``app.run()`` en tu archivo de aplicación que no está "
+"protegida por una condición ``if __name__ == '__main__':``.  Elimina esa "
+"llamada :meth:`~flask.Flask.run` del archivo y muévela a otro archivo :file:"
+"`run.py` o ponla en un bloque if de este tipo."
+
+#: ../../deploying/mod_wsgi.rst:160
+msgid "**Problem:** application gives permission errors"
+msgstr "**Problema:** la aplicación da errores de permiso"
+
+#: ../../deploying/mod_wsgi.rst:156
+msgid ""
+"Probably caused by your application running as the wrong user.  Make sure the "
+"folders the application needs access to have the proper privileges set and the "
+"application runs as the correct user (``user`` and ``group`` parameter to the "
+"`WSGIDaemonProcess` directive)"
+msgstr ""
+"Probablemente causado por su aplicación que se ejecuta como el usuario "
+"equivocado.  Asegúrate de que las carpetas a las que la aplicación necesita "
+"acceder tienen los privilegios adecuados y la aplicación se ejecuta como el "
+"usuario correcto (parámetro ``user`` y ``group`` de la directiva "
+"`WSGIDaemonProcess`)"
+
+#: ../../deploying/mod_wsgi.rst:176
+msgid "**Problem:** application dies with an error on print"
+msgstr "**Problema:** la aplicación muere con un error al imprimirse"
+
+#: ../../deploying/mod_wsgi.rst:163
+msgid ""
+"Keep in mind that mod_wsgi disallows doing anything with :data:`sys.stdout` "
+"and :data:`sys.stderr`.  You can disable this protection from the config by "
+"setting the `WSGIRestrictStdout` to ``off``:"
+msgstr ""
+"Ten en cuenta que mod_wsgi no permite hacer nada con :data:`sys.stdout` y :"
+"data:`sys.stderr`.  Puedes desactivar esta protección desde la configuración "
+"estableciendo el valor `WSGIRestrictStdout` a ``off``:"
+
+#: ../../deploying/mod_wsgi.rst:172
+msgid ""
+"Alternatively you can also replace the standard out in the .wsgi file with a "
+"different stream::"
+msgstr ""
+"También puede reemplazar la salida estándar en el archivo .wsgi con un flujo "
+"diferente::"
+
+#: ../../deploying/mod_wsgi.rst:186
+msgid "**Problem:** accessing resources gives IO errors"
+msgstr "**Problem:** el acceso a los recursos arroja IO errors"
+
+#: ../../deploying/mod_wsgi.rst:179
+msgid ""
+"Your application probably is a single .py file you symlinked into the site-"
+"packages folder.  Please be aware that this does not work, instead you either "
+"have to put the folder into the pythonpath the file is stored in, or convert "
+"your application into a package."
+msgstr ""
+"Su aplicación probablemente sea un único archivo .py que ha enlazado "
+"simbólicamente en la carpeta site-packages.  Tenga en cuenta que esto no "
+"funciona, en su lugar tiene que poner la carpeta en el pythonpath en el que se "
+"almacena el archivo, o convertir su aplicación en un paquete."
+
+#: ../../deploying/mod_wsgi.rst:184
+msgid ""
+"The reason for this is that for non-installed packages, the module filename is "
+"used to locate the resources and for symlinks the wrong filename is picked up."
+msgstr ""
+"La razón de esto es que para los paquetes no instalados, se utiliza el nombre "
+"de archivo del módulo para localizar los recursos y para los enlaces "
+"simbólicos se recoge el nombre de archivo equivocado."
+
+#: ../../deploying/mod_wsgi.rst:189
+msgid "Support for Automatic Reloading"
+msgstr "Soporte para la recarga automática"
+
+#: ../../deploying/mod_wsgi.rst:191
+msgid ""
+"To help deployment tools you can activate support for automatic reloading.  "
+"Whenever something changes the ``.wsgi`` file, `mod_wsgi` will reload all the "
+"daemon processes for us."
+msgstr ""
+"Para ayudar a las herramientas de despliegue se puede activar el soporte para "
+"la recarga automática.  Cada vez que algo cambie el archivo ``.wsgi``, "
+"`mod_wsgi` recargará todos los procesos daemon por nosotros."
+
+#: ../../deploying/mod_wsgi.rst:195
+msgid "For that, just add the following directive to your `Directory` section:"
+msgstr ""
+"Para ello, basta con añadir la siguiente directiva a su sección `Directory`:"
+
+#: ../../deploying/mod_wsgi.rst:202
+msgid "Working with Virtual Environments"
+msgstr "Working with Virtual Environments"
+
+#: ../../deploying/mod_wsgi.rst:204
+msgid ""
+"Virtual environments have the advantage that they never install the required "
+"dependencies system wide so you have a better control over what is used "
+"where.  If you want to use a virtual environment with mod_wsgi you have to "
+"modify your ``.wsgi`` file slightly."
+msgstr ""
+"Los entornos virtuales tienen la ventaja de que nunca instalan las "
+"dependencias requeridas en todo el sistema, por lo que se tiene un mejor "
+"control sobre lo que se utiliza y dónde.  Si quieres usar un entorno virtual "
+"con mod_wsgi tienes que modificar ligeramente tu archivo ``.wsgi``."
+
+#: ../../deploying/mod_wsgi.rst:209
+msgid "Add the following lines to the top of your ``.wsgi`` file::"
+msgstr "Añade las siguientes líneas al principio de tu archivo ``.wsgi``::"
+
+#: ../../deploying/mod_wsgi.rst:215
+msgid ""
+"This sets up the load paths according to the settings of the virtual "
+"environment.  Keep in mind that the path has to be absolute."
+msgstr ""
+"Esto configura las rutas de carga de acuerdo con la configuración del entorno "
+"virtual.  Ten en cuenta que la ruta tiene que ser absoluta."

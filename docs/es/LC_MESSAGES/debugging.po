@@ -1,0 +1,196 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <pedrotorcattsoto@gmail.com>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.0.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-27 07:20-0400\n"
+"PO-Revision-Date: 2022-02-15 21:58-0400\n"
+"Language-Team: es_LA <pedrotorcattsoto@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+"Last-Translator: Pedro Torcatt <pedrotorcattsoto@gmail.com>\n"
+"Language: es\n"
+"X-Generator: Poedit 3.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../debugging.rst:2
+msgid "Debugging Application Errors"
+msgstr "Depuración de errores de la aplicación"
+
+#: ../../debugging.rst:6
+msgid "In Production"
+msgstr "En producción"
+
+#: ../../debugging.rst:8
+msgid ""
+"**Do not run the development server, or enable the built-in debugger, in "
+"a production environment.** The debugger allows executing arbitrary "
+"Python code from the browser. It's protected by a pin, but that should "
+"not be relied on for security."
+msgstr ""
+"**No ejecute el servidor de desarrollo, ni habilite el depurador "
+"incorporado, en un entorno de producción.** El depurador permite ejecutar"
+" código Python arbitrario desde el navegador. Está protegido por un pin, "
+"pero no se debe confiar en eso para la seguridad."
+
+#: ../../debugging.rst:13
+msgid ""
+"Use an error logging tool, such as Sentry, as described in :ref:`error-"
+"logging-tools`, or enable logging and notifications as described in "
+":doc:`/logging`."
+msgstr ""
+"Utiliza una herramienta de registro de errores, como Sentry, como se "
+"describe en :ref:`error-logging-tools`, o activa el registro y las "
+"notificaciones como se describe en :doc:`/logging`."
+
+#: ../../debugging.rst:17
+msgid ""
+"If you have access to the server, you could add some code to start an "
+"external debugger if ``request.remote_addr`` matches your IP. Some IDE "
+"debuggers also have a remote mode so breakpoints on the server can be "
+"interacted with locally. Only enable a debugger temporarily."
+msgstr ""
+"Si tiene acceso al servidor, podría añadir algún código para iniciar un "
+"depurador externo si ``request.remote_addr`` coincide con su IP. Algunos "
+"depuradores IDE también tienen un modo remoto para que los puntos de "
+"interrupción en el servidor puedan ser interactuados localmente. Habilite"
+" un depurador sólo temporalmente."
+
+#: ../../debugging.rst:24
+msgid "The Built-In Debugger"
+msgstr "El depurador incorporado"
+
+#: ../../debugging.rst:26
+msgid ""
+"The built-in Werkzeug development server provides a debugger which shows "
+"an interactive traceback in the browser when an unhandled error occurs "
+"during a request. This debugger should only be used during development."
+msgstr ""
+"El servidor de desarrollo incorporado de Werkzeug proporciona un "
+"depurador que muestra un rastreo interactivo en el navegador cuando se "
+"produce un error no manejado durante una solicitud. Este depurador sólo "
+"debe utilizarse durante el desarrollo."
+
+msgid "captura de pantalla del depurador en acción"
+msgstr ""
+
+#: ../../debugging.rst:37
+msgid ""
+"The debugger allows executing arbitrary Python code from the browser. It "
+"is protected by a pin, but still represents a major security risk. Do not"
+" run the development server or debugger in a production environment."
+msgstr ""
+"El depurador permite ejecutar código Python arbitrario desde el "
+"navegador. Está protegido por un pin, pero sigue representando un riesgo "
+"de seguridad importante. No ejecute el servidor de desarrollo o el "
+"depurador en un entorno de producción."
+
+#: ../../debugging.rst:42
+msgid ""
+"To enable the debugger, run the development server with the ``FLASK_ENV``"
+" environment variable set to ``development``. This puts Flask in debug "
+"mode, which changes how it handles some errors, and enables the debugger "
+"and reloader."
+msgstr ""
+"Para habilitar el depurador, ejecuta el servidor de desarrollo con la "
+"variable de entorno ``FLASK_ENV`` establecida en ``development``. Esto "
+"pone a Flask en modo de depuración, lo que cambia la forma en que maneja "
+"algunos errores, y habilita el depurador y el recargador."
+
+#: ../../debugging.rst:49 ../../debugging.rst:102
+msgid "Bash"
+msgstr ""
+
+#: ../../debugging.rst:56 ../../debugging.rst:109
+msgid "CMD"
+msgstr ""
+
+#: ../../debugging.rst:63 ../../debugging.rst:116
+msgid "Powershell"
+msgstr ""
+
+#: ../../debugging.rst:70
+msgid ""
+"``FLASK_ENV`` can only be set as an environment variable. When running "
+"from Python code, passing ``debug=True`` enables debug mode, which is "
+"mostly equivalent. Debug mode can be controled separately from "
+"``FLASK_ENV`` with the ``FLASK_DEBUG`` environment variable as well."
+msgstr ""
+"``FLASK_ENV`` sólo puede establecerse como una variable de entorno. "
+"Cuando se ejecuta desde el código de Python, pasar ``debug=True`` "
+"habilita el modo de depuración, que es mayormente equivalente. El modo de"
+" depuración se puede controlar por separado de ``FLASK_ENV`` con la "
+"variable de entorno ``FLASK_DEBUG``."
+
+#: ../../debugging.rst:79
+msgid ""
+":doc:`/server` and :doc:`/cli` have more information about running the "
+"debugger, debug mode, and development mode. More information about the "
+"debugger can be found in the `Werkzeug documentation "
+"<https://werkzeug.palletsprojects.com/debug/>`__."
+msgstr ""
+":doc:`/server` y :doc:`/cli` tienen más información sobre la ejecución "
+"del depurador, el modo de depuración y el modo de desarrollo. Puede "
+"encontrar más información sobre el depurador en la documentación de "
+"`Werkzeug <https://werkzeug.palletsprojects.com/debug/>`__."
+
+#: ../../debugging.rst:86
+msgid "External Debuggers"
+msgstr "Depuradores externos"
+
+#: ../../debugging.rst:88
+msgid ""
+"External debuggers, such as those provided by IDEs, can offer a more "
+"powerful debugging experience than the built-in debugger. They can also "
+"be used to step through code during a request before an error is raised, "
+"or if no error is raised. Some even have a remote mode so you can debug "
+"code running on another machine."
+msgstr ""
+"Los depuradores externos, como los proporcionados por los IDEs, pueden "
+"ofrecer una experiencia de depuración más potente que el depurador "
+"incorporado. También pueden utilizarse para recorrer el código durante "
+"una solicitud antes de que se produzca un error, o si no se produce "
+"ningún error. Algunos incluso tienen un modo remoto para que puedas "
+"depurar el código que se ejecuta en otra máquina."
+
+#: ../../debugging.rst:94
+msgid ""
+"When using an external debugger, the app should still be in debug mode, "
+"but it can be useful to disable the built-in debugger and reloader, which"
+" can interfere."
+msgstr ""
+"Cuando se utiliza un depurador externo, la aplicación debe seguir en modo"
+" de depuración, pero puede ser útil desactivar el depurador y el "
+"recargador integrados, que pueden interferir."
+
+#: ../../debugging.rst:98
+msgid "When running from the command line:"
+msgstr "Cuando se ejecuta desde la línea de comandos:"
+
+#: ../../debugging.rst:123
+msgid "When running from Python:"
+msgstr "Cuando se ejecuta desde Python:"
+
+#: ../../debugging.rst:129
+msgid ""
+"Disabling these isn't required, an external debugger will continue to "
+"work with the following caveats. If the built-in debugger is not "
+"disabled, it will catch unhandled exceptions before the external debugger"
+" can. If the reloader is not disabled, it could cause an unexpected "
+"reload if code changes during debugging."
+msgstr ""
+"Desactivar estos no es necesario, un depurador externo seguirá "
+"funcionando con las siguientes advertencias. Si el depurador incorporado "
+"no está deshabilitado, capturará las excepciones no manejadas antes de "
+"que el depurador externo pueda hacerlo. Si el recargador no está "
+"deshabilitado, podría causar una recarga inesperada si el código cambia "
+"durante la depuración."
+
+#~ msgid "screenshot of debugger in action"
+#~ msgstr "captura de pantalla del depurador en acción"

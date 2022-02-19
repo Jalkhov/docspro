@@ -1,0 +1,155 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <pedrotorcattsoto@gmail.com>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.0.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-27 07:20-0400\n"
+"PO-Revision-Date: 2022-02-15 21:58-0400\n"
+"Language-Team: es_LA <pedrotorcattsoto@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+"Last-Translator: Pedro Torcatt <pedrotorcattsoto@gmail.com>\n"
+"Language: es\n"
+"X-Generator: Poedit 3.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../license.rst:2
+msgid "License"
+msgstr "Licencia"
+
+#: ../../license.rst:5
+msgid "BSD-3-Clause Source License"
+msgstr "Licencia BSD-3-Clause Source"
+
+#: ../../license.rst:7
+msgid ""
+"The BSD-3-Clause license applies to all files in the Flask repository "
+"and source distribution. This includes Flask's source code, the "
+"examples, and tests, as well as the documentation."
+msgstr ""
+"La licencia BSD-3-Clause se aplica a todos los archivos del repositorio "
+"de Flask y a la distribución del código fuente. Esto incluye el código "
+"fuente de Flask, los ejemplos y las pruebas, así como la documentación."
+
+#: ../../../LICENSE.rst:1 ../../../artwork/LICENSE.rst:1
+msgid "Copyright 2010 Pallets"
+msgstr "Copyright 2010 Pallets"
+
+#: ../../../LICENSE.rst:3
+msgid ""
+"Redistribution and use in source and binary forms, with or without "
+"modification, are permitted provided that the following conditions are "
+"met:"
+msgstr ""
+"Se permite la redistribución y el uso en forma de código fuente y "
+"binario, con o sin modificación, siempre que se cumplan las siguientes "
+"condiciones:"
+
+#: ../../../LICENSE.rst:7
+msgid ""
+"Redistributions of source code must retain the above copyright notice, "
+"this list of conditions and the following disclaimer."
+msgstr ""
+"Las redistribuciones del código fuente deben conservar el aviso de "
+"copyright anterior, esta lista de condiciones y el siguiente descargo de "
+"responsabilidad."
+
+#: ../../../LICENSE.rst:10
+msgid ""
+"Redistributions in binary form must reproduce the above copyright "
+"notice, this list of conditions and the following disclaimer in the "
+"documentation and/or other materials provided with the distribution."
+msgstr ""
+"Las redistribuciones en formato binario deben reproducir el aviso de "
+"copyright anterior, esta lista de condiciones y el siguiente descargo de "
+"responsabilidad en la documentación y/o otros materiales proporcionados "
+"con la distribución."
+
+#: ../../../LICENSE.rst:14 ../../../artwork/LICENSE.rst:13
+msgid ""
+"Neither the name of the copyright holder nor the names of its "
+"contributors may be used to endorse or promote products derived from "
+"this software without specific prior written permission."
+msgstr ""
+"Ni el nombre del titular de los derechos de autor ni los nombres de sus "
+"colaboradores pueden utilizarse para respaldar o promocionar productos "
+"derivados de este software sin un permiso específico previo por escrito."
+
+#: ../../../LICENSE.rst:18
+msgid ""
+"THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS \"AS "
+"IS\" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED "
+"TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A "
+"PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT "
+"HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, "
+"SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED "
+"TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR "
+"PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF "
+"LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING "
+"NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS "
+"SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE."
+msgstr ""
+"ESTE SOFTWARE ES PROPORCIONADO POR LOS TITULARES DE LOS DERECHOS DE "
+"AUTOR Y LOS COLABORADORES \"TAL CUAL\" Y SE RECHAZA CUALQUIER GARANTÍA "
+"EXPRESA O IMPLÍCITA, INCLUIDAS, ENTRE OTRAS, LAS GARANTÍAS IMPLÍCITAS DE "
+"COMERCIABILIDAD E IDONEIDAD PARA UN FIN DETERMINADO. EN NINGÚN CASO EL "
+"TITULAR DE LOS DERECHOS DE AUTOR O LOS COLABORADORES SERÁN RESPONSABLES "
+"DE NINGÚN DAÑO DIRECTO, INDIRECTO, INCIDENTAL, ESPECIAL, EJEMPLAR O "
+"CONSECUENTE (INCLUYENDO, PERO SIN LIMITARSE A, LA ADQUISICIÓN DE BIENES "
+"O SERVICIOS SUSTITUTIVOS; LA PÉRDIDA DE USO, DATOS O BENEFICIOS; O LA "
+"INTERRUPCIÓN DE LA ACTIVIDAD COMERCIAL), SEA CUAL SEA LA CAUSA Y LA "
+"TEORÍA DE LA RESPONSABILIDAD, YA SEA POR CONTRATO, RESPONSABILIDAD "
+"ESTRICTA O AGRAVIO (INCLUYENDO LA NEGLIGENCIA O DE OTRO TIPO) QUE SURJA "
+"DE CUALQUIER MANERA DEL USO DE ESTE SOFTWARE, INCLUSO SI SE AVISA DE LA "
+"POSIBILIDAD DE TALES DAÑOS."
+
+#: ../../license.rst:15
+msgid "Artwork License"
+msgstr "Licencia de obras de arte"
+
+#: ../../license.rst:17
+msgid "This license applies to Flask's logo."
+msgstr "Esta licencia se aplica al logotipo de Flask."
+
+#: ../../../artwork/LICENSE.rst:3
+msgid ""
+"This logo or a modified version may be used by anyone to refer to the "
+"Flask project, but does not indicate endorsement by the project."
+msgstr ""
+"Este logotipo o una versión modificada puede ser utilizado por cualquier "
+"persona para referirse al proyecto Flask, pero no indica la aprobación "
+"del proyecto."
+
+#: ../../../artwork/LICENSE.rst:6
+msgid ""
+"Redistribution and use in source (SVG) and binary (renders in PNG, etc.) "
+"forms, with or without modification, are permitted provided that the "
+"following conditions are met:"
+msgstr ""
+"Se permite la redistribución y el uso en forma de código fuente (SVG) y "
+"binaria (renders en PNG, etc.), con o sin modificación, siempre que se "
+"cumplan las siguientes condiciones:"
+
+#: ../../../artwork/LICENSE.rst:10
+msgid ""
+"Redistributions of source code must retain the above copyright notice "
+"and this list of conditions."
+msgstr ""
+"Las redistribuciones del código fuente deben conservar el aviso de "
+"copyright anterior y esta lista de condiciones."
+
+#: ../../../artwork/LICENSE.rst:17
+msgid ""
+"We would appreciate that you make the image a link to https://"
+"palletsprojects.com/p/flask/ if you use it in a medium that supports "
+"links."
+msgstr ""
+"Le agradeceremos que convierta la imagen en un enlace a https://"
+"palletsprojects.com/p/flask/ si la utiliza en un medio que admita "
+"enlaces."

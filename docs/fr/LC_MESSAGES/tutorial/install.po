@@ -1,0 +1,179 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <victor.levieux@gmail.com>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.1.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-01 02:27-0500\n"
+"PO-Revision-Date: 2021-07-01 04:24-0500\n"
+"Language-Team: fr_FR <victor.levieux@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+"Last-Translator: Victor LEVIEUX <victor.levieux@gmail.com>\n"
+"Language: fr\n"
+"X-Generator: Poedit 3.0\n"
+
+#: ../../tutorial/install.rst:2
+msgid "Make the Project Installable"
+msgstr "Rendre le projet installable"
+
+#: ../../tutorial/install.rst:4
+msgid ""
+"Making your project installable means that you can build a *distribution* "
+"file and install that in another environment, just like you installed Flask "
+"in your project's environment. This makes deploying your project the same "
+"as installing any other library, so you're using all the standard Python "
+"tools to manage everything."
+msgstr ""
+"Rendre votre projet installable signifie que vous pouvez créer un fichier "
+"de *distribution* et l'installer dans un autre environnement, tout comme "
+"vous avez installé Flask dans l'environnement de votre projet. Cela rend le "
+"déploiement de votre projet identique à l'installation de n'importe quelle "
+"autre bibliothèque, de sorte que vous utilisez tous les outils Python "
+"standard pour tout gérer."
+
+#: ../../tutorial/install.rst:10
+msgid ""
+"Installing also comes with other benefits that might not be obvious from "
+"the tutorial or as a new Python user, including:"
+msgstr ""
+"L'installation s'accompagne également d'autres avantages qui ne sont peut-"
+"être pas évidents à la lecture du tutoriel ou en tant que nouvel "
+"utilisateur de Python, notamment :"
+
+#: ../../tutorial/install.rst:13
+msgid ""
+"Currently, Python and Flask understand how to use the ``flaskr`` package "
+"only because you're running from your project's directory. Installing means "
+"you can import it no matter where you run from."
+msgstr ""
+"Actuellement, Python et Flask comprennent comment utiliser le paquet "
+"``flaskr`` uniquement parce que vous vous exécutez depuis le répertoire de "
+"votre projet. L'installation signifie que vous pouvez l'importer quel que "
+"soit l'endroit d'où vous vous exécutez."
+
+#: ../../tutorial/install.rst:17
+msgid ""
+"You can manage your project's dependencies just like other packages do, so "
+"``pip install yourproject.whl`` installs them."
+msgstr ""
+"Vous pouvez gérer les dépendances de votre projet comme les autres paquets, "
+"pour que ``pip install yourproject.whl`` les installe."
+
+#: ../../tutorial/install.rst:20
+msgid ""
+"Test tools can isolate your test environment from your development "
+"environment."
+msgstr ""
+"Les outils de test peuvent isoler votre environnement de test de votre "
+"environnement de développement."
+
+#: ../../tutorial/install.rst:24
+msgid ""
+"This is being introduced late in the tutorial, but in your future projects "
+"you should always start with this."
+msgstr ""
+"Cette fonction est introduite tardivement dans le tutoriel, mais dans vos "
+"futurs projets, vous devriez toujours commencer par cette fonction."
+
+#: ../../tutorial/install.rst:29
+msgid "Describe the Project"
+msgstr "Décrire le projet"
+
+#: ../../tutorial/install.rst:31
+msgid ""
+"The ``setup.py`` file describes your project and the files that belong to "
+"it."
+msgstr ""
+"Le fichier ``setup.py`` décrit votre projet et les fichiers qui lui "
+"appartiennent."
+
+#: ../../tutorial/install.rst:34
+msgid "``setup.py``"
+msgstr "``setup.py``"
+
+#: ../../tutorial/install.rst:51
+msgid ""
+"``packages`` tells Python what package directories (and the Python files "
+"they contain) to include. ``find_packages()`` finds these directories "
+"automatically so you don't have to type them out. To include other files, "
+"such as the static and templates directories, ``include_package_data`` is "
+"set. Python needs another file named ``MANIFEST.in`` to tell what this "
+"other data is."
+msgstr ""
+"``packages`` indique à Python les répertoires de paquets (et les fichiers "
+"Python qu'ils contiennent) à inclure. ``find_packages()`` trouve ces "
+"répertoires automatiquement pour que vous n'ayez pas à les taper. Pour "
+"inclure d'autres fichiers, comme les répertoires static et templates, il "
+"faut définir ``include_package_data``. Python a besoin d'un autre fichier "
+"nommé ``MANIFEST.in`` pour indiquer ce que sont ces autres données."
+
+#: ../../tutorial/install.rst:58
+msgid "``MANIFEST.in``"
+msgstr "``MANIFEST.in``"
+
+#: ../../tutorial/install.rst:66
+msgid ""
+"This tells Python to copy everything in the ``static`` and ``templates`` "
+"directories, and the ``schema.sql`` file, but to exclude all bytecode files."
+msgstr ""
+"Ceci indique à Python de copier tout ce qui se trouve dans les répertoires "
+"``static`` et ``templates``, et le fichier ``schema.sql``, mais d'exclure "
+"tous les fichiers de bytecode."
+
+#: ../../tutorial/install.rst:70
+msgid ""
+"See the `official packaging guide`_ for another explanation of the files "
+"and options used."
+msgstr ""
+"Voir le `guide officiel de packaging`_ pour une autre explication des "
+"fichiers et options utilisés."
+
+#: ../../tutorial/install.rst:77
+msgid "Install the Project"
+msgstr "Installer le projet"
+
+#: ../../tutorial/install.rst:79
+msgid "Use ``pip`` to install your project in the virtual environment."
+msgstr ""
+"Utilisez ``pip`` pour installer votre projet dans l'environnement virtuel."
+
+#: ../../tutorial/install.rst:85
+msgid ""
+"This tells pip to find ``setup.py`` in the current directory and install it "
+"in *editable* or *development* mode. Editable mode means that as you make "
+"changes to your local code, you'll only need to re-install if you change "
+"the metadata about the project, such as its dependencies."
+msgstr ""
+"Ceci indique à pip de trouver ``setup.py`` dans le répertoire courant et de "
+"l'installer en mode *éditable* ou *développement*. Le mode éditable "
+"signifie que lorsque vous apportez des modifications à votre code local, "
+"vous n'aurez à réinstaller que si vous changez les métadonnées du projet, "
+"comme ses dépendances."
+
+#: ../../tutorial/install.rst:90
+msgid "You can observe that the project is now installed with ``pip list``."
+msgstr ""
+"Vous pouvez observer que le projet est maintenant installé avec ``pip "
+"list``."
+
+#: ../../tutorial/install.rst:109
+msgid ""
+"Nothing changes from how you've been running your project so far. "
+"``FLASK_APP`` is still set to ``flaskr`` and ``flask run`` still runs the "
+"application, but you can call it from anywhere, not just the ``flask-"
+"tutorial`` directory."
+msgstr ""
+"Rien ne change par rapport à la façon dont vous avez exécuté votre projet "
+"jusqu'à présent. ``FLASK_APP`` est toujours défini à ``flaskr`` et ``flask "
+"run`` exécute toujours l'application, mais vous pouvez l'appeler de "
+"n'importe où, pas seulement du répertoire ``flask-tutorial``."
+
+#: ../../tutorial/install.rst:114
+msgid "Continue to :doc:`tests`."
+msgstr "Continuer vers :doc:`tests`."

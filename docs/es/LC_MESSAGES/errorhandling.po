@@ -1,0 +1,684 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <pedrotorcattsoto@gmail.com>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.0.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-27 07:20-0400\n"
+"PO-Revision-Date: 2022-02-15 21:58-0400\n"
+"Language-Team: es_LA <pedrotorcattsoto@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+"Last-Translator: Pedro Torcatt <pedrotorcattsoto@gmail.com>\n"
+"Language: es\n"
+"X-Generator: Poedit 3.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../errorhandling.rst:2
+msgid "Handling Application Errors"
+msgstr "Manejo de los errores de la aplicación"
+
+#: ../../errorhandling.rst:4
+#, python-format
+msgid ""
+"Applications fail, servers fail. Sooner or later you will see an "
+"exception in production. Even if your code is 100% correct, you will "
+"still see exceptions from time to time. Why? Because everything else "
+"involved will fail. Here are some situations where perfectly fine code "
+"can lead to server errors:"
+msgstr ""
+"Las aplicaciones fallan, los servidores fallan. Tarde o temprano verás "
+"una excepción en producción. Incluso si tu código es 100% correcto, "
+"verás excepciones de vez en cuando. ¿Por qué? Porque todo lo demás "
+"fallará. Aquí hay algunas situaciones en las que un código perfectamente "
+"correcto puede llevar a errores en el servidor:"
+
+#: ../../errorhandling.rst:10
+msgid ""
+"the client terminated the request early and the application was still "
+"reading from the incoming data"
+msgstr ""
+"el cliente terminó la solicitud antes de tiempo y la aplicación todavía "
+"estaba leyendo de los datos entrantes"
+
+#: ../../errorhandling.rst:12
+msgid "the database server was overloaded and could not handle the query"
+msgstr ""
+"el servidor de la base de datos estaba sobrecargado y no podía manejar "
+"la consulta"
+
+#: ../../errorhandling.rst:13
+msgid "a filesystem is full"
+msgstr "un sistema de archivos está lleno"
+
+#: ../../errorhandling.rst:14
+msgid "a harddrive crashed"
+msgstr "un disco duro se ha estropeado"
+
+#: ../../errorhandling.rst:15
+msgid "a backend server overloaded"
+msgstr "un servidor backend sobrecargado"
+
+#: ../../errorhandling.rst:16
+msgid "a programming error in a library you are using"
+msgstr "un error de programación en una biblioteca que está utilizando"
+
+#: ../../errorhandling.rst:17
+msgid "network connection of the server to another system failed"
+msgstr "falló la conexión de red del servidor con otro sistema"
+
+#: ../../errorhandling.rst:19
+msgid ""
+"And that's just a small sample of issues you could be facing. So how do "
+"we deal with that sort of problem? By default if your application runs "
+"in production mode, and an exception is raised Flask will display a very "
+"simple page for you and log the exception to the :attr:`~flask.Flask."
+"logger`."
+msgstr ""
+"Y eso es sólo una pequeña muestra de los problemas a los que puede "
+"enfrentarse. Así que, ¿cómo podemos hacer frente a este tipo de "
+"problemas? Por defecto, si tu aplicación se ejecuta en modo de "
+"producción y se produce una excepción, Flask te mostrará una página muy "
+"simple y registrará la excepción en el :attr:`~flask.Flask.logger`."
+
+#: ../../errorhandling.rst:24
+msgid ""
+"But there is more you can do, and we will cover some better setups to "
+"deal with errors including custom exceptions and 3rd party tools."
+msgstr ""
+"Pero hay más que puede hacer, y cubriremos algunas configuraciones "
+"mejores para lidiar con los errores, incluyendo excepciones "
+"personalizadas y herramientas de terceros."
+
+#: ../../errorhandling.rst:31
+msgid "Error Logging Tools"
+msgstr "Herramientas de registro de errores"
+
+#: ../../errorhandling.rst:33
+msgid ""
+"Sending error mails, even if just for critical ones, can become "
+"overwhelming if enough users are hitting the error and log files are "
+"typically never looked at. This is why we recommend using `Sentry "
+"<https://sentry.io/>`_ for dealing with application errors. It's "
+"available as a source-available project `on GitHub <https://github.com/"
+"getsentry/sentry>`_ and is also available as a `hosted version <https://"
+"sentry.io/signup/>`_ which you can try for free. Sentry aggregates "
+"duplicate errors, captures the full stack trace and local variables for "
+"debugging, and sends you mails based on new errors or frequency "
+"thresholds."
+msgstr ""
+"El envío de correos de error, aunque sólo sea para los críticos, puede "
+"llegar a ser abrumador si hay un número suficiente de usuarios que se "
+"encuentran con el error y los archivos de registro normalmente nunca se "
+"miran. Por eso recomendamos utilizar `Sentry <https://sentry.io/>`_ para "
+"tratar los errores de la aplicación. Está disponible como proyecto con "
+"código fuente `en GitHub <https://github.com/getsentry/sentry>`_ y "
+"también está disponible como `versión alojada <https://sentry.io/signup/"
+">`_ que puedes probar gratuitamente. Sentry agrega los errores "
+"duplicados, captura el seguimiento completo de la pila y las variables "
+"locales para la depuración, y le envía correos en función de nuevos "
+"errores o umbrales de frecuencia."
+
+#: ../../errorhandling.rst:44
+msgid ""
+"To use Sentry you need to install the ``sentry-sdk`` client with extra "
+"``flask`` dependencies."
+msgstr ""
+"Para utilizar Sentry es necesario instalar el cliente ``sentry-sdk`` con "
+"dependencias extra de ``flask``."
+
+#: ../../errorhandling.rst:51
+msgid "And then add this to your Flask app:"
+msgstr "Y luego añade esto a tu aplicación Flask:"
+
+#: ../../errorhandling.rst:60
+msgid ""
+"The ``YOUR_DSN_HERE`` value needs to be replaced with the DSN value you "
+"get from your Sentry installation."
+msgstr ""
+"El valor ``YOUR_DSN_HERE`` debe ser sustituido por el valor DSN que "
+"obtiene de su instalación de Sentry."
+
+#: ../../errorhandling.rst:63
+msgid ""
+"After installation, failures leading to an Internal Server Error are "
+"automatically reported to Sentry and from there you can receive error "
+"notifications."
+msgstr ""
+"Después de la instalación, los fallos que conducen a un Error Interno "
+"del Servidor son reportados automáticamente a Sentry y desde allí puede "
+"recibir notificaciones de error."
+
+#: ../../errorhandling.rst:67
+msgid "See also:"
+msgstr "Vea también:"
+
+#: ../../errorhandling.rst:69
+msgid ""
+"Sentry also supports catching errors from a worker queue (RQ, Celery, "
+"etc.) in a similar fashion. See the `Python SDK docs <https://docs."
+"sentry.io/platforms/python/>`__ for more information."
+msgstr ""
+"Sentry también soporta la captura de errores de una cola de trabajadores "
+"(RQ, Celery, etc.) de manera similar. Consulta la `Documentación del SDK "
+"de Python <https://docs.sentry.io/platforms/python/>`__ para más "
+"información."
+
+#: ../../errorhandling.rst:72
+msgid ""
+"`Getting started with Sentry <https://docs.sentry.io/quickstart/?"
+"platform=python>`__"
+msgstr ""
+"`Cómo empezar a utilizar Sentry <https://docs.sentry.io/quickstart/?"
+"platform=python>`__"
+
+#: ../../errorhandling.rst:73
+msgid ""
+"`Flask-specific documentation <https://docs.sentry.io/platforms/python/"
+"guides/flask/>`__"
+msgstr ""
+"`Documentación específica para el flash <https://docs.sentry.io/"
+"platforms/python/guides/flask/>`__"
+
+#: ../../errorhandling.rst:77
+msgid "Error Handlers"
+msgstr "Manejadores de errores"
+
+#: ../../errorhandling.rst:79
+msgid ""
+"When an error occurs in Flask, an appropriate `HTTP status code <https://"
+"developer.mozilla.org/en-US/docs/Web/HTTP/Status>`__ will be returned. "
+"400-499 indicate errors with the client's request data, or about the "
+"data requested. 500-599 indicate errors with the server or application "
+"itself."
+msgstr ""
+"Cuando se produce un error en Flask, se devuelve un código de estado "
+"`HTTP apropiado <https://developer.mozilla.org/en-US/docs/Web/HTTP/"
+"Status>`__. 400-499 indican errores con los datos de la solicitud del "
+"cliente, o sobre los datos solicitados. 500-599 indican errores con el "
+"servidor o la aplicación en sí."
+
+#: ../../errorhandling.rst:85
+msgid ""
+"You might want to show custom error pages to the user when an error "
+"occurs. This can be done by registering error handlers."
+msgstr ""
+"Es posible que desee mostrar páginas de error personalizadas al usuario "
+"cuando se produce un error. Esto se puede hacer registrando manejadores "
+"de error."
+
+#: ../../errorhandling.rst:88
+msgid ""
+"An error handler is a function that returns a response when a type of "
+"error is raised, similar to how a view is a function that returns a "
+"response when a request URL is matched. It is passed the instance of the "
+"error being handled, which is most likely a :exc:`~werkzeug.exceptions."
+"HTTPException`."
+msgstr ""
+"Un gestor de errores es una función que devuelve una respuesta cuando se "
+"produce un tipo de error, de forma similar a como una vista es una "
+"función que devuelve una respuesta cuando una URL de solicitud coincide. "
+"Se le pasa la instancia del error que se está manejando, que "
+"probablemente sea una :exc:`~werkzeug.exceptions.HTTPException`."
+
+#: ../../errorhandling.rst:93
+msgid ""
+"The status code of the response will not be set to the handler's code. "
+"Make sure to provide the appropriate HTTP status code when returning a "
+"response from a handler."
+msgstr ""
+"El código de estado de la respuesta no se ajustará al código del "
+"manejador. Asegúrese de proporcionar el código de estado HTTP apropiado "
+"cuando devuelva una respuesta de un manejador."
+
+#: ../../errorhandling.rst:99
+msgid "Registering"
+msgstr "Registrando"
+
+#: ../../errorhandling.rst:101
+msgid ""
+"Register handlers by decorating a function with :meth:`~flask.Flask."
+"errorhandler`. Or use :meth:`~flask.Flask.register_error_handler` to "
+"register the function later. Remember to set the error code when "
+"returning the response."
+msgstr ""
+"Registra los manejadores decorando una función con :meth:`~flask.Flask."
+"errorhandler`. O usa :meth:`~flask.Flask.register_error_handler` para "
+"registrar la función más tarde. Recuerda establecer el código de error "
+"al devolver la respuesta."
+
+#: ../../errorhandling.rst:115
+msgid ""
+":exc:`werkzeug.exceptions.HTTPException` subclasses like :exc:`~werkzeug."
+"exceptions.BadRequest` and their HTTP codes are interchangeable when "
+"registering handlers. (``BadRequest.code == 400``)"
+msgstr ""
+"Las subclases de :exc:`werkzeug.exceptions.HTTPException` como :exc:"
+"`~werkzeug.exceptions.BadRequest` y sus códigos HTTP son intercambiables "
+"al registrar los manejadores. (``BadRequest.code == 400``)"
+
+#: ../../errorhandling.rst:119
+msgid ""
+"Non-standard HTTP codes cannot be registered by code because they are "
+"not known by Werkzeug. Instead, define a subclass of :class:`~werkzeug."
+"exceptions.HTTPException` with the appropriate code and register and "
+"raise that exception class."
+msgstr ""
+"Los códigos HTTP no estándar no pueden ser registrados por el código "
+"porque no son conocidos por Werkzeug. En su lugar, defina una subclase "
+"de :class:`~werkzeug.exceptions.HTTPException` con el código apropiado y "
+"registre y lance esa clase de excepción."
+
+#: ../../errorhandling.rst:134
+msgid ""
+"Handlers can be registered for any exception class, not just :exc:"
+"`~werkzeug.exceptions.HTTPException` subclasses or HTTP status codes. "
+"Handlers can be registered for a specific class, or for all subclasses "
+"of a parent class."
+msgstr ""
+"Los manejadores pueden registrarse para cualquier clase de excepción, no "
+"sólo para las subclases :exc:`~werkzeug.exceptions.HTTPException` o los "
+"códigos de estado HTTP. Los manejadores pueden ser registrados para una "
+"clase específica, o para todas las subclases de una clase padre."
+
+#: ../../errorhandling.rst:141
+msgid "Handling"
+msgstr "Manejando"
+
+#: ../../errorhandling.rst:143
+msgid ""
+"When building a Flask application you *will* run into exceptions. If "
+"some part of your code breaks while handling a request (and you have no "
+"error handlers registered), a \"500 Internal Server Error\" (:exc:"
+"`~werkzeug.exceptions.InternalServerError`) will be returned by default. "
+"Similarly, \"404 Not Found\" (:exc:`~werkzeug.exceptions.NotFound`) "
+"error will occur if a request is sent to an unregistered route. If a "
+"route receives an unallowed request method, a \"405 Method Not Allowed"
+"\" (:exc:`~werkzeug.exceptions.MethodNotAllowed`) will be raised. These "
+"are all subclasses of :class:`~werkzeug.exceptions.HTTPException` and "
+"are provided by default in Flask."
+msgstr ""
+"Cuando construyas una aplicación Flask te *encontrarás* con excepciones. "
+"Si alguna parte de tu código se rompe mientras manejas una petición (y "
+"no tienes ningún controlador de errores registrado), un \"500 Internal "
+"Server Error\" (:exc:`~werkzeug.exceptions.InternalServerError`) será "
+"devuelto por defecto. Del mismo modo, se producirá el error \"404 Not "
+"Found\" (:exc:`~werkzeug.exceptions.NotFound`) si se envía una solicitud "
+"a una ruta no registrada. Si una ruta recibe un método de solicitud no "
+"permitido, se producirá un error \"405 Method Not Allowed\" (:exc:"
+"`~werkzeug.exceptions.MethodNotAllowed`). Todas estas son subclases de :"
+"class:`~werkzeug.exceptions.HTTPException` y se proporcionan por defecto "
+"en Flask."
+
+#: ../../errorhandling.rst:154
+msgid ""
+"Flask gives you to the ability to raise any HTTP exception registered by "
+"Werkzeug. However, the default HTTP exceptions return simple exception "
+"pages. You might want to show custom error pages to the user when an "
+"error occurs. This can be done by registering error handlers."
+msgstr ""
+"Flask te da la posibilidad de lanzar cualquier excepción HTTP registrada "
+"por Werkzeug. Sin embargo, las excepciones HTTP por defecto devuelven "
+"simples páginas de excepción. Es posible que desee mostrar páginas de "
+"error personalizadas al usuario cuando se produce un error. Esto se "
+"puede hacer registrando manejadores de error."
+
+#: ../../errorhandling.rst:159
+msgid ""
+"When Flask catches an exception while handling a request, it is first "
+"looked up by code. If no handler is registered for the code, Flask looks "
+"up the error by its class hierarchy; the most specific handler is "
+"chosen. If no handler is registered, :class:`~werkzeug.exceptions."
+"HTTPException` subclasses show a generic message about their code, while "
+"other exceptions are converted to a generic \"500 Internal Server Error"
+"\"."
+msgstr ""
+"Cuando Flask atrapa una excepción mientras maneja una solicitud, primero "
+"se busca por código. Si no se registra ningún manejador para el código, "
+"Flask busca el error por su jerarquía de clases; se elige el manejador "
+"más específico. Si no se registra ningún manejador, las subclases :class:"
+"`~werkzeug.exceptions.HTTPException` muestran un mensaje genérico sobre "
+"su código, mientras que otras excepciones se convierten en un genérico "
+"\"500 Internal Server Error\"."
+
+#: ../../errorhandling.rst:165
+msgid ""
+"For example, if an instance of :exc:`ConnectionRefusedError` is raised, "
+"and a handler is registered for :exc:`ConnectionError` and :exc:"
+"`ConnectionRefusedError`, the more specific :exc:"
+"`ConnectionRefusedError` handler is called with the exception instance "
+"to generate the response."
+msgstr ""
+"Por ejemplo, si se lanza una instancia de :exc:`ConnectionRefusedError`, "
+"y se registra un manejador para :exc:`ConnectionError` y :exc:"
+"`ConnectionRefusedError`, se llama al manejador más específico de :exc:"
+"`ConnectionRefusedError` con la instancia de excepción para generar la "
+"respuesta."
+
+#: ../../errorhandling.rst:170
+msgid ""
+"Handlers registered on the blueprint take precedence over those "
+"registered globally on the application, assuming a blueprint is handling "
+"the request that raises the exception. However, the blueprint cannot "
+"handle 404 routing errors because the 404 occurs at the routing level "
+"before the blueprint can be determined."
+msgstr ""
+"Los manejadores registrados en el blueprint tienen prioridad sobre los "
+"registrados globalmente en la aplicación, asumiendo que un blueprint "
+"está manejando la solicitud que genera la excepción. Sin embargo, el "
+"blueprint no puede manejar errores de enrutamiento 404 porque el 404 se "
+"produce en el nivel de enrutamiento antes de que el blueprint pueda ser "
+"determinado."
+
+#: ../../errorhandling.rst:178
+msgid "Generic Exception Handlers"
+msgstr "Manejadores genéricos de excepciones"
+
+#: ../../errorhandling.rst:180
+msgid ""
+"It is possible to register error handlers for very generic base classes "
+"such as ``HTTPException`` or even ``Exception``. However, be aware that "
+"these will catch more than you might expect."
+msgstr ""
+"Es posible registrar manejadores de errores para clases base muy "
+"genéricas como ``HTTPException`` o incluso ``Exception``. Sin embargo, "
+"hay que tener en cuenta que éstos atraparán más de lo que se espera."
+
+#: ../../errorhandling.rst:184
+msgid ""
+"For example, an error handler for ``HTTPException`` might be useful for "
+"turning the default HTML errors pages into JSON. However, this handler "
+"will trigger for things you don't cause directly, such as 404 and 405 "
+"errors during routing. Be sure to craft your handler carefully so you "
+"don't lose information about the HTTP error."
+msgstr ""
+"Por ejemplo, un manejador de errores para ``HTTPException`` podría ser "
+"útil para convertir las páginas de errores HTML por defecto en JSON. Sin "
+"embargo, este manejador se activará para cosas que no causes "
+"directamente, como los errores 404 y 405 durante el enrutamiento. "
+"Asegúrate de elaborar tu manejador con cuidado para no perder "
+"información sobre el error HTTP."
+
+#: ../../errorhandling.rst:209
+msgid ""
+"An error handler for ``Exception`` might seem useful for changing how "
+"all errors, even unhandled ones, are presented to the user. However, "
+"this is similar to doing ``except Exception:`` in Python, it will "
+"capture *all* otherwise unhandled errors, including all HTTP status "
+"codes."
+msgstr ""
+"Un manejador de errores para ``Exception`` podría parecer útil para "
+"cambiar cómo se presentan al usuario todos los errores, incluso los no "
+"manejados. Sin embargo, esto es similar a hacer ``except Exception:`` en "
+"Python, capturará *todos* los errores no manejados, incluyendo todos los "
+"códigos de estado HTTP."
+
+#: ../../errorhandling.rst:215
+msgid ""
+"In most cases it will be safer to register handlers for more specific "
+"exceptions. Since ``HTTPException`` instances are valid WSGI responses, "
+"you could also pass them through directly."
+msgstr ""
+"En la mayoría de los casos será más seguro registrar manejadores para "
+"excepciones más específicas. Dado que las instancias de "
+"``HTTPException`` son respuestas válidas de WSGI, también podrías "
+"pasarlas directamente."
+
+#: ../../errorhandling.rst:232
+msgid ""
+"Error handlers still respect the exception class hierarchy. If you "
+"register handlers for both ``HTTPException`` and ``Exception``, the "
+"``Exception`` handler will not handle ``HTTPException`` subclasses "
+"because it the ``HTTPException`` handler is more specific."
+msgstr ""
+"Los manejadores de errores siguen respetando la jerarquía de clases de "
+"excepción. Si registras manejadores tanto para ``HTTPException`` como "
+"para ``Exception``, el manejador de ``Exception`` no manejará subclases "
+"de ``HTTPException`` porque el manejador de ``HTTPException`` es más "
+"específico."
+
+#: ../../errorhandling.rst:239
+msgid "Unhandled Exceptions"
+msgstr "Excepciones no controladas"
+
+#: ../../errorhandling.rst:241
+msgid ""
+"When there is no error handler registered for an exception, a 500 "
+"Internal Server Error will be returned instead. See :meth:`flask.Flask."
+"handle_exception` for information about this behavior."
+msgstr ""
+"Cuando no hay un manejador de errores registrado para una excepción, se "
+"devolverá un Error Interno del Servidor 500 en su lugar. Véase :meth:"
+"`flask.Flask.handle_exception` para obtener información sobre este "
+"comportamiento."
+
+#: ../../errorhandling.rst:246
+msgid ""
+"If there is an error handler registered for ``InternalServerError``, "
+"this will be invoked. As of Flask 1.1.0, this error handler will always "
+"be passed an instance of ``InternalServerError``, not the original "
+"unhandled error."
+msgstr ""
+"Si hay un gestor de errores registrado para ``InternalServerError``, "
+"éste será invocado. A partir de Flask 1.1.0, a este manejador de errores "
+"siempre se le pasará una instancia de ``InternalServerError``, no el "
+"error original no manejado."
+
+#: ../../errorhandling.rst:251
+msgid "The original error is available as ``e.original_exception``."
+msgstr "El error original está disponible como ``e.original_exception``."
+
+#: ../../errorhandling.rst:253
+msgid ""
+"An error handler for \"500 Internal Server Error\" will be passed "
+"uncaught exceptions in addition to explicit 500 errors. In debug mode, a "
+"handler for \"500 Internal Server Error\" will not be used. Instead, the "
+"interactive debugger will be shown."
+msgstr ""
+"Un manejador de errores para \"500 Internal Server Error\" será pasado "
+"por excepciones no capturadas además de los errores 500 explícitos. En "
+"el modo de depuración, no se utilizará un manejador para \"500 Internal "
+"Server Error\". En su lugar, se mostrará el depurador interactivo."
+
+#: ../../errorhandling.rst:260
+msgid "Custom Error Pages"
+msgstr "Páginas de error personalizadas"
+
+#: ../../errorhandling.rst:262
+msgid ""
+"Sometimes when building a Flask application, you might want to raise a :"
+"exc:`~werkzeug.exceptions.HTTPException` to signal to the user that "
+"something is wrong with the request. Fortunately, Flask comes with a "
+"handy :func:`~flask.abort` function that aborts a request with a HTTP "
+"error from werkzeug as desired. It will also provide a plain black and "
+"white error page for you with a basic description, but nothing fancy."
+msgstr ""
+"A veces, cuando se construye una aplicación Flask, es posible que se "
+"quiera lanzar una :exc:`~werkzeug.exceptions.HTTPException` para indicar "
+"al usuario que algo va mal en la petición. Afortunadamente, Flask viene "
+"con una práctica función :func:`~flask.abort` que aborta una petición "
+"con un error HTTP de werkzeug como se desee. También te proporcionará "
+"una página de error en blanco y negro con una descripción básica, pero "
+"nada del otro mundo."
+
+#: ../../errorhandling.rst:269
+msgid ""
+"Depending on the error code it is less or more likely for the user to "
+"actually see such an error."
+msgstr ""
+"Dependiendo del código de error es menos o más probable que el usuario "
+"vea realmente dicho error."
+
+#: ../../errorhandling.rst:272
+msgid ""
+"Consider the code below, we might have a user profile route, and if the "
+"user fails to pass a username we can raise a \"400 Bad Request\". If the "
+"user passes a username and we can't find it, we raise a \"404 Not Found"
+"\"."
+msgstr ""
+"Considere el código de abajo, podríamos tener una ruta de perfil de "
+"usuario, y si el usuario no pasa un nombre de usuario podemos levantar "
+"un \"400 Bad Request\". Si el usuario pasa un nombre de usuario y no "
+"podemos encontrarlo, lanzamos un \"404 Not Found\"."
+
+#: ../../errorhandling.rst:296
+msgid ""
+"Here is another example implementation for a \"404 Page Not Found\" "
+"exception:"
+msgstr ""
+"Aquí hay otro ejemplo de implementación para una excepción \"404 Page "
+"Not Found\":"
+
+#: ../../errorhandling.rst:307 ../../errorhandling.rst:361
+msgid "When using :doc:`/patterns/appfactories`:"
+msgstr "Cuando se utiliza :doc:`/patterns/appfactories`:"
+
+#: ../../errorhandling.rst:321
+msgid "An example template might be this:"
+msgstr "Un ejemplo de plantilla podría ser este:"
+
+#: ../../errorhandling.rst:335
+msgid "Further Examples"
+msgstr "Otros ejemplos"
+
+#: ../../errorhandling.rst:337
+msgid ""
+"The above examples wouldn't actually be an improvement on the default "
+"exception pages. We can create a custom 500.html template like this:"
+msgstr ""
+"Los ejemplos anteriores no serían en realidad una mejora de las páginas "
+"de excepción por defecto. Podemos crear una plantilla 500.html "
+"personalizada como esta:"
+
+#: ../../errorhandling.rst:350
+msgid ""
+"It can be implemented by rendering the template on \"500 Internal Server "
+"Error\":"
+msgstr ""
+"Se puede implementar al renderizar la plantilla en \"500 Internal Server "
+"Error\":"
+
+#: ../../errorhandling.rst:375
+msgid "When using :doc:`/blueprints`:"
+msgstr "Cuando se utiliza :doc:`/blueprints`:"
+
+#: ../../errorhandling.rst:393
+msgid "Blueprint Error Handlers"
+msgstr "Manejadores de errores de Blueprint"
+
+#: ../../errorhandling.rst:395
+msgid ""
+"In :doc:`/blueprints`, most error handlers will work as expected. "
+"However, there is a caveat concerning handlers for 404 and 405 "
+"exceptions. These error handlers are only invoked from an appropriate "
+"``raise`` statement or a call to ``abort`` in another of the blueprint's "
+"view functions; they are not invoked by, e.g., an invalid URL access."
+msgstr ""
+"En :doc:`/blueprints`, la mayoría de los manejadores de errores "
+"funcionarán como se espera. Sin embargo, hay una advertencia sobre los "
+"manejadores de las excepciones 404 y 405. Estos manejadores de error "
+"sólo se invocan desde una sentencia ``raise`` apropiada o una llamada a "
+"``abort`` en otra de las funciones de vista del blueprint; no se "
+"invocan, por ejemplo, por un acceso a una URL no válida."
+
+#: ../../errorhandling.rst:401
+msgid ""
+"This is because the blueprint does not \"own\" a certain URL space, so "
+"the application instance has no way of knowing which blueprint error "
+"handler it should run if given an invalid URL. If you would like to "
+"execute different handling strategies for these errors based on URL "
+"prefixes, they may be defined at the application level using the "
+"``request`` proxy object."
+msgstr ""
+"Esto se debe a que el blueprint no es \"dueño\" de un determinado "
+"espacio URL, por lo que la instancia de la aplicación no tiene forma de "
+"saber qué manejador de errores del blueprint debe ejecutar si se le da "
+"una URL inválida. Si quieres ejecutar diferentes estrategias de manejo "
+"para estos errores basados en prefijos de URL, pueden ser definidos a "
+"nivel de aplicación usando el objeto proxy ``request``."
+
+#: ../../errorhandling.rst:436
+msgid "Returning API Errors as JSON"
+msgstr "Devolución de errores de la API como JSON"
+
+#: ../../errorhandling.rst:438
+msgid ""
+"When building APIs in Flask, some developers realise that the built-in "
+"exceptions are not expressive enough for APIs and that the content type "
+"of :mimetype:`text/html` they are emitting is not very useful for API "
+"consumers."
+msgstr ""
+"Al construir APIs en Flask, algunos desarrolladores se dan cuenta de que "
+"las excepciones incorporadas no son lo suficientemente expresivas para "
+"las APIs y que el tipo de contenido :mimetype:`text/html` que emiten no "
+"es muy útil para los consumidores de la API."
+
+#: ../../errorhandling.rst:442
+msgid ""
+"Using the same techniques as above and :func:`~flask.json.jsonify` we "
+"can return JSON responses to API errors.  :func:`~flask.abort` is called "
+"with a ``description`` parameter. The error handler will use that as the "
+"JSON error message, and set the status code to 404."
+msgstr ""
+"Usando las mismas técnicas anteriores y :func:`~flask.json.jsonify` "
+"podemos devolver respuestas JSON a los errores de la API. :func:`~flask."
+"abort` se llama con un parámetro ``description``. El controlador de "
+"errores utilizará eso como el mensaje de error JSON, y establecerá el "
+"código de estado como 404."
+
+#: ../../errorhandling.rst:464
+msgid ""
+"We can also create custom exception classes. For instance, we can "
+"introduce a new custom exception for an API that can take a proper human "
+"readable message, a status code for the error and some optional payload "
+"to give more context for the error."
+msgstr ""
+"También podemos crear clases de excepción personalizadas. Por ejemplo, "
+"podemos introducir una nueva excepción personalizada para una API que "
+"puede tomar un mensaje adecuado legible por humanos, un código de estado "
+"para el error y alguna carga útil opcional para dar más contexto para el "
+"error."
+
+#: ../../errorhandling.rst:469
+msgid "This is a simple example:"
+msgstr "Este es un ejemplo sencillo:"
+
+#: ../../errorhandling.rst:508
+msgid ""
+"A view can now raise that exception with an error message. Additionally "
+"some extra payload can be provided as a dictionary through the `payload` "
+"parameter."
+msgstr ""
+"Una vista puede ahora lanzar esa excepción con un mensaje de error. "
+"Además, se puede proporcionar una carga útil adicional como un "
+"diccionario a través del parámetro `payload`."
+
+#: ../../errorhandling.rst:514
+msgid "Logging"
+msgstr "Registro"
+
+#: ../../errorhandling.rst:516
+msgid ""
+"See :doc:`/logging` for information about how to log exceptions, such as "
+"by emailing them to admins."
+msgstr ""
+"Consulte :doc:`/logging` para obtener información sobre cómo registrar "
+"las excepciones, por ejemplo, enviándolas por correo electrónico a los "
+"administradores."
+
+#: ../../errorhandling.rst:521
+msgid "Debugging"
+msgstr "Depurando"
+
+#: ../../errorhandling.rst:523
+msgid ""
+"See :doc:`/debugging` for information about how to debug errors in "
+"development and production."
+msgstr ""
+"Consulte :doc:`/debugging` para obtener información sobre cómo depurar "
+"errores en desarrollo y producción."

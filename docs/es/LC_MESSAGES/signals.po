@@ -1,0 +1,304 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <pedrotorcattsoto@gmail.com>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.0.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-27 07:20-0400\n"
+"PO-Revision-Date: 2022-02-15 21:58-0400\n"
+"Language-Team: es_LA <pedrotorcattsoto@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+"Last-Translator: Pedro Torcatt <pedrotorcattsoto@gmail.com>\n"
+"Language: es\n"
+"X-Generator: Poedit 3.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../signals.rst:2
+msgid "Signals"
+msgstr "Señales"
+
+#: ../../signals.rst:6
+msgid ""
+"Starting with Flask 0.6, there is integrated support for signalling in Flask.  "
+"This support is provided by the excellent `blinker`_ library and will "
+"gracefully fall back if it is not available."
+msgstr ""
+"A partir de Flask 0.6, hay soporte integrado para la señalización en Flask. "
+"Este soporte es proporcionado por la excelente biblioteca `blinker`_ y se "
+"retirará con gracia si no está disponible."
+
+#: ../../signals.rst:10
+msgid ""
+"What are signals?  Signals help you decouple applications by sending "
+"notifications when actions occur elsewhere in the core framework or another "
+"Flask extensions.  In short, signals allow certain senders to notify "
+"subscribers that something happened."
+msgstr ""
+"¿Qué son las señales? Las señales te ayudan a desacoplar las aplicaciones "
+"enviando notificaciones cuando se producen acciones en otra parte del núcleo "
+"del framework o en otras extensiones de Flask. En resumen, las señales permiten "
+"a ciertos remitentes notificar a los suscriptores que algo ha sucedido."
+
+#: ../../signals.rst:15
+msgid ""
+"Flask comes with a couple of signals and other extensions might provide more.  "
+"Also keep in mind that signals are intended to notify subscribers and should "
+"not encourage subscribers to modify data.  You will notice that there are "
+"signals that appear to do the same thing like some of the builtin decorators do "
+"(eg: :data:`~flask.request_started` is very similar to :meth:`~flask.Flask."
+"before_request`).  However, there are differences in how they work.  The core :"
+"meth:`~flask.Flask.before_request` handler, for example, is executed in a "
+"specific order and is able to abort the request early by returning a response.  "
+"In contrast all signal handlers are executed in undefined order and do not "
+"modify any data."
+msgstr ""
+"Flask viene con un par de señales y otras extensiones podrían proporcionar más. "
+"También hay que tener en cuenta que las señales están pensadas para notificar a "
+"los suscriptores y no deben animar a los suscriptores a modificar los datos. "
+"Notarás que hay señales que parecen hacer lo mismo que algunos de los "
+"decoradores incorporados (por ejemplo: :data:`~flask.request_started` es muy "
+"similar a :meth:`~flask.Flask.before_request`). Sin embargo, hay diferencias en "
+"su funcionamiento. El manejador principal :meth:`~flask.Flask.before_request`, "
+"por ejemplo, se ejecuta en un orden específico y es capaz de abortar la "
+"solicitud antes de tiempo devolviendo una respuesta. En cambio, todos los "
+"manejadores de señales se ejecutan en un orden indefinido y no modifican ningún "
+"dato."
+
+#: ../../signals.rst:26
+msgid ""
+"The big advantage of signals over handlers is that you can safely subscribe to "
+"them for just a split second.  These temporary subscriptions are helpful for "
+"unit testing for example.  Say you want to know what templates were rendered as "
+"part of a request: signals allow you to do exactly that."
+msgstr ""
+"La gran ventaja de las señales sobre los manejadores es que puedes suscribirte "
+"a ellas de forma segura durante una fracción de segundo. Estas suscripciones "
+"temporales son útiles para las pruebas unitarias, por ejemplo. Digamos que "
+"quieres saber qué plantillas se renderizaron como parte de una solicitud: las "
+"señales te permiten hacer exactamente eso."
+
+#: ../../signals.rst:33
+msgid "Subscribing to Signals"
+msgstr "Suscripción a las señales"
+
+#: ../../signals.rst:35
+msgid ""
+"To subscribe to a signal, you can use the :meth:`~blinker.base.Signal.connect` "
+"method of a signal.  The first argument is the function that should be called "
+"when the signal is emitted, the optional second argument specifies a sender.  "
+"To unsubscribe from a signal, you can use the :meth:`~blinker.base.Signal."
+"disconnect` method."
+msgstr ""
+"Para suscribirse a una señal, se puede utilizar el método :meth:`~blinker.base."
+"Signal.connect` de una señal. El primer argumento es la función que debe ser "
+"llamada cuando se emite la señal, el segundo argumento opcional especifica un "
+"emisor.  Para darse de baja de una señal, puedes utilizar el método :meth:"
+"`~blinker.base.Signal.disconnect`."
+
+#: ../../signals.rst:41
+msgid ""
+"For all core Flask signals, the sender is the application that issued the "
+"signal.  When you subscribe to a signal, be sure to also provide a sender "
+"unless you really want to listen for signals from all applications.  This is "
+"especially true if you are developing an extension."
+msgstr ""
+"Para todas las señales del núcleo de Flask, el remitente es la aplicación que "
+"emitió la señal. Cuando te suscribas a una señal, asegúrate de proporcionar "
+"también un remitente a menos que realmente quieras escuchar las señales de "
+"todas las aplicaciones. Esto es especialmente cierto si estás desarrollando una "
+"extensión."
+
+#: ../../signals.rst:46
+msgid ""
+"For example, here is a helper context manager that can be used in a unit test "
+"to determine which templates were rendered and what variables were passed to "
+"the template::"
+msgstr ""
+"Por ejemplo, aquí hay un gestor de contexto de ayuda que se puede utilizar en "
+"una prueba de unidad para determinar qué plantillas se han renderizado y qué "
+"variables se han pasado a la plantilla::"
+
+#: ../../signals.rst:64
+msgid "This can now easily be paired with a test client::"
+msgstr "Ahora se puede emparejar fácilmente con un cliente de prueba::"
+
+#: ../../signals.rst:74
+msgid ""
+"Make sure to subscribe with an extra ``**extra`` argument so that your calls "
+"don't fail if Flask introduces new arguments to the signals."
+msgstr ""
+"Asegúrate de suscribirte con un argumento extra ``**extra`` para que tus "
+"llamadas no fallen si Flask introduce nuevos argumentos en las señales."
+
+#: ../../signals.rst:77
+msgid ""
+"All the template rendering in the code issued by the application `app` in the "
+"body of the ``with`` block will now be recorded in the `templates` variable.  "
+"Whenever a template is rendered, the template object as well as context are "
+"appended to it."
+msgstr ""
+"Toda la renderización de plantillas en el código emitido por la aplicación "
+"`app` en el cuerpo del bloque ``with`` se registrará ahora en la variable "
+"`templates`. Cada vez que se renderiza una plantilla, el objeto de la plantilla "
+"así como el contexto se añaden a ella."
+
+#: ../../signals.rst:82
+msgid ""
+"Additionally there is a convenient helper method (:meth:`~blinker.base.Signal."
+"connected_to`)  that allows you to temporarily subscribe a function to a signal "
+"with a context manager on its own.  Because the return value of the context "
+"manager cannot be specified that way, you have to pass the list in as an "
+"argument::"
+msgstr ""
+"Además, existe un práctico método de ayuda (:meth:`~blinker.base.Signal."
+"connected_to`) que permite suscribir temporalmente una función a una señal con "
+"un gestor de contexto propio. Debido a que el valor de retorno del gestor de "
+"contexto no puede ser especificado de esa manera, tienes que pasar la lista "
+"como un argumento::"
+
+#: ../../signals.rst:95
+msgid "The example above would then look like this::"
+msgstr "El ejemplo anterior quedaría así::"
+
+#: ../../signals.rst:102
+msgid "Blinker API Changes"
+msgstr "Cambios en la API Blinker"
+
+#: ../../signals.rst:104
+msgid ""
+"The :meth:`~blinker.base.Signal.connected_to` method arrived in Blinker with "
+"version 1.1."
+msgstr ""
+"El método :meth:`~blinker.base.Signal.connected_to` llegó a Blinker con la "
+"versión 1.1."
+
+#: ../../signals.rst:108
+msgid "Creating Signals"
+msgstr "Creación de señales"
+
+#: ../../signals.rst:110
+msgid ""
+"If you want to use signals in your own application, you can use the blinker "
+"library directly.  The most common use case are named signals in a custom :"
+"class:`~blinker.base.Namespace`..  This is what is recommended most of the "
+"time::"
+msgstr ""
+"Si quieres usar señales en tu propia aplicación, puedes usar la librería "
+"blinker directamente. El caso de uso más común son las señales con nombre en "
+"un :class:`~blinker.base.Namespace`. Esto es lo que se recomienda la mayoría de "
+"las veces::"
+
+#: ../../signals.rst:118
+msgid "Now you can create new signals like this::"
+msgstr "Ahora puedes crear nuevas señales así::"
+
+#: ../../signals.rst:122
+msgid ""
+"The name for the signal here makes it unique and also simplifies debugging.  "
+"You can access the name of the signal with the :attr:`~blinker.base.NamedSignal."
+"name` attribute."
+msgstr ""
+"El nombre de la señal aquí la hace única y también simplifica la depuración. "
+"Puedes acceder al nombre de la señal con el atributo :attr:`~blinker.base."
+"NamedSignal.name`."
+
+#: ../../signals.rst:126
+msgid "For Extension Developers"
+msgstr "Para los desarrolladores de extensiones"
+
+#: ../../signals.rst:128
+msgid ""
+"If you are writing a Flask extension and you want to gracefully degrade for "
+"missing blinker installations, you can do so by using the :class:`flask.signals."
+"Namespace` class."
+msgstr ""
+"Si estás escribiendo una extensión de Flask y quieres degradar con gracia las "
+"instalaciones de parpadeo que faltan, puedes hacerlo utilizando la clase :class:"
+"`flask.signals.Namespace`."
+
+#: ../../signals.rst:135
+msgid "Sending Signals"
+msgstr "Envío de señales"
+
+#: ../../signals.rst:137
+msgid ""
+"If you want to emit a signal, you can do so by calling the :meth:`~blinker.base."
+"Signal.send` method.  It accepts a sender as first argument and optionally some "
+"keyword arguments that are forwarded to the signal subscribers::"
+msgstr ""
+"Si quieres emitir una señal, puedes hacerlo llamando al método :meth:`~blinker."
+"base.Signal.send`. Acepta un remitente como primer argumento y, opcionalmente, "
+"algunos argumentos de palabras clave que se reenvían a los suscriptores de la "
+"señal::"
+
+#: ../../signals.rst:148
+msgid ""
+"Try to always pick a good sender.  If you have a class that is emitting a "
+"signal, pass ``self`` as sender.  If you are emitting a signal from a random "
+"function, you can pass ``current_app._get_current_object()`` as sender."
+msgstr ""
+"Intenta elegir siempre un buen emisor. Si tienes una clase que está emitiendo "
+"una señal, pasa ``self`` como emisor. Si estás emitiendo una señal desde una "
+"función aleatoria, puedes pasar ``current_app._get_current_object()`` como "
+"emisor."
+
+#: ../../signals.rst:152
+msgid "Passing Proxies as Senders"
+msgstr "Pasar proxies como remitentes"
+
+#: ../../signals.rst:154
+msgid ""
+"Never pass :data:`~flask.current_app` as sender to a signal.  Use ``current_app."
+"_get_current_object()`` instead.  The reason for this is that :data:`~flask."
+"current_app` is a proxy and not the real application object."
+msgstr ""
+"Nunca pase :data:`~flask.current_app` como remitente de una señal. Utiliza "
+"``current_app._get_current_object()`` en su lugar. La razón es que :data:"
+"`~flask.current_app` es un proxy y no el objeto real de la aplicación."
+
+#: ../../signals.rst:161
+msgid "Signals and Flask's Request Context"
+msgstr "Señales y contexto de solicitud de Flask"
+
+#: ../../signals.rst:163
+msgid ""
+"Signals fully support :doc:`reqcontext` when receiving signals. Context-local "
+"variables are consistently available between :data:`~flask.request_started` "
+"and :data:`~flask.request_finished`, so you can rely on :class:`flask.g` and "
+"others as needed.  Note the limitations described in :ref:`signals-sending` and "
+"the :data:`~flask.request_tearing_down` signal."
+msgstr ""
+"Las señales son totalmente compatibles con :doc:`reqcontext` cuando se reciben "
+"señales. Las variables locales de contexto están disponibles de forma "
+"consistente entre :data:`~flask.request_started` y :data:`~flask."
+"request_finished`, por lo que puede confiar en :class:`flask.g` y otros según "
+"sea necesario.  Tenga en cuenta las limitaciones descritas en :ref:`signals-"
+"sending` y la señal :data:`~flask.request_tearing_down`."
+
+#: ../../signals.rst:171
+msgid "Decorator Based Signal Subscriptions"
+msgstr "Suscripciones de señales basadas en decoradores"
+
+#: ../../signals.rst:173
+msgid ""
+"With Blinker 1.1 you can also easily subscribe to signals by using the new :"
+"meth:`~blinker.base.NamedSignal.connect_via` decorator::"
+msgstr ""
+"Con Blinker 1.1 también puedes suscribirte fácilmente a las señales utilizando "
+"el nuevo decorador :meth:`~blinker.base.NamedSignal.connect_via`::"
+
+#: ../../signals.rst:183
+msgid "Core Signals"
+msgstr "Núcleo de las señales"
+
+#: ../../signals.rst:185
+msgid "Take a look at :ref:`core-signals-list` for a list of all builtin signals."
+msgstr ""
+"Echa un vistazo a :ref:`core-signals-list` para ver una lista de todas las "
+"señales incorporadas."

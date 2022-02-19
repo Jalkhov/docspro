@@ -1,0 +1,98 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2010 Pallets
+# This file is distributed under the same license as the Flask package.
+# FIRST AUTHOR <pedrotorcattsoto@gmail.com>, 2021.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Flask 2.0.x\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-05-27 07:20-0400\n"
+"PO-Revision-Date: 2022-02-15 21:58-0400\n"
+"Language-Team: es_LA <pedrotorcattsoto@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+"Last-Translator: Pedro Torcatt <pedrotorcattsoto@gmail.com>\n"
+"Language: es\n"
+"X-Generator: Poedit 3.0\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../tutorial/static.rst:2
+msgid "Static Files"
+msgstr "Archivos estáticos"
+
+#: ../../tutorial/static.rst:4
+msgid ""
+"The authentication views and templates work, but they look very plain right "
+"now. Some `CSS`_ can be added to add style to the HTML layout you constructed. "
+"The style won't change, so it's a *static* file rather than a template."
+msgstr ""
+"Las vistas y plantillas de autenticación funcionan, pero ahora mismo tienen un "
+"aspecto muy sencillo. Se puede añadir algo de `CSS`_ para añadir estilo al "
+"diseño HTML que has construido. El estilo no cambiará, por lo que es un "
+"archivo *estático* en lugar de una plantilla."
+
+#: ../../tutorial/static.rst:9
+msgid ""
+"Flask automatically adds a ``static`` view that takes a path relative to the "
+"``flaskr/static`` directory and serves it. The ``base.html`` template already "
+"has a link to the ``style.css`` file:"
+msgstr ""
+"Flask añade automáticamente una vista ``static`` que toma una ruta relativa al "
+"directorio ``flaskr/static`` y la sirve. La plantilla ``base.html`` ya tiene "
+"un enlace al archivo ``style.css``:"
+
+#: ../../tutorial/static.rst:17
+msgid ""
+"Besides CSS, other types of static files might be files with JavaScript "
+"functions, or a logo image. They are all placed under the ``flaskr/static`` "
+"directory and referenced with ``url_for('static', filename='...')``."
+msgstr ""
+"Además de CSS, otros tipos de archivos estáticos pueden ser archivos con "
+"funciones de JavaScript, o una imagen de logotipo. Todos ellos se colocan en "
+"el directorio ``flaskr/static`` y se referencian con ``url_for('static', "
+"filename='...')``."
+
+#: ../../tutorial/static.rst:22
+msgid ""
+"This tutorial isn't focused on how to write CSS, so you can just copy the "
+"following into the ``flaskr/static/style.css`` file:"
+msgstr ""
+"Este tutorial no se centra en cómo escribir CSS, así que puedes copiar lo "
+"siguiente en el archivo ``flaskr/static/style.css``:"
+
+#: ../../tutorial/static.rst:25
+msgid "``flaskr/static/style.css``"
+msgstr "``flaskr/static/style.css``"
+
+#: ../../tutorial/static.rst:55
+msgid ""
+"You can find a less compact version of ``style.css`` in the :gh:`example code "
+"<examples/tutorial/flaskr/static/style.css>`."
+msgstr ""
+"Puedes encontrar una versión menos compacta de ``style.css`` en el código de :"
+"gh:`ejemplo <examples/tutorial/flaskr/static/style.css>`."
+
+#: ../../tutorial/static.rst:58
+msgid ""
+"Go to http://127.0.0.1:5000/auth/login and the page should look like the "
+"screenshot below."
+msgstr ""
+"Vaya a http://127.0.0.1:5000/auth/login y la página debería ser como la "
+"captura de pantalla de abajo."
+
+#: ../../tutorial/static.rst:66
+msgid ""
+"You can read more about CSS from `Mozilla's documentation <CSS_>`_. If you "
+"change a static file, refresh the browser page. If the change doesn't show up, "
+"try clearing your browser's cache."
+msgstr ""
+"Puede leer más sobre CSS en la documentación de `Mozilla <CSS_>`_. Si cambia "
+"un archivo estático, actualice la página del navegador. Si el cambio no "
+"aparece, prueba a borrar la caché del navegador."
+
+#: ../../tutorial/static.rst:72
+msgid "Continue to :doc:`blog`."
+msgstr "Continuar con :doc:`blog`."
