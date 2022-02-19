@@ -25,7 +25,8 @@ jobs:
       - name: Download folders
         run: python main.py --download
 
-      - name: Check i18n coverage
+        id: i18nCoverage
+        name: Check i18n coverage
         uses: alexkiro/i18n-coverage@v1.0.0
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
