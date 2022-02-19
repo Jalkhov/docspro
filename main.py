@@ -10,7 +10,8 @@ badge_url = 'https://shields.io/badge/translated-{cov}%25-green'
 
 def download_docs():
     Octo = Octodir()
-    os.makedirs('for_deploy/data', exist_ok=True) # Create folder for jsons and badges
+    os.makedirs('for_deploy/data', exist_ok=True) # Create folder for jsons
+    os.makedirs('for_deploy/badge', exist_ok=True) # Create folder for badges
     os.makedirs(folder, exist_ok=True)
     for lang in repos:
         lng = lang[0]
@@ -34,7 +35,7 @@ def generate_jsons(lang, cov):
 def generate_badge(lang, cov):
     cov = round_cov(cov)
     svg_data = requests.get(badge_url.format(cov=cov)).text
-    with open(f'for_deploy/data/{lang}_progress.svg', 'w') as file:
+    with open(f'for_deploy/badge/{lang}_progress.svg', 'w') as file:
         file.write(svg_data)
 
 
