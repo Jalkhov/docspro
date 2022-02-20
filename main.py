@@ -74,7 +74,7 @@ def generate_main_files():
         template_content = readme_template.read()
 
         with open('README.md', 'w') as readme_md:
-            readme_content = template_content.format(table=table, last_sync=today())
+            readme_content = template_content.format(table=table)
             readme_md.write(readme_content)
 
     with open(f'for_deploy/index.html', 'w') as outfile:
