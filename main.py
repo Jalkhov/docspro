@@ -8,7 +8,8 @@ repos = [['es', 'es'], ['fr', 'fr'], ['zh', 'zh_CN'], ['fa', 'fa']] # temporal, 
 target = 'https://github.com/flaskcwg/flask-docs-{lang}/tree/main/docs/locales/{dial}'
 folder = 'for_deploy/docs' # Current working directory
 badge_url = 'https://shields.io/badge/translated-{cov}%25-green'
-img_badge = '![Progress]({img_url})'
+img_badge_prev = '![Progress]({img_url})'
+img_badge_code = f'`{img_badge_prev}`'
 
 
 def get_badges():
@@ -17,11 +18,12 @@ def get_badges():
 def gen_badges_table():
     table = PrettyTable()
     table.set_style(MARKDOWN)
-    table.field_names = ["Preview", "Code", "SVG"]
+    table.field_names = ["Preview", "Code"]
     badges = get_badges()
-    print(badges)
+
     for badge in badges:
-        table.add_row([f"badge/{badge}", img_badge.format(img_url=badge), badge])
+        table.add_row([img_badge_prev.format(img_url=badge),
+                       img_badge_code.format(img_url=badge)])
     return table
 
 def download_docs():
