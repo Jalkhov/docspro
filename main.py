@@ -37,6 +37,7 @@ def gen_badges_table():
     and embed codes
     """
     table = PrettyTable()
+    table.set_style(MARKDOWN)
     table.field_names = ["Lang", "Preview", "Code"]
     badges = get_badges()
 
@@ -74,7 +75,7 @@ def generate_main_files():
         template_content = readme_template.read()
 
         with open('README.md', 'w') as readme_md:
-            readme_content = template_content.format(table=table.set_style(MARKDOWN))
+            readme_content = template_content.format(table=table)
             #print(readme_content)
             readme_md.write(readme_content)
 
