@@ -10,9 +10,9 @@ This project is a small temporary whim and will be archived when the translation
 
 Image codes for badges:
 
-|        Preview        |             Code             |       SVG       |
-|:---------------------:|:----------------------------:|:---------------:|
-| badge/fr_progress.svg | ![Progress](fr_progress.svg) | fr_progress.svg |
-| badge/es_progress.svg | ![Progress](es_progress.svg) | es_progress.svg |
-| badge/fa_progress.svg | ![Progress](fa_progress.svg) | fa_progress.svg |
-| badge/zh_progress.svg | ![Progress](zh_progress.svg) | zh_progress.svg |
+|           Preview            |              Code              |
+|:----------------------------:|:------------------------------:|
+| ![Progress](fr_progress.svg) | `![Progress](fr_progress.svg)` |
+| ![Progress](es_progress.svg) | `![Progress](es_progress.svg)` |
+| ![Progress](fa_progress.svg) | `![Progress](fa_progress.svg)` |
+| ![Progress](zh_progress.svg) | `![Progress](zh_progress.svg)` |
