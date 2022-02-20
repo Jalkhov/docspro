@@ -76,12 +76,8 @@ def generate_main_files():
             content = content.format(table=table.set_style(MARKDOWN))
             output.write(content)
 
-    with open('.github/INDEX_TEMPLATE.html','r') as index_template:
-        content = index_template.read()
-
-        with open(f'for_deploy/index.html', 'w') as output:
-            content = content.format(table=table.get_html_string())
-            output.write(content)
+        with open(f'for_deploy/index.html', 'w') as outfile:
+            outfile.write("<p>This site os only a mirror for host badges, please go to <a href='https://github.com/Jalkhov/docspro'>REPO</a> for full  info.</p>")
 
 
 def generate_jsons(lang, cov):
