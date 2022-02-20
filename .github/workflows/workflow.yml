@@ -74,13 +74,11 @@ jobs:
 
       - name: Update README.md
         run: |
-          if [[ "$(git status --porcelain)" != "" ]]; then
-            git config user.name "GitHub Action"
-            git config user.email "action@github.com"
-            git add README.md
-            git commit -m "Render README.md"
-            git push
-          fi
+          git config user.name "GitHub Action"
+          git config user.email "action@github.com"
+          git add README.md
+          git commit -m "Render README.md"
+          git push
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.3

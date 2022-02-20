@@ -75,6 +75,7 @@ def generate_main_files():
 
         with open('README.md', 'w') as output:
             content = content.format(table=table.set_style(MARKDOWN))
+            print(content)
             output.write(content)
 
     with open(f'for_deploy/index.html', 'w') as outfile:
