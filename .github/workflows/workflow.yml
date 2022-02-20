@@ -58,18 +58,21 @@ jobs:
           translations-path: 'for_deploy/docs/fa/**/**.po'
 
       - name: Get ES coverage
-        run: python main.py --es ${{ steps.esCoverage.outputs.coverage }}
+        run: python main.py --gen es ${{ steps.esCoverage.outputs.coverage }}
 
       - name: Get FR coverage
-        run: python main.py --fr ${{ steps.frCoverage.outputs.coverage }}
+        run: python main.py --gen fr ${{ steps.frCoverage.outputs.coverage }}
 
       - name: Get ZH coverage
-        run: python main.py --zh ${{ steps.zhCoverage.outputs.coverage }}
+        run: python main.py --gen zh ${{ steps.zhCoverage.outputs.coverage }}
 
       - name: Get FA coverage
-        run: python main.py --fa ${{ steps.faCoverage.outputs.coverage }}
+        run: python main.py --gen fa ${{ steps.faCoverage.outputs.coverage }}
 
-      - name: Render README.md
+      - name: Build README.md & index.html
+        run: python main.py --build
+
+      - name: Update README.md
         run: |
           if [[ "$(git status --porcelain)" != "" ]]; then
             git config user.name "GitHub Action"

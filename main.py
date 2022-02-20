@@ -96,14 +96,20 @@ def generate_badge(lang, cov):
 
 
 def main(args):
-    if len(args) > 1 and args[1] == "--download":
-        download_docs()
-    else:
-        lang = args[1].split('--')[1]
-        cov = args[2]
-        generate_jsons(lang, cov)
-        generate_badge(lang, cov)
-        generate_main_files()
+    if len(args) > 1:
+        option = args[1]
+        if option == "--download":
+            download_docs()
+
+        elif option == "--gen":
+            #--gen fa ${{ steps.faCoverage.outputs.coverage }}
+            lang = args[2]
+            cov = args[3]
+            generate_jsons(lang, cov)
+            generate_badge(lang, cov)
+
+        elif args[1] == "--build":
+            generate_main_files()
 
 if __name__ == '__main__':
     main(sys.argv)
