@@ -69,14 +69,13 @@ def generate_main_files():
     and index.html
     """
     table = gen_badges_table()
-    print(table)
     with open('.github/README_TEMPLATE.md','r') as readme_template:
-        content = readme_template.read()
+        template_content = readme_template.read()
 
-        with open('README.md', 'w') as output:
-            content = content.format(table=table.set_style(MARKDOWN))
-            print(content)
-            output.write(content)
+        with open('README.md', 'w') as readme_md:
+            readme_content = template_content.format(table=table.set_style(MARKDOWN))
+            print(readme_content)
+            readme_md.write(readme_content)
 
     with open(f'for_deploy/index.html', 'w') as outfile:
         outfile.write("<p>This site os only a mirror for host badges, please go to <a href='https://github.com/Jalkhov/docspro'>REPO</a> for full  info.</p>")
