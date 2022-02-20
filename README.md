@@ -16,3 +16,5 @@ Image codes for badges:
 |  es  | ![Progress](https://jalkhov.github.io/docspro/badge/es_progress.svg) | `![Progress](https://jalkhov.github.io/docspro/badge/es_progress.svg)` |
 |  fa  | ![Progress](https://jalkhov.github.io/docspro/badge/fa_progress.svg) | `![Progress](https://jalkhov.github.io/docspro/badge/fa_progress.svg)` |
 |  zh  | ![Progress](https://jalkhov.github.io/docspro/badge/zh_progress.svg) | `![Progress](https://jalkhov.github.io/docspro/badge/zh_progress.svg)` |
+
+**Last sync:** 20-02-2022 03:16:49 AM
