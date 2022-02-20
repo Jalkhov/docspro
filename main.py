@@ -8,7 +8,7 @@ repos = [['es', 'es'], ['fr', 'fr'], ['zh', 'zh_CN'], ['fa', 'fa']] # temporal, 
 target = 'https://github.com/flaskcwg/flask-docs-{lang}/tree/main/docs/locales/{dial}'
 folder = 'for_deploy/docs' # Current working directory
 badge_url = 'https://shields.io/badge/translated-{cov}%25-green'
-img_badge_prev = '![Progress]({img_url})'
+img_badge_prev = '![Progress](https://jalkhov.github.io/docspro/badge/{img_url})'
 img_badge_code = f'`{img_badge_prev}`'
 
 
