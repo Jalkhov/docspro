@@ -10,9 +10,4 @@ This project is a small temporary whim and will be archived when the translation
 
 Image codes for badges:
 
-|                               Preview                                |                                  Code                                  |
-|:--------------------------------------------------------------------:|:----------------------------------------------------------------------:|
-| ![Progress](https://jalkhov.github.io/docspro/badge/fr_progress.svg) | `![Progress](https://jalkhov.github.io/docspro/badge/fr_progress.svg)` |
-| ![Progress](https://jalkhov.github.io/docspro/badge/es_progress.svg) | `![Progress](https://jalkhov.github.io/docspro/badge/es_progress.svg)` |
-| ![Progress](https://jalkhov.github.io/docspro/badge/fa_progress.svg) | `![Progress](https://jalkhov.github.io/docspro/badge/fa_progress.svg)` |
-| ![Progress](https://jalkhov.github.io/docspro/badge/zh_progress.svg) | `![Progress](https://jalkhov.github.io/docspro/badge/zh_progress.svg)` |
+None
