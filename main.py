@@ -1,12 +1,11 @@
-from octodir import Octodir
+import json
 import os
 import sys
-import json
-import requests
-import html
-html.escape = lambda *args, **kwargs: args[0]
-from prettytable import PrettyTable, MARKDOWN
 
+import requests
+from dayman import today
+from octodir import Octodir
+from prettytable import MARKDOWN, PrettyTable
 
 repos = [['es', 'es'], ['fr', 'fr'], ['zh', 'zh_CN'], ['fa', 'fa']] # temporal, walk org repos
 repo_locales_url = 'https://github.com/flaskcwg/flask-docs-{lang}/tree/main/docs/locales/{dial}'
@@ -75,8 +74,7 @@ def generate_main_files():
         template_content = readme_template.read()
 
         with open('README.md', 'w') as readme_md:
-            readme_content = template_content.format(table=table)
-            #print(readme_content)
+            readme_content = template_content.format(table=table, last_sync=today())
             readme_md.write(readme_content)
 
     with open(f'for_deploy/index.html', 'w') as outfile:
