@@ -3,7 +3,6 @@ import os
 import sys
 
 import requests
-from dayman import today
 from octodir import Octodir
 from prettytable import MARKDOWN, PrettyTable
 
