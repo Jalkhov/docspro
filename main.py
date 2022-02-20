@@ -69,6 +69,7 @@ def generate_main_files():
     and index.html
     """
     table = gen_badges_table()
+    print(table)
     with open('.github/README_TEMPLATE.md','r') as readme_template:
         content = readme_template.read()
 
