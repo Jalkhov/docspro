@@ -5,8 +5,8 @@ import sys
 import requests
 from octodir import Octodir
 from prettytable import MARKDOWN, PrettyTable
+from twalker import TWalker
 
-repos = [['es', 'es'], ['fr', 'fr'], ['zh', 'zh_CN'], ['fa', 'fa']] # temporal, walk org repos
 repo_locales_url = 'https://github.com/flaskcwg/flask-docs-{lang}/tree/main/docs/locales/{dial}'
 docs_dir = 'for_deploy/docs' # Folder for languages
 badge_url = 'https://shields.io/badge/translated-{cov}%25-blue'
@@ -52,6 +52,10 @@ def download_docs():
     Download language docs
     """
     Octo = Octodir()
+    TWalker = TWalker()
+
+    repos = TWalker.langs_data()
+
     os.makedirs('for_deploy/data', exist_ok=True) # Create folder for jsons
     os.makedirs('for_deploy/badge', exist_ok=True) # Create folder for badges
     os.makedirs(docs_dir, exist_ok=True) # Create folde for languages
