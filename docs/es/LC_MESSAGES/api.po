@@ -6659,21 +6659,25 @@ msgid ""
 ":class:`datetime.datetime` and :class:`datetime.date` are serialized to "
 ":rfc:`822` strings. This is the same as the HTTP date format."
 msgstr ""
+":class:`datetime.datetime` y :class:`datetime.date` se serializan en cadenas"
+" :rfc:`822`. Esto es lo mismo que el formato de fecha HTTP."
 
 #: ../../api.rst:247 flask.json.JSONEncoder:7 of
 msgid ":class:`uuid.UUID` is serialized to a string."
-msgstr ""
+msgstr ":class:`uuid.UUID` se serializa en una cadena."
 
 #: ../../api.rst:248 flask.json.JSONEncoder:8 of
 msgid ""
 ":class:`dataclasses.dataclass` is passed to :func:`dataclasses.asdict`."
-msgstr ""
+msgstr ":class:`dataclasses.dataclass` se pasa a :func:`dataclasses.asdict`."
 
 #: ../../api.rst:250 flask.json.JSONEncoder:10 of
 msgid ""
 ":class:`~markupsafe.Markup` (or any object with a ``__html__`` method) will "
 "call the ``__html__`` method to get a string."
 msgstr ""
+":class:`~markupsafe.Markup` (o cualquier objeto con un método ``__html__``) "
+"llamará al método ``__html__`` para obtener una cadena."
 
 #: ../../api.rst:253
 msgid ""
@@ -6681,28 +6685,39 @@ msgid ""
 "function. The filter marks the output with ``|safe`` automatically. Use the "
 "filter to render data inside ``<script>`` tags."
 msgstr ""
+"El filtro ``|tojson`` de Jinja está configurado para utilizar la función "
+":func:`dumps` de Flask. El filtro marca la salida con ``|safe`` "
+"automáticamente. Utiliza el filtro para renderizar datos dentro de las "
+"etiquetas ``<script>``."
 
 #: flask.json.jsonify:1 of
 msgid ""
 "Serialize data to JSON and wrap it in a :class:`~flask.Response` with the "
 ":mimetype:`application/json` mimetype."
 msgstr ""
+"Serializa los datos a JSON y los envuelve en un :class:`~flask.Response` con"
+" el mimetype:`application/json`."
 
 #: flask.json.jsonify:4 of
 msgid ""
 "Uses :func:`dumps` to serialize the data, but ``args`` and ``kwargs`` are "
 "treated as data rather than arguments to :func:`json.dumps`."
 msgstr ""
+"Utiliza :func:`dumps` para serializar los datos, pero los ``args`` y los "
+"``kwargs`` son tratados como datos en lugar de argumentos para "
+":func:`json.dumps`."
 
 #: flask.json.jsonify:8 of
 msgid "Single argument: Treated as a single value."
-msgstr ""
+msgstr "Argumento único: Se trata como un solo valor."
 
 #: flask.json.jsonify:9 of
 msgid ""
 "Multiple arguments: Treated as a list of values. ``jsonify(1, 2, 3)`` is the"
 " same as ``jsonify([1, 2, 3])``."
 msgstr ""
+"Argumentos múltiples: Tratados como una lista de valores. ``jsonify(1, 2, "
+"3)`` es lo mismo que ``jsonify([1, 2, 3])``."
 
 #: flask.json.jsonify:11 of
 msgid ""
@@ -6710,16 +6725,21 @@ msgid ""
 "errors=errors)`` is the same as ``jsonify({\"data\": data, \"errors\": "
 "errors})``."
 msgstr ""
+"Argumentos de palabras clave: Tratados como un dict de valores. "
+"``jsonify(data=data, errors=errors)`` es lo mismo que ``jsonify({\"data\": "
+"data, \"errors\": errors})``."
 
 #: flask.json.jsonify:14 of
 msgid ""
 "Passing both arguments and keyword arguments is not allowed as it's not "
 "clear what should happen."
 msgstr ""
+"No se permite pasar tanto los argumentos como las palabras clave, ya que no "
+"está claro qué debe ocurrir."
 
 #: flask.json.jsonify:29 of
 msgid "Will return a JSON response like this:"
-msgstr ""
+msgstr "Devolverá una respuesta JSON como esta:"
 
 #: flask.json.jsonify:39 of
 msgid ""
@@ -6727,55 +6747,69 @@ msgid ""
 "or if :data:`JSONIFY_PRETTYPRINT_REGULAR` is ``True``, the output will be "
 "formatted to be easier to read."
 msgstr ""
+"La salida por defecto omite las sangrías y los espacios después de los "
+"separadores. En modo de depuración o si :data:`JSONIFY_PRETTYPRINT_REGULAR` "
+"es ``True``, la salida tendrá un formato más fácil de leer."
 
 #: flask.json.jsonify:43 of
 msgid ""
 "Added support for serializing top-level arrays. This introduces a security "
 "risk in ancient browsers. See :ref:`security-json`."
 msgstr ""
+"Se ha añadido soporte para serializar arrays de nivel superior. Esto "
+"introduce un riesgo de seguridad en los navegadores antiguos. Ver "
+":ref:`security-json`."
 
 #: flask.json.dumps:1 of
 msgid "Serialize an object to a string of JSON."
-msgstr ""
+msgstr "Serializa un objeto a una cadena de JSON."
 
 #: flask.json.dumps:3 of
 msgid ""
 "Takes the same arguments as the built-in :func:`json.dumps`, with some "
 "defaults from application configuration."
 msgstr ""
+"Toma los mismos argumentos que el built-in :func:`json.dumps`, con algunos "
+"valores por defecto de la configuración de la aplicación."
 
 #: flask.json.dump:6 flask.json.dumps:6 of
 msgid "Object to serialize to JSON."
-msgstr ""
+msgstr "Objeto para serializar a JSON."
 
 #: flask.json.dump:8 flask.json.dumps:7 flask.json.load:7 flask.json.loads:7
 #: of
 msgid "Use this app's config instead of the active app context or defaults."
 msgstr ""
+"Utiliza la configuración de esta aplicación en lugar del contexto de la "
+"aplicación activa o los valores predeterminados."
 
 #: flask.json.dumps:9 of
 msgid "Extra arguments passed to :func:`json.dumps`."
-msgstr ""
+msgstr "Argumentos extra pasados a :func:`json.dumps`."
 
 #: flask.json.dumps:11 of
 msgid "``encoding`` is deprecated and will be removed in Flask 2.1."
-msgstr ""
+msgstr "``encoding`` está obsoleto y será eliminado en Flask 2.1."
 
 #: flask.json.dumps:14 flask.json.loads:15 of
 msgid ""
 "``app`` can be passed directly, rather than requiring an app context for "
 "configuration."
 msgstr ""
+"``app`` se puede pasar directamente, en lugar de requerir un contexto de "
+"aplicación para la configuración."
 
 #: flask.json.dump:1 of
 msgid "Serialize an object to JSON written to a file object."
-msgstr ""
+msgstr "Serializar un objeto a JSON escrito en un objeto de archivo."
 
 #: flask.json.dump:3 of
 msgid ""
 "Takes the same arguments as the built-in :func:`json.dump`, with some "
 "defaults from application configuration."
 msgstr ""
+"Toma los mismos argumentos que el built-in :func:`json.dump`, con algunos "
+"valores por defecto de la configuración de la aplicación."
 
 #: flask.json.dump:7 of
 msgid "File object to write JSON to."
