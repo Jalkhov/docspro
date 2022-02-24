@@ -154,7 +154,7 @@ msgid ""
 "The ``your_application`` string has to point to your application's package "
 "or module that creates the ``celery`` object."
 msgstr ""
-"La cadena ``tu_aplicación`` tiene que apuntar al paquete o módulo de tu "
+"La cadena ``your_application`` tiene que apuntar al paquete o módulo de tu "
 "aplicación que crea el objeto ``celery``."
 
 #: ../../patterns/celery.rst:100

@@ -28,20 +28,20 @@ msgid ""
 "Eager to get started? This page gives a good introduction to Flask. Follow "
 ":doc:`installation` to set up a project and install Flask first."
 msgstr ""
-"برای شروع مشتاق هستید؟ این صفحه معرفی خوبی برای فلاسک میدهد. برای راه‌اندازی"
-" یک پروژه و نصب فلاسک ابتدا :doc:`installation` را دنبال کنید."
+"مشتاق شروع هستید؟ این صفحه اطلاعات خوبی درباره فلاسک می‌دهد. برای راه‌اندازی"
+" یک پروژه و نصب فلاسک، ابتدا :doc:`installation` را بررسی کنید."
 
 #: ../../quickstart.rst:9
 msgid "A Minimal Application"
-msgstr "یک برنامه مینیمال"
+msgstr "یک برنامه ساده"
 
 #: ../../quickstart.rst:11
 msgid "A minimal Flask application looks something like this:"
-msgstr "یک اپلیکیشن فلاسک مینیمال چیزی شبیه به این است:"
+msgstr "یک برنامه ساده فلاسک، چیزی شبیه به این است:"
 
 #: ../../quickstart.rst:23
 msgid "So what did that code do?"
-msgstr "پس آن کد چه کرد؟"
+msgstr "این کد چه کاری می‌کند؟"
 
 #: ../../quickstart.rst:25
 msgid ""
@@ -59,9 +59,9 @@ msgid ""
 "knows where to look for resources such as templates and static files."
 msgstr ""
 "بعد، یک نمونه از این کلاس ایجاد می کنیم. اولین آرگومان نام ماژول یا بسته "
-"برنامه است. ``__name__`` میانبر مناسبی برای این کار است که برای اکثر موارد "
-"مناسب است. این مورد نیاز است تا فلاسک بداند در کجا به دنبال منابعی مانند "
-"قالب ها و فایل های استاتیک باشد."
+"برنامه است. ``__name__`` میانبر مناسبی برای این کار است و در اکثر موارد "
+"مناسب است. این آرگومان اجباری است چون باید فلاسک بداند که کجا به دنبال "
+"منابعی مانند قالب ها و فایل های استاتیک باشد."
 
 #: ../../quickstart.rst:32
 msgid ""
@@ -78,15 +78,16 @@ msgid ""
 "the browser."
 msgstr ""
 "تابع پیامی را که می خواهیم در مرورگر کاربر نمایش دهیم برمی گرداند. نوع "
-"محتوای پیش فرض HTML است، بنابراین HTML در رشته توسط مرورگر ارائه می شود."
+"محتوای پیش فرض HTML است، بنابراین کد HTML در رشته، توسط مرورگر ارائه می شود."
 
 #: ../../quickstart.rst:38
 msgid ""
 "Save it as :file:`hello.py` or something similar. Make sure to not call your"
 " application :file:`flask.py` because this would conflict with Flask itself."
 msgstr ""
-"آن را به صورت :file:`hello.py` یا چیزی مشابه ذخیره کنید. مطمئن شوید که "
-"برنامه خود را :file:`flask.py` فرا نخوانید زیرا با خود فلاسک در تضاد است."
+"آن را به صورت :file:`hello.py` یا هر چیز مشابه دیگر ذخیره کنید. مطمئن شوید "
+"که برنامه خود را :file:`flask.py` نام گذاری نکنید زیرا با خود فلاسک در تضاد "
+"است."
 
 #: ../../quickstart.rst:42
 msgid ""
@@ -96,8 +97,8 @@ msgid ""
 "variable:"
 msgstr ""
 "برای اجرای برنامه، از دستور :command:`flask` یا :command:`python -m flask` "
-"استفاده کنید. قبل از اینکه بتوانید این کار را انجام دهید، باید به ترمینال "
-"خود بگویید که برنامه با صادر کردن متغیر محیطی ``FLASK_APP`` با آن کار کند:"
+"استفاده کنید. قبل از اینکه این کار را انجام دهید، باید به ترمینال خود بگویید"
+" که متغیر محیطی ``FLASK_APP`` را صادر کند تا برنامه با آن کار کند:"
 
 #: ../../quickstart.rst:49 ../../quickstart.rst:170
 msgid "Bash"
@@ -105,7 +106,7 @@ msgstr "Bash"
 
 #: ../../quickstart.rst:57 ../../quickstart.rst:177
 msgid "Fish"
-msgstr ""
+msgstr "Fish"
 
 #: ../../quickstart.rst:65 ../../quickstart.rst:184
 msgid "CMD"
@@ -125,7 +126,7 @@ msgid ""
 "have to set the ``FLASK_APP`` environment variable. See :doc:`/cli` for more"
 " details."
 msgstr ""
-"به عنوان میانبر، اگر نام فایل ``app.py`` یا ``wsgi.py`` باشد، لازم نیست "
+"به عنوان راه میانبر، اگر نام فایل ``app.py`` یا ``wsgi.py`` باشد، لازم نیست "
 "متغیر محیطی ``FLASK_APP`` را تنظیم کنید. برای جزئیات بیشتر به :doc:`/cli` "
 "مراجعه کنید."
 
@@ -215,7 +216,7 @@ msgstr ""
 "در نسخه های ۰.۱۱ و قبل از آن تفاوتی در اجرای برنامه بود. به صورت کوتاه، "
 ":command:`flask` و :command:`python -m flask` وجود خارجی نداشتند. در این "
 "حالت شما دو انتخاب داشتید: یا فلاسک را به نسخه های جدیدتر بروز کنید یا "
-":doc:`/server` را بررسی میکردید تا روشی تناوبی برای اجرای سرور بیابید."
+":doc:`/server` را بررسی می کردید تا روشی تناوبی برای اجرای سرور بیابید."
 
 #: ../../quickstart.rst:134
 msgid "Invalid Import Name"
@@ -259,7 +260,7 @@ msgstr ""
 "نشان می دهد."
 
 msgid "The interactive debugger in action."
-msgstr ""
+msgstr "اشکال زدای تعاملی در عمل."
 
 #: ../../quickstart.rst:160
 msgid ""
@@ -1373,6 +1374,3 @@ msgid "Ready to deploy your new Flask app? See :doc:`deploying/index`."
 msgstr ""
 "آیا برای استقرار برنامه فلاسک جدیدتان آماده اید؟  :doc:`deploying/index` با "
 "ببنید."
-
-#~ msgid "اشکال زدای تعاملی در عمل."
-#~ msgstr ""
