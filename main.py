@@ -52,9 +52,9 @@ def download_docs():
     Download language docs
     """
     Octo = Octodir()
-    TWalker = TWalker()
+    tw = TWalker()
 
-    repos = TWalker.langs_data()
+    repos = tw.langs_data()
 
     os.makedirs('for_deploy/data', exist_ok=True) # Create folder for jsons
     os.makedirs('for_deploy/badge', exist_ok=True) # Create folder for badges
