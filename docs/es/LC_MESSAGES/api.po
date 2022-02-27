@@ -8116,7 +8116,7 @@ msgstr ""
 "Las partes variables en la ruta se pueden especificar con paréntesis "
 "angulares (``/user/<username>``). Por defecto, una parte variable en la URL "
 "acepta cualquier cadena sin barra, pero también se puede especificar un "
-"convertidor diferente utilizando ``<converter:name>`."
+"convertidor diferente utilizando ``<converter:name>``."
 
 #: ../../api.rst:611
 msgid "Variable parts are passed to the view function as keyword arguments."
