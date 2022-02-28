@@ -65,15 +65,15 @@ msgstr ""
 
 #: ../../server.rst:28
 msgid "Bash"
-msgstr ""
+msgstr "Bash"
 
 #: ../../server.rst:36
 msgid "CMD"
-msgstr ""
+msgstr "CMD"
 
 #: ../../server.rst:44
 msgid "Powershell"
-msgstr ""
+msgstr "Powershell"
 
 #: ../../server.rst:52
 msgid ""

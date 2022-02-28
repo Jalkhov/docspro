@@ -201,11 +201,11 @@ msgstr "Crear un virtualenv."
 
 #: ../../../CONTRIBUTING.rst:101
 msgid "Linux/macOS"
-msgstr ""
+msgstr "Linux/macOS"
 
 #: ../../../CONTRIBUTING.rst:108
 msgid "Windows"
-msgstr ""
+msgstr "Windows"
 
 #: ../../../CONTRIBUTING.rst:115
 msgid "Upgrade pip and setuptools."

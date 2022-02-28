@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../deploying/asgi.rst:4
 msgid "ASGI"
-msgstr ""
+msgstr "ASGI"
 
 #: ../../deploying/asgi.rst:6
 msgid ""
@@ -31,9 +31,17 @@ msgid ""
 " used for Flask's :ref:`async_await` support. You can use the adapter by "
 "wrapping the Flask app,"
 msgstr ""
+"Si quieres usar un servidor ASGI necesitarás utilizar un middleware de WSGI "
+"a ASGI. Se recomienda el adaptador asgiref "
+"[WsgiToAsgi](https://github.com/django/asgiref#wsgi-to-asgi-adapter) ya que "
+"se integra con el bucle de eventos utilizado para el soporte "
+":ref:`async_await` de Flask. Puedes utilizar el adaptador envolviendo la "
+"aplicación Flask,"
 
 #: ../../deploying/asgi.rst:24
 msgid ""
 "and then serving the ``asgi_app`` with the asgi server, e.g. using "
 "`Hypercorn <https://gitlab.com/pgjones/hypercorn>`_,"
 msgstr ""
+"y luego servir la ``asgi_app`` con el servidor asgi, por ejemplo usando "
+"`Hypercorn <https://gitlab.com/pgjones/hypercorn>`_,"

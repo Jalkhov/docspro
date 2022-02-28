@@ -78,7 +78,7 @@ msgstr ""
 " durante el desarrollo."
 
 msgid "captura de pantalla del depurador en acción"
-msgstr ""
+msgstr "captura de pantalla del depurador en acción"
 
 #: ../../debugging.rst:37
 msgid ""
@@ -105,15 +105,15 @@ msgstr ""
 
 #: ../../debugging.rst:49 ../../debugging.rst:102
 msgid "Bash"
-msgstr ""
+msgstr "Bash"
 
 #: ../../debugging.rst:56 ../../debugging.rst:109
 msgid "CMD"
-msgstr ""
+msgstr "CMD"
 
 #: ../../debugging.rst:63 ../../debugging.rst:116
 msgid "Powershell"
-msgstr ""
+msgstr "Powershell"
 
 #: ../../debugging.rst:70
 msgid ""

@@ -21,7 +21,7 @@ msgstr ""
 
 #: ../../quickstart.rst:2
 msgid "Quickstart"
-msgstr ""
+msgstr "Quickstart"
 
 #: ../../quickstart.rst:4
 msgid ""
@@ -106,15 +106,15 @@ msgstr ""
 
 #: ../../quickstart.rst:49 ../../quickstart.rst:157
 msgid "Bash"
-msgstr ""
+msgstr "Bash"
 
 #: ../../quickstart.rst:57 ../../quickstart.rst:164
 msgid "CMD"
-msgstr ""
+msgstr "CMD"
 
 #: ../../quickstart.rst:65 ../../quickstart.rst:171
 msgid "Powershell"
-msgstr ""
+msgstr "Powershell"
 
 #: ../../quickstart.rst:73
 msgid "Application Discovery Behavior"
@@ -254,7 +254,7 @@ msgstr ""
 "el navegador si se produce un error durante una solicitud."
 
 msgid "El depurador interactivo en acción."
-msgstr ""
+msgstr "El depurador interactivo en acción."
 
 #: ../../quickstart.rst:147
 msgid ""
@@ -402,7 +402,7 @@ msgstr "Tipos de convertidores:"
 
 #: ../../quickstart.rst:264
 msgid "``string``"
-msgstr ""
+msgstr "``string``"
 
 #: ../../quickstart.rst:264
 msgid "(default) accepts any text without a slash"
@@ -410,7 +410,7 @@ msgstr "(Por defecto) acepta cualquier texto sin barra"
 
 #: ../../quickstart.rst:265
 msgid "``int``"
-msgstr ""
+msgstr "``int``"
 
 #: ../../quickstart.rst:265
 msgid "accepts positive integers"
@@ -418,7 +418,7 @@ msgstr "acepta números enteros positivos"
 
 #: ../../quickstart.rst:266
 msgid "``float``"
-msgstr ""
+msgstr "``float``"
 
 #: ../../quickstart.rst:266
 msgid "accepts positive floating point values"
@@ -426,7 +426,7 @@ msgstr "acepta valores positivos en coma flotante"
 
 #: ../../quickstart.rst:267
 msgid "``path``"
-msgstr ""
+msgstr "``path``"
 
 #: ../../quickstart.rst:267
 msgid "like ``string`` but also accepts slashes"
@@ -434,7 +434,7 @@ msgstr "como ``string`` pero también acepta barras inclinadas"
 
 #: ../../quickstart.rst:268
 msgid "``uuid``"
-msgstr ""
+msgstr "``uuid``"
 
 #: ../../quickstart.rst:268
 msgid "accepts UUID strings"
@@ -970,7 +970,7 @@ msgstr ""
 
 #: ../../quickstart.rst:635
 msgid "Cookies"
-msgstr ""
+msgstr "Cookies"
 
 #: ../../quickstart.rst:637
 msgid ""

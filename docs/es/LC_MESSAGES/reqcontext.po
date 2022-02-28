@@ -316,7 +316,7 @@ msgstr ""
 
 #: ../../reqcontext.rst:159
 msgid "Teardown Callbacks"
-msgstr ""
+msgstr "Teardown Callbacks"
 
 #: ../../reqcontext.rst:161
 msgid ""

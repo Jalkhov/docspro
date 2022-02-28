@@ -168,11 +168,11 @@ msgstr "Cree una carpeta de proyecto y una carpeta :file:`venv` dentro:"
 
 #: ../../installation.rst:80 ../../installation.rst:106
 msgid "macOS/Linux"
-msgstr ""
+msgstr "macOS/Linux"
 
 #: ../../installation.rst:88 ../../installation.rst:112
 msgid "Windows"
-msgstr ""
+msgstr "Windows"
 
 #: ../../installation.rst:100
 msgid "Activate the environment"

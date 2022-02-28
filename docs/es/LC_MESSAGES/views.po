@@ -208,7 +208,7 @@ msgstr ""
 
 #: ../../views.rst:177
 msgid "URL"
-msgstr ""
+msgstr "URL"
 
 #: ../../views.rst:177
 msgid "Method"
@@ -220,11 +220,11 @@ msgstr "Descripción"
 
 #: ../../views.rst:179 ../../views.rst:180
 msgid "``/users/``"
-msgstr ""
+msgstr "``/users/``"
 
 #: ../../views.rst:179 ../../views.rst:181
 msgid "``GET``"
-msgstr ""
+msgstr "``GET``"
 
 #: ../../views.rst:179
 msgid "Gives a list of all users"
@@ -232,7 +232,7 @@ msgstr "Da una lista de todos los usuarios"
 
 #: ../../views.rst:180
 msgid "``POST``"
-msgstr ""
+msgstr "``POST``"
 
 #: ../../views.rst:180
 msgid "Creates a new user"
@@ -240,7 +240,7 @@ msgstr "Crea un nuevo usuario"
 
 #: ../../views.rst:181 ../../views.rst:182 ../../views.rst:183
 msgid "``/users/<id>``"
-msgstr ""
+msgstr "``/users/<id>``"
 
 #: ../../views.rst:181
 msgid "Shows a single user"
@@ -248,7 +248,7 @@ msgstr "Muestra un solo usuario"
 
 #: ../../views.rst:182
 msgid "``PUT``"
-msgstr ""
+msgstr "``PUT``"
 
 #: ../../views.rst:182
 msgid "Updates a single user"
@@ -256,7 +256,7 @@ msgstr "Actualiza un solo usuario"
 
 #: ../../views.rst:183
 msgid "``DELETE``"
-msgstr ""
+msgstr "``DELETE``"
 
 #: ../../views.rst:183
 msgid "Deletes a single user"

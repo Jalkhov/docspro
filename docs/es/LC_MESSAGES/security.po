@@ -296,6 +296,8 @@ msgid ""
 "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-"
 "Security"
 msgstr ""
+"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Strict-Transport-"
+"Security"
 
 #: ../../security.rst:142
 msgid "Content Security Policy (CSP)"
@@ -314,17 +316,19 @@ msgstr ""
 
 #: ../../security.rst:150
 msgid "https://csp.withgoogle.com/docs/index.html"
-msgstr ""
+msgstr "https://csp.withgoogle.com/docs/index.html"
 
 #: ../../security.rst:151
 msgid ""
 "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-"
 "Policy"
 msgstr ""
+"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Content-Security-"
+"Policy"
 
 #: ../../security.rst:154
 msgid "X-Content-Type-Options"
-msgstr ""
+msgstr "X-Content-Type-Options"
 
 #: ../../security.rst:156
 msgid ""
@@ -341,10 +345,12 @@ msgid ""
 "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-"
 "Options"
 msgstr ""
+"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Content-Type-"
+"Options"
 
 #: ../../security.rst:165
 msgid "X-Frame-Options"
-msgstr ""
+msgstr "X-Frame-Options"
 
 #: ../../security.rst:167
 msgid ""
@@ -362,10 +368,11 @@ msgstr ""
 msgid ""
 "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options"
 msgstr ""
+"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options"
 
 #: ../../security.rst:177
 msgid "X-XSS-Protection"
-msgstr ""
+msgstr "X-XSS-Protection"
 
 #: ../../security.rst:179
 msgid ""
@@ -381,6 +388,7 @@ msgstr ""
 msgid ""
 "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection"
 msgstr ""
+"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection"
 
 #: ../../security.rst:191
 msgid "Set-Cookie options"
@@ -461,11 +469,11 @@ msgstr ""
 
 #: ../../security.rst:244
 msgid "https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies"
-msgstr ""
+msgstr "https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies"
 
 #: ../../security.rst:245
 msgid "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie"
-msgstr ""
+msgstr "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie"
 
 #: ../../security.rst:251
 msgid "HTTP Public Key Pinning (HPKP)"
@@ -489,7 +497,7 @@ msgstr ""
 
 #: ../../security.rst:260
 msgid "https://developer.mozilla.org/en-US/docs/Web/HTTP/Public_Key_Pinning"
-msgstr ""
+msgstr "https://developer.mozilla.org/en-US/docs/Web/HTTP/Public_Key_Pinning"
 
 #: ../../security.rst:264
 msgid "Copy/Paste to Terminal"

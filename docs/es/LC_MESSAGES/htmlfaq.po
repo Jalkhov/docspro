@@ -201,7 +201,7 @@ msgstr "|Y| [1]_"
 
 #: ../../htmlfaq.rst:111
 msgid "Si"
-msgstr ""
+msgstr "Si"
 
 #: ../../htmlfaq.rst:80 ../../htmlfaq.rst:82 ../../htmlfaq.rst:84
 #: ../../htmlfaq.rst:88 ../../htmlfaq.rst:91 ../../htmlfaq.rst:93
