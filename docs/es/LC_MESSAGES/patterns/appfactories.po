@@ -146,17 +146,17 @@ msgstr ""
 #: ../../patterns/appfactories.rst:94 ../../patterns/appfactories.rst:120
 #: ../../patterns/packages.rst:64 ../../patterns/packages.rst:88
 msgid "Bash"
-msgstr ""
+msgstr "Bash"
 
 #: ../../patterns/appfactories.rst:101 ../../patterns/appfactories.rst:127
 #: ../../patterns/packages.rst:70 ../../patterns/packages.rst:94
 msgid "CMD"
-msgstr ""
+msgstr "CMD"
 
 #: ../../patterns/appfactories.rst:108 ../../patterns/appfactories.rst:134
 #: ../../patterns/packages.rst:76 ../../patterns/packages.rst:100
 msgid "Powershell"
-msgstr ""
+msgstr "Powershell"
 
 #: ../../patterns/appfactories.rst:115
 msgid ""

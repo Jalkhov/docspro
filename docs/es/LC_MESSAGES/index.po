@@ -24,7 +24,7 @@ msgid "Welcome to Flask"
 msgstr "Bienvenido a Flask"
 
 msgid "Flask: desarrollo web, una gota a la vez"
-msgstr ""
+msgstr "Flask: desarrollo web, una gota a la vez"
 
 #: ../../index.rst:11
 msgid ""

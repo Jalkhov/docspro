@@ -149,15 +149,15 @@ msgstr ""
 
 #: ../../config.rst:72 ../../config.rst:440 ../../config.rst:511
 msgid "Bash"
-msgstr ""
+msgstr "Bash"
 
 #: ../../config.rst:79 ../../config.rst:448 ../../config.rst:520
 msgid "CMD"
-msgstr ""
+msgstr "CMD"
 
 #: ../../config.rst:86 ../../config.rst:456 ../../config.rst:529
 msgid "Powershell"
-msgstr ""
+msgstr "Powershell"
 
 #: ../../config.rst:93
 msgid ""
@@ -634,14 +634,17 @@ msgid ""
 "``SESSION_REFRESH_EACH_REQUEST``, ``TEMPLATES_AUTO_RELOAD``, "
 "``LOGGER_HANDLER_POLICY``, ``EXPLAIN_TEMPLATE_LOADING``"
 msgstr ""
+"``SESSION_REFRESH_EACH_REQUEST``, ``TEMPLATES_AUTO_RELOAD``, "
+"``LOGGER_HANDLER_POLICY``, ``EXPLAIN_TEMPLATE_LOADING``"
 
 #: ../../config.rst:397
 msgid "``JSON_AS_ASCII``, ``JSON_SORT_KEYS``, ``JSONIFY_PRETTYPRINT_REGULAR``"
 msgstr ""
+"``JSON_AS_ASCII``, ``JSON_SORT_KEYS``, ``JSONIFY_PRETTYPRINT_REGULAR``"
 
 #: ../../config.rst:394
 msgid "``PREFERRED_URL_SCHEME``"
-msgstr ""
+msgstr "``PREFERRED_URL_SCHEME``"
 
 #: ../../config.rst:388
 msgid ""
@@ -649,22 +652,25 @@ msgid ""
 " ``SESSION_COOKIE_DOMAIN``, ``SESSION_COOKIE_PATH``, "
 "``SESSION_COOKIE_HTTPONLY``, ``SESSION_COOKIE_SECURE``"
 msgstr ""
+"``TRAP_BAD_REQUEST_ERRORS``, ``TRAP_HTTP_EXCEPTIONS``, ``APPLICATION_ROOT``,"
+" ``SESSION_COOKIE_DOMAIN``, ``SESSION_COOKIE_PATH``, "
+"``SESSION_COOKIE_HTTPONLY``, ``SESSION_COOKIE_SECURE``"
 
 #: ../../config.rst:385
 msgid "``PROPAGATE_EXCEPTIONS``, ``PRESERVE_CONTEXT_ON_EXCEPTION``"
-msgstr ""
+msgstr "``PROPAGATE_EXCEPTIONS``, ``PRESERVE_CONTEXT_ON_EXCEPTION``"
 
 #: ../../config.rst:382
 msgid "``MAX_CONTENT_LENGTH``"
-msgstr ""
+msgstr "``MAX_CONTENT_LENGTH``"
 
 #: ../../config.rst:379
 msgid "``SERVER_NAME``"
-msgstr ""
+msgstr "``SERVER_NAME``"
 
 #: ../../config.rst:376
 msgid "``LOGGER_NAME``"
-msgstr ""
+msgstr "``LOGGER_NAME``"
 
 #: ../../config.rst:418
 msgid "Configuring from Python Files"
