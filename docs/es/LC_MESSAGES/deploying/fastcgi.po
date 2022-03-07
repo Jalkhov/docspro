@@ -38,6 +38,10 @@ msgstr ""
 "usaremos para esta guía. Asegúrate de tenerlo instalado para poder seguir "
 "adelante."
 
+#: ../../deploying/fastcgi.rst:10
+msgid "Watch Out"
+msgstr "Cuidado"
+
 #: ../../deploying/fastcgi.rst:12
 msgid ""
 "Please make sure in advance that any ``app.run()`` calls you might have in "
@@ -102,7 +106,7 @@ msgstr ""
 "Asegúrate de poner el bit de ejecutable en ese archivo para que los "
 "servidores puedan ejecutarlo:"
 
-#: ../../deploying/fastcgi.rst:53 ../../deploying/mod_wsgi.rst:82
+#: ../../deploying/fastcgi.rst:53
 msgid "Configuring Apache"
 msgstr "Configuring Apache"
 
@@ -189,7 +193,7 @@ msgstr ""
 "(tenga en cuenta que ya no es necesario pasar explícitamente un socket a "
 "run())."
 
-#: ../../deploying/fastcgi.rst:164 ../../deploying/uwsgi.rst:48
+#: ../../deploying/fastcgi.rst:164
 msgid "Configuring nginx"
 msgstr "Configuración de nginx"
 

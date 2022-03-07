@@ -76,6 +76,10 @@ msgstr ""
 " Contendrá la fábrica de la aplicación, y le dice a Python que el directorio"
 " ``flaskr`` debe ser tratado como un paquete."
 
+#: ../../tutorial/factory.rst:35
+msgid "``flaskr/__init__.py``"
+msgstr "``flaskr/__init__.py``"
+
 #: ../../tutorial/factory.rst:71
 msgid ""
 "``create_app`` is the application factory function. You'll add to it later "
@@ -223,11 +227,27 @@ msgstr ""
 "cambios en el código. Puedes dejarlo funcionando y simplemente recargar la "
 "página del navegador mientras sigues el tutorial."
 
+#: ../../tutorial/factory.rst:140
+msgid "Bash"
+msgstr "Bash"
+
+#: ../../tutorial/factory.rst:148
+msgid "Fish"
+msgstr "Fish"
+
+#: ../../tutorial/factory.rst:156
+msgid "CMD"
+msgstr "CMD"
+
 #: ../../tutorial/factory.rst:164
+msgid "Powershell"
+msgstr "Powershell"
+
+#: ../../tutorial/factory.rst:172
 msgid "You'll see output similar to this:"
 msgstr "Verás un resultado similar a este:"
 
-#: ../../tutorial/factory.rst:176
+#: ../../tutorial/factory.rst:184
 msgid ""
 "Visit http://127.0.0.1:5000/hello in a browser and you should see the "
 "\"Hello, World!\" message. Congratulations, you're now running your Flask "
@@ -237,6 +257,16 @@ msgstr ""
 " \"¡Hola, mundo!\". Enhorabuena, ¡ya estás ejecutando tu aplicación web "
 "Flask!"
 
-#: ../../tutorial/factory.rst:180
+#: ../../tutorial/factory.rst:188
+msgid ""
+"If another program is already using port 5000, you'll see ``OSError: [Errno "
+"98]`` or ``OSError: [WinError 10013]`` when the server tries to start. See "
+":ref:`address-already-in-use` for how to handle that."
+msgstr ""
+"Si otro programa ya está usando el puerto 5000, verás ``OSError: [Errno "
+"98]`` o ``OSError: [WinError 10013]`` cuando el servidor intente iniciarse. "
+"Ver :ref:`address-already-in-use` para saber cómo manejar esto."
+
+#: ../../tutorial/factory.rst:193
 msgid "Continue to :doc:`database`."
 msgstr "Continuar con :doc:`database`."

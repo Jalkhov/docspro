@@ -77,7 +77,7 @@ msgstr ""
 "error no manejado durante una solicitud. Este depurador sólo debe utilizarse"
 " durante el desarrollo."
 
-msgid "captura de pantalla del depurador en acción"
+msgid "screenshot of debugger in action"
 msgstr "captura de pantalla del depurador en acción"
 
 #: ../../debugging.rst:37
@@ -103,32 +103,36 @@ msgstr ""
 "a Flask en modo de depuración, lo que cambia la forma en que maneja algunos "
 "errores, y habilita el depurador y el recargador."
 
-#: ../../debugging.rst:49 ../../debugging.rst:102
+#: ../../debugging.rst:49 ../../debugging.rst:109
 msgid "Bash"
 msgstr "Bash"
 
-#: ../../debugging.rst:56 ../../debugging.rst:109
+#: ../../debugging.rst:56 ../../debugging.rst:116
+msgid "Fish"
+msgstr "Fish"
+
+#: ../../debugging.rst:63 ../../debugging.rst:123
 msgid "CMD"
 msgstr "CMD"
 
-#: ../../debugging.rst:63 ../../debugging.rst:116
+#: ../../debugging.rst:70 ../../debugging.rst:130
 msgid "Powershell"
 msgstr "Powershell"
 
-#: ../../debugging.rst:70
+#: ../../debugging.rst:77
 msgid ""
 "``FLASK_ENV`` can only be set as an environment variable. When running from "
 "Python code, passing ``debug=True`` enables debug mode, which is mostly "
-"equivalent. Debug mode can be controled separately from ``FLASK_ENV`` with "
+"equivalent. Debug mode can be controlled separately from ``FLASK_ENV`` with "
 "the ``FLASK_DEBUG`` environment variable as well."
 msgstr ""
 "``FLASK_ENV`` sólo puede establecerse como una variable de entorno. Cuando "
-"se ejecuta desde el código de Python, pasar ``debug=True`` habilita el modo "
-"de depuración, que es mayormente equivalente. El modo de depuración se puede"
-" controlar por separado de ``FLASK_ENV`` con la variable de entorno "
+"se ejecuta desde el código de Python, al pasar ``debug=True`` se activa el "
+"modo de depuración, que es mayormente equivalente. El modo de depuración se "
+"puede controlar por separado de ``FLASK_ENV`` con la variable de entorno "
 "``FLASK_DEBUG``."
 
-#: ../../debugging.rst:79
+#: ../../debugging.rst:86
 msgid ""
 ":doc:`/server` and :doc:`/cli` have more information about running the "
 "debugger, debug mode, and development mode. More information about the "
@@ -140,11 +144,11 @@ msgstr ""
 "más información sobre el depurador en la documentación de `Werkzeug "
 "<https://werkzeug.palletsprojects.com/debug/>`__."
 
-#: ../../debugging.rst:86
+#: ../../debugging.rst:93
 msgid "External Debuggers"
 msgstr "Depuradores externos"
 
-#: ../../debugging.rst:88
+#: ../../debugging.rst:95
 msgid ""
 "External debuggers, such as those provided by IDEs, can offer a more "
 "powerful debugging experience than the built-in debugger. They can also be "
@@ -159,7 +163,7 @@ msgstr ""
 "error. Algunos incluso tienen un modo remoto para que puedas depurar el "
 "código que se ejecuta en otra máquina."
 
-#: ../../debugging.rst:94
+#: ../../debugging.rst:101
 msgid ""
 "When using an external debugger, the app should still be in debug mode, but "
 "it can be useful to disable the built-in debugger and reloader, which can "
@@ -169,15 +173,15 @@ msgstr ""
 " depuración, pero puede ser útil desactivar el depurador y el recargador "
 "integrados, que pueden interferir."
 
-#: ../../debugging.rst:98
+#: ../../debugging.rst:105
 msgid "When running from the command line:"
 msgstr "Cuando se ejecuta desde la línea de comandos:"
 
-#: ../../debugging.rst:123
+#: ../../debugging.rst:137
 msgid "When running from Python:"
 msgstr "Cuando se ejecuta desde Python:"
 
-#: ../../debugging.rst:129
+#: ../../debugging.rst:143
 msgid ""
 "Disabling these isn't required, an external debugger will continue to work "
 "with the following caveats. If the built-in debugger is not disabled, it "
@@ -193,4 +197,7 @@ msgstr ""
 "depuración."
 
 #~ msgid "screenshot of debugger in action"
+#~ msgstr "captura de pantalla del depurador en acción"
+
+#~ msgid "captura de pantalla del depurador en acción"
 #~ msgstr "captura de pantalla del depurador en acción"

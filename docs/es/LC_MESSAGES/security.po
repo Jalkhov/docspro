@@ -370,31 +370,11 @@ msgid ""
 msgstr ""
 "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-Frame-Options"
 
-#: ../../security.rst:177
-msgid "X-XSS-Protection"
-msgstr "X-XSS-Protection"
-
 #: ../../security.rst:179
-msgid ""
-"The browser will try to prevent reflected XSS attacks by not loading the "
-"page if the request contains something that looks like JavaScript and the "
-"response contains the same data. ::"
-msgstr ""
-"El navegador intentará evitar los ataques XSS reflejados no cargando la "
-"página si la petición contiene algo que parezca JavaScript y la respuesta "
-"contiene los mismos datos. ::"
-
-#: ../../security.rst:185
-msgid ""
-"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection"
-msgstr ""
-"https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection"
-
-#: ../../security.rst:191
 msgid "Set-Cookie options"
 msgstr "Opciones de Set-Cookie"
 
-#: ../../security.rst:193
+#: ../../security.rst:181
 msgid ""
 "These options can be added to a ``Set-Cookie`` header to improve their "
 "security. Flask has configuration options to set these on the session "
@@ -404,11 +384,11 @@ msgstr ""
 "su seguridad. Flask tiene opciones de configuración para establecerlas en la"
 " cookie de sesión. También se pueden establecer en otras cookies."
 
-#: ../../security.rst:197
+#: ../../security.rst:185
 msgid "``Secure`` limits cookies to HTTPS traffic only."
 msgstr "``Secure`` limita las cookies sólo al tráfico HTTPS."
 
-#: ../../security.rst:198
+#: ../../security.rst:186
 msgid ""
 "``HttpOnly`` protects the contents of cookies from being read with "
 "JavaScript."
@@ -416,7 +396,7 @@ msgstr ""
 "``HttpOnly`` protege el contenido de las cookies para que no sean leídas con"
 " JavaScript."
 
-#: ../../security.rst:200
+#: ../../security.rst:188
 msgid ""
 "``SameSite`` restricts how cookies are sent with requests from external "
 "sites. Can be set to ``'Lax'`` (recommended) or ``'Strict'``. ``Lax`` "
@@ -431,7 +411,7 @@ msgstr ""
 "``Strict`` impide el envío de cookies con todas las solicitudes externas, "
 "incluyendo el seguimiento de enlaces regulares."
 
-#: ../../security.rst:216
+#: ../../security.rst:204
 msgid ""
 "Specifying ``Expires`` or ``Max-Age`` options, will remove the cookie after "
 "the given time, or the current time plus the age, respectively. If neither "
@@ -442,7 +422,7 @@ msgstr ""
 "Si no se establece ninguna de las dos opciones, la cookie se eliminará "
 "cuando se cierre el navegador. ::"
 
-#: ../../security.rst:223
+#: ../../security.rst:211
 msgid ""
 "For the session cookie, if :attr:`session.permanent "
 "<flask.session.permanent>` is set, then :data:`PERMANENT_SESSION_LIFETIME` "
@@ -459,7 +439,7 @@ msgstr ""
 "ayudar a mitigar los ataques de repetición, donde las cookies interceptadas "
 "pueden ser enviadas en un momento posterior. ::"
 
-#: ../../security.rst:241
+#: ../../security.rst:229
 msgid ""
 "Use :class:`itsdangerous.TimedSerializer` to sign and validate other cookie "
 "values (or any values that need secure signatures)."
@@ -467,19 +447,19 @@ msgstr ""
 "Utiliza :class:`itsdangerous.TimedSerializer` para firmar y validar otros "
 "valores de cookies (o cualquier valor que necesite firmas seguras)."
 
-#: ../../security.rst:244
+#: ../../security.rst:232
 msgid "https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies"
 msgstr "https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies"
 
-#: ../../security.rst:245
+#: ../../security.rst:233
 msgid "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie"
 msgstr "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie"
 
-#: ../../security.rst:251
+#: ../../security.rst:239
 msgid "HTTP Public Key Pinning (HPKP)"
 msgstr "Fijación de la clave pública HTTP (HPKP)"
 
-#: ../../security.rst:253
+#: ../../security.rst:241
 msgid ""
 "This tells the browser to authenticate with the server using only the "
 "specific certificate key to prevent MITM attacks."
@@ -487,7 +467,7 @@ msgstr ""
 "Esto le dice al navegador que se autentique con el servidor usando sólo la "
 "clave del certificado específico para evitar ataques MITM."
 
-#: ../../security.rst:257
+#: ../../security.rst:245
 msgid ""
 "Be careful when enabling this, as it is very difficult to undo if you set up"
 " or upgrade your key incorrectly."
@@ -495,15 +475,15 @@ msgstr ""
 "Tenga cuidado al activar esto, ya que es muy difícil deshacerlo si configura"
 " o actualiza su clave incorrectamente."
 
-#: ../../security.rst:260
+#: ../../security.rst:248
 msgid "https://developer.mozilla.org/en-US/docs/Web/HTTP/Public_Key_Pinning"
 msgstr "https://developer.mozilla.org/en-US/docs/Web/HTTP/Public_Key_Pinning"
 
-#: ../../security.rst:264
+#: ../../security.rst:252
 msgid "Copy/Paste to Terminal"
 msgstr "Copiar/pegar en el terminal"
 
-#: ../../security.rst:266
+#: ../../security.rst:254
 msgid ""
 "Hidden characters such as the backspace character (``\\b``, ``^H``) can "
 "cause text to render differently in HTML than how it is interpreted if "
@@ -514,7 +494,7 @@ msgstr ""
 "interpreta `si se pega en un terminal "
 "<https://security.stackexchange.com/q/39118>`__."
 
-#: ../../security.rst:270
+#: ../../security.rst:258
 msgid ""
 "For example, ``import y\\bose\\bm\\bi\\bt\\be\\b`` renders as ``import "
 "yosemite`` in HTML, but the backspaces are applied when pasted into a "
@@ -524,7 +504,7 @@ msgstr ""
 "yosemite`` en HTML, pero los espacios traseros se aplican cuando se pega en "
 "un terminal, y se convierte en ``importar os``."
 
-#: ../../security.rst:274
+#: ../../security.rst:262
 msgid ""
 "If you expect users to copy and paste untrusted code from your site, such as"
 " from comments posted by users on a technical blog, consider applying extra "
@@ -535,7 +515,7 @@ msgstr ""
 "considere la posibilidad de aplicar un filtrado adicional, como la "
 "sustitución de todos los caracteres ``\\b``."
 
-#: ../../security.rst:282
+#: ../../security.rst:270
 msgid ""
 "Most modern terminals will warn about and remove hidden characters when "
 "pasting, so this isn't strictly necessary. It's also possible to craft "
@@ -548,3 +528,20 @@ msgstr ""
 "posible elaborar comandos peligrosos de otras maneras que no son posibles de"
 " filtrar. Dependiendo del caso de uso de su sitio, puede ser bueno mostrar "
 "una advertencia sobre la copia de código en general."
+
+#~ msgid "X-XSS-Protection"
+#~ msgstr "X-XSS-Protection"
+
+#~ msgid ""
+#~ "The browser will try to prevent reflected XSS attacks by not loading the "
+#~ "page if the request contains something that looks like JavaScript and the "
+#~ "response contains the same data. ::"
+#~ msgstr ""
+#~ "El navegador intentará evitar los ataques XSS reflejados no cargando la "
+#~ "página si la petición contiene algo que parezca JavaScript y la respuesta "
+#~ "contiene los mismos datos. ::"
+
+#~ msgid ""
+#~ "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection"
+#~ msgstr ""
+#~ "https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/X-XSS-Protection"

@@ -65,18 +65,14 @@ msgstr ""
 "requieren un contexto de solicitud falsa."
 
 #: ../../shell.rst:24
-msgid ""
-"Generally it's recommended that you read the :doc:`reqcontext` chapter of "
-"the documentation first."
-msgstr ""
-"En general, se recomienda leer primero el capítulo :doc:`reqcontext` de la "
-"documentación."
+msgid "Generally it's recommended that you read :doc:`reqcontext` first."
+msgstr "Generalmente se recomienda leer primero :doc:`reqcontext`."
 
-#: ../../shell.rst:28
+#: ../../shell.rst:27
 msgid "Command Line Interface"
 msgstr "Interfaz de línea de comandos"
 
-#: ../../shell.rst:30
+#: ../../shell.rst:29
 msgid ""
 "Starting with Flask 0.11 the recommended way to work with the shell is the "
 "``flask shell`` command which does a lot of this automatically for you. For "
@@ -88,15 +84,15 @@ msgstr ""
 "ejemplo, el shell se inicializa automáticamente con un contexto de "
 "aplicación cargado."
 
-#: ../../shell.rst:35
+#: ../../shell.rst:34
 msgid "For more information see :doc:`/cli`."
 msgstr "Para más información, véase :doc:`/cli`."
 
-#: ../../shell.rst:38
+#: ../../shell.rst:37
 msgid "Creating a Request Context"
 msgstr "Creación de un contexto de solicitud"
 
-#: ../../shell.rst:40
+#: ../../shell.rst:39
 msgid ""
 "The easiest way to create a proper request context from the shell is by "
 "using the :attr:`~flask.Flask.test_request_context` method which creates us "
@@ -106,7 +102,7 @@ msgstr ""
 "shell es utilizando el método :attr:`~flask.Flask.test_request_context` que "
 "nos crea un :class:`~flask.ctx.RequestContext`:"
 
-#: ../../shell.rst:46
+#: ../../shell.rst:45
 msgid ""
 "Normally you would use the ``with`` statement to make this request object "
 "active, but in the shell it's easier to use the "
@@ -118,7 +114,7 @@ msgstr ""
 ":meth:`~flask.ctx.RequestContext.push` y "
 ":meth:`~flask.ctx.RequestContext.pop` a mano:"
 
-#: ../../shell.rst:53
+#: ../../shell.rst:52
 msgid ""
 "From that point onwards you can work with the request object until you call "
 "`pop`:"
@@ -126,11 +122,11 @@ msgstr ""
 "A partir de ese momento se puede trabajar con el objeto request hasta que se"
 " llame a `pop`:"
 
-#: ../../shell.rst:59
+#: ../../shell.rst:58
 msgid "Firing Before/After Request"
 msgstr "Petición de disparo antes/después"
 
-#: ../../shell.rst:61
+#: ../../shell.rst:60
 msgid ""
 "By just creating a request context, you still don't have run the code that "
 "is normally run before a request.  This might result in your database being "
@@ -144,7 +140,7 @@ msgstr ""
 "de datos en un callback antes de la petición o que el usuario actual no se "
 "almacene en el objeto :data:`~flask.g` etc."
 
-#: ../../shell.rst:67
+#: ../../shell.rst:66
 msgid ""
 "This however can easily be done yourself.  Just call "
 ":meth:`~flask.Flask.preprocess_request`:"
@@ -152,7 +148,7 @@ msgstr ""
 "Sin embargo, esto se puede hacer fácilmente.  Simplemente llama a "
 ":meth:`~flask.Flask.preprocess_request`:"
 
-#: ../../shell.rst:74
+#: ../../shell.rst:73
 msgid ""
 "Keep in mind that the :meth:`~flask.Flask.preprocess_request` function might"
 " return a response object, in that case just ignore it."
@@ -160,7 +156,7 @@ msgstr ""
 "Ten en cuenta que la función :meth:`~flask.Flask.preprocess_request` puede "
 "devolver un objeto respuesta, en ese caso simplemente ignórala."
 
-#: ../../shell.rst:77
+#: ../../shell.rst:76
 msgid ""
 "To shutdown a request, you need to trick a bit before the after request "
 "functions (triggered by :meth:`~flask.Flask.process_response`) operate on a "
@@ -170,7 +166,7 @@ msgstr ""
 "funciones posteriores a la solicitud (activadas por "
 ":meth:`~flask.Flask.process_response`) operen sobre un objeto de respuesta:"
 
-#: ../../shell.rst:85
+#: ../../shell.rst:84
 msgid ""
 "The functions registered as :meth:`~flask.Flask.teardown_request` are "
 "automatically called when the context is popped.  So this is the perfect "
@@ -183,11 +179,11 @@ msgstr ""
 "fueron necesarios por el contexto de la solicitud (como las conexiones a la "
 "base de datos)."
 
-#: ../../shell.rst:92
+#: ../../shell.rst:91
 msgid "Further Improving the Shell Experience"
 msgstr "Mejorar aún más la experiencia de Shell"
 
-#: ../../shell.rst:94
+#: ../../shell.rst:93
 msgid ""
 "If you like the idea of experimenting in a shell, create yourself a module "
 "with stuff you want to star import into your interactive session.  There you"
@@ -199,7 +195,7 @@ msgstr ""
 "también podrías definir algunos métodos más de ayuda para cosas comunes como"
 " la inicialización de la base de datos, la eliminación de tablas, etc."
 
-#: ../../shell.rst:99
+#: ../../shell.rst:98
 msgid "Just put them into a module (like `shelltools`) and import from there:"
 msgstr ""
 "Sólo hay que ponerlos en un módulo (como `shelltools`) e importarlos desde "

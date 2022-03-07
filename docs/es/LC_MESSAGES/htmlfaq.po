@@ -200,8 +200,8 @@ msgid "|Y| [1]_"
 msgstr "|Y| [1]_"
 
 #: ../../htmlfaq.rst:111
-msgid "Si"
-msgstr "Si"
+msgid "Yes"
+msgstr "Sí"
 
 #: ../../htmlfaq.rst:80 ../../htmlfaq.rst:82 ../../htmlfaq.rst:84
 #: ../../htmlfaq.rst:88 ../../htmlfaq.rst:91 ../../htmlfaq.rst:93
@@ -472,7 +472,10 @@ msgid ""
 "For most applications, it is undoubtedly better to use HTML5 than XHTML."
 msgstr ""
 "Para la mayoría de las aplicaciones, es sin duda mejor utilizar HTML5 que "
-"XHTML."
+"XTML."
 
 #~ msgid "Yes"
 #~ msgstr "Sí"
+
+#~ msgid "Si"
+#~ msgstr "Si"

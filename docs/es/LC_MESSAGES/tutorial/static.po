@@ -84,6 +84,9 @@ msgstr ""
 "Vaya a http://127.0.0.1:5000/auth/login y la página debería ser como la "
 "captura de pantalla de abajo."
 
+msgid "screenshot of login page"
+msgstr "captura de pantalla de la página de inicio de sesión"
+
 #: ../../tutorial/static.rst:66
 msgid ""
 "You can read more about CSS from `Mozilla's documentation <CSS_>`_. If you "

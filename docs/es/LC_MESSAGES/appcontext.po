@@ -37,13 +37,13 @@ msgstr ""
 
 #: ../../appcontext.rst:11
 msgid ""
-"This is similar to the :doc:`/reqcontext`, which keeps track of request-"
-"level data during a request. A corresponding application context is pushed "
-"when a request context is pushed."
+"This is similar to :doc:`/reqcontext`, which keeps track of request-level "
+"data during a request. A corresponding application context is pushed when a "
+"request context is pushed."
 msgstr ""
-"Esto es similar al :doc:`/reqcontext`, que mantiene un seguimiento de los "
-"datos a nivel de solicitud durante una petición. Cuando se envía un contexto"
-" de solicitud, se envía un contexto de solicitud correspondiente."
+"Esto es similar a :doc:`/reqcontext`, que mantiene un seguimiento de los "
+"datos a nivel de solicitud durante una petición. Un contexto de aplicación "
+"correspondiente se empuja cuando se empuja un contexto de solicitud."
 
 #: ../../appcontext.rst:16
 msgid "Purpose of the Context"

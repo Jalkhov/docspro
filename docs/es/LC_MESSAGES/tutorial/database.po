@@ -239,6 +239,10 @@ msgstr ""
 "Importa y llama a esta función desde la fábrica. Coloca el nuevo código al "
 "final de la función de fábrica antes de devolver la aplicación."
 
+#: ../../tutorial/database.rst:174
+msgid "``flaskr/__init__.py``"
+msgstr "``flaskr/__init__.py``"
+
 #: ../../tutorial/database.rst:188
 msgid "Initialize the Database File"
 msgstr "Inicializar el archivo de la base de datos"

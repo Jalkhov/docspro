@@ -4370,9 +4370,9 @@ msgstr ""
 
 #: ../../api.rst:171
 msgid ""
-"This is a good place to store resources during a request. During testing, "
-"you can use the :ref:`faking-resources` pattern to pre-configure such "
-"resources."
+"This is a good place to store resources during a request. For example, a "
+"``before_request`` function could load a user object from a session id, then"
+" set ``g.user`` to be used in the view function."
 msgstr ""
 
 #: ../../api.rst:175 ../../api.rst:199
@@ -6666,4 +6666,10 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Raises"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "This is a good place to store resources during a request. During testing, "
+#~ "you can use the :ref:`faking-resources` pattern to pre-configure such "
+#~ "resources."
 #~ msgstr ""

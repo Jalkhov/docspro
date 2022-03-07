@@ -39,8 +39,8 @@ msgstr ""
 " را ویرایش یا حذف کنند. شما قادر خواهید بود برنامه را بر روی رایانه های دیگر"
 " بسته بندی و نصب کنید."
 
-msgid "screenshot of index page"
-msgstr "اسکرین شات صفحه اصلی"
+msgid "اسکرین شات صفحه اصلی"
+msgstr ""
 
 #: ../../tutorial/index.rst:30
 msgid ""
@@ -66,9 +66,6 @@ msgstr ""
 "پروژه ها شما میتوانید تصمیم بگیرید که از :doc:`/extensions` یا سایر کتابخانه"
 " ها اندک ساخته شده استفاده کنید."
 
-msgid "screenshot of login page"
-msgstr "اسکرین شات صفحه ورود"
-
 #: ../../tutorial/index.rst:47
 msgid ""
 "Flask is flexible. It doesn't require you to use any particular project or "
@@ -87,8 +84,8 @@ msgstr ""
 "گسترش داد. هنگامی که با فلاسک راحت تر شدید، می توانید از این ساختار خارج "
 "شوید و از انعطاف پذیری فلاسک نهایت استفاده را ببرید."
 
-msgid "screenshot of edit page"
-msgstr "اسکرین شات صفحه ویرایش"
+msgid "اسکرین شات صفحه ویرایش"
+msgstr ""
 
 #: ../../tutorial/index.rst:60
 msgid ""

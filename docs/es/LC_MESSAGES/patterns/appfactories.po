@@ -143,22 +143,23 @@ msgstr ""
 "Para ejecutar una aplicación de este tipo, puede utilizar el comando "
 ":command:`flask`:"
 
-#: ../../patterns/appfactories.rst:94 ../../patterns/appfactories.rst:120
-#: ../../patterns/packages.rst:64 ../../patterns/packages.rst:88
+#: ../../patterns/appfactories.rst:94 ../../patterns/appfactories.rst:127
 msgid "Bash"
 msgstr "Bash"
 
-#: ../../patterns/appfactories.rst:101 ../../patterns/appfactories.rst:127
-#: ../../patterns/packages.rst:70 ../../patterns/packages.rst:94
+#: ../../patterns/appfactories.rst:101 ../../patterns/appfactories.rst:134
+msgid "Fish"
+msgstr "Fish"
+
+#: ../../patterns/appfactories.rst:108 ../../patterns/appfactories.rst:141
 msgid "CMD"
 msgstr "CMD"
 
-#: ../../patterns/appfactories.rst:108 ../../patterns/appfactories.rst:134
-#: ../../patterns/packages.rst:76 ../../patterns/packages.rst:100
+#: ../../patterns/appfactories.rst:115 ../../patterns/appfactories.rst:148
 msgid "Powershell"
 msgstr "Powershell"
 
-#: ../../patterns/appfactories.rst:115
+#: ../../patterns/appfactories.rst:122
 msgid ""
 "Flask will automatically detect the factory (``create_app`` or ``make_app``)"
 " in ``myapp``. You can also pass arguments to the factory like this:"
@@ -166,7 +167,7 @@ msgstr ""
 "Flask detectará automáticamente la fábrica (``create_app`` o ``make_app``) "
 "en ``miapp``. También puedes pasar argumentos a la fábrica así:"
 
-#: ../../patterns/appfactories.rst:141
+#: ../../patterns/appfactories.rst:155
 msgid ""
 "Then the ``create_app`` factory in ``myapp`` is called with the string "
 "``'dev'`` as the argument. See :doc:`/cli` for more detail."
@@ -174,11 +175,11 @@ msgstr ""
 "Entonces se llama a la fábrica ``create_app`` en ``miapp`` con la cadena "
 "``'dev'`` como argumento. Ver :doc:`/cli` para más detalles."
 
-#: ../../patterns/appfactories.rst:145
+#: ../../patterns/appfactories.rst:159
 msgid "Factory Improvements"
 msgstr "Mejoras en la fábrica"
 
-#: ../../patterns/appfactories.rst:147
+#: ../../patterns/appfactories.rst:161
 msgid ""
 "The factory function above is not very clever, but you can improve it. The "
 "following changes are straightforward to implement:"
@@ -186,7 +187,7 @@ msgstr ""
 "La función de fábrica anterior no es muy inteligente, pero se puede mejorar."
 " Los siguientes cambios son sencillos de implementar:"
 
-#: ../../patterns/appfactories.rst:150
+#: ../../patterns/appfactories.rst:164
 msgid ""
 "Make it possible to pass in configuration values for unit tests so that you "
 "don't have to create config files on the filesystem."
@@ -194,7 +195,7 @@ msgstr ""
 "Hacer posible pasar valores de configuración para las pruebas unitarias para"
 " no tener que crear archivos de configuración en el sistema de archivos."
 
-#: ../../patterns/appfactories.rst:152
+#: ../../patterns/appfactories.rst:166
 msgid ""
 "Call a function from a blueprint when the application is setting up so that "
 "you have a place to modify attributes of the application (like hooking in "
@@ -205,7 +206,7 @@ msgstr ""
 "aplicación (como enganchar los manejadores de peticiones antes/después, "
 "etc.)"
 
-#: ../../patterns/appfactories.rst:155
+#: ../../patterns/appfactories.rst:169
 msgid ""
 "Add in WSGI middlewares when the application is being created if necessary."
 msgstr ""

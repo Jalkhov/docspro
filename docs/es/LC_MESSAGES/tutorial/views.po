@@ -69,8 +69,8 @@ msgstr ""
 "autenticación, escribirás primero el de autenticación."
 
 #: ../../tutorial/views.rst:27 ../../tutorial/views.rst:79
-#: ../../tutorial/views.rst:171 ../../tutorial/views.rst:218
-#: ../../tutorial/views.rst:247 ../../tutorial/views.rst:263
+#: ../../tutorial/views.rst:170 ../../tutorial/views.rst:222
+#: ../../tutorial/views.rst:251 ../../tutorial/views.rst:267
 msgid "``flaskr/auth.py``"
 msgstr "``flaskr/auth.py``"
 
@@ -85,6 +85,20 @@ msgstr ""
 "de aplicación, el blueprint necesita saber dónde está definido, por lo que "
 "se pasa ``nombre__`` como segundo argumento. El ``url_prefix`` se añadirá a "
 "todas las URLs asociadas al blueprint."
+
+#: ../../tutorial/views.rst:46
+msgid ""
+"Import and register the blueprint from the factory using "
+":meth:`app.register_blueprint() <Flask.register_blueprint>`. Place the new "
+"code at the end of the factory function before returning the app."
+msgstr ""
+"Importa y registra el blueprint de la fábrica usando "
+":meth:`app.register_blueprint() <Flask.register_blueprint>`. Coloca el nuevo"
+" código al final de la función de fábrica antes de devolver la app."
+
+#: ../../tutorial/views.rst:50
+msgid "``flaskr/__init__.py``"
+msgstr "``flaskr/__init__.py``"
 
 #: ../../tutorial/views.rst:62
 msgid ""
@@ -159,52 +173,48 @@ msgid "Validate that ``username`` and ``password`` are not empty."
 msgstr "Valida que ``nombre de usuario`` y ``contraseña`` no estén vacíos."
 
 #: ../../tutorial/views.rst:128
-msgid ""
-"Validate that ``username`` is not already registered by querying the "
-"database and checking if a result is returned. :meth:`db.execute "
-"<sqlite3.Connection.execute>` takes a SQL query with ``?`` placeholders for "
-"any user input, and a tuple of values to replace the placeholders with. The "
-"database library will take care of escaping the values so you are not "
-"vulnerable to a *SQL injection attack*."
+msgid "If validation succeeds, insert the new user data into the database."
 msgstr ""
-"Valida que ``nombre de usuario`` no está ya registrado consultando la base "
-"de datos y comprobando si se devuelve un resultado. :meth:`db.execute "
-"<sqlite3.Connection.execute>` toma una consulta SQL con ``?`` marcadores de "
-"posición para cualquier entrada del usuario, y una tupla de valores para "
-"reemplazar los marcadores de posición. La biblioteca de la base de datos se "
-"encargará de escapar los valores para que no seas vulnerable a un *ataque de"
-" inyección SQL*."
+"Si la validación tiene éxito, inserte los nuevos datos del usuario en la "
+"base de datos."
+
+#: ../../tutorial/views.rst:130
+msgid ""
+":meth:`db.execute <sqlite3.Connection.execute>` takes a SQL query with ``?``"
+" placeholders for any user input, and a tuple of values to replace the "
+"placeholders with. The database library will take care of escaping the "
+"values so you are not vulnerable to a *SQL injection attack*."
+msgstr ""
+":meth:`db.execute <sqlite3.Connection.execute>` toma una consulta SQL con "
+"marcadores de posición ``?`` para cualquier entrada del usuario, y una tupla"
+" de valores para reemplazar los marcadores de posición. La biblioteca de la "
+"base de datos se encargará de escapar los valores para que no seas "
+"vulnerable a un *ataque de inyección SQL*."
 
 #: ../../tutorial/views.rst:136
 msgid ""
-":meth:`~sqlite3.Cursor.fetchone` returns one row from the query. If the "
-"query returned no results, it returns ``None``. Later, "
-":meth:`~sqlite3.Cursor.fetchall` is used, which returns a list of all "
-"results."
-msgstr ""
-":meth:`~sqlite3.Cursor.fetchone` devuelve una fila de la consulta. Si la "
-"consulta no devuelve ningún resultado, devuelve ``None``. Más tarde, "
-":meth:`~sqlite3.Cursor.fetchall` es utilizado, que devuelve una lista de "
-"todos los resultados."
-
-#: ../../tutorial/views.rst:141
-msgid ""
-"If validation succeeds, insert the new user data into the database. For "
-"security, passwords should never be stored in the database directly. "
+"For security, passwords should never be stored in the database directly. "
 "Instead, :func:`~werkzeug.security.generate_password_hash` is used to "
 "securely hash the password, and that hash is stored. Since this query "
 "modifies data, :meth:`db.commit() <sqlite3.Connection.commit>` needs to be "
 "called afterwards to save the changes."
 msgstr ""
-"Si la validación tiene éxito, inserte los nuevos datos del usuario en la "
-"base de datos. Por seguridad, las contraseñas nunca deben ser almacenadas en"
-" la base de datos directamente. En su lugar, se utiliza "
+"Por seguridad, las contraseñas nunca deben ser almacenadas en la base de "
+"datos directamente. En su lugar, se utiliza "
 ":func:`~werkzeug.security.generate_password_hash` para hacer un hash seguro "
 "de la contraseña, y ese hash se almacena. Como esta consulta modifica los "
 "datos, es necesario llamar después a :meth:`db.commit() "
 "<sqlite3.Connection.commit>` para guardar los cambios."
 
-#: ../../tutorial/views.rst:149
+#: ../../tutorial/views.rst:144
+msgid ""
+"An :exc:`sqlite3.IntegrityError` will occur if the username already exists, "
+"which should be shown to the user as another validation error."
+msgstr ""
+"Se producirá un :exc:`sqlite3.IntegrityError` si el nombre de usuario ya "
+"existe, lo que debería mostrarse al usuario como otro error de validación."
+
+#: ../../tutorial/views.rst:148
 msgid ""
 "After storing the user, they are redirected to the login page. "
 ":func:`url_for` generates the URL for the login view based on its name. This"
@@ -219,7 +229,7 @@ msgstr ""
 "con ella. :func:`redirect` genera una respuesta de redirección a la URL "
 "generada."
 
-#: ../../tutorial/views.rst:156
+#: ../../tutorial/views.rst:155
 msgid ""
 "If validation fails, the error is shown to the user. :func:`flash` stores "
 "messages that can be retrieved when rendering the template."
@@ -227,7 +237,7 @@ msgstr ""
 "Si la validación falla, se muestra el error al usuario. :func:`flash` "
 "almacena mensajes que pueden ser recuperados al renderizar la plantilla."
 
-#: ../../tutorial/views.rst:159
+#: ../../tutorial/views.rst:158
 msgid ""
 "When the user initially navigates to ``auth/register``, or there was a "
 "validation error, an HTML page with the registration form should be shown. "
@@ -239,25 +249,37 @@ msgstr ""
 ":func:`render_template` renderizará una plantilla que contiene el HTML, que "
 "escribirás en el siguiente paso del tutorial."
 
-#: ../../tutorial/views.rst:167
+#: ../../tutorial/views.rst:166
 msgid "Login"
 msgstr "Inicio de sesión"
 
-#: ../../tutorial/views.rst:169
+#: ../../tutorial/views.rst:168
 msgid "This view follows the same pattern as the ``register`` view above."
 msgstr "Esta vista sigue el mismo patrón que la vista ``registro`` anterior."
 
-#: ../../tutorial/views.rst:199
+#: ../../tutorial/views.rst:198
 msgid "There are a few differences from the ``register`` view:"
 msgstr "Hay algunas diferencias con la vista ``register``:"
 
-#: ../../tutorial/views.rst:201
+#: ../../tutorial/views.rst:200
 msgid "The user is queried first and stored in a variable for later use."
 msgstr ""
 "El usuario se consulta primero y se almacena en una variable para su uso "
 "posterior."
 
-#: ../../tutorial/views.rst:203
+#: ../../tutorial/views.rst:202
+msgid ""
+":meth:`~sqlite3.Cursor.fetchone` returns one row from the query. If the "
+"query returned no results, it returns ``None``. Later, "
+":meth:`~sqlite3.Cursor.fetchall` will be used, which returns a list of all "
+"results."
+msgstr ""
+":meth:`~sqlite3.Cursor.fetchone` devuelve una fila de la consulta. Si la "
+"consulta no devuelve ningún resultado, devuelve ``None``. Más tarde, se "
+"utilizará :meth:`~sqlite3.Cursor.fetchall`, que devuelve una lista de todos "
+"los resultados."
+
+#: ../../tutorial/views.rst:207
 msgid ""
 ":func:`~werkzeug.security.check_password_hash` hashes the submitted password"
 " in the same way as the stored hash and securely compares them. If they "
@@ -267,7 +289,7 @@ msgstr ""
 "contraseña enviada de la misma forma que el hash almacenado y los compara de"
 " forma segura. Si coinciden, la contraseña es válida."
 
-#: ../../tutorial/views.rst:207
+#: ../../tutorial/views.rst:211
 msgid ""
 ":data:`session` is a :class:`dict` that stores data across requests. When "
 "validation succeeds, the user's ``id`` is stored in a new session. The data "
@@ -281,7 +303,7 @@ msgstr ""
 "envía al navegador, y éste la devuelve con las siguientes peticiones. Flask "
 "*firma* de forma segura los datos para que no puedan ser manipulados."
 
-#: ../../tutorial/views.rst:213
+#: ../../tutorial/views.rst:217
 msgid ""
 "Now that the user's ``id`` is stored in the :data:`session`, it will be "
 "available on subsequent requests. At the beginning of each request, if a "
@@ -293,7 +315,7 @@ msgstr ""
 "petición, si un usuario está conectado, su información debe ser cargada and "
 "made available to other views."
 
-#: ../../tutorial/views.rst:232
+#: ../../tutorial/views.rst:236
 msgid ""
 ":meth:`bp.before_app_request() <Blueprint.before_app_request>` registers a "
 "function that runs before the view function, no matter what URL is "
@@ -310,11 +332,11 @@ msgstr ""
 " petición. Si no hay id de usuario, o si el id no existe, ``g.user`` será "
 "``None``."
 
-#: ../../tutorial/views.rst:242
+#: ../../tutorial/views.rst:246
 msgid "Logout"
 msgstr "Cierre de sesión"
 
-#: ../../tutorial/views.rst:244
+#: ../../tutorial/views.rst:248
 msgid ""
 "To log out, you need to remove the user id from the :data:`session`. Then "
 "``load_logged_in_user`` won't load a user on subsequent requests."
@@ -323,11 +345,11 @@ msgstr ""
 ":data:`session`. Entonces ``load_logged_in_user`` no cargará un usuario en "
 "las siguientes peticiones."
 
-#: ../../tutorial/views.rst:257
+#: ../../tutorial/views.rst:261
 msgid "Require Authentication in Other Views"
 msgstr "Requerir autenticación en otras vistas"
 
-#: ../../tutorial/views.rst:259
+#: ../../tutorial/views.rst:263
 msgid ""
 "Creating, editing, and deleting blog posts will require a user to be logged "
 "in. A *decorator* can be used to check this for each view it's applied to."
@@ -336,7 +358,7 @@ msgstr ""
 "usuario esté conectado. Se puede utilizar un *decorador* para comprobar esto"
 " para cada vista a la que se aplique."
 
-#: ../../tutorial/views.rst:276
+#: ../../tutorial/views.rst:280
 msgid ""
 "This decorator returns a new view function that wraps the original view it's"
 " applied to. The new function checks if a user is loaded and redirects to "
@@ -350,11 +372,11 @@ msgstr ""
 "carga un usuario, se llama a la vista original y continúa normalmente. "
 "Utilizarás este decorador cuando escribas las vistas del blog."
 
-#: ../../tutorial/views.rst:283
+#: ../../tutorial/views.rst:287
 msgid "Endpoints and URLs"
 msgstr "Endpoints y URLs"
 
-#: ../../tutorial/views.rst:285
+#: ../../tutorial/views.rst:289
 msgid ""
 "The :func:`url_for` function generates the URL to a view based on a name and"
 " arguments. The name associated with a view is also called the *endpoint*, "
@@ -365,7 +387,7 @@ msgstr ""
 "*endpoint*, y por defecto es el mismo que el nombre de la función de la "
 "vista."
 
-#: ../../tutorial/views.rst:290
+#: ../../tutorial/views.rst:294
 msgid ""
 "For example, the ``hello()`` view that was added to the app factory earlier "
 "in the tutorial has the name ``'hello'`` and can be linked to with "
@@ -377,7 +399,7 @@ msgstr ""
 "puede ser enlazada con ``url_for('hello')``. Si tuviera un argumento, que "
 "verás más adelante, se enlazaría con ``url_for('hello', who='World')``."
 
-#: ../../tutorial/views.rst:296
+#: ../../tutorial/views.rst:300
 msgid ""
 "When using a blueprint, the name of the blueprint is prepended to the name "
 "of the function, so the endpoint for the ``login`` function you wrote above "
@@ -388,6 +410,6 @@ msgstr ""
 "escribiste arriba es ``'auth.login'`` porque lo agregaste al blueprint "
 "``'auth'``."
 
-#: ../../tutorial/views.rst:301
+#: ../../tutorial/views.rst:305
 msgid "Continue to :doc:`templates`."
 msgstr "Continuar con :doc:`templates`."

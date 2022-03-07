@@ -29,6 +29,10 @@ msgstr ""
 "Si está utilizando el servidor web `Apache`_, considere el uso de "
 "`mod_wsgi`_."
 
+#: ../../deploying/mod_wsgi.rst:6
+msgid "Watch Out"
+msgstr "Cuidado"
+
 #: ../../deploying/mod_wsgi.rst:8
 msgid ""
 "Please make sure in advance that any ``app.run()`` calls you might have in "
@@ -152,6 +156,10 @@ msgstr ""
 "`virtual de python`_.  Tenga en cuenta que tendrá que instalar su aplicación"
 " en el virtualenv también.  Alternativamente existe la opción de simplemente"
 " parchear la ruta en el archivo ``.wsgi`` antes de la importación::"
+
+#: ../../deploying/mod_wsgi.rst:82
+msgid "Configuring Apache"
+msgstr "Configuración de Apache"
 
 #: ../../deploying/mod_wsgi.rst:84
 msgid ""

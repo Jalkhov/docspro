@@ -70,6 +70,10 @@ msgstr ""
 "aplicación y la instancia de aplicación dentro del módulo. Si utilizas el "
 "patrón de fábrica de aplicaciones, puedes pasar una llamada a ese::"
 
+#: ../../deploying/wsgi-standalone.rst:35
+msgid "uWSGI"
+msgstr "uWSGI"
+
 #: ../../deploying/wsgi-standalone.rst:37
 msgid ""
 "`uWSGI`_ is a fast application server written in C. It is very configurable "

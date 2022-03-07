@@ -19,7 +19,7 @@ msgstr ""
 "Generated-By: Babel 2.9.1\n"
 "X-Generator: Poedit 3.0\n"
 
-#: ../../deploying/uwsgi.rst:2 ../../deploying/wsgi-standalone.rst:35
+#: ../../deploying/uwsgi.rst:2
 msgid "uWSGI"
 msgstr "uWSGI"
 
@@ -45,6 +45,10 @@ msgid ""
 msgstr ""
 "El servidor uWSGI más popular es `uwsgi`_, que usaremos para esta guía. "
 "Asegúrate de tenerlo instalado para poder seguir adelante."
+
+#: ../../deploying/uwsgi.rst:13
+msgid "Watch Out"
+msgstr "Cuidado"
 
 #: ../../deploying/uwsgi.rst:15
 msgid ""
@@ -84,16 +88,16 @@ msgid ""
 "you can use a single ``/`` instead of ``/yourapplication``. ``myapp`` refers"
 " to the name of the file of your flask application (without extension) or "
 "the module which provides ``app``. ``app`` is the callable inside of your "
-"application (usually the line reads ``app = Flask(__name__)``."
+"application (usually the line reads ``app = Flask(__name__)``)."
 msgstr ""
 "La directiva ``--manage-script-name`` moverá el manejo de ``SCRIPT_NAME`` a "
 "uwsgi, ya que es más inteligente al respecto. Se utiliza junto con la "
-"directiva ``--mount`` que hará que las peticiones a ``/tuaplicacion`` sean "
-"dirigidas a ``miapp:app``. Si tu aplicación es accesible a nivel de raíz, "
-"puedes utilizar un único ``/`` en lugar de ``/tuaplicacion``. ``miapp`` se "
-"refiere al nombre del archivo de tu aplicación flask (sin extensión) o al "
-"módulo que proporciona ``app``. ``app`` es el callable dentro de tu "
-"aplicación (normalmente la línea dice ``app = Flask(__name__)``."
+"directiva ``--mount`` que hará que las peticiones a ``/yourapplication`` "
+"sean dirigidas a ``myapp:app``. Si tu aplicación es accesible a nivel de "
+"raíz, puedes utilizar un único ``/`` en lugar de ``/yourapplication``. "
+"``myapp`` se refiere al nombre del archivo de tu aplicación flask (sin "
+"extensión) o al módulo que proporciona ``app``. ``app`` es la llamada dentro"
+" de tu aplicación (normalmente la línea dice ``app = Flask(__name__)``)."
 
 #: ../../deploying/uwsgi.rst:42
 msgid ""
@@ -107,6 +111,10 @@ msgstr ""
 "necesitas añadir también ``--virtualenv /ruta/al/entorno/virtual``. También "
 "puedes necesitar añadir ``--plugin python`` o ``--plugin python3`` "
 "dependiendo de la versión de python que utilices para tu proyecto."
+
+#: ../../deploying/uwsgi.rst:48
+msgid "Configuring nginx"
+msgstr "Configurando nginx"
 
 #: ../../deploying/uwsgi.rst:50
 msgid "A basic flask nginx configuration looks like this::"

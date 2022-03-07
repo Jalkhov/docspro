@@ -105,8 +105,8 @@ msgstr ""
 "Jinja2 por defecto:"
 
 #: ../../templating.rst:40
-msgid "The current configuration object (:data:`flask.config`)"
-msgstr "El objeto de configuración actual (:data:`flask.config`)"
+msgid "The current configuration object (:data:`flask.Flask.config`)"
+msgstr "El objeto de configuración actual (:data:`flask.Flask.config`)"
 
 #: ../../templating.rst:44
 msgid "This is now always available, even in imported templates."

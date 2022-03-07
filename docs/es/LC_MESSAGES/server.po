@@ -68,14 +68,18 @@ msgid "Bash"
 msgstr "Bash"
 
 #: ../../server.rst:36
+msgid "Fish"
+msgstr "Fish"
+
+#: ../../server.rst:44
 msgid "CMD"
 msgstr "CMD"
 
-#: ../../server.rst:44
+#: ../../server.rst:52
 msgid "Powershell"
 msgstr "Powershell"
 
-#: ../../server.rst:52
+#: ../../server.rst:60
 msgid ""
 "This enables the development environment, including the interactive debugger"
 " and reloader, and then starts the server on http://localhost:5000/. Use "
@@ -88,7 +92,7 @@ msgstr ""
 ":doc:`/cli` para obtener instrucciones detalladas sobre la configuración y "
 "el uso de la CLI."
 
-#: ../../server.rst:60
+#: ../../server.rst:68
 msgid ""
 "Prior to Flask 1.0 the ``FLASK_ENV`` environment variable was not supported "
 "and you needed to enable debug mode by exporting ``FLASK_DEBUG=1``. This can"
@@ -100,11 +104,77 @@ msgstr ""
 "Esto todavía se puede utilizar para controlar el modo de depuración, pero es"
 " preferible configurar el entorno de desarrollo como se muestra arriba."
 
-#: ../../server.rst:68
+#: ../../server.rst:78
+msgid "Address already in use"
+msgstr "Dirección ya utilizada"
+
+#: ../../server.rst:80
+msgid ""
+"If another program is already using port 5000, you'll see an ``OSError`` "
+"when the server tries to start. It may have one of the following messages:"
+msgstr ""
+"Si otro programa ya está utilizando el puerto 5000, verá un ``OSError`` "
+"cuando el servidor intente iniciarse. Puede tener uno de los siguientes "
+"mensajes:"
+
+#: ../../server.rst:84
+msgid "``OSError: [Errno 98] Address already in use``"
+msgstr "``OSError: [Errno 98] Address already in use``"
+
+#: ../../server.rst:85
+msgid ""
+"``OSError: [WinError 10013] An attempt was made to access a socket in a way "
+"forbidden by its access permissions``"
+msgstr ""
+"``OSError: [WinError 10013] An attempt was made to access a socket in a way "
+"forbidden by its access permissions``"
+
+#: ../../server.rst:88
+msgid ""
+"Either identify and stop the other program, or use ``flask run --port 5001``"
+" to pick a different port."
+msgstr ""
+"Identifique y detenga el otro programa, o utilice ``flask run --port 5001`` "
+"para elegir un puerto diferente."
+
+#: ../../server.rst:91
+msgid ""
+"You can use ``netstat`` or ``lsof`` to identify what process id is using a "
+"port, then use other operating system tools stop that process. The following"
+" example shows that process id 6847 is using port 5000."
+msgstr ""
+"Puedes usar ``netstat`` o ``lsof`` para identificar qué id de proceso está "
+"usando un puerto, y luego usar otras herramientas del sistema operativo para"
+" detener ese proceso. El siguiente ejemplo muestra que el proceso 6847 está "
+"usando el puerto 5000."
+
+#: ../../server.rst:97
+msgid "``netstat`` (Linux)"
+msgstr "``netstat`` (Linux)"
+
+#: ../../server.rst:104
+msgid "``lsof`` (macOS / Linux)"
+msgstr "``lsof`` (macOS / Linux)"
+
+#: ../../server.rst:111
+msgid "``netstat`` (Windows)"
+msgstr "``netstat`` (Windows)"
+
+#: ../../server.rst:118
+msgid ""
+"macOS Monterey and later automatically starts a service that uses port 5000."
+" To disable the service, go to System Preferences, Sharing, and disable "
+"\"AirPlay Receiver\"."
+msgstr ""
+"macOS Monterey y posteriores inician automáticamente un servicio que utiliza"
+" el puerto 5000. Para desactivar el servicio, vaya a Preferencias del "
+"Sistema, Compartir, y desactive \"AirPlay Receiver\"."
+
+#: ../../server.rst:124
 msgid "Lazy or Eager Loading"
 msgstr "Carga lenta o urgente"
 
-#: ../../server.rst:70
+#: ../../server.rst:126
 msgid ""
 "When using the ``flask run`` command with the reloader, the server will "
 "continue to run even if you introduce syntax errors or other initialization "
@@ -118,7 +188,7 @@ msgstr ""
 "depurador interactivo para el error, en lugar de bloquear el servidor. Esta "
 "característica se llama carga lenta o \"lazy loading\"."
 
-#: ../../server.rst:76
+#: ../../server.rst:132
 msgid ""
 "If a syntax error is already present when calling ``flask run``, it will "
 "fail immediately and show the traceback rather than waiting until the site "
@@ -131,7 +201,7 @@ msgstr ""
 "principio, al tiempo que permite al servidor manejar los errores en la "
 "recarga."
 
-#: ../../server.rst:81
+#: ../../server.rst:137
 msgid ""
 "To override this behavior and always fail immediately, even on reload, pass "
 "the ``--eager-loading`` option. To always keep the server running, even on "
@@ -142,11 +212,11 @@ msgstr ""
 "servidor en funcionamiento, incluso en la llamada inicial, pasa ``--lazy-"
 "loading``."
 
-#: ../../server.rst:87
+#: ../../server.rst:143
 msgid "In Code"
 msgstr "En Código"
 
-#: ../../server.rst:89
+#: ../../server.rst:145
 msgid ""
 "As an alternative to the ``flask run`` command, the development server can "
 "also be started from Python with the :meth:`Flask.run` method. This method "
@@ -160,7 +230,7 @@ msgstr ""
 "servidor. La principal diferencia con el comando CLI es que el servidor se "
 "bloqueará si hay errores al recargar."
 
-#: ../../server.rst:95
+#: ../../server.rst:151
 msgid ""
 "``debug=True`` can be passed to enable the debugger and reloader, but the "
 "``FLASK_ENV=development`` environment variable is still required to fully "
@@ -170,7 +240,7 @@ msgstr ""
 "pero la variable de entorno ``FLASK_ENV=development`` sigue siendo necesaria"
 " para activar completamente el modo de desarrollo."
 
-#: ../../server.rst:99
+#: ../../server.rst:155
 msgid ""
 "Place the call in a main block, otherwise it will interfere when trying to "
 "import and run the application with a production server later."
