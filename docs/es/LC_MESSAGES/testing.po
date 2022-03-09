@@ -29,10 +29,15 @@ msgid ""
 " over techniques for working with different parts of the application in "
 "tests."
 msgstr ""
+"Flask proporciona utilidades para probar una aplicación. Esta documentación "
+"repasa las técnicas para trabajar con diferentes partes de la aplicación en "
+"las pruebas."
 
 #: ../../testing.rst:8
 msgid "We will use the `pytest`_ framework to set up and run our tests."
 msgstr ""
+"Utilizaremos el framework `pytest`_ para configurar y ejecutar nuestras "
+"pruebas."
 
 #: ../../testing.rst:16
 #, python-format
@@ -42,10 +47,14 @@ msgid ""
 "tests </tutorial/tests>` for a detailed explanation of specific tests for an"
 " application."
 msgstr ""
+"El :doc:`tutorial </tutorial/index>` repasa cómo escribir pruebas para una "
+"cobertura del 100% de la aplicación de ejemplo del blog Flaskr. Consulta el "
+":doc:`the tutorial on tests </tutorial/tests>` para una explicación "
+"detallada de pruebas específicas para una aplicación."
 
 #: ../../testing.rst:23
 msgid "Identifying Tests"
-msgstr ""
+msgstr "Identificación de pruebas"
 
 #: ../../testing.rst:25
 msgid ""
@@ -53,6 +62,10 @@ msgid ""
 "that start with ``test_``, in Python modules that start with ``test_``. "
 "Tests can also be further grouped in classes that start with ``Test``."
 msgstr ""
+"Las pruebas se encuentran normalmente en la carpeta ``tests``. Las pruebas "
+"son funciones que empiezan por ``test_``, en módulos de Python que empiezan "
+"por ``test_``. Las pruebas también se pueden agrupar en clases que empiezan "
+"por ``Test``."
 
 #: ../../testing.rst:29
 msgid ""
@@ -61,10 +74,14 @@ msgid ""
 "already tested. Try to extract complex behaviors as separate functions to "
 "test individually."
 msgstr ""
+"Puede ser difícil saber qué probar. En general, intenta probar el código que"
+" escribes, no el de las bibliotecas que utilizas, ya que éstas ya están "
+"probadas. Intenta extraer los comportamientos complejos como funciones "
+"separadas para probarlas individualmente."
 
 #: ../../testing.rst:36
 msgid "Fixtures"
-msgstr ""
+msgstr "Fixtures"
 
 #: ../../testing.rst:38
 msgid ""
@@ -73,6 +90,12 @@ msgid ""
 "yield a value, then do teardown. Fixtures for the application, test client, "
 "and CLI runner are shown below, they can be placed in ``tests/conftest.py``."
 msgstr ""
+"Los *fixtures* de Pytest permiten escribir piezas de código que son "
+"reutilizables en todas las pruebas. Un fixture simple devuelve un valor, "
+"pero un fixture también puede hacer la configuración, producir un valor, y "
+"luego hacer el desmontaje. Los fixture para la aplicación, el cliente de "
+"pruebas y el ejecutor CLI se muestran a continuación, y pueden colocarse en "
+"``tests/conftest.py``."
 
 #: ../../testing.rst:44
 msgid ""
@@ -81,6 +104,10 @@ msgid ""
 "add code before and after the ``yield`` to set up and tear down other "
 "resources, such as creating and clearing a database."
 msgstr ""
+"Si utilizas una :doc:`application factory </patterns/appfactories>`, define "
+"un fixture ``app`` para crear y configurar una instancia de la aplicación. "
+"Puedes añadir código antes y después del ``yield`` para configurar y "
+"desmontar otros recursos, como crear y borrar una base de datos."
 
 #: ../../testing.rst:50
 msgid ""
@@ -88,10 +115,13 @@ msgid ""
 " and configure directly. You can still use an ``app`` fixture to set up and "
 "tear down resources."
 msgstr ""
+"Si no estás usando una fábrica, ya tienes un objeto de aplicación que puedes"
+" importar y configurar directamente. Todavía puedes usar un fixture de "
+"``app`` para configurar y desmontar recursos."
 
 #: ../../testing.rst:84
 msgid "Sending Requests with the Test Client"
-msgstr ""
+msgstr "Envío de solicitudes con el cliente de prueba"
 
 #: ../../testing.rst:86
 msgid ""
@@ -99,6 +129,9 @@ msgid ""
 "server. Flask's client extends :doc:`Werkzeug's client <werkzeug:test>`, see"
 " those docs for additional information."
 msgstr ""
+"El cliente de prueba hace peticiones a la aplicación sin ejecutar un "
+"servidor en vivo. El cliente de Flask extiende :doc:`Werkzeug's client "
+"<werkzeug:test>`, vea esos docs para información adicional."
 
 #: ../../testing.rst:91
 msgid ""
@@ -108,6 +141,11 @@ msgid ""
 ":class:`~werkzeug.test.EnvironBuilder`. Typically you'll use ``path``, "
 "``query_string``, ``headers``, and ``data`` or ``json``."
 msgstr ""
+"El ``client`` tiene métodos que coinciden con los métodos comunes de "
+"petición HTTP, como ``client.get()`` y ``client.post()``. Toman muchos "
+"argumentos para construir la petición; puedes encontrar la documentación "
+"completa en :class:`~werkzeug.test.EnvironBuilder`. Normalmente usarás "
+"``path``, ``query_string``, ``headers``, y ``data`` o ``json``."
 
 #: ../../testing.rst:97
 msgid ""
@@ -118,6 +156,13 @@ msgid ""
 "returned by the view. If you want to use text, Werkzeug 2.1 provides "
 "``response.text``, or use ``response.get_data(as_text=True)``."
 msgstr ""
+"Para realizar una petición, se llama al método que debe utilizar la petición"
+" con la ruta a probar. Se devuelve una :class:`~werkzeug.test.TestResponse` "
+"para examinar los datos de la respuesta. Tiene todas las propiedades "
+"habituales de un objeto respuesta. Por lo general, se examinará "
+"``response.data``, que son los bytes devueltos por la vista. Si quieres usar"
+" texto, Werkzeug 2.1 proporciona ``response.text``, o usa "
+"``response.get_data(as_text=True)``."
 
 #: ../../testing.rst:111
 msgid ""
@@ -125,10 +170,16 @@ msgid ""
 "the query string (after the ``?`` in the URL). You can also pass a string if"
 " you want to set a specific value directly."
 msgstr ""
+"Pasa un dict ``query_string={\"key\": \"valor\", ...}`` para establecer "
+"argumentos en la cadena de consulta (después del ``?`` en la URL). También "
+"puedes pasar una cadena si quieres establecer un valor específico "
+"directamente."
 
 #: ../../testing.rst:115
 msgid "Pass a dict to ``headers={}`` to set request headers."
 msgstr ""
+"Pasa un dict a ``headers={}`` para establecer las cabeceras de las "
+"peticiones."
 
 #: ../../testing.rst:117
 msgid ""
@@ -136,10 +187,13 @@ msgid ""
 "If raw bytes are passed, that exact body is used. Usually, you'll pass a "
 "dict to set form data."
 msgstr ""
+"Para enviar un cuerpo de petición en una petición POST o PUT, pase un valor "
+"a ``data``. Si se pasan bytes sin procesar, se utiliza ese cuerpo exacto. "
+"Normalmente, se pasa un dict para establecer los datos del formulario."
 
 #: ../../testing.rst:123
 msgid "Form Data"
-msgstr ""
+msgstr "Datos del formulario"
 
 #: ../../testing.rst:125
 msgid ""
@@ -147,6 +201,9 @@ msgid ""
 " be set to ``multipart/form-data`` or ``application/x-www-form-urlencoded`` "
 "automatically."
 msgstr ""
+"Para enviar los datos del formulario, pasa un dict a ``data``. La cabecera "
+"``Content-Type`` se establecerá como ``multipart/form-data`` o "
+"``application/x-www-form-urlencoded`` automáticamente."
 
 #: ../../testing.rst:129
 msgid ""
@@ -156,32 +213,45 @@ msgid ""
 "will be closed after making the request, so they do not need to use the "
 "usual ``with open() as f:`` pattern."
 msgstr ""
+"Si un valor es un objeto de archivo abierto para la lectura de bytes (modo "
+"``\"rb\"``), será tratado como un archivo cargado. Para cambiar el nombre de"
+" archivo y el tipo de contenido detectados, pase una tupla ``(file, "
+"filename, content_type)``. Los objetos archivo se cerrarán después de "
+"realizar la petición, por lo que no es necesario utilizar el patrón habitual"
+" ``with open() as f:``."
 
 #: ../../testing.rst:135
 msgid ""
 "It can be useful to store files in a ``tests/resources`` folder, then use "
 "``pathlib.Path`` to get files relative to the current test file."
 msgstr ""
+"Puede ser útil almacenar los archivos en una carpeta ``tests/resources``, y "
+"luego utilizar ``pathlib.Path`` para obtener los archivos relativos al "
+"archivo de prueba actual."
 
 #: ../../testing.rst:155
 msgid "JSON Data"
-msgstr ""
+msgstr "Datos JSON"
 
 #: ../../testing.rst:157
 msgid ""
 "To send JSON data, pass an object to ``json``. The ``Content-Type`` header "
 "will be set to ``application/json`` automatically."
 msgstr ""
+"Para enviar datos JSON, pasa un objeto a ``json``. La cabecera ``Content-"
+"Type`` se establecerá como ``application/json`` automáticamente."
 
 #: ../../testing.rst:160
 msgid ""
 "Similarly, if the response contains JSON data, the ``response.json`` "
 "attribute will contain the deserialized object."
 msgstr ""
+"Del mismo modo, si la respuesta contiene datos JSON, el atributo "
+"``response.json`` contendrá el objeto deserializado."
 
 #: ../../testing.rst:182
 msgid "Following Redirects"
-msgstr ""
+msgstr "Siguiendo las redirecciones"
 
 #: ../../testing.rst:184
 msgid ""
@@ -190,6 +260,10 @@ msgid ""
 "client will continue to make requests until a non-redirect response is "
 "returned."
 msgstr ""
+"Por defecto, el cliente no realiza peticiones adicionales si la respuesta es"
+" una redirección. Al pasar ``follow_redirects=True`` a un método de "
+"petición, el cliente continuará haciendo peticiones hasta que se devuelva "
+"una respuesta que no sea una redirección."
 
 #: ../../testing.rst:189
 msgid ""
@@ -198,11 +272,14 @@ msgid ""
 ":attr:`~werkzeug.test.TestResponse.request` attribute which records the "
 "request that produced that response."
 msgstr ""
+":attr:`TestResponse.history <werkzeug.test.TestResponse.history>` es una "
+"tupla de las respuestas que condujeron a la respuesta final. Cada respuesta "
+"tiene un atributo :attr:`~werkzeug.test.TestResponse.request` que registra "
+"la solicitud que produjo esa respuesta."
 
 #: ../../testing.rst:205
-#, fuzzy
 msgid "Accessing and Modifying the Session"
-msgstr "Acceso y modificación de las sesiones"
+msgstr "Acceder y modificar la sesión"
 
 #: ../../testing.rst:207
 msgid ""
@@ -210,6 +287,10 @@ msgid ""
 "client in a ``with`` statement. The app and request context will remain "
 "active *after* making a request, until the ``with`` block ends."
 msgstr ""
+"Para acceder a las variables de contexto de Flask, principalmente "
+":data:`~flask.session`, utiliza el cliente en una sentencia ``with``. La "
+"aplicación y el contexto de la solicitud permanecerán activos *después* de "
+"hacer una solicitud, hasta que el bloque ``with`` termine."
 
 #: ../../testing.rst:224
 msgid ""
@@ -219,10 +300,15 @@ msgid ""
 "statement. It returns a session object, and will save the session once the "
 "block ends."
 msgstr ""
+"Si quieres acceder o establecer un valor en la sesión *antes* de hacer una "
+"petición, utiliza el método "
+":meth:`~flask.testing.FlaskClient.session_transaction` del cliente en una "
+"sentencia ``with``. Devuelve un objeto de sesión, y guardará la sesión una "
+"vez que el bloque termine."
 
 #: ../../testing.rst:248
 msgid "Running Commands with the CLI Runner"
-msgstr ""
+msgstr "Ejecución de comandos con el CLI Runner"
 
 #: ../../testing.rst:250
 msgid ""
@@ -232,6 +318,11 @@ msgid ""
 " runner extends :doc:`Click's runner <click:testing>`, see those docs for "
 "additional information."
 msgstr ""
+"Flask proporciona :meth:`~flask.Flask.test_cli_runner` para crear un "
+":class:`~flask.testing.FlaskCliRunner`, que ejecuta comandos CLI de forma "
+"aislada y captura la salida en un objeto :class:`~click.testing.Result`. El "
+"corredor de Flask extiende el :doc:`Cliclic's runner <click:testing>`, vea "
+"esos docs para información adicional."
 
 #: ../../testing.rst:256
 msgid ""
@@ -239,10 +330,13 @@ msgid ""
 " commands in the same way they would be called with the ``flask`` command "
 "from the command line."
 msgstr ""
+"Utiliza el método :meth:`~flask.testing.FlaskCliRunner.invoke` del corredor "
+"para llamar a los comandos de la misma manera que se llamarían con el "
+"comando ``flask`` desde la línea de comandos."
 
 #: ../../testing.rst:278
 msgid "Tests that depend on an Active Context"
-msgstr ""
+msgstr "Pruebas que dependen de un Contexto Activo"
 
 #: ../../testing.rst:280
 msgid ""
@@ -252,18 +346,29 @@ msgid ""
 "``current_app``. Rather than testing them by making a request or invoking "
 "the command, you can create and activate a context directly."
 msgstr ""
+"Puedes tener funciones que son llamadas desde vistas o comandos, que esperan"
+" un contexto activo de :doc:`application context </appcontext>` o "
+":doc:`request context  </reqcontext>` porque acceden a ``request``, "
+"``session``, o ``current_app``. En lugar de probarlos haciendo una petición "
+"o invocando el comando, puedes crear y activar un contexto directamente."
 
 #: ../../testing.rst:287
 msgid ""
 "Use ``with app.app_context()`` to push an application context. For example, "
 "database extensions usually require an active app context to make queries."
 msgstr ""
+"Utiliza ``with app.app_context()`` para impulsar un contexto de aplicación. "
+"Por ejemplo, las extensiones de bases de datos suelen requerir un contexto "
+"de aplicación activo para realizar consultas."
 
 #: ../../testing.rst:297
 msgid ""
 "Use ``with app.test_request_context()`` to push a request context. It takes "
 "the same arguments as the test client's request methods."
 msgstr ""
+"Utiliza ``with app.app_context()`` para impulsar un contexto de aplicación. "
+"Por ejemplo, las extensiones de bases de datos suelen requerir un contexto "
+"de aplicación activo para realizar consultas."
 
 #: ../../testing.rst:311
 msgid ""
@@ -272,6 +377,10 @@ msgid ""
 "these, usually it's better to make a full request instead. However, it's "
 "possible to call them manually."
 msgstr ""
+"La creación de un contexto de petición de prueba no ejecuta ningún código de"
+" envío de Flask, por lo que no se llaman las funciones ``before_request``. "
+"Si necesitas llamarlas, normalmente es mejor hacer una petición completa. "
+"Sin embargo, es posible llamarlas manualmente."
 
 #~ msgid "**Something that is untested is broken.**"
 #~ msgstr "**Algo que no está probado está roto.**"
