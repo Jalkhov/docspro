@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2010 Pallets
 # This file is distributed under the same license as the Flask package.
-# Mohamad Balkhi <ahmdparsh129@gmail.com>, 2021.
+# Komeil Parseh <ahmdparsh129@gmail.com>, 2021.
 #
 msgid ""
 msgstr ""
@@ -65,6 +65,9 @@ msgstr ""
 "پیدا کنید. این آموزش فقط برای پایتون و چیستی فلاسک تهیه شده است. برای سایر "
 "پروژه ها شما میتوانید تصمیم بگیرید که از :doc:`/extensions` یا سایر کتابخانه"
 " ها اندک ساخته شده استفاده کنید."
+
+msgid "اسکرین شات صفحه ورود"
+msgstr ""
 
 #: ../../tutorial/index.rst:47
 msgid ""

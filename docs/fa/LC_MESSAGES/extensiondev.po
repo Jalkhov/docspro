@@ -1,7 +1,7 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2010 Pallets
 # This file is distributed under the same license as the Flask package.
-# Mohamad Balkhi <ahmdparsh129@gmail.com>, 2022.
+# Komeil Parseh <ahmdparsh129@gmail.com>, 2022.
 #
 msgid ""
 msgstr ""
@@ -537,8 +537,8 @@ msgstr ""
 #: ../../extensiondev.rst:324
 msgid ""
 "For maximum compatibility, the extension should support the same versions of"
-" Python that Flask supports. 3.6+ is recommended as of 2020. Use "
-"``python_requires=\">= 3.6\"`` in ``setup.py`` to indicate supported "
+" Python that Flask supports. 3.7+ is recommended as of December 2021. Use "
+"``python_requires=\">= 3.7\"`` in ``setup.py`` to indicate supported "
 "versions."
 msgstr ""
 "برای حداکثر سازگاری، افزونه باید از همان نسخه‌های پایتون پشتیبانی کند که "
