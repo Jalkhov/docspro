@@ -308,9 +308,8 @@ msgstr ""
 ":meth:`~flask.Flask.test_cli_runner` برای ایجاد "
 ":class:`~flask.testing.FlaskCliRunner` ارائه میدهد که این دستورات CLI را به "
 "صورت مجزا اجرا می‌کند و خروجی را در یک :doc:`Click's runner <click:testing>`"
-"  شی :doc:`Click's runner <click:testing>` می‌گیرد. برای اطلاعات بیشتر "
-"درباره Runner فلاسک میتوانید :doc:`Click's runner <click:testing>` را "
-"ببینید."
+"  شی :class:`~click.testing.Result` می‌گیرد. برای اطلاعات بیشتر درباره "
+"Runner فلاسک میتوانید :doc:`Click's runner <click:testing>` را ببینید."
 
 #: ../../testing.rst:256
 msgid ""
