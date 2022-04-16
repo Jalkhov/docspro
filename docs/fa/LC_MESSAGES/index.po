@@ -23,8 +23,8 @@ msgstr ""
 msgid "Welcome to Flask"
 msgstr "به فلاسک خوش آمدید"
 
-msgid "فلاسک: توسعه وب، یکبار برای همیشه"
-msgstr ""
+msgid "Flask: web development, one drop at a time"
+msgstr "فلاسک: توسعه وب، یکبار برای همیشه"
 
 #: ../../index.rst:11
 msgid ""

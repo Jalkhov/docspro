@@ -259,7 +259,7 @@ msgstr ""
 "میشود و در صورت بروز خطا در هنگام درخواست، یک دیباگر تعاملی را در مرورگر "
 "نشان می دهد."
 
-msgid "اشکال زدای تعاملی در عمل."
+msgid "The interactive debugger in action."
 msgstr ""
 
 #: ../../quickstart.rst:160
@@ -1374,3 +1374,6 @@ msgid "Ready to deploy your new Flask app? See :doc:`deploying/index`."
 msgstr ""
 "آیا برای استقرار برنامه فلاسک جدیدتان آماده اید؟  :doc:`deploying/index` با "
 "ببنید."
+
+#~ msgid "اشکال زدای تعاملی در عمل."
+#~ msgstr ""

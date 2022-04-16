@@ -82,8 +82,8 @@ msgid ""
 msgstr ""
 "به http://127.0.0.1:5000/auth/login بروید و صفحه باید مانند تصویر زیر باشد."
 
-msgid "اسکرین شات صفحه ورود"
-msgstr ""
+msgid "screenshot of login page"
+msgstr "اسکرین شات صفحه ورود"
 
 #: ../../tutorial/static.rst:66
 msgid ""
