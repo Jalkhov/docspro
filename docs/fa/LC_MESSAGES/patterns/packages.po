@@ -177,21 +177,11 @@ msgstr ""
 "نمی کنیم و فقط از وارد شدن ماژول اطمینان می دهیم و این کار را در پایین فایل "
 "انجام می دهیم."
 
-#: ../../patterns/packages.rst:176
-msgid ""
-"There are still some problems with that approach but if you want to use "
-"decorators there is no way around that.  Check out the :doc:`/becomingbig` "
-"section for some inspiration how to deal with that."
-msgstr ""
-"هنوز برخی از مشکلات با این رویکرد وجود دارد، اما اگر می خواهید از دکوراتورها"
-" استفاده کنید، راهی برای دور زدن آن وجود ندارد. بخش :doc:`/becomingbig` را "
-"برای الهام گرفتن از نحوه برخورد با آن بررسی کنید."
-
-#: ../../patterns/packages.rst:182
+#: ../../patterns/packages.rst:178
 msgid "Working with Blueprints"
 msgstr "کار با طرح ها (Blueprints)"
 
-#: ../../patterns/packages.rst:184
+#: ../../patterns/packages.rst:180
 msgid ""
 "If you have larger applications it's recommended to divide them into smaller"
 " groups where each group is implemented with the help of a blueprint.  For a"
@@ -201,3 +191,12 @@ msgstr ""
 "اگر برنامه‌های بزرگ‌تری دارید، توصیه می‌شود آنها را به گروه‌های کوچک‌تر "
 "تقسیم کنید، جایی که هر گروه با کمک یک طرح اولیه پیاده‌سازی می‌شود. برای "
 "معرفی ملایم این موضوع به فصل :doc:`/blueprints` از مستندات مراجعه کنید."
+
+#~ msgid ""
+#~ "There are still some problems with that approach but if you want to use "
+#~ "decorators there is no way around that.  Check out the :doc:`/becomingbig` "
+#~ "section for some inspiration how to deal with that."
+#~ msgstr ""
+#~ "هنوز برخی از مشکلات با این رویکرد وجود دارد، اما اگر می خواهید از دکوراتورها"
+#~ " استفاده کنید، راهی برای دور زدن آن وجود ندارد. بخش :doc:`/becomingbig` را "
+#~ "برای الهام گرفتن از نحوه برخورد با آن بررسی کنید."

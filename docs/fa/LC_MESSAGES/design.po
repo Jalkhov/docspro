@@ -238,17 +238,11 @@ msgid ""
 "quick and easy to write a traditional web application."
 msgstr ""
 
-#: ../../design.rst:170
-msgid ""
-"Also see the :doc:`/becomingbig` section of the documentation for some "
-"inspiration for larger applications based on Flask."
-msgstr ""
-
-#: ../../design.rst:175
+#: ../../design.rst:172
 msgid "Async/await and ASGI support"
 msgstr ""
 
-#: ../../design.rst:177
+#: ../../design.rst:174
 msgid ""
 "Flask supports ``async`` coroutines for view functions by executing the "
 "coroutine on a separate thread instead of using an event loop on the main "
@@ -259,7 +253,7 @@ msgid ""
 "the threads."
 msgstr ""
 
-#: ../../design.rst:185
+#: ../../design.rst:182
 msgid ""
 "Due to how tied to WSGI Flask's code is, it's not clear if it's possible to "
 "make the ``Flask`` class support ASGI and WSGI at the same time. Work is "
@@ -267,15 +261,15 @@ msgid ""
 "enable support in Flask as well."
 msgstr ""
 
-#: ../../design.rst:190
+#: ../../design.rst:187
 msgid "See :doc:`/async-await` for more discussion."
 msgstr ""
 
-#: ../../design.rst:194
+#: ../../design.rst:191
 msgid "What Flask is, What Flask is Not"
 msgstr ""
 
-#: ../../design.rst:196
+#: ../../design.rst:193
 msgid ""
 "Flask will never have a database layer.  It will not have a form library or "
 "anything else in that direction.  Flask itself just bridges to Werkzeug to "
@@ -284,7 +278,7 @@ msgid ""
 "Everything else is up for extensions."
 msgstr ""
 
-#: ../../design.rst:202
+#: ../../design.rst:199
 msgid ""
 "Why is this the case?  Because people have different preferences and "
 "requirements and Flask could not meet those if it would force any of this "
@@ -292,8 +286,13 @@ msgid ""
 " in some sort.  However not every application needs a SQL database."
 msgstr ""
 
-#: ../../design.rst:207
+#: ../../design.rst:204
 msgid ""
 "The idea of Flask is to build a good foundation for all applications. "
 "Everything else is up to you or extensions."
 msgstr ""
+
+#~ msgid ""
+#~ "Also see the :doc:`/becomingbig` section of the documentation for some "
+#~ "inspiration for larger applications based on Flask."
+#~ msgstr ""
