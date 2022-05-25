@@ -100,7 +100,7 @@ msgstr "بش(Bash)"
 
 #: ../../tutorial/deploy.rst:60
 msgid "Fish"
-msgstr ""
+msgstr "Fish"
 
 #: ../../tutorial/deploy.rst:67
 msgid "CMD"

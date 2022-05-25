@@ -28,7 +28,6 @@ msgid "Python Version"
 msgstr "نسخه پایتون"
 
 #: ../../installation.rst:8
-#, fuzzy
 msgid ""
 "We recommend using the latest version of Python. Flask supports Python 3.7 "
 "and newer."
@@ -118,13 +117,16 @@ msgstr ""
 
 #: ../../installation.rst:53
 msgid "greenlet"
-msgstr ""
+msgstr "greenlet"
 
 #: ../../installation.rst:55
 msgid ""
 "You may choose to use gevent or eventlet with your application. In this "
 "case, greenlet>=1.0 is required. When using PyPy, PyPy>=7.3.7 is required."
 msgstr ""
+"می توانید انتخاب کنید که از gevent یا eventlet برای برنامه خود استفاده کنید."
+" در این مورد، greenlet>=1.0 مورد نیاز است. هنگام استفاده از این PyPy>=7.3.7 "
+"نیاز است."
 
 #: ../../installation.rst:59
 msgid ""
@@ -132,6 +134,9 @@ msgid ""
 "versions that added necessary features. You should use the latest versions "
 "of each."
 msgstr ""
+"اینها حداقل نسخه های پشتیبانی شده نیستند، آنها فقط اولین نسخه هایی را نشان "
+"می دهند که ویژگی های لازم را اضافه کرده اند. شما باید از آخرین نسخه های هر "
+"کدام استفاده کنید."
 
 #: ../../installation.rst:65
 msgid "Virtual environments"
