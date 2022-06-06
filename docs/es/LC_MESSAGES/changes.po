@@ -24,14 +24,12 @@ msgid "Changes"
 msgstr "Cambios"
 
 #: ../../../CHANGES.rst:4
-#, fuzzy
 msgid "Version 2.0.3"
-msgstr "Versión 2.0.2"
+msgstr "Versión 2.0.3"
 
 #: ../../../CHANGES.rst:6
-#, fuzzy
 msgid "Released 2022-02-14"
-msgstr "Publicado el 2021-05-21"
+msgstr "Publicado el 2022-02-14"
 
 #: ../../../CHANGES.rst:8
 msgid ""
