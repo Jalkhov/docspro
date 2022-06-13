@@ -199,18 +199,22 @@ msgid "Bash"
 msgstr "Bash"
 
 #: ../../tutorial/factory.rst:148
+msgid "Fish"
+msgstr ""
+
+#: ../../tutorial/factory.rst:156
 msgid "CMD"
 msgstr "CMD"
 
-#: ../../tutorial/factory.rst:156
+#: ../../tutorial/factory.rst:164
 msgid "Powershell"
 msgstr "Powershell"
 
-#: ../../tutorial/factory.rst:164
+#: ../../tutorial/factory.rst:172
 msgid "You'll see output similar to this:"
 msgstr "你会看到类似下面的输出："
 
-#: ../../tutorial/factory.rst:176
+#: ../../tutorial/factory.rst:184
 msgid ""
 "Visit http://127.0.0.1:5000/hello in a browser and you should see the "
 "\"Hello, World!\" message. Congratulations, you're now running your Flask "
@@ -219,6 +223,13 @@ msgstr ""
 "在浏览器中访问 http://127.0.0.1:5000/hello，你应该会看到“Hello, World!”信息。恭喜，你现在正在运行你的 "
 "Flask web 应用！"
 
-#: ../../tutorial/factory.rst:180
+#: ../../tutorial/factory.rst:188
+msgid ""
+"If another program is already using port 5000, you'll see ``OSError: [Errno "
+"98]`` or ``OSError: [WinError 10013]`` when the server tries to start. See "
+":ref:`address-already-in-use` for how to handle that."
+msgstr ""
+
+#: ../../tutorial/factory.rst:193
 msgid "Continue to :doc:`database`."
 msgstr "继续阅读 :doc:`database`。"

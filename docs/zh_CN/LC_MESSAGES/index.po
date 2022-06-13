@@ -24,8 +24,8 @@ msgstr ""
 msgid "Welcome to Flask"
 msgstr "欢迎来到 Flask 的世界"
 
-msgid "Flask: web development, one drop at a time"
-msgstr "Flask：Web 开发，一次一滴"
+msgid "Flask：Web 开发，一次一滴"
+msgstr ""
 
 #: ../../index.rst:11
 msgid ""
@@ -84,3 +84,6 @@ msgstr "附加笔记"
 msgid ""
 "Design notes, legal information and changelog are here for the interested."
 msgstr "如果你感兴趣的话，这里有一些设计笔记、法律信息和变更日志（changelog）。"
+
+#~ msgid "Flask: web development, one drop at a time"
+#~ msgstr "Flask：Web 开发，一次一滴"

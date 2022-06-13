@@ -84,7 +84,7 @@ msgid ""
 msgstr ""
 
 #: ../../templating.rst:40
-msgid "The current configuration object (:data:`flask.config`)"
+msgid "The current configuration object (:data:`flask.Flask.config`)"
 msgstr ""
 
 #: ../../templating.rst:44
@@ -271,3 +271,6 @@ msgid ""
 ":ref:`registering-filters`), but this demonstrates how to pass functions in "
 "a context processor."
 msgstr ""
+
+#~ msgid "The current configuration object (:data:`flask.config`)"
+#~ msgstr ""

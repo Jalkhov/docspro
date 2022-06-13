@@ -35,10 +35,11 @@ msgstr ""
 ":data:`current_app` 和 :data:`g` 这两个代理对象来访问应用上下文。"
 
 #: ../../appcontext.rst:11
+#, fuzzy
 msgid ""
-"This is similar to the :doc:`/reqcontext`, which keeps track of request-"
-"level data during a request. A corresponding application context is pushed "
-"when a request context is pushed."
+"This is similar to :doc:`/reqcontext`, which keeps track of request-level "
+"data during a request. A corresponding application context is pushed when a "
+"request context is pushed."
 msgstr ""
 "这与在请求当中跟踪请求层面数据的 :doc:`/reqcontext` 类似。在一个请求上下文被推入线程局部栈时，对应的应用上下文也被推入。"
 
