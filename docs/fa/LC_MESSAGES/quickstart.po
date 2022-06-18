@@ -259,9 +259,6 @@ msgstr ""
 "میشود و در صورت بروز خطا در هنگام درخواست، یک دیباگر تعاملی را در مرورگر "
 "نشان می دهد."
 
-msgid "The interactive debugger in action."
-msgstr "اشکال زدای تعاملی در عمل"
-
 #: ../../quickstart.rst:160
 msgid ""
 "The debugger allows executing arbitrary Python code from the browser. It is "
@@ -1375,5 +1372,5 @@ msgstr ""
 "آیا برای استقرار برنامه فلاسک جدیدتان آماده اید؟  :doc:`deploying/index` با "
 "ببنید."
 
-#~ msgid "اشکال زدای تعاملی در عمل."
-#~ msgstr ""
+#~ msgid "The interactive debugger in action."
+#~ msgstr "اشکال زدای تعاملی در عمل"

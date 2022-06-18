@@ -23,9 +23,6 @@ msgstr ""
 msgid "Welcome to Flask"
 msgstr "به فلاسک خوش آمدید"
 
-msgid "Flask: web development, one drop at a time"
-msgstr "فلاسک: توسعه وب، یکبار برای همیشه"
-
 #: ../../index.rst:11
 msgid ""
 "Welcome to Flask's documentation. Get started with :doc:`installation` and "
@@ -72,11 +69,11 @@ msgstr ""
 "شروع می‌شود. سپس بر روی دستور عمل های گام به گام توسعه وب با فلاسک تمرکز "
 "می‌کند."
 
-#: ../../index.rst:66
+#: ../../index.rst:65
 msgid "API Reference"
 msgstr "مرجع API"
 
-#: ../../index.rst:68
+#: ../../index.rst:67
 msgid ""
 "If you are looking for information on a specific function, class or method, "
 "this part of the documentation is for you."
@@ -84,12 +81,15 @@ msgstr ""
 "اگر به دنبال اطلاعاتی در مورد یک تابع، کلاس یا روش خاص هستید، این بخش از "
 "مستندات مناسب شماست."
 
-#: ../../index.rst:78
+#: ../../index.rst:77
 msgid "Additional Notes"
 msgstr "یادداشت های اضافی"
 
-#: ../../index.rst:80
+#: ../../index.rst:79
 msgid ""
 "Design notes, legal information and changelog are here for the interested."
 msgstr ""
 "یادداشت های طراحی، اطلاعات حقوقی و تغییرات در اینجا برای علاقمندان است."
+
+#~ msgid "Flask: web development, one drop at a time"
+#~ msgstr "فلاسک: توسعه وب، یکبار برای همیشه"

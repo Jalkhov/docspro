@@ -161,7 +161,6 @@ msgstr ""
 "استفاده کنید."
 
 #: ../../testing.rst:111
-#, fuzzy
 msgid ""
 "Pass a dict ``query_string={\"key\": \"value\", ...}`` to set arguments in "
 "the query string (after the ``?`` in the URL). Pass a dict ``headers={}`` to"
