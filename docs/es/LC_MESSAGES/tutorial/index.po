@@ -39,8 +39,8 @@ msgstr ""
 "mensajes y editar o eliminar sus propios mensajes. Podrás empaquetar e "
 "instalar la aplicación en otros ordenadores."
 
-msgid "screenshot of index page"
-msgstr "captura de pantalla de la página de índice"
+msgid "captura de pantalla de la página de índice"
+msgstr ""
 
 #: ../../tutorial/index.rst:30
 msgid ""
@@ -67,8 +67,8 @@ msgstr ""
 ":doc:`/extensions` u otras bibliotecas para hacer algunas tareas más "
 "simples."
 
-msgid "screenshot of login page"
-msgstr "captura de pantalla de la página de inicio de sesión"
+msgid "captura de pantalla de la página de inicio de sesión"
+msgstr ""
 
 #: ../../tutorial/index.rst:47
 msgid ""
@@ -88,9 +88,6 @@ msgstr ""
 "ampliar. Una vez que te sientas más cómodo con Flask, podrás salir de esta "
 "estructura y aprovechar al máximo la flexibilidad de Flask."
 
-msgid "screenshot of edit page"
-msgstr "captura de pantalla de la página de inicio de sesión"
-
 #: ../../tutorial/index.rst:60
 msgid ""
 ":gh:`The tutorial project is available as an example in the Flask repository"
@@ -104,3 +101,12 @@ msgstr ""
 #: ../../tutorial/index.rst:64
 msgid "Continue to :doc:`layout`."
 msgstr "Continúe con :doc:`layout`."
+
+#~ msgid "screenshot of index page"
+#~ msgstr "captura de pantalla de la página de índice"
+
+#~ msgid "screenshot of login page"
+#~ msgstr "captura de pantalla de la página de inicio de sesión"
+
+#~ msgid "screenshot of edit page"
+#~ msgstr "captura de pantalla de la página de inicio de sesión"

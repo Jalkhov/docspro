@@ -339,19 +339,11 @@ msgstr ""
 "Flask no está diseñado para aplicaciones grandes o servidores asíncronos. "
 "Flask quiere que sea rápido y fácil escribir una aplicación web tradicional."
 
-#: ../../design.rst:170
-msgid ""
-"Also see the :doc:`/becomingbig` section of the documentation for some "
-"inspiration for larger applications based on Flask."
-msgstr ""
-"Consulta también la sección :doc:`/becomingbig` de la documentación para "
-"inspirarte en aplicaciones más grandes basadas en Flask."
-
-#: ../../design.rst:175
+#: ../../design.rst:172
 msgid "Async/await and ASGI support"
 msgstr "Soporte de Async/await y ASGI"
 
-#: ../../design.rst:177
+#: ../../design.rst:174
 msgid ""
 "Flask supports ``async`` coroutines for view functions by executing the "
 "coroutine on a separate thread instead of using an event loop on the main "
@@ -369,7 +361,7 @@ msgstr ""
 "Este compromiso introduce un coste de rendimiento en comparación con los "
 "frameworks ASGI, debido a la sobrecarga de los hilos."
 
-#: ../../design.rst:185
+#: ../../design.rst:182
 msgid ""
 "Due to how tied to WSGI Flask's code is, it's not clear if it's possible to "
 "make the ``Flask`` class support ASGI and WSGI at the same time. Work is "
@@ -381,15 +373,15 @@ msgstr ""
 "Actualmente se está trabajando en Werkzeug para trabajar con ASGI, lo que "
 "eventualmente podría permitir el soporte en Flask también."
 
-#: ../../design.rst:190
+#: ../../design.rst:187
 msgid "See :doc:`/async-await` for more discussion."
 msgstr "Ver :doc:`/async-await` para más información."
 
-#: ../../design.rst:194
+#: ../../design.rst:191
 msgid "What Flask is, What Flask is Not"
 msgstr "Qué es Flask, qué no es Flask"
 
-#: ../../design.rst:196
+#: ../../design.rst:193
 msgid ""
 "Flask will never have a database layer.  It will not have a form library or "
 "anything else in that direction.  Flask itself just bridges to Werkzeug to "
@@ -403,7 +395,7 @@ msgstr ""
 "plantillas. También se vincula a algunos paquetes de bibliotecas estándar "
 "comunes, como el registro. Todo lo demás es para las extensiones."
 
-#: ../../design.rst:202
+#: ../../design.rst:199
 msgid ""
 "Why is this the case?  Because people have different preferences and "
 "requirements and Flask could not meet those if it would force any of this "
@@ -416,10 +408,17 @@ msgstr ""
 "tipo. Sin embargo, no todas las aplicaciones necesitan una base de datos "
 "SQL."
 
-#: ../../design.rst:207
+#: ../../design.rst:204
 msgid ""
 "The idea of Flask is to build a good foundation for all applications. "
 "Everything else is up to you or extensions."
 msgstr ""
 "La idea de Flask es construir una buena base para todas las aplicaciones. "
 "Todo lo demás depende de ti o de las extensiones."
+
+#~ msgid ""
+#~ "Also see the :doc:`/becomingbig` section of the documentation for some "
+#~ "inspiration for larger applications based on Flask."
+#~ msgstr ""
+#~ "Consulta también la sección :doc:`/becomingbig` de la documentación para "
+#~ "inspirarte en aplicaciones más grandes basadas en Flask."

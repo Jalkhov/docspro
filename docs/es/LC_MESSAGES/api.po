@@ -222,13 +222,13 @@ msgstr ""
 #: flask.ctx.after_this_request flask.ctx.copy_current_request_context
 #: flask.helpers.flash flask.helpers.get_flashed_messages
 #: flask.helpers.get_template_attribute flask.helpers.make_response
-#: flask.helpers.safe_join flask.helpers.send_file
-#: flask.helpers.send_from_directory flask.helpers.stream_with_context
-#: flask.helpers.url_for flask.json.JSONEncoder.default flask.json.dump
-#: flask.json.dumps flask.json.jsonify flask.json.load flask.json.loads
-#: flask.json.tag.JSONTag flask.json.tag.JSONTag.check
-#: flask.json.tag.JSONTag.tag flask.json.tag.JSONTag.to_json
-#: flask.json.tag.JSONTag.to_python flask.json.tag.TaggedJSONSerializer.dumps
+#: flask.helpers.send_file flask.helpers.send_from_directory
+#: flask.helpers.stream_with_context flask.helpers.url_for
+#: flask.json.JSONEncoder.default flask.json.dump flask.json.dumps
+#: flask.json.jsonify flask.json.load flask.json.loads flask.json.tag.JSONTag
+#: flask.json.tag.JSONTag.check flask.json.tag.JSONTag.tag
+#: flask.json.tag.JSONTag.to_json flask.json.tag.JSONTag.to_python
+#: flask.json.tag.TaggedJSONSerializer.dumps
 #: flask.json.tag.TaggedJSONSerializer.loads
 #: flask.json.tag.TaggedJSONSerializer.register
 #: flask.json.tag.TaggedJSONSerializer.tag
@@ -280,7 +280,6 @@ msgstr ""
 #: werkzeug.wrappers.response.Response.add_etag
 #: werkzeug.wrappers.response.Response.call_on_close
 #: werkzeug.wrappers.response.Response.force_type
-#: werkzeug.wrappers.response.Response.freeze
 #: werkzeug.wrappers.response.Response.from_app
 #: werkzeug.wrappers.response.Response.get_app_iter
 #: werkzeug.wrappers.response.Response.get_data
@@ -455,13 +454,13 @@ msgstr ""
 #: flask.ctx.copy_current_request_context flask.ctx.has_app_context
 #: flask.ctx.has_request_context flask.helpers.flash
 #: flask.helpers.get_flashed_messages flask.helpers.get_template_attribute
-#: flask.helpers.make_response flask.helpers.safe_join
-#: flask.helpers.send_from_directory flask.helpers.stream_with_context
-#: flask.helpers.url_for flask.json.JSONEncoder.default flask.json.dump
-#: flask.json.dumps flask.json.jsonify flask.json.load flask.json.loads
-#: flask.json.tag.JSONTag flask.json.tag.JSONTag.check
-#: flask.json.tag.JSONTag.tag flask.json.tag.JSONTag.to_json
-#: flask.json.tag.JSONTag.to_python flask.json.tag.TaggedJSONSerializer
+#: flask.helpers.make_response flask.helpers.send_from_directory
+#: flask.helpers.stream_with_context flask.helpers.url_for
+#: flask.json.JSONEncoder.default flask.json.dump flask.json.dumps
+#: flask.json.jsonify flask.json.load flask.json.loads flask.json.tag.JSONTag
+#: flask.json.tag.JSONTag.check flask.json.tag.JSONTag.tag
+#: flask.json.tag.JSONTag.to_json flask.json.tag.JSONTag.to_python
+#: flask.json.tag.TaggedJSONSerializer
 #: flask.json.tag.TaggedJSONSerializer.dumps
 #: flask.json.tag.TaggedJSONSerializer.loads
 #: flask.json.tag.TaggedJSONSerializer.register
@@ -1561,92 +1560,6 @@ msgstr ""
 "como una aplicación WSGI. El resultado se utiliza para crear un objeto de "
 "respuesta."
 
-#: flask.app.Flask.make_response:4 of
-msgid ""
-"the return value from the view function. The view function must return a "
-"response. Returning ``None``, or the view ending without returning, is not "
-"allowed. The following types are allowed for ``view_rv``:"
-msgstr ""
-"el valor de retorno de la función de la vista. La función de la vista debe "
-"devolver una respuesta. No se permite devolver ``None``, o que la vista "
-"termine sin devolver. Los siguientes tipos están permitidos para "
-"``view_rv``:"
-
-#: flask.app.Flask.make_response:11 of
-msgid "``str``"
-msgstr "``str``"
-
-#: flask.app.Flask.make_response:10 of
-msgid ""
-"A response object is created with the string encoded to UTF-8 as the body."
-msgstr ""
-"Se crea un objeto de respuesta con la cadena codificada en UTF-8 como "
-"cuerpo."
-
-#: flask.app.Flask.make_response:14 of
-msgid "``bytes``"
-msgstr "``bytes``"
-
-#: flask.app.Flask.make_response:14 of
-msgid "A response object is created with the bytes as the body."
-msgstr "Se crea un objeto de respuesta con los bytes como cuerpo."
-
-#: flask.app.Flask.make_response:17 of
-msgid "``dict``"
-msgstr "``dict``"
-
-#: flask.app.Flask.make_response:17 of
-msgid "A dictionary that will be jsonify'd before being returned."
-msgstr "Un diccionario que será jsonificado antes de ser devuelto."
-
-#: flask.app.Flask.make_response:26 of
-msgid "``tuple``"
-msgstr "``tuple``"
-
-#: flask.app.Flask.make_response:20 of
-msgid ""
-"Either ``(body, status, headers)``, ``(body, status)``, or ``(body, "
-"headers)``, where ``body`` is any of the other types allowed here, "
-"``status`` is a string or an integer, and ``headers`` is a dictionary or a "
-"list of ``(key, value)`` tuples. If ``body`` is a :attr:`response_class` "
-"instance, ``status`` overwrites the exiting value and ``headers`` are "
-"extended."
-msgstr ""
-"O bien ``(body, status, headers)``, ``(body, status)``, o ``(body, "
-"headers)``, donde ``body`` es cualquiera de los otros tipos permitidos aquí,"
-" ``status`` es una cadena o un entero, y ``headers`` es un diccionario o una"
-" lista de tuplas ``(key, value)``. Si ``body`` es una instancia de "
-":attr:`response_class`, ``status`` sobrescribe el valor existente y "
-"``headers`` se extiende."
-
-#: flask.app.Flask.make_response:29 of
-msgid ":attr:`response_class`"
-msgstr ":attr:`response_class`"
-
-#: flask.app.Flask.make_response:29 of
-msgid "The object is returned unchanged."
-msgstr "El objeto se devuelve sin cambios."
-
-#: flask.app.Flask.make_response:32 of
-msgid "other :class:`~werkzeug.wrappers.Response` class"
-msgstr "otra clase :class:`~werkzeug.wrappers.Response`"
-
-#: flask.app.Flask.make_response:32 of
-msgid "The object is coerced to :attr:`response_class`."
-msgstr "El objeto se coacciona con :attr:`response_class`."
-
-#: flask.app.Flask.make_response:36 of
-msgid ":func:`callable`"
-msgstr ":func:`callable`"
-
-#: flask.app.Flask.make_response:35 of
-msgid ""
-"The function is called as a WSGI application. The result is used to create a"
-" response object."
-msgstr ""
-"La función se llama como una aplicación WSGI. El resultado se utiliza para "
-"crear un objeto de respuesta."
-
 #: flask.app.Flask.make_response:38 of
 msgid ""
 "Previously a tuple was interpreted as the arguments for the response object."
@@ -1807,8 +1720,7 @@ msgstr "un objeto :attr:`response_class`."
 #: ../../docstring flask.app.Flask.process_response flask.cli.load_dotenv
 #: flask.config.Config.from_envvar flask.config.Config.from_file
 #: flask.config.Config.from_json flask.config.Config.from_pyfile
-#: flask.helpers.safe_join flask.testing.FlaskCliRunner.invoke
-#: markupsafe._speedups.escape of
+#: flask.testing.FlaskCliRunner.invoke markupsafe._speedups.escape of
 #: werkzeug.wrappers.request.Request.application
 #: werkzeug.wrappers.request.Request.from_values
 #: werkzeug.wrappers.response.Response.force_type
@@ -3754,35 +3666,30 @@ msgid "Parse :attr:`data` as JSON."
 msgstr "Analiza :attr:`data` como JSON."
 
 #: of werkzeug.wrappers.request.Request.get_json:3
-#: werkzeug.wrappers.response.Response.get_json:3
 msgid ""
 "If the mimetype does not indicate JSON (:mimetype:`application/json`, see "
-":attr:`is_json`), this returns ``None``."
+":attr:`is_json`), or parsing fails, :meth:`on_json_loading_failed` is called"
+" and its return value is used as the return value. By default this raises a "
+"400 Bad Request error."
 msgstr ""
-"Si el mimetype no indica JSON (:mimetype:`application/json`, véase "
-":attr:`is_json`), devuelve ``None``."
 
-#: of werkzeug.wrappers.request.Request.get_json:7
-msgid ""
-"If parsing fails, :meth:`on_json_loading_failed` is called and its return "
-"value is used as the return value."
-msgstr ""
-"Si el análisis sintáctico falla, se llama a :meth:`on_json_loading_failed` y"
-" su valor de retorno se utiliza como valor de retorno."
-
-#: of werkzeug.wrappers.request.Request.get_json:10
+#: of werkzeug.wrappers.request.Request.get_json:9
 #: werkzeug.wrappers.response.Response.get_json:9
 msgid "Ignore the mimetype and always try to parse JSON."
 msgstr "Ignora el mimetype e intenta siempre parsear JSON."
 
-#: of werkzeug.wrappers.request.Request.get_json:11
-#: werkzeug.wrappers.response.Response.get_json:10
-msgid "Silence parsing errors and return ``None`` instead."
+#: of werkzeug.wrappers.request.Request.get_json:10
+#, fuzzy
+msgid "Silence mimetype and parsing errors, and return ``None`` instead."
 msgstr "Silencia los errores de análisis y devuelve ``None`` en su lugar."
 
-#: of werkzeug.wrappers.request.Request.get_json:13
+#: of werkzeug.wrappers.request.Request.get_json:12
 msgid "Store the parsed JSON to return for subsequent calls."
 msgstr "Almacena el JSON analizado para devolverlo en posteriores llamadas."
+
+#: flask.Request.json:9 of werkzeug.wrappers.request.Request.get_json:15
+msgid "Raise a 400 error if the content type is incorrect."
+msgstr ""
 
 #: ../../docstring flask.Request.headers:1 of
 msgid "The headers received with the request."
@@ -3896,6 +3803,12 @@ msgstr ""
 msgid "Calls :meth:`get_json` with default arguments."
 msgstr "Llama a :meth:`get_json` con argumentos por defecto."
 
+#: flask.Request.json:6 of
+msgid ""
+"If the request content type is not ``application/json``, this will raise a "
+"400 Bad Request error."
+msgstr ""
+
 #: of werkzeug.wrappers.request.Request.make_form_data_parser:1
 msgid ""
 "Creates the form data parser. Instantiates the "
@@ -3943,15 +3856,26 @@ msgstr ""
 "'utf-8'}``."
 
 #: flask.wrappers.Request.on_json_loading_failed:1 of
+msgid "Called if :meth:`get_json` fails and isn't silenced."
+msgstr ""
+
+#: flask.wrappers.Request.on_json_loading_failed:3 of
+#, fuzzy
 msgid ""
-"Called if :meth:`get_json` parsing fails and isn't silenced. If this method "
-"returns a value, it is used as the return value for :meth:`get_json`. The "
-"default implementation raises :exc:`~werkzeug.exceptions.BadRequest`."
+"If this method returns a value, it is used as the return value for "
+":meth:`get_json`. The default implementation raises "
+":exc:`~werkzeug.exceptions.BadRequest`."
 msgstr ""
 "Se llama si el análisis sintáctico de :meth:`get_json` falla y no se "
 "silencia. Si este método devuelve un valor, se utiliza como valor de retorno"
 " para :meth:`get_json`. La implementación por defecto lanza "
 ":exc:`~werkzeug.exceptions.BadRequest`."
+
+#: flask.wrappers.Request.on_json_loading_failed:7 of
+msgid ""
+"If parsing failed, this is the exception. It will be ``None`` if the content"
+" type wasn't ``application/json``."
+msgstr ""
 
 #: ../../docstring flask.Request.origin:1 of
 msgid ""
@@ -4649,6 +4573,11 @@ msgid "Generate an ``ETag`` header if one is not already set."
 msgstr "Genera una cabecera ``ETag`` si aún no se ha establecido una."
 
 #: of werkzeug.wrappers.response.Response.freeze:10
+#, fuzzy
+msgid "Removed the ``no_etag`` parameter."
+msgstr "Se ha añadido el parámetro ``follow_redirects``."
+
+#: of werkzeug.wrappers.response.Response.freeze:13
 msgid ""
 "An ``ETag`` header is added, the ``no_etag`` parameter is deprecated and "
 "will be removed in Werkzeug 2.1."
@@ -4656,7 +4585,7 @@ msgstr ""
 "Se añade una cabecera ``ETag``, el parámetro ``no_etag`` está obsoleto y se "
 "eliminará en Werkzeug 2.1."
 
-#: of werkzeug.wrappers.response.Response.freeze:14
+#: of werkzeug.wrappers.response.Response.freeze:17
 msgid "The ``Content-Length`` header is set."
 msgstr "La cabecera ``Content-Length`` se ha establecido."
 
@@ -4749,11 +4678,23 @@ msgstr ""
 msgid "Parse :attr:`data` as JSON. Useful during testing."
 msgstr "Analiza :attr:`data` como JSON. Útil durante las pruebas."
 
+#: of werkzeug.wrappers.response.Response.get_json:3
+msgid ""
+"If the mimetype does not indicate JSON (:mimetype:`application/json`, see "
+":attr:`is_json`), this returns ``None``."
+msgstr ""
+"Si el mimetype no indica JSON (:mimetype:`application/json`, véase "
+":attr:`is_json`), devuelve ``None``."
+
 #: of werkzeug.wrappers.response.Response.get_json:7
 msgid "Unlike :meth:`Request.get_json`, the result is not cached."
 msgstr ""
 "A diferencia de :meth:`Request.get_json`, el resultado no se almacena en "
 "caché."
+
+#: of werkzeug.wrappers.response.Response.get_json:10
+msgid "Silence parsing errors and return ``None`` instead."
+msgstr "Silencia los errores de análisis y devuelve ``None`` en su lugar."
 
 #: of werkzeug.wrappers.response.Response.get_wsgi_headers:1
 msgid ""
@@ -5698,6 +5639,11 @@ msgstr ""
 "las respuestas intermedias."
 
 #: flask.testing.FlaskClient.open:15 of
+#, fuzzy
+msgid "Removed the ``as_tuple`` parameter."
+msgstr "Se ha añadido el parámetro ``standalone_mode``."
+
+#: flask.testing.FlaskClient.open:18 of
 msgid ""
 "``as_tuple`` is deprecated and will be removed in Werkzeug 2.1. Use "
 ":attr:`TestResponse.request` and ``request.environ`` instead."
@@ -5705,7 +5651,7 @@ msgstr ""
 "``as_tuple`` está obsoleto y será eliminado en Werkzeug 2.1. Utilice "
 ":attr:`TestResponse.request` y ``request.environ`` en su lugar."
 
-#: flask.testing.FlaskClient.open:20 of
+#: flask.testing.FlaskClient.open:23 of
 msgid ""
 "The request input stream is closed when calling ``response.close()``. Input "
 "streams for redirects are automatically closed."
@@ -5714,7 +5660,7 @@ msgstr ""
 "``response.close()``. Los flujos de entrada para las redirecciones se "
 "cierran automáticamente."
 
-#: flask.testing.FlaskClient.open:25 of
+#: flask.testing.FlaskClient.open:28 of
 msgid ""
 "If a dict is provided as file in the dict for the ``data`` parameter the "
 "content type has to be called ``content_type`` instead of ``mimetype``. This"
@@ -5725,7 +5671,7 @@ msgstr ""
 "``mimetype``. Este cambio se ha realizado por coherencia con "
 ":class:`werkzeug.FileWrapper`."
 
-#: flask.testing.FlaskClient.open:31 of
+#: flask.testing.FlaskClient.open:34 of
 msgid "Added the ``follow_redirects`` parameter."
 msgstr "Se ha añadido el parámetro ``follow_redirects``."
 
@@ -6521,27 +6467,6 @@ msgstr "Argumentos para pasar a :func:`send_file`."
 msgid "``path`` replaces the ``filename`` parameter."
 msgstr "``path`` sustituye al parámetro ``filename``."
 
-#: flask.helpers.safe_join:1 of
-msgid ""
-"Safely join zero or more untrusted path components to a base directory to "
-"avoid escaping the base directory."
-msgstr ""
-"Unir de forma segura cero o más componentes de ruta no confiables a un "
-"directorio base para evitar el escape del directorio base."
-
-#: flask.helpers.safe_join:4 of
-msgid "The trusted base directory."
-msgstr "El directorio base de confianza."
-
-#: flask.helpers.safe_join:5 of
-msgid "The untrusted path components relative to the base directory."
-msgstr ""
-"Los componentes de la ruta de acceso no fiable relativos al directorio base."
-
-#: flask.helpers.safe_join:7 of
-msgid "A safe path, otherwise ``None``."
-msgstr "Una ruta segura, de lo contrario ``None``."
-
 #: ../../docstring markupsafe._speedups.escape:1 of
 msgid ""
 "Replace the characters ``&``, ``<``, ``>``, ``'``, and ``\"`` in the string "
@@ -6628,7 +6553,7 @@ msgstr ""
 "Convierte las marcas escapadas en una cadena de texto. Esto reemplaza las "
 "entidades HTML con los caracteres que representan."
 
-#: ../../api.rst:229
+#: ../../api.rst:227
 msgid "Message Flashing"
 msgstr "Mensaje intermitente"
 
@@ -6730,11 +6655,11 @@ msgstr ""
 "filtro de categorías para limitar los valores devueltos.  Sólo se devolverán"
 " las categorías de la lista."
 
-#: ../../api.rst:237
+#: ../../api.rst:235
 msgid "JSON Support"
 msgstr "Soporte JSON"
 
-#: ../../api.rst:241
+#: ../../api.rst:239
 msgid ""
 "Flask uses the built-in :mod:`json` module for handling JSON. It will use "
 "the current blueprint's or application's JSON encoder and decoder for easier"
@@ -6745,7 +6670,7 @@ msgstr ""
 "facilitar la personalización. Por defecto maneja algunos tipos de datos "
 "extra:"
 
-#: ../../api.rst:245 flask.json.JSONEncoder:4 of
+#: ../../api.rst:243 flask.json.JSONEncoder:4 of
 msgid ""
 ":class:`datetime.datetime` and :class:`datetime.date` are serialized to "
 ":rfc:`822` strings. This is the same as the HTTP date format."
@@ -6753,16 +6678,21 @@ msgstr ""
 ":class:`datetime.datetime` y :class:`datetime.date` se serializan en cadenas"
 " :rfc:`822`. Esto es lo mismo que el formato de fecha HTTP."
 
-#: ../../api.rst:247 flask.json.JSONEncoder:7 of
+#: ../../api.rst:245
+#, fuzzy
+msgid ":class:`decimal.Decimal` is serialized to a string."
+msgstr ":class:`uuid.UUID` se serializa en una cadena."
+
+#: ../../api.rst:246 flask.json.JSONEncoder:7 of
 msgid ":class:`uuid.UUID` is serialized to a string."
 msgstr ":class:`uuid.UUID` se serializa en una cadena."
 
-#: ../../api.rst:248 flask.json.JSONEncoder:8 of
+#: ../../api.rst:247 flask.json.JSONEncoder:8 of
 msgid ""
 ":class:`dataclasses.dataclass` is passed to :func:`dataclasses.asdict`."
 msgstr ":class:`dataclasses.dataclass` se pasa a :func:`dataclasses.asdict`."
 
-#: ../../api.rst:250 flask.json.JSONEncoder:10 of
+#: ../../api.rst:249 flask.json.JSONEncoder:10 of
 msgid ""
 ":class:`~markupsafe.Markup` (or any object with a ``__html__`` method) will "
 "call the ``__html__`` method to get a string."
@@ -6770,7 +6700,7 @@ msgstr ""
 ":class:`~markupsafe.Markup` (o cualquier objeto con un método ``__html__``) "
 "llamará al método ``__html__`` para obtener una cadena."
 
-#: ../../api.rst:253
+#: ../../api.rst:252
 msgid ""
 "Jinja's ``|tojson`` filter is configured to use Flask's :func:`dumps` "
 "function. The filter marks the output with ``|safe`` automatically. Use the "
@@ -7202,7 +7132,7 @@ msgstr ""
 "nueva etiqueta al principio de la orden ya que ``OrderedDict`` debe ser "
 "procesado antes que ``dict``."
 
-#: ../../api.rst:284
+#: ../../api.rst:283
 msgid "Template Rendering"
 msgstr "Renderizado de plantillas"
 
@@ -7259,7 +7189,7 @@ msgstr "el nombre de la plantilla"
 msgid "the name of the variable of macro to access"
 msgstr "el nombre de la variable de la macro a la que hay que acceder"
 
-#: ../../api.rst:295
+#: ../../api.rst:294
 msgid "Configuration"
 msgstr "Configuración"
 
@@ -7558,7 +7488,7 @@ msgstr ""
 "una bandera que indica si las claves del diccionario resultante no deben "
 "incluir el espacio de nombres"
 
-#: ../../api.rst:302
+#: ../../api.rst:301
 msgid "Stream Helpers"
 msgstr "Ayudas para streams"
 
@@ -7587,7 +7517,7 @@ msgstr ""
 msgid "Alternatively it can also be used around a specific generator::"
 msgstr "También puede utilizarse en torno a un generador específico::"
 
-#: ../../api.rst:307
+#: ../../api.rst:306
 msgid "Useful Internals"
 msgstr "Internos útiles"
 
@@ -7703,7 +7633,7 @@ msgstr "Se ha añadido el argumento `exc`."
 msgid "Binds the request context to the current context."
 msgstr "Vincula el contexto de la solicitud al contexto actual."
 
-#: ../../api.rst:314
+#: ../../api.rst:313
 msgid ""
 "The internal :class:`~werkzeug.local.LocalStack` that holds "
 ":class:`~flask.ctx.RequestContext` instances. Typically, the :data:`request`"
@@ -7715,61 +7645,61 @@ msgstr ""
 "proxies :data:`request` y :data:`session` en lugar de a la pila. Puede ser "
 "útil acceder a la pila en el código de extensión."
 
-#: ../../api.rst:320
+#: ../../api.rst:319
 msgid ""
 "The following attributes are always present on each layer of the stack:"
 msgstr ""
 "Los siguientes atributos están siempre presentes en cada capa de la pila:"
 
-#: ../../api.rst:324
+#: ../../api.rst:323
 msgid "`app`"
 msgstr "`app`"
 
-#: ../../api.rst:324
+#: ../../api.rst:323
 msgid "the active Flask application."
 msgstr "la aplicación Flask activa."
 
-#: ../../api.rst:327
+#: ../../api.rst:326
 msgid "`url_adapter`"
 msgstr "`url_adapter`"
 
-#: ../../api.rst:327
+#: ../../api.rst:326
 msgid "the URL adapter that was used to match the request."
 msgstr "el adaptador de URL que se utilizó para hacer coincidir la solicitud."
 
-#: ../../api.rst:330
+#: ../../api.rst:329
 msgid "`request`"
 msgstr "`request`"
 
-#: ../../api.rst:330
+#: ../../api.rst:329
 msgid "the current request object."
 msgstr "el objeto de solicitud actual."
 
-#: ../../api.rst:333
+#: ../../api.rst:332
 msgid "`session`"
 msgstr "`session`"
 
-#: ../../api.rst:333
+#: ../../api.rst:332
 msgid "the active session object."
 msgstr "el objeto de sesión activo."
 
-#: ../../api.rst:336
+#: ../../api.rst:335
 msgid "`g`"
 msgstr "`g`"
 
-#: ../../api.rst:336
+#: ../../api.rst:335
 msgid "an object with all the attributes of the :data:`flask.g` object."
 msgstr "un objeto con todos los atributos del objeto :data:`flask.g`."
 
-#: ../../api.rst:339
+#: ../../api.rst:338
 msgid "`flashes`"
 msgstr "`flashes`"
 
-#: ../../api.rst:339
+#: ../../api.rst:338
 msgid "an internal cache for the flashed messages."
 msgstr "un caché interno para los mensajes flasheados."
 
-#: ../../api.rst:341 ../../api.rst:515
+#: ../../api.rst:340 ../../api.rst:514
 msgid "Example usage::"
 msgstr "Ejemplo de uso::"
 
@@ -7795,7 +7725,7 @@ msgstr "Muestra el contexto de la aplicación."
 msgid "Binds the app context to the current context."
 msgstr "Vincula el contexto de la aplicación al contexto actual."
 
-#: ../../api.rst:355
+#: ../../api.rst:354
 msgid ""
 "The internal :class:`~werkzeug.local.LocalStack` that holds "
 ":class:`~flask.ctx.AppContext` instances. Typically, the :data:`current_app`"
@@ -7877,11 +7807,11 @@ msgid "The prefix that should be used for all URLs defined on the blueprint."
 msgstr ""
 "El prefijo que debe usarse para todas las URLs definidas en el blueprint."
 
-#: ../../api.rst:369
+#: ../../api.rst:368
 msgid "Signals"
 msgstr "Señales"
 
-#: ../../api.rst:375
+#: ../../api.rst:374
 msgid ""
 "``True`` if the signaling system is available.  This is the case when "
 "`blinker`_ is installed."
@@ -7889,11 +7819,11 @@ msgstr ""
 "``True`` si el sistema de señalización está disponible. Este es el caso "
 "cuando `blinker`_ está instalado."
 
-#: ../../api.rst:378
+#: ../../api.rst:377
 msgid "The following signals exist in Flask:"
 msgstr "En Flask existen las siguientes señales:"
 
-#: ../../api.rst:382
+#: ../../api.rst:381
 msgid ""
 "This signal is sent when a template was successfully rendered.  The signal "
 "is invoked with the instance of the template as `template` and the context "
@@ -7903,12 +7833,12 @@ msgstr ""
 "señal se invoca con la instancia de la plantilla como `template` y el "
 "contexto como diccionario (llamado `context`)."
 
-#: ../../api.rst:386 ../../api.rst:403 ../../api.rst:420 ../../api.rst:433
-#: ../../api.rst:478 ../../api.rst:497 ../../api.rst:552
+#: ../../api.rst:385 ../../api.rst:402 ../../api.rst:419 ../../api.rst:432
+#: ../../api.rst:477 ../../api.rst:496 ../../api.rst:551
 msgid "Example subscriber::"
 msgstr "Ejemplo de suscriptor::"
 
-#: ../../api.rst:399
+#: ../../api.rst:398
 msgid ""
 "This signal is sent before template rendering process. The signal is invoked"
 " with the instance of the template as `template` and the context as "
@@ -7918,7 +7848,7 @@ msgstr ""
 "señal se invoca con la instancia de la plantilla como `template` y el "
 "contexto como diccionario (llamado `context`)."
 
-#: ../../api.rst:415
+#: ../../api.rst:414
 msgid ""
 "This signal is sent when the request context is set up, before any request "
 "processing happens.  Because the request context is already bound, the "
@@ -7930,7 +7860,7 @@ msgstr ""
 "contexto de la solicitud ya está vinculado, el suscriptor puede acceder a la"
 " solicitud con los proxies globales estándar como :class:`~flask.request`."
 
-#: ../../api.rst:430
+#: ../../api.rst:429
 msgid ""
 "This signal is sent right before the response is sent to the client. It is "
 "passed the response to be sent named `response`."
@@ -7938,7 +7868,7 @@ msgstr ""
 "Esta señal se envía justo antes de que se envíe la respuesta al cliente. Se "
 "le pasa la respuesta a enviar llamada `response`."
 
-#: ../../api.rst:444
+#: ../../api.rst:443
 msgid ""
 "This signal is sent when an unhandled exception happens during request "
 "processing, including when debugging. The exception is passed to the "
@@ -7948,7 +7878,7 @@ msgstr ""
 " procesamiento de la solicitud, incluso durante la depuración. La excepción "
 "se pasa al suscriptor como ``excepción``."
 
-#: ../../api.rst:448
+#: ../../api.rst:447
 msgid ""
 "This signal is not sent for :exc:`~werkzeug.exceptions.HTTPException`, or "
 "other exceptions that have error handlers registered, unless the exception "
@@ -7958,7 +7888,7 @@ msgstr ""
 "otras excepciones que tengan manejadores de error registrados, a menos que "
 "la excepción haya sido lanzada desde un manejador de errores."
 
-#: ../../api.rst:453
+#: ../../api.rst:452
 msgid ""
 "This example shows how to do some extra logging if a theoretical "
 "``SecurityException`` was raised:"
@@ -7966,7 +7896,7 @@ msgstr ""
 "Este ejemplo muestra cómo hacer un registro extra si una teórica "
 "``SecurityException`` fue levantada:"
 
-#: ../../api.rst:473
+#: ../../api.rst:472
 msgid ""
 "This signal is sent when the request is tearing down.  This is always "
 "called, even if an exception is caused.  Currently functions listening to "
@@ -7978,7 +7908,7 @@ msgstr ""
 "escuchan esta señal son llamadas después de los manejadores regulares de "
 "teardown, pero esto no es algo en lo que se pueda confiar."
 
-#: ../../api.rst:486
+#: ../../api.rst:485
 msgid ""
 "As of Flask 0.9, this will also be passed an `exc` keyword argument that has"
 " a reference to the exception that caused the teardown if there was one."
@@ -7987,7 +7917,7 @@ msgstr ""
 " `exc` que tiene una referencia a la excepción que causó el teardown si es "
 "que hubo una."
 
-#: ../../api.rst:492
+#: ../../api.rst:491
 msgid ""
 "This signal is sent when the app context is tearing down.  This is always "
 "called, even if an exception is caused.  Currently functions listening to "
@@ -7999,7 +7929,7 @@ msgstr ""
 "funciones que escuchan esta señal son llamadas después de los manejadores "
 "regulares de teardown, pero esto no es algo en lo que puedas confiar."
 
-#: ../../api.rst:505
+#: ../../api.rst:504
 msgid ""
 "This will also be passed an `exc` keyword argument that has a reference to "
 "the exception that caused the teardown if there was one."
@@ -8007,7 +7937,7 @@ msgstr ""
 "También se le pasará un argumento de la palabra clave `exc` que tiene una "
 "referencia a la excepción que causó el derribo si es que la hubo."
 
-#: ../../api.rst:510
+#: ../../api.rst:509
 msgid ""
 "This signal is sent when an application context is pushed.  The sender is "
 "the application.  This is usually useful for unittests in order to "
@@ -8019,11 +7949,11 @@ msgstr ""
 "temporalmente la información. Por ejemplo, se puede utilizar para establecer"
 " un recurso temprano en el objeto `g`."
 
-#: ../../api.rst:527
+#: ../../api.rst:526
 msgid "And in the testcode::"
 msgstr "Y en el testcode::"
 
-#: ../../api.rst:539
+#: ../../api.rst:538
 msgid ""
 "This signal is sent when an application context is popped.  The sender is "
 "the application.  This usually falls in line with the "
@@ -8033,7 +7963,7 @@ msgstr ""
 "es la aplicación. Suele coincidir con la señal "
 ":data:`appcontext_tearing_down`."
 
-#: ../../api.rst:548
+#: ../../api.rst:547
 msgid ""
 "This signal is sent when the application is flashing a message.  The "
 "messages is sent as `message` keyword argument and the category as "
@@ -8043,7 +7973,7 @@ msgstr ""
 "mensaje se envía como argumento de la palabra clave `message` y la categoría"
 " como `category`."
 
-#: ../../api.rst:565
+#: ../../api.rst:564
 msgid ""
 "An alias for :class:`blinker.base.Namespace` if blinker is available, "
 "otherwise a dummy class that creates fake signals.  This class is available "
@@ -8055,7 +7985,7 @@ msgstr ""
 "disponible para las extensiones de Flask que quieran proporcionar el mismo "
 "sistema de fallback que el propio Flask."
 
-#: ../../api.rst:572
+#: ../../api.rst:571
 msgid ""
 "Creates a new signal for this namespace if blinker is available, otherwise "
 "returns a fake signal that has a send method that will do nothing but will "
@@ -8067,7 +7997,7 @@ msgstr ""
 "envío que no hará nada pero fallará con un :exc:`RuntimeError` para todas "
 "las demás operaciones, incluyendo la conexión."
 
-#: ../../api.rst:582
+#: ../../api.rst:581
 msgid "Class-Based Views"
 msgstr "Vistas basadas en clases"
 
@@ -8176,25 +8106,25 @@ msgstr ""
 "métodos correspondientes de la clase. Por ejemplo, si se implementa un "
 "método ``get``, se utilizará para gestionar las peticiones ``GET``. ::"
 
-#: ../../api.rst:597
+#: ../../api.rst:596
 msgid "URL Route Registrations"
 msgstr "Registros de rutas URL"
 
-#: ../../api.rst:599
+#: ../../api.rst:598
 msgid "Generally there are three ways to define rules for the routing system:"
 msgstr ""
 "En general, hay tres maneras de definir las reglas del sistema de "
 "enrutamiento:"
 
-#: ../../api.rst:601
+#: ../../api.rst:600
 msgid "You can use the :meth:`flask.Flask.route` decorator."
 msgstr "Puede utilizar el decorador :meth:`flask.Flask.route`."
 
-#: ../../api.rst:602
+#: ../../api.rst:601
 msgid "You can use the :meth:`flask.Flask.add_url_rule` function."
 msgstr "Puedes utilizar la función :meth:`flask.Flask.add_url_rule`."
 
-#: ../../api.rst:603
+#: ../../api.rst:602
 msgid ""
 "You can directly access the underlying Werkzeug routing system which is "
 "exposed as :attr:`flask.Flask.url_map`."
@@ -8202,7 +8132,7 @@ msgstr ""
 "Puedes acceder directamente al sistema de enrutamiento subyacente de "
 "Werkzeug que se expone como :attr:`flask.Flask.url_map`."
 
-#: ../../api.rst:606
+#: ../../api.rst:605
 msgid ""
 "Variable parts in the route can be specified with angular brackets "
 "(``/user/<username>``).  By default a variable part in the URL accepts any "
@@ -8214,75 +8144,75 @@ msgstr ""
 "acepta cualquier cadena sin barra, pero también se puede especificar un "
 "convertidor diferente utilizando ``<converter:name>``."
 
-#: ../../api.rst:611
+#: ../../api.rst:610
 msgid "Variable parts are passed to the view function as keyword arguments."
 msgstr ""
 "Las partes variables se pasan a la función de la vista como argumentos de "
 "palabra clave."
 
-#: ../../api.rst:613
+#: ../../api.rst:612
 msgid "The following converters are available:"
 msgstr "Están disponibles los siguientes convertidores:"
 
-#: ../../api.rst:616
+#: ../../api.rst:615
 msgid "`string`"
 msgstr "`string`"
 
-#: ../../api.rst:616
+#: ../../api.rst:615
 msgid "accepts any text without a slash (the default)"
 msgstr "acepta cualquier texto sin barra (por defecto)"
 
-#: ../../api.rst:617
+#: ../../api.rst:616
 msgid "`int`"
 msgstr "`int`"
 
-#: ../../api.rst:617
+#: ../../api.rst:616
 msgid "accepts integers"
 msgstr "acepta números enteros"
 
-#: ../../api.rst:618
+#: ../../api.rst:617
 msgid "`float`"
 msgstr "`float`"
 
-#: ../../api.rst:618
+#: ../../api.rst:617
 msgid "like `int` but for floating point values"
 msgstr "como `int` pero para valores de punto flotante"
 
-#: ../../api.rst:619
+#: ../../api.rst:618
 msgid "`path`"
 msgstr "`path`"
 
-#: ../../api.rst:619
+#: ../../api.rst:618
 msgid "like the default but also accepts slashes"
 msgstr "como el predeterminado, pero también acepta barras inclinadas"
 
-#: ../../api.rst:620
+#: ../../api.rst:619
 msgid "`any`"
 msgstr "`any`"
 
-#: ../../api.rst:620
+#: ../../api.rst:619
 msgid "matches one of the items provided"
 msgstr "coincide con uno de los elementos previstos"
 
-#: ../../api.rst:621
+#: ../../api.rst:620
 msgid "`uuid`"
 msgstr "`uuid`"
 
-#: ../../api.rst:621
+#: ../../api.rst:620
 msgid "accepts UUID strings"
 msgstr "acepta cadenas UUID"
 
-#: ../../api.rst:624
+#: ../../api.rst:623
 msgid "Custom converters can be defined using :attr:`flask.Flask.url_map`."
 msgstr ""
 "Los convertidores personalizados pueden ser definidos usando "
 ":attr:`flask.Flask.url_map`."
 
-#: ../../api.rst:626
+#: ../../api.rst:625
 msgid "Here are some examples::"
 msgstr "He aquí algunos ejemplos::"
 
-#: ../../api.rst:640
+#: ../../api.rst:639
 msgid ""
 "An important detail to keep in mind is how Flask deals with trailing "
 "slashes.  The idea is to keep each URL unique so the following rules apply:"
@@ -8291,7 +8221,7 @@ msgstr ""
 "finales. La idea es que cada URL sea única, por lo que se aplican las "
 "siguientes reglas:"
 
-#: ../../api.rst:644
+#: ../../api.rst:643
 msgid ""
 "If a rule ends with a slash and is requested without a slash by the user, "
 "the user is automatically redirected to the same page with a trailing slash "
@@ -8301,7 +8231,7 @@ msgstr ""
 " éste es redirigido automáticamente a la misma página con una barra al "
 "final."
 
-#: ../../api.rst:647
+#: ../../api.rst:646
 msgid ""
 "If a rule does not end with a trailing slash and the user requests the page "
 "with a trailing slash, a 404 not found is raised."
@@ -8309,7 +8239,7 @@ msgstr ""
 "Si una regla no termina con una barra final y el usuario solicita la página "
 "con una barra final, se genera un 404 no encontrado."
 
-#: ../../api.rst:650
+#: ../../api.rst:649
 msgid ""
 "This is consistent with how web servers deal with static files.  This also "
 "makes it possible to use relative link targets safely."
@@ -8318,7 +8248,7 @@ msgstr ""
 " estáticos. Esto también hace posible el uso de objetivos de enlaces "
 "relativos de forma segura."
 
-#: ../../api.rst:653
+#: ../../api.rst:652
 msgid ""
 "You can also define multiple rules for the same function.  They have to be "
 "unique however.  Defaults can also be specified.  Here for example is a "
@@ -8329,7 +8259,7 @@ msgstr ""
 "Aquí, por ejemplo, hay una definición para una URL que acepta una página "
 "opcional::"
 
-#: ../../api.rst:662
+#: ../../api.rst:661
 msgid ""
 "This specifies that ``/users/`` will be the URL for page one and "
 "``/users/page/N`` will be the URL for page ``N``."
@@ -8337,7 +8267,7 @@ msgstr ""
 "Esto especifica que ``/users/`` será la URL de la página uno y "
 "``/users/page/N`` será la URL de la página ``N``."
 
-#: ../../api.rst:665
+#: ../../api.rst:664
 msgid ""
 "If a URL contains a default value, it will be redirected to its simpler form"
 " with a 301 redirect. In the above example, ``/users/page/1`` will be "
@@ -8351,7 +8281,7 @@ msgstr ""
 "``POST``, asegúrate de que la ruta por defecto sólo maneja ``GET``, ya que "
 "las redirecciones no pueden conservar los datos del formulario. ::"
 
-#: ../../api.rst:676
+#: ../../api.rst:675
 msgid ""
 "Here are the parameters that :meth:`~flask.Flask.route` and "
 ":meth:`~flask.Flask.add_url_rule` accept.  The only difference is that with "
@@ -8363,19 +8293,19 @@ msgstr ""
 "parámetro de la ruta la función de la vista se define con el decorador en "
 "lugar del parámetro `view_func`."
 
-#: ../../api.rst:682
+#: ../../api.rst:681
 msgid "`rule`"
 msgstr "`rule`"
 
-#: ../../api.rst:682
+#: ../../api.rst:681
 msgid "the URL rule as string"
 msgstr "la regla URL como cadena"
 
-#: ../../api.rst:683
+#: ../../api.rst:682
 msgid "`endpoint`"
 msgstr "`endpoint`"
 
-#: ../../api.rst:683
+#: ../../api.rst:682
 msgid ""
 "the endpoint for the registered URL rule.  Flask itself assumes that the "
 "name of the view function is the name of the endpoint if not explicitly "
@@ -8385,11 +8315,11 @@ msgstr ""
 "el nombre de la función de la vista es el nombre del punto final si no se "
 "indica explícitamente."
 
-#: ../../api.rst:686
+#: ../../api.rst:685
 msgid "`view_func`"
 msgstr "`view_func`"
 
-#: ../../api.rst:686
+#: ../../api.rst:685
 msgid ""
 "the function to call when serving a request to the provided endpoint.  If "
 "this is not provided one can specify the function later by storing it in the"
@@ -8400,11 +8330,11 @@ msgstr ""
 "tarde almacenándola en el diccionario :attr:`~flask.Flask.view_functions` "
 "con el punto final como clave."
 
-#: ../../api.rst:691
+#: ../../api.rst:690
 msgid "`defaults`"
 msgstr "`defaults`"
 
-#: ../../api.rst:691
+#: ../../api.rst:690
 msgid ""
 "A dictionary with defaults for this rule.  See the example above for how "
 "defaults work."
@@ -8412,11 +8342,11 @@ msgstr ""
 "Un diccionario con los valores por defecto para esta regla. Consulte el "
 "ejemplo anterior para saber cómo funcionan los valores predeterminados."
 
-#: ../../api.rst:693
+#: ../../api.rst:692
 msgid "`subdomain`"
 msgstr "`subdomain`"
 
-#: ../../api.rst:693
+#: ../../api.rst:692
 msgid ""
 "specifies the rule for the subdomain in case subdomain matching is in use.  "
 "If not specified the default subdomain is assumed."
@@ -8425,11 +8355,11 @@ msgstr ""
 "coincidencia de subdominios. Si no se especifica, se asume el subdominio por"
 " defecto."
 
-#: ../../api.rst:696
+#: ../../api.rst:695
 msgid "`**options`"
 msgstr "`**options`"
 
-#: ../../api.rst:696
+#: ../../api.rst:695
 msgid ""
 "the options to be forwarded to the underlying "
 ":class:`~werkzeug.routing.Rule` object.  A change to Werkzeug is handling of"
@@ -8448,11 +8378,11 @@ msgstr ""
 "peticiones estándar. Tienen que ser especificadas como argumentos de palabra"
 " clave."
 
-#: ../../api.rst:708
+#: ../../api.rst:707
 msgid "View Function Options"
 msgstr "Ver opciones de funciones"
 
-#: ../../api.rst:710
+#: ../../api.rst:709
 msgid ""
 "For internal usage the view functions can have some attributes attached to "
 "customize behavior the view function would normally not have control over. "
@@ -8465,7 +8395,7 @@ msgstr ""
 "proporcionar opcionalmente para anular algunos valores predeterminados de "
 ":meth:`~flask.Flask.add_url_rule` o el comportamiento general:"
 
-#: ../../api.rst:715
+#: ../../api.rst:714
 msgid ""
 "`__name__`: The name of a function is by default used as endpoint.  If "
 "endpoint is provided explicitly this value is used.  Additionally this will "
@@ -8477,7 +8407,7 @@ msgstr ""
 "Además, se le antepondrá el nombre del plano por defecto, que no puede "
 "personalizarse desde la propia función."
 
-#: ../../api.rst:720
+#: ../../api.rst:719
 msgid ""
 "`methods`: If methods are not provided when the URL rule is added, Flask "
 "will look on the view function object itself if a `methods` attribute "
@@ -8488,7 +8418,7 @@ msgstr ""
 "URL, Flask buscará en el propio objeto de función de la vista si existe un "
 "atributo `methods`. Si lo hay, sacará la información de los métodos de ahí."
 
-#: ../../api.rst:725
+#: ../../api.rst:724
 msgid ""
 "`provide_automatic_options`: if this attribute is set Flask will either "
 "force enable or disable the automatic implementation of the HTTP ``OPTIONS``"
@@ -8500,7 +8430,7 @@ msgstr ""
 "HTTP ``OPTIONS``. Esto puede ser útil cuando se trabaja con decoradores que "
 "quieren personalizar la respuesta ``OPTIONS`` en cada vista."
 
-#: ../../api.rst:731
+#: ../../api.rst:730
 msgid ""
 "`required_methods`: if this attribute is set, Flask will always add these "
 "methods when registering a URL rule even if the methods were explicitly "
@@ -8510,15 +8440,15 @@ msgstr ""
 "estos métodos al registrar una regla de URL, incluso si los métodos fueron "
 "explícitamente anulados en la llamada a ``route()``."
 
-#: ../../api.rst:735
+#: ../../api.rst:734
 msgid "Full example::"
 msgstr "Ejemplo completo::"
 
-#: ../../api.rst:747
+#: ../../api.rst:746
 msgid "The `provide_automatic_options` functionality was added."
 msgstr "Se ha añadido la funcionalidad `provide_automatic_options`."
 
-#: ../../api.rst:751
+#: ../../api.rst:750
 msgid "Command Line Interface"
 msgstr "Interfaz de línea de comandos"
 
@@ -8796,7 +8726,7 @@ msgstr ""
 "registran directamente en el objeto ``app.cli``, entonces se envuelven con "
 "esta función por defecto, a menos que se desactive."
 
-#: ../../api.rst:770
+#: ../../api.rst:769
 msgid ""
 "Marks a function so that an instance of :class:`ScriptInfo` is passed as "
 "first argument to the click callback."
@@ -8882,3 +8812,98 @@ msgstr ""
 #~ msgstr ""
 #~ "booleano. ``True`` si puede cargar la configuración, ``False`` en caso "
 #~ "contrario."
+
+#~ msgid ""
+#~ "the return value from the view function. The view function must return a "
+#~ "response. Returning ``None``, or the view ending without returning, is not "
+#~ "allowed. The following types are allowed for ``view_rv``:"
+#~ msgstr ""
+#~ "el valor de retorno de la función de la vista. La función de la vista debe "
+#~ "devolver una respuesta. No se permite devolver ``None``, o que la vista "
+#~ "termine sin devolver. Los siguientes tipos están permitidos para "
+#~ "``view_rv``:"
+
+#~ msgid "``str``"
+#~ msgstr "``str``"
+
+#~ msgid ""
+#~ "A response object is created with the string encoded to UTF-8 as the body."
+#~ msgstr ""
+#~ "Se crea un objeto de respuesta con la cadena codificada en UTF-8 como "
+#~ "cuerpo."
+
+#~ msgid "``bytes``"
+#~ msgstr "``bytes``"
+
+#~ msgid "A response object is created with the bytes as the body."
+#~ msgstr "Se crea un objeto de respuesta con los bytes como cuerpo."
+
+#~ msgid "``dict``"
+#~ msgstr "``dict``"
+
+#~ msgid "A dictionary that will be jsonify'd before being returned."
+#~ msgstr "Un diccionario que será jsonificado antes de ser devuelto."
+
+#~ msgid "``tuple``"
+#~ msgstr "``tuple``"
+
+#~ msgid ""
+#~ "Either ``(body, status, headers)``, ``(body, status)``, or ``(body, "
+#~ "headers)``, where ``body`` is any of the other types allowed here, "
+#~ "``status`` is a string or an integer, and ``headers`` is a dictionary or a "
+#~ "list of ``(key, value)`` tuples. If ``body`` is a :attr:`response_class` "
+#~ "instance, ``status`` overwrites the exiting value and ``headers`` are "
+#~ "extended."
+#~ msgstr ""
+#~ "O bien ``(body, status, headers)``, ``(body, status)``, o ``(body, "
+#~ "headers)``, donde ``body`` es cualquiera de los otros tipos permitidos aquí,"
+#~ " ``status`` es una cadena o un entero, y ``headers`` es un diccionario o una"
+#~ " lista de tuplas ``(key, value)``. Si ``body`` es una instancia de "
+#~ ":attr:`response_class`, ``status`` sobrescribe el valor existente y "
+#~ "``headers`` se extiende."
+
+#~ msgid ":attr:`response_class`"
+#~ msgstr ":attr:`response_class`"
+
+#~ msgid "The object is returned unchanged."
+#~ msgstr "El objeto se devuelve sin cambios."
+
+#~ msgid "other :class:`~werkzeug.wrappers.Response` class"
+#~ msgstr "otra clase :class:`~werkzeug.wrappers.Response`"
+
+#~ msgid "The object is coerced to :attr:`response_class`."
+#~ msgstr "El objeto se coacciona con :attr:`response_class`."
+
+#~ msgid ":func:`callable`"
+#~ msgstr ":func:`callable`"
+
+#~ msgid ""
+#~ "The function is called as a WSGI application. The result is used to create a"
+#~ " response object."
+#~ msgstr ""
+#~ "La función se llama como una aplicación WSGI. El resultado se utiliza para "
+#~ "crear un objeto de respuesta."
+
+#~ msgid ""
+#~ "If parsing fails, :meth:`on_json_loading_failed` is called and its return "
+#~ "value is used as the return value."
+#~ msgstr ""
+#~ "Si el análisis sintáctico falla, se llama a :meth:`on_json_loading_failed` y"
+#~ " su valor de retorno se utiliza como valor de retorno."
+
+#~ msgid ""
+#~ "Safely join zero or more untrusted path components to a base directory to "
+#~ "avoid escaping the base directory."
+#~ msgstr ""
+#~ "Unir de forma segura cero o más componentes de ruta no confiables a un "
+#~ "directorio base para evitar el escape del directorio base."
+
+#~ msgid "The trusted base directory."
+#~ msgstr "El directorio base de confianza."
+
+#~ msgid "The untrusted path components relative to the base directory."
+#~ msgstr ""
+#~ "Los componentes de la ruta de acceso no fiable relativos al directorio base."
+
+#~ msgid "A safe path, otherwise ``None``."
+#~ msgstr "Una ruta segura, de lo contrario ``None``."

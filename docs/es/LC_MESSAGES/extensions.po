@@ -72,10 +72,12 @@ msgid "Building Extensions"
 msgstr "Creación de extensiones"
 
 #: ../../extensions.rst:42
+#, fuzzy
 msgid ""
-"While the `PyPI <pypi_>`_ contains many Flask extensions, you may not find "
-"an extension that fits your need. If this is the case, you can create your "
-"own. Read :doc:`/extensiondev` to develop your own Flask extension."
+"While `PyPI <pypi_>`_ contains many Flask extensions, you may not find an "
+"extension that fits your need. If this is the case, you can create your own,"
+" and publish it for others to use as well. Read :doc:`extensiondev` to "
+"develop your own Flask extension."
 msgstr ""
 "Aunque la `PyPI <pypi_>`_ contiene muchas extensiones de Flask, puede que no"
 " encuentres una extensión que se ajuste a tus necesidades. Si este es el "

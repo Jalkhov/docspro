@@ -147,19 +147,19 @@ msgstr ""
 "Para cambiar Flask al entorno de desarrollo y habilitar el modo de "
 "depuración, establezca :envvar:`FLASK_ENV`:"
 
-#: ../../config.rst:72 ../../config.rst:447 ../../config.rst:526
+#: ../../config.rst:72 ../../config.rst:447 ../../config.rst:529
 msgid "Bash"
 msgstr "Bash"
 
-#: ../../config.rst:79 ../../config.rst:455 ../../config.rst:535
+#: ../../config.rst:79 ../../config.rst:455 ../../config.rst:538
 msgid "Fish"
 msgstr "Fish"
 
-#: ../../config.rst:86 ../../config.rst:463 ../../config.rst:544
+#: ../../config.rst:86 ../../config.rst:463 ../../config.rst:547
 msgid "CMD"
 msgstr "CMD"
 
-#: ../../config.rst:93 ../../config.rst:471 ../../config.rst:553
+#: ../../config.rst:93 ../../config.rst:471 ../../config.rst:556
 msgid "Powershell"
 msgstr "Powershell"
 
@@ -761,68 +761,77 @@ msgid "Configuring from Environment Variables"
 msgstr "Configuración desde las variables de entorno"
 
 #: ../../config.rst:518
+#, fuzzy
 msgid ""
 "In addition to pointing to configuration files using environment variables, "
 "you may find it useful (or necessary) to control your configuration values "
-"directly from the environment."
+"directly from the environment. Flask can be instructed to load all "
+"environment variables starting with a specific prefix into the config using "
+":meth:`~flask.Config.from_prefixed_env`."
 msgstr ""
 "Además de apuntar a los archivos de configuración utilizando variables de "
 "entorno, puede resultar útil (o necesario) controlar sus valores de "
 "configuración directamente desde el entorno."
 
-#: ../../config.rst:522
+#: ../../config.rst:524
 msgid ""
 "Environment variables can be set in the shell before starting the server:"
 msgstr ""
 "Las variables de entorno pueden establecerse en el shell antes de iniciar el"
 " servidor:"
 
-#: ../../config.rst:562
+#: ../../config.rst:565
 msgid ""
-"While this approach is straightforward to use, it is important to remember "
-"that environment variables are strings -- they are not automatically "
-"deserialized into Python types."
+"The variables can then be loaded and accessed via the config with a key "
+"equal to the environment variable name without the prefix i.e."
 msgstr ""
-"Aunque este enfoque es sencillo de utilizar, es importante recordar que las "
-"variables de entorno son cadenas de texto, no se deserializan "
-"automáticamente en tipos de Python."
 
-#: ../../config.rst:566
+#: ../../config.rst:573
 msgid ""
-"Here is an example of a configuration file that uses environment variables::"
+"The prefix is ``FLASK_`` by default. This is configurable via the ``prefix``"
+" argument of :meth:`~flask.Config.from_prefixed_env`."
 msgstr ""
-"Este es un ejemplo de un archivo de configuración que utiliza variables de "
-"entorno::"
 
-#: ../../config.rst:579
+#: ../../config.rst:576
 msgid ""
-"Notice that any value besides an empty string will be interpreted as a "
-"boolean ``True`` value in Python, which requires care if an environment "
-"explicitly sets values intended to be ``False``."
+"Values will be parsed to attempt to convert them to a more specific type "
+"than strings. By default :func:`json.loads` is used, so any valid JSON value"
+" is possible, including lists and dicts. This is configurable via the "
+"``loads`` argument of :meth:`~flask.Config.from_prefixed_env`."
 msgstr ""
-"Tenga en cuenta que cualquier valor que no sea una cadena vacía se "
-"interpretará como un valor booleano ``True`` en Python, lo que requiere "
-"cuidado si un entorno establece explícitamente valores destinados a ser "
-"``False``."
 
-#: ../../config.rst:583
+#: ../../config.rst:581
 msgid ""
-"Make sure to load the configuration very early on, so that extensions have "
-"the ability to access the configuration when starting up.  There are other "
-"methods on the config object as well to load from individual files.  For a "
-"complete reference, read the :class:`~flask.Config` class documentation."
+"When adding a boolean value with the default JSON parsing, only \"true\" and"
+" \"false\", lowercase, are valid values. Keep in mind that any non-empty "
+"string is considered ``True`` by Python."
 msgstr ""
-"Asegúrese de cargar la configuración muy pronto, para que las extensiones "
-"tengan la capacidad de acceder a la configuración cuando se inicie. También "
-"hay otros métodos en el objeto config para cargar desde archivos "
-"individuales. Para una referencia completa, lea la documentación de la clase"
-" :class:`~flask.Config`."
 
-#: ../../config.rst:590
+#: ../../config.rst:585
+msgid ""
+"It is possible to set keys in nested dictionaries by separating the keys "
+"with double underscore (``__``). Any intermediate keys that don't exist on "
+"the parent dict will be initialized to an empty dict."
+msgstr ""
+
+#: ../../config.rst:597
+msgid ""
+"On Windows, environment variable keys are always uppercase, therefore the "
+"above example would end up as ``MYAPI__CREDENTIALS__USERNAME``."
+msgstr ""
+
+#: ../../config.rst:600
+msgid ""
+"For even more config loading features, including merging and case-"
+"insensitive Windows support, try a dedicated library such as Dynaconf_, "
+"which includes integration with Flask."
+msgstr ""
+
+#: ../../config.rst:608
 msgid "Configuration Best Practices"
 msgstr "Mejores prácticas de configuración"
 
-#: ../../config.rst:592
+#: ../../config.rst:610
 #, python-format
 msgid ""
 "The downside with the approach mentioned earlier is that it makes testing a "
@@ -835,7 +844,7 @@ msgstr ""
 "este problema en general, pero hay un par de cosas que puedes tener en "
 "cuenta para mejorar esa experiencia:"
 
-#: ../../config.rst:597
+#: ../../config.rst:615
 msgid ""
 "Create your application in a function and register blueprints on it. That "
 "way you can create multiple instances of your application with different "
@@ -848,7 +857,7 @@ msgstr ""
 "más fáciles. Puedes usar esto para pasar la configuración según sea "
 "necesario."
 
-#: ../../config.rst:602
+#: ../../config.rst:620
 msgid ""
 "Do not write code that needs the configuration at import time.  If you limit"
 " yourself to request-only accesses to the configuration you can reconfigure "
@@ -858,11 +867,17 @@ msgstr ""
 "importación. Si te limitas a los accesos de sólo petición a la "
 "configuración, puedes reconfigurar el objeto más tarde según sea necesario."
 
-#: ../../config.rst:609
+#: ../../config.rst:624
+msgid ""
+"Make sure to load the configuration very early on, so that extensions can "
+"access the configuration when calling ``init_app``."
+msgstr ""
+
+#: ../../config.rst:631
 msgid "Development / Production"
 msgstr "Desarrollo / Producción"
 
-#: ../../config.rst:611
+#: ../../config.rst:633
 msgid ""
 "Most applications need more than one configuration.  There should be at "
 "least separate configurations for the production server and the one used "
@@ -878,7 +893,7 @@ msgstr ""
 "del control de versiones, y una configuración separada que anula los valores"
 " según sea necesario como se menciona en el ejemplo anterior::"
 
-#: ../../config.rst:622
+#: ../../config.rst:644
 msgid ""
 "Then you just have to add a separate :file:`config.py` file and export "
 "``YOURAPPLICATION_SETTINGS=/path/to/config.py`` and you are done.  However "
@@ -890,7 +905,7 @@ msgstr ""
 "embargo, también hay formas alternativas. Por ejemplo, puedes usar "
 "importaciones o subclases."
 
-#: ../../config.rst:627
+#: ../../config.rst:649
 msgid ""
 "What is very popular in the Django world is to make the import explicit in "
 "the config file by adding ``from yourapplication.default_settings import *``"
@@ -906,7 +921,7 @@ msgstr ""
 "entorno como ``YOURAPPLICATION_MODE`` y establecerla como `producción`, "
 "`desarrollo`, etc. e importar diferentes archivos codificados en base a eso."
 
-#: ../../config.rst:634
+#: ../../config.rst:656
 msgid ""
 "An interesting pattern is also to use classes and inheritance for "
 "configuration::"
@@ -914,7 +929,7 @@ msgstr ""
 "Un patrón interesante es también utilizar clases y herencia para la "
 "configuración::"
 
-#: ../../config.rst:650
+#: ../../config.rst:672
 msgid ""
 "To enable such a config you just have to call into "
 ":meth:`~flask.Config.from_object`::"
@@ -922,7 +937,7 @@ msgstr ""
 "Para habilitar una configuración de este tipo sólo tienes que llamar a "
 ":meth:`~flask.Config.from_object`::"
 
-#: ../../config.rst:655
+#: ../../config.rst:677
 msgid ""
 "Note that :meth:`~flask.Config.from_object` does not instantiate the class "
 "object. If you need to instantiate the class, such as to access a property, "
@@ -933,7 +948,7 @@ msgstr ""
 "acceder a una propiedad, debe hacerlo antes de llamar a "
 ":meth:`~flask.Config.from_object`::"
 
-#: ../../config.rst:667
+#: ../../config.rst:689
 msgid ""
 "Instantiating the configuration object allows you to use ``@property`` in "
 "your configuration classes::"
@@ -941,7 +956,7 @@ msgstr ""
 "La instanciación del objeto de configuración le permite utilizar "
 "``@property`` en sus clases de configuración::"
 
-#: ../../config.rst:690
+#: ../../config.rst:712
 msgid ""
 "There are many different ways and it's up to you how you want to manage your"
 " configuration files.  However here a list of good recommendations:"
@@ -950,7 +965,7 @@ msgstr ""
 "archivos de configuración. Sin embargo aquí una lista de buenas "
 "recomendaciones:"
 
-#: ../../config.rst:693
+#: ../../config.rst:715
 msgid ""
 "Keep a default configuration in version control.  Either populate the config"
 " with this default configuration or import it in your own configuration "
@@ -960,7 +975,7 @@ msgstr ""
 "la configuración con esta configuración por defecto o impórtela en sus "
 "propios archivos de configuración antes de anular los valores."
 
-#: ../../config.rst:696
+#: ../../config.rst:718
 msgid ""
 "Use an environment variable to switch between the configurations. This can "
 "be done from outside the Python interpreter and makes development and "
@@ -978,7 +993,7 @@ msgstr ""
 "incluso crear tu propio script para el sourcing que active un virtualenv y "
 "exporte la configuración de desarrollo por ti."
 
-#: ../../config.rst:703
+#: ../../config.rst:725
 msgid ""
 "Use a tool like `fabric`_ in production to push code and configurations "
 "separately to the production server(s).  For some details about how to do "
@@ -989,11 +1004,11 @@ msgstr ""
 "algunos detalles sobre cómo hacerlo, dirígete al patrón "
 ":doc:`/patterns/fabric`."
 
-#: ../../config.rst:714
+#: ../../config.rst:736
 msgid "Instance Folders"
 msgstr "Carpetas de instancias"
 
-#: ../../config.rst:718
+#: ../../config.rst:740
 msgid ""
 "Flask 0.8 introduces instance folders.  Flask for a long time made it "
 "possible to refer to paths relative to the application's folder directly "
@@ -1010,7 +1025,7 @@ msgstr ""
 "aplicaciones no son paquetes, en cuyo caso la ruta raíz se refiere al "
 "contenido del paquete."
 
-#: ../../config.rst:725
+#: ../../config.rst:747
 msgid ""
 "With Flask 0.8 a new attribute was introduced: :attr:`Flask.instance_path`."
 "  It refers to a new concept called the “instance folder”.  The instance "
@@ -1024,7 +1039,7 @@ msgstr ""
 " ser específica para el despliegue.  Es el lugar perfecto para dejar cosas "
 "que cambian en tiempo de ejecución o archivos de configuración."
 
-#: ../../config.rst:731
+#: ../../config.rst:753
 msgid ""
 "You can either explicitly provide the path of the instance folder when "
 "creating the Flask application or you can let Flask autodetect the instance "
@@ -1035,13 +1050,13 @@ msgstr ""
 "de instancia. Para la configuración explícita utilice el parámetro "
 "`instance_path`::"
 
-#: ../../config.rst:738
+#: ../../config.rst:760
 msgid "Please keep in mind that this path *must* be absolute when provided."
 msgstr ""
 "Por favor, tenga en cuenta que esta ruta *debe* ser absoluta cuando se "
 "proporciona."
 
-#: ../../config.rst:740
+#: ../../config.rst:762
 msgid ""
 "If the `instance_path` parameter is not provided the following default "
 "locations are used:"
@@ -1049,19 +1064,19 @@ msgstr ""
 "Si no se proporciona el parámetro `instance_path` se utilizan las siguientes"
 " ubicaciones por defecto:"
 
-#: ../../config.rst:743
+#: ../../config.rst:765
 msgid "Uninstalled module::"
 msgstr "Módulo desinstalado::"
 
-#: ../../config.rst:748
+#: ../../config.rst:770
 msgid "Uninstalled package::"
 msgstr "Paquete desinstalado::"
 
-#: ../../config.rst:754
+#: ../../config.rst:776
 msgid "Installed module or package::"
 msgstr "Módulo o paquete instalado::"
 
-#: ../../config.rst:759
+#: ../../config.rst:781
 msgid ""
 "``$PREFIX`` is the prefix of your Python installation.  This can be ``/usr``"
 " or the path to your virtualenv.  You can print the value of ``sys.prefix`` "
@@ -1071,7 +1086,7 @@ msgstr ""
 "la ruta de tu virtualenv. Puedes imprimir el valor de ``sys.prefix`` para "
 "ver cuál es el prefijo establecido."
 
-#: ../../config.rst:763
+#: ../../config.rst:785
 msgid ""
 "Since the config object provided loading of configuration files from "
 "relative filenames we made it possible to change the loading via filenames "
@@ -1089,7 +1104,7 @@ msgstr ""
 "instancia\" a través del interruptor `instance_relative_config` del "
 "constructor de la aplicación::"
 
-#: ../../config.rst:772
+#: ../../config.rst:794
 msgid ""
 "Here is a full example of how to configure Flask to preload the config from "
 "a module and then override the config from a file in the instance folder if "
@@ -1099,7 +1114,7 @@ msgstr ""
 "configuración de un módulo y luego anular la configuración de un archivo en "
 "la carpeta de instancia si existe::"
 
-#: ../../config.rst:780
+#: ../../config.rst:802
 msgid ""
 "The path to the instance folder can be found via the "
 ":attr:`Flask.instance_path`.  Flask also provides a shortcut to open a file "
@@ -1110,6 +1125,43 @@ msgstr ""
 "para abrir un archivo de la carpeta de instancia con "
 ":meth:`Flask.open_instance_resource`."
 
-#: ../../config.rst:784
+#: ../../config.rst:806
 msgid "Example usage for both::"
 msgstr "Ejemplo de uso de ambos::"
+
+#~ msgid ""
+#~ "While this approach is straightforward to use, it is important to remember "
+#~ "that environment variables are strings -- they are not automatically "
+#~ "deserialized into Python types."
+#~ msgstr ""
+#~ "Aunque este enfoque es sencillo de utilizar, es importante recordar que las "
+#~ "variables de entorno son cadenas de texto, no se deserializan "
+#~ "automáticamente en tipos de Python."
+
+#~ msgid ""
+#~ "Here is an example of a configuration file that uses environment variables::"
+#~ msgstr ""
+#~ "Este es un ejemplo de un archivo de configuración que utiliza variables de "
+#~ "entorno::"
+
+#~ msgid ""
+#~ "Notice that any value besides an empty string will be interpreted as a "
+#~ "boolean ``True`` value in Python, which requires care if an environment "
+#~ "explicitly sets values intended to be ``False``."
+#~ msgstr ""
+#~ "Tenga en cuenta que cualquier valor que no sea una cadena vacía se "
+#~ "interpretará como un valor booleano ``True`` en Python, lo que requiere "
+#~ "cuidado si un entorno establece explícitamente valores destinados a ser "
+#~ "``False``."
+
+#~ msgid ""
+#~ "Make sure to load the configuration very early on, so that extensions have "
+#~ "the ability to access the configuration when starting up.  There are other "
+#~ "methods on the config object as well to load from individual files.  For a "
+#~ "complete reference, read the :class:`~flask.Config` class documentation."
+#~ msgstr ""
+#~ "Asegúrese de cargar la configuración muy pronto, para que las extensiones "
+#~ "tengan la capacidad de acceder a la configuración cuando se inicie. También "
+#~ "hay otros métodos en el objeto config para cargar desde archivos "
+#~ "individuales. Para una referencia completa, lea la documentación de la clase"
+#~ " :class:`~flask.Config`."

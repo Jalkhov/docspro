@@ -77,8 +77,8 @@ msgstr ""
 "error no manejado durante una solicitud. Este depurador sólo debe utilizarse"
 " durante el desarrollo."
 
-msgid "screenshot of debugger in action"
-msgstr "captura de pantalla del depurador en acción"
+msgid "captura de pantalla del depurador en acción"
+msgstr ""
 
 #: ../../debugging.rst:37
 msgid ""

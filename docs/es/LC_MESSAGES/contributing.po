@@ -52,13 +52,6 @@ msgstr ""
 
 #: ../../../CONTRIBUTING.rst:17
 msgid ""
-"The mailing list flask@python.org for long term discussion or larger issues."
-msgstr ""
-"La lista de correo flask@python.org para discusiones a largo plazo o asuntos"
-" de mayor envergadura."
-
-#: ../../../CONTRIBUTING.rst:19
-msgid ""
 "Ask on `Stack Overflow`_. Search with Google first using: "
 "``site:stackoverflow.com flask {search term, exception message, etc.}``"
 msgstr ""
@@ -66,23 +59,28 @@ msgstr ""
 "``site:stackoverflow.com flask {término de búsqueda, mensaje de excepción, "
 "etc.}``"
 
-#: ../../../CONTRIBUTING.rst:21
-msgid "Ask on our `GitHub Discussions`_."
-msgstr "Pregunta en nuestro `GitHub Discussions`_."
+#: ../../../CONTRIBUTING.rst:19
+#, fuzzy
+msgid ""
+"Ask on our `GitHub Discussions`_ for long term discussion or larger "
+"questions."
+msgstr ""
+"La lista de correo flask@python.org para discusiones a largo plazo o asuntos"
+" de mayor envergadura."
 
-#: ../../../CONTRIBUTING.rst:28
+#: ../../../CONTRIBUTING.rst:27
 msgid "Reporting issues"
 msgstr "Informar de los problemas"
 
-#: ../../../CONTRIBUTING.rst:30
+#: ../../../CONTRIBUTING.rst:29
 msgid "Include the following information in your post:"
 msgstr "Incluya la siguiente información en su puesto:"
 
-#: ../../../CONTRIBUTING.rst:32
+#: ../../../CONTRIBUTING.rst:31
 msgid "Describe what you expected to happen."
 msgstr "Describa lo que esperaba que ocurriera."
 
-#: ../../../CONTRIBUTING.rst:33
+#: ../../../CONTRIBUTING.rst:32
 msgid ""
 "If possible, include a `minimal reproducible example`_ to help us identify "
 "the issue. This also helps check that the issue is not with your own code."
@@ -91,7 +89,7 @@ msgstr ""
 "identificar el problema. Esto también ayuda a comprobar que el problema no "
 "es con su propio código."
 
-#: ../../../CONTRIBUTING.rst:36
+#: ../../../CONTRIBUTING.rst:35
 msgid ""
 "Describe what actually happened. Include the full traceback if there was an "
 "exception."
@@ -99,7 +97,7 @@ msgstr ""
 "Describa lo que realmente sucedió. Incluya el rastreo completo si hubo una "
 "excepción."
 
-#: ../../../CONTRIBUTING.rst:38
+#: ../../../CONTRIBUTING.rst:37
 msgid ""
 "List your Python and Flask versions. If possible, check if this issue is "
 "already fixed in the latest releases or the latest code in the repository."
@@ -108,11 +106,11 @@ msgstr ""
 "problema ya está solucionado en las últimas versiones o en el último código "
 "del repositorio."
 
-#: ../../../CONTRIBUTING.rst:46
+#: ../../../CONTRIBUTING.rst:45
 msgid "Submitting patches"
 msgstr "Envío de parches"
 
-#: ../../../CONTRIBUTING.rst:48
+#: ../../../CONTRIBUTING.rst:47
 msgid ""
 "If there is not an open issue for what you want to submit, prefer opening "
 "one for discussion before working on a PR. You can work on any issue that "
@@ -126,11 +124,11 @@ msgstr ""
 "aparecen en la barra lateral. No hace falta que preguntes si puedes trabajar"
 " en un tema que te interesa."
 
-#: ../../../CONTRIBUTING.rst:54
+#: ../../../CONTRIBUTING.rst:53
 msgid "Include the following in your patch:"
 msgstr "Incluya lo siguiente en su parche:"
 
-#: ../../../CONTRIBUTING.rst:56
+#: ../../../CONTRIBUTING.rst:55
 msgid ""
 "Use `Black`_ to format your code. This and other tools will run "
 "automatically if you install `pre-commit`_ using the instructions below."
@@ -139,7 +137,7 @@ msgstr ""
 "ejecutarán automáticamente si instalas `pre-commit`_ siguiendo las "
 "instrucciones que aparecen a continuación."
 
-#: ../../../CONTRIBUTING.rst:59
+#: ../../../CONTRIBUTING.rst:58
 msgid ""
 "Include tests if your patch adds or changes code. Make sure the test fails "
 "without your patch."
@@ -147,7 +145,7 @@ msgstr ""
 "Incluya pruebas si su parche añade o cambia código. Asegúrese de que la "
 "prueba falla sin su parche."
 
-#: ../../../CONTRIBUTING.rst:61
+#: ../../../CONTRIBUTING.rst:60
 msgid ""
 "Update any relevant docs pages and docstrings. Docs pages and docstrings "
 "should be wrapped at 72 characters."
@@ -156,7 +154,7 @@ msgstr ""
 " Las páginas de documentos y las cadenas de documentos deben tener 72 "
 "caracteres."
 
-#: ../../../CONTRIBUTING.rst:63
+#: ../../../CONTRIBUTING.rst:62
 msgid ""
 "Add an entry in ``CHANGES.rst``. Use the same style as other entries. Also "
 "include ``.. versionchanged::`` inline changelogs in relevant docstrings."
@@ -165,31 +163,31 @@ msgstr ""
 "entradas. Incluir también ``. versionchanged::`` inline changelogs en los "
 "docstrings relevantes."
 
-#: ../../../CONTRIBUTING.rst:72
+#: ../../../CONTRIBUTING.rst:71
 msgid "First time setup"
 msgstr "Primera configuración"
 
-#: ../../../CONTRIBUTING.rst:74
+#: ../../../CONTRIBUTING.rst:73
 msgid "Download and install the `latest version of git`_."
 msgstr "Descargue e instale la `última versión de git`_."
 
-#: ../../../CONTRIBUTING.rst:75
+#: ../../../CONTRIBUTING.rst:74
 msgid "Configure git with your `username`_ and `email`_."
 msgstr "Configura git con tu `nombre de usuario`_ y `correo electrónico`_."
 
-#: ../../../CONTRIBUTING.rst:82
+#: ../../../CONTRIBUTING.rst:81
 msgid "Make sure you have a `GitHub account`_."
 msgstr "Asegúrate de tener una cuenta en `GitHub`_."
 
-#: ../../../CONTRIBUTING.rst:83
+#: ../../../CONTRIBUTING.rst:82
 msgid "Fork Flask to your GitHub account by clicking the `Fork`_ button."
 msgstr "Fork Flask a su cuenta de GitHub haciendo clic en el botón `Fork`_."
 
-#: ../../../CONTRIBUTING.rst:84
+#: ../../../CONTRIBUTING.rst:83
 msgid "`Clone`_ the main repository locally."
 msgstr "`Clona`_ el repositorio principal localmente."
 
-#: ../../../CONTRIBUTING.rst:91
+#: ../../../CONTRIBUTING.rst:90
 msgid ""
 "Add your fork as a remote to push your work to. Replace ``{username}`` with "
 "your username. This names the remote \"fork\", the default Pallets remote is"
@@ -199,38 +197,38 @@ msgstr ""
 "por tu nombre de usuario. Esto nombra al remoto \"fork\", el remoto por "
 "defecto de Pallets es \"origin\"."
 
-#: ../../../CONTRIBUTING.rst:99
+#: ../../../CONTRIBUTING.rst:98
 msgid "Create a virtualenv."
 msgstr "Crear un virtualenv."
 
-#: ../../../CONTRIBUTING.rst:103
+#: ../../../CONTRIBUTING.rst:101
 msgid "Linux/macOS"
 msgstr "Linux/macOS"
 
-#: ../../../CONTRIBUTING.rst:110
+#: ../../../CONTRIBUTING.rst:108
 msgid "Windows"
 msgstr "Windows"
 
-#: ../../../CONTRIBUTING.rst:117
+#: ../../../CONTRIBUTING.rst:115
 msgid "Upgrade pip and setuptools."
 msgstr "Actualizar pip y setuptools."
 
-#: ../../../CONTRIBUTING.rst:123
+#: ../../../CONTRIBUTING.rst:121
 msgid ""
 "Install the development dependencies, then install Flask in editable mode."
 msgstr ""
 "Instale las dependencias de desarrollo y luego instale Flask en modo "
 "editable."
 
-#: ../../../CONTRIBUTING.rst:130
+#: ../../../CONTRIBUTING.rst:128
 msgid "Install the pre-commit hooks."
 msgstr "Instale los hooks de pre-commit."
 
-#: ../../../CONTRIBUTING.rst:145
+#: ../../../CONTRIBUTING.rst:143
 msgid "Start coding"
 msgstr "Empezar a codificar"
 
-#: ../../../CONTRIBUTING.rst:147
+#: ../../../CONTRIBUTING.rst:145
 msgid ""
 "Create a branch to identify the issue you would like to work on. If you're "
 "submitting a bug or documentation fix, branch off of the latest \".x\" "
@@ -240,7 +238,7 @@ msgstr ""
 "Si estás enviando una corrección de un error o de la documentación, bifurca "
 "desde la última rama \".x\"."
 
-#: ../../../CONTRIBUTING.rst:156
+#: ../../../CONTRIBUTING.rst:154
 msgid ""
 "If you're submitting a feature addition or change, branch off of the "
 "\"main\" branch."
@@ -248,14 +246,14 @@ msgstr ""
 "Si estás enviando una adición o cambio de característica, bifúrcate de la "
 "rama \"main\"."
 
-#: ../../../CONTRIBUTING.rst:164
+#: ../../../CONTRIBUTING.rst:162
 msgid ""
 "Using your favorite editor, make your changes, `committing as you go`_."
 msgstr ""
 "Utilizando su editor favorito, realice los cambios, `hacer commits a medida "
 "que avanza`_."
 
-#: ../../../CONTRIBUTING.rst:166
+#: ../../../CONTRIBUTING.rst:164
 msgid ""
 "Include tests that cover any code changes you make. Make sure the test fails"
 " without your patch. Run the tests as described below."
@@ -264,7 +262,7 @@ msgstr ""
 " de que la prueba falla sin su parche. Ejecute las pruebas como se describe "
 "a continuación."
 
-#: ../../../CONTRIBUTING.rst:168
+#: ../../../CONTRIBUTING.rst:166
 msgid ""
 "Push your commits to your fork on GitHub and `create a pull request`_. Link "
 "to the issue being addressed with ``fixes #123`` in the pull request."
@@ -272,15 +270,15 @@ msgstr ""
 "Empuja tus commits a tu fork en GitHub y `crea un pull request`_. Enlaza el "
 "problema que se está tratando con ``fixes #123`` en el pull request."
 
-#: ../../../CONTRIBUTING.rst:181
+#: ../../../CONTRIBUTING.rst:179
 msgid "Running the tests"
 msgstr "Ejecución de las pruebas"
 
-#: ../../../CONTRIBUTING.rst:183
+#: ../../../CONTRIBUTING.rst:181
 msgid "Run the basic test suite with pytest."
 msgstr "Ejecute el conjunto de pruebas básicas con pytest."
 
-#: ../../../CONTRIBUTING.rst:189
+#: ../../../CONTRIBUTING.rst:187
 msgid ""
 "This runs the tests for the current environment, which is usually "
 "sufficient. CI will run the full suite when you submit your pull request. "
@@ -290,11 +288,11 @@ msgstr ""
 "CI ejecutará el conjunto completo cuando envíe su solicitud de extracción. "
 "Puede ejecutar el conjunto completo de pruebas con tox si no quiere esperar."
 
-#: ../../../CONTRIBUTING.rst:200
+#: ../../../CONTRIBUTING.rst:198
 msgid "Running test coverage"
 msgstr "Ejecución de la cobertura de las pruebas"
 
-#: ../../../CONTRIBUTING.rst:202
+#: ../../../CONTRIBUTING.rst:200
 msgid ""
 "Generating a report of lines that do not have test coverage can indicate "
 "where to start contributing. Run ``pytest`` using ``coverage`` and generate "
@@ -304,29 +302,32 @@ msgstr ""
 "indicar por dónde empezar a contribuir. Ejecuta ``pytest`` utilizando "
 "``coverage`` y genera un informe."
 
-#: ../../../CONTRIBUTING.rst:212
+#: ../../../CONTRIBUTING.rst:210
 msgid "Open ``htmlcov/index.html`` in your browser to explore the report."
 msgstr "Abra ``htmlcov/index.html`` en su navegador para explorar el informe."
 
-#: ../../../CONTRIBUTING.rst:214
+#: ../../../CONTRIBUTING.rst:212
 msgid "Read more about `coverage <https://coverage.readthedocs.io>`__."
 msgstr ""
 "Más información sobre `cobertura <https://coverage.readthedocs.io>`__."
 
-#: ../../../CONTRIBUTING.rst:218
+#: ../../../CONTRIBUTING.rst:216
 msgid "Building the docs"
 msgstr "Construir los documentos"
 
-#: ../../../CONTRIBUTING.rst:220
+#: ../../../CONTRIBUTING.rst:218
 msgid "Build the docs in the ``docs`` directory using Sphinx."
 msgstr "Construye los documentos en el directorio ``docs`` usando Sphinx."
 
-#: ../../../CONTRIBUTING.rst:227
+#: ../../../CONTRIBUTING.rst:225
 msgid "Open ``_build/html/index.html`` in your browser to view the docs."
 msgstr ""
 "Abre ``_build/html/index.html`` en tu navegador para ver los documentos."
 
-#: ../../../CONTRIBUTING.rst:229
+#: ../../../CONTRIBUTING.rst:227
 msgid "Read more about `Sphinx <https://www.sphinx-doc.org/en/stable/>`__."
 msgstr ""
 "Más información sobre `Sphinx <https://www.sphinx-doc.org/en/stable/>`__."
+
+#~ msgid "Ask on our `GitHub Discussions`_."
+#~ msgstr "Pregunta en nuestro `GitHub Discussions`_."

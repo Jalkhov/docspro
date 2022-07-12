@@ -200,8 +200,8 @@ msgid "|Y| [1]_"
 msgstr "|Y| [1]_"
 
 #: ../../htmlfaq.rst:111
-msgid "Yes"
-msgstr "Sí"
+msgid "Sí"
+msgstr ""
 
 #: ../../htmlfaq.rst:80 ../../htmlfaq.rst:82 ../../htmlfaq.rst:84
 #: ../../htmlfaq.rst:88 ../../htmlfaq.rst:91 ../../htmlfaq.rst:93

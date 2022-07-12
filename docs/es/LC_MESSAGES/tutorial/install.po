@@ -126,22 +126,24 @@ msgstr ""
 "archivos del tipo ``bytecode``."
 
 #: ../../tutorial/install.rst:70
+#, fuzzy
 msgid ""
-"See the `official packaging guide`_ for another explanation of the files and"
-" options used."
+"See the official `Packaging tutorial <packaging tutorial_>`_ and `detailed "
+"guide <packaging guide_>`_ for more explanation of the files and options "
+"used."
 msgstr ""
 "Consulte la `guía oficial de empaquetado`_ para obtener otra explicación de "
 "los archivos y opciones utilizados."
 
-#: ../../tutorial/install.rst:77
+#: ../../tutorial/install.rst:79
 msgid "Install the Project"
 msgstr "Instalar el proyecto"
 
-#: ../../tutorial/install.rst:79
+#: ../../tutorial/install.rst:81
 msgid "Use ``pip`` to install your project in the virtual environment."
 msgstr "Utilice ``pip`` para instalar su proyecto en el entorno virtual."
 
-#: ../../tutorial/install.rst:85
+#: ../../tutorial/install.rst:87
 msgid ""
 "This tells pip to find ``setup.py`` in the current directory and install it "
 "in *editable* or *development* mode. Editable mode means that as you make "
@@ -153,11 +155,11 @@ msgstr ""
 "medida que se realicen cambios en el código local, sólo será necesario "
 "reinstalar si se cambian los metadatos del proyecto, como sus dependencias."
 
-#: ../../tutorial/install.rst:90
+#: ../../tutorial/install.rst:92
 msgid "You can observe that the project is now installed with ``pip list``."
 msgstr "Se puede observar que el proyecto se instala ahora con ``pip list``."
 
-#: ../../tutorial/install.rst:109
+#: ../../tutorial/install.rst:111
 msgid ""
 "Nothing changes from how you've been running your project so far. "
 "``FLASK_APP`` is still set to ``flaskr`` and ``flask run`` still runs the "
@@ -169,6 +171,6 @@ msgstr ""
 "aplicación, pero puedes llamarla desde cualquier lugar, no sólo desde el "
 "directorio ``flask-tutorial``."
 
-#: ../../tutorial/install.rst:114
+#: ../../tutorial/install.rst:116
 msgid "Continue to :doc:`tests`."
 msgstr "Continúe con :doc:`tests`."

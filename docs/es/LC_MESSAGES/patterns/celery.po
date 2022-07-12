@@ -95,13 +95,13 @@ msgstr ""
 "aplicación de Flask y enganchándolo con la configuración de Flask."
 
 #: ../../patterns/celery.rst:37
-msgid ""
-"This is all that is necessary to properly integrate Celery with Flask::"
+#, fuzzy
+msgid "This is all that is necessary to integrate Celery with Flask:"
 msgstr ""
 "Esto es todo lo que se necesita para integrar adecuadamente Celery con "
 "Flask::"
 
-#: ../../patterns/celery.rst:57
+#: ../../patterns/celery.rst:55
 msgid ""
 "The function creates a new Celery object, configures it with the broker from"
 " the application config, updates the rest of the Celery config from the "
@@ -113,11 +113,17 @@ msgstr ""
 "Celery desde la configuración de Flask y luego crea una subclase de la tarea"
 " que envuelve la ejecución de la tarea en un contexto de aplicación."
 
-#: ../../patterns/celery.rst:63
+#: ../../patterns/celery.rst:61
+msgid ""
+"Celery 5.x deprecated uppercase configuration keys, and 6.x will remove "
+"them. See their official `migration guide`_."
+msgstr ""
+
+#: ../../patterns/celery.rst:67
 msgid "An example task"
 msgstr "Una tarea de ejemplo"
 
-#: ../../patterns/celery.rst:65
+#: ../../patterns/celery.rst:69
 msgid ""
 "Let's write a task that adds two numbers together and returns the result. We"
 " configure Celery's broker and backend to use Redis, create a ``celery`` "
@@ -129,15 +135,15 @@ msgstr ""
 "aplicación ``celery`` usando la fábrica de arriba, y luego la usamos para "
 "definir la tarea:"
 
-#: ../../patterns/celery.rst:82
+#: ../../patterns/celery.rst:86
 msgid "This task can now be called in the background::"
 msgstr "Esta tarea puede llamarse ahora en segundo plano::"
 
-#: ../../patterns/celery.rst:88
+#: ../../patterns/celery.rst:92
 msgid "Run a worker"
 msgstr "Ejecutar un trabajador"
 
-#: ../../patterns/celery.rst:90
+#: ../../patterns/celery.rst:94
 msgid ""
 "If you jumped in and already executed the above code you will be "
 "disappointed to learn that ``.wait()`` will never actually return. That's "
@@ -149,7 +155,7 @@ msgstr ""
 "es necesario ejecutar un trabajador Celery para recibir y ejecutar la tarea "
 "::"
 
-#: ../../patterns/celery.rst:97
+#: ../../patterns/celery.rst:101
 msgid ""
 "The ``your_application`` string has to point to your application's package "
 "or module that creates the ``celery`` object."
@@ -157,7 +163,7 @@ msgstr ""
 "La cadena ``your_application`` tiene que apuntar al paquete o módulo de tu "
 "aplicación que crea el objeto ``celery``."
 
-#: ../../patterns/celery.rst:100
+#: ../../patterns/celery.rst:104
 msgid ""
 "Now that the worker is running, ``wait`` will return the result once the "
 "task is finished."

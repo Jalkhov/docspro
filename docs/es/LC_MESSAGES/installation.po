@@ -28,31 +28,24 @@ msgid "Python Version"
 msgstr "Versión de Python"
 
 #: ../../installation.rst:8
+#, fuzzy
 msgid ""
-"We recommend using the latest version of Python. Flask supports Python 3.6 "
+"We recommend using the latest version of Python. Flask supports Python 3.7 "
 "and newer."
 msgstr ""
 "Recomendamos utilizar la última versión de Python. Flask soporta Python 3.6 "
 "y posteriores."
 
-#: ../../installation.rst:11
-msgid ""
-"``async`` support in Flask requires Python 3.7+ for "
-"``contextvars.ContextVar``."
-msgstr ""
-"El soporte de ``async`` en Flask requiere Python 3.7+ para "
-"``contextvars.ContextVar``."
-
-#: ../../installation.rst:15
+#: ../../installation.rst:13
 msgid "Dependencies"
 msgstr "Dependencias"
 
-#: ../../installation.rst:17
+#: ../../installation.rst:15
 msgid ""
 "These distributions will be installed automatically when installing Flask."
 msgstr "Estas distribuciones se instalarán automáticamente al instalar Flask."
 
-#: ../../installation.rst:19
+#: ../../installation.rst:17
 msgid ""
 "`Werkzeug`_ implements WSGI, the standard Python interface between "
 "applications and servers."
@@ -60,7 +53,7 @@ msgstr ""
 "`Werkzeug`_ implementa WSGI, la interfaz estándar de Python entre "
 "aplicaciones y servidores."
 
-#: ../../installation.rst:21
+#: ../../installation.rst:19
 msgid ""
 "`Jinja`_ is a template language that renders the pages your application "
 "serves."
@@ -68,7 +61,7 @@ msgstr ""
 "`Jinja`_ es un lenguaje de plantillas que renderiza las páginas que sirve tu"
 " aplicación."
 
-#: ../../installation.rst:23
+#: ../../installation.rst:21
 msgid ""
 "`MarkupSafe`_ comes with Jinja. It escapes untrusted input when rendering "
 "templates to avoid injection attacks."
@@ -76,7 +69,7 @@ msgstr ""
 "`MarkupSafe`_ viene con Jinja. Escapa de la entrada no fiable cuando se "
 "renderizan las plantillas para evitar ataques de inyección."
 
-#: ../../installation.rst:25
+#: ../../installation.rst:23
 msgid ""
 "`ItsDangerous`_ securely signs data to ensure its integrity. This is used to"
 " protect Flask's session cookie."
@@ -84,7 +77,7 @@ msgstr ""
 "`ItsDangerous`_ firma de forma segura los datos para asegurar su integridad."
 " Se utiliza para proteger la cookie de sesión de Flask."
 
-#: ../../installation.rst:27
+#: ../../installation.rst:25
 msgid ""
 "`Click`_ is a framework for writing command line applications. It provides "
 "the ``flask`` command and allows adding custom management commands."
@@ -93,11 +86,11 @@ msgstr ""
 "Proporciona el comando ``flask`` y permite añadir comandos de gestión "
 "personalizados."
 
-#: ../../installation.rst:38
+#: ../../installation.rst:36
 msgid "Optional dependencies"
 msgstr "Dependencias opcionales"
 
-#: ../../installation.rst:40
+#: ../../installation.rst:38
 msgid ""
 "These distributions will not be installed automatically. Flask will detect "
 "and use them if you install them."
@@ -105,11 +98,11 @@ msgstr ""
 "Estas distribuciones no se instalarán automáticamente. Flask las detectará y"
 " utilizará si usted las instala."
 
-#: ../../installation.rst:43
+#: ../../installation.rst:41
 msgid "`Blinker`_ provides support for :doc:`signals`."
 msgstr "`Blinker`_ proporciona soporte para :doc:`signals`."
 
-#: ../../installation.rst:44
+#: ../../installation.rst:42
 msgid ""
 "`python-dotenv`_ enables support for :ref:`dotenv` when running ``flask`` "
 "commands."
@@ -117,7 +110,7 @@ msgstr ""
 "`python-dotenv`_ habilita el soporte para :ref:`dotenv` cuando se ejecutan "
 "comandos ``flask``."
 
-#: ../../installation.rst:46
+#: ../../installation.rst:44
 msgid ""
 "`Watchdog`_ provides a faster, more efficient reloader for the development "
 "server."
@@ -125,11 +118,28 @@ msgstr ""
 "`Watchdog`_ proporciona un recargador más rápido y eficiente para el servidor de\n"
 "  de desarrollo."
 
+#: ../../installation.rst:53
+msgid "greenlet"
+msgstr ""
+
 #: ../../installation.rst:55
+msgid ""
+"You may choose to use gevent or eventlet with your application. In this "
+"case, greenlet>=1.0 is required. When using PyPy, PyPy>=7.3.7 is required."
+msgstr ""
+
+#: ../../installation.rst:59
+msgid ""
+"These are not minimum supported versions, they only indicate the first "
+"versions that added necessary features. You should use the latest versions "
+"of each."
+msgstr ""
+
+#: ../../installation.rst:65
 msgid "Virtual environments"
 msgstr "Entornos virtuales"
 
-#: ../../installation.rst:57
+#: ../../installation.rst:67
 msgid ""
 "Use a virtual environment to manage the dependencies for your project, both "
 "in development and in production."
@@ -137,7 +147,7 @@ msgstr ""
 "Utilice un entorno virtual para gestionar las dependencias de su proyecto, "
 "tanto en desarrollo como en producción."
 
-#: ../../installation.rst:60
+#: ../../installation.rst:70
 msgid ""
 "What problem does a virtual environment solve? The more Python projects you "
 "have, the more likely it is that you need to work with different versions of"
@@ -150,7 +160,7 @@ msgstr ""
 " las librerías para un proyecto pueden romper la compatibilidad en otro "
 "proyecto."
 
-#: ../../installation.rst:65
+#: ../../installation.rst:75
 msgid ""
 "Virtual environments are independent groups of Python libraries, one for "
 "each project. Packages installed for one project will not affect other "
@@ -160,48 +170,48 @@ msgstr ""
 "para cada proyecto. Los paquetes instalados para un proyecto no afectarán a "
 "otros proyectos o a los paquetes del sistema operativo."
 
-#: ../../installation.rst:69
+#: ../../installation.rst:79
 msgid ""
 "Python comes bundled with the :mod:`venv` module to create virtual "
 "environments."
 msgstr "Python viene con el módulo :mod:`venv` para crear entornos virtuales."
 
-#: ../../installation.rst:76
+#: ../../installation.rst:86
 msgid "Create an environment"
 msgstr "Crear un entorno"
 
-#: ../../installation.rst:78
+#: ../../installation.rst:88
 msgid "Create a project folder and a :file:`venv` folder within:"
 msgstr "Cree una carpeta de proyecto y una carpeta :file:`venv` dentro:"
 
-#: ../../installation.rst:82 ../../installation.rst:108
+#: ../../installation.rst:92 ../../installation.rst:118
 msgid "macOS/Linux"
 msgstr "macOS/Linux"
 
-#: ../../installation.rst:90 ../../installation.rst:114
+#: ../../installation.rst:100 ../../installation.rst:124
 msgid "Windows"
 msgstr "Windows"
 
-#: ../../installation.rst:102
+#: ../../installation.rst:112
 msgid "Activate the environment"
 msgstr "Activar el entorno"
 
-#: ../../installation.rst:104
+#: ../../installation.rst:114
 msgid ""
 "Before you work on your project, activate the corresponding environment:"
 msgstr "Antes de trabajar en su proyecto, active el entorno correspondiente:"
 
-#: ../../installation.rst:120
+#: ../../installation.rst:130
 msgid ""
 "Your shell prompt will change to show the name of the activated environment."
 msgstr ""
 "El prompt del shell cambiará para mostrar el nombre del entorno activado."
 
-#: ../../installation.rst:125
+#: ../../installation.rst:135
 msgid "Install Flask"
 msgstr "Instalar Flask"
 
-#: ../../installation.rst:127
+#: ../../installation.rst:137
 msgid ""
 "Within the activated environment, use the following command to install "
 "Flask:"
@@ -209,10 +219,17 @@ msgstr ""
 "Dentro del entorno activado, utilice el siguiente comando para instalar "
 "Flask:"
 
-#: ../../installation.rst:134
+#: ../../installation.rst:144
 msgid ""
 "Flask is now installed. Check out the :doc:`/quickstart` or go to the "
 ":doc:`Documentation Overview </index>`."
 msgstr ""
 "Flask ya está instalado. Consulta el :doc:`/quickstart` o ve al "
 ":doc:`Resumen de la documentación </index>`."
+
+#~ msgid ""
+#~ "``async`` support in Flask requires Python 3.7+ for "
+#~ "``contextvars.ContextVar``."
+#~ msgstr ""
+#~ "El soporte de ``async`` en Flask requiere Python 3.7+ para "
+#~ "``contextvars.ContextVar``."

@@ -23,8 +23,8 @@ msgstr ""
 msgid "Welcome to Flask"
 msgstr "Bienvenido a Flask"
 
-msgid "Flask: web development, one drop at a time"
-msgstr "Flask: desarrollo web, una gota a la vez"
+msgid "Flask: desarrollo web, una gota a la vez"
+msgstr ""
 
 #: ../../index.rst:11
 msgid ""
@@ -74,11 +74,11 @@ msgstr ""
 " algo de información de fondo sobre Flask, y luego se centra en las "
 "instrucciones paso a paso para el desarrollo web con Flask."
 
-#: ../../index.rst:66
+#: ../../index.rst:65
 msgid "API Reference"
 msgstr "Referencia de la API"
 
-#: ../../index.rst:68
+#: ../../index.rst:67
 msgid ""
 "If you are looking for information on a specific function, class or method, "
 "this part of the documentation is for you."
@@ -86,11 +86,11 @@ msgstr ""
 "Si busca información sobre una función, clase o método específico, esta "
 "parte de la documentación es para usted."
 
-#: ../../index.rst:78
+#: ../../index.rst:77
 msgid "Additional Notes"
 msgstr "Notas adicionales"
 
-#: ../../index.rst:80
+#: ../../index.rst:79
 msgid ""
 "Design notes, legal information and changelog are here for the interested."
 msgstr ""

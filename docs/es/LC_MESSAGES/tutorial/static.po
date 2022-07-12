@@ -84,8 +84,8 @@ msgstr ""
 "Vaya a http://127.0.0.1:5000/auth/login y la página debería ser como la "
 "captura de pantalla de abajo."
 
-msgid "screenshot of login page"
-msgstr "captura de pantalla de la página de inicio de sesión"
+msgid "captura de pantalla de la página de inicio de sesión"
+msgstr ""
 
 #: ../../tutorial/static.rst:66
 msgid ""
@@ -100,3 +100,6 @@ msgstr ""
 #: ../../tutorial/static.rst:72
 msgid "Continue to :doc:`blog`."
 msgstr "Continuar con :doc:`blog`."
+
+#~ msgid "screenshot of login page"
+#~ msgstr "captura de pantalla de la página de inicio de sesión"

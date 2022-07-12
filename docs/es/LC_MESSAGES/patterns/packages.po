@@ -181,21 +181,11 @@ msgstr ""
 " razón es que no estamos usando las vistas en :file:`__init__.py` y sólo nos"
 " aseguramos de que el módulo es importado y lo hacemos al final del fichero."
 
-#: ../../patterns/packages.rst:176
-msgid ""
-"There are still some problems with that approach but if you want to use "
-"decorators there is no way around that.  Check out the :doc:`/becomingbig` "
-"section for some inspiration how to deal with that."
-msgstr ""
-"Todavía hay algunos problemas con ese enfoque, pero si quieres usar "
-"decoradores no hay manera de evitarlo. Consulte la sección "
-":doc:`/becomingbig` para inspirarse en la forma de tratar con eso."
-
-#: ../../patterns/packages.rst:182
+#: ../../patterns/packages.rst:178
 msgid "Working with Blueprints"
 msgstr "Trabajar con Blueprints"
 
-#: ../../patterns/packages.rst:184
+#: ../../patterns/packages.rst:180
 msgid ""
 "If you have larger applications it's recommended to divide them into smaller"
 " groups where each group is implemented with the help of a blueprint.  For a"
@@ -206,3 +196,12 @@ msgstr ""
 "pequeños donde cada grupo se implementa con la ayuda de un blueprint.  Para "
 "una suave introducción a este tema, consulte el capítulo :doc:`/blueprints` "
 "de la documentación."
+
+#~ msgid ""
+#~ "There are still some problems with that approach but if you want to use "
+#~ "decorators there is no way around that.  Check out the :doc:`/becomingbig` "
+#~ "section for some inspiration how to deal with that."
+#~ msgstr ""
+#~ "Todavía hay algunos problemas con ese enfoque, pero si quieres usar "
+#~ "decoradores no hay manera de evitarlo. Consulte la sección "
+#~ ":doc:`/becomingbig` para inspirarse en la forma de tratar con eso."
