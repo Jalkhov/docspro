@@ -95,7 +95,6 @@ msgid "Environment and Debug Features"
 msgstr "Características de entorno y depuración"
 
 #: ../../config.rst:48
-#, fuzzy
 msgid ""
 "The :data:`ENV` and :data:`DEBUG` config values are special because they may"
 " behave inconsistently if changed after the app has begun setting up. In "
@@ -105,7 +104,8 @@ msgstr ""
 "Los valores de configuración :data:`ENV` y :data:`DEBUG` son especiales "
 "porque pueden comportarse de forma inconsistente si se cambian después de "
 "que la aplicación haya empezado a configurarse. Para establecer el entorno y"
-" el modo de depuración de forma fiable, Flask utiliza variables de entorno."
+" el modo de depuración de forma fiable, pasa opciones al comando ``flask`` o"
+" utiliza variables de entorno."
 
 #: ../../config.rst:53
 msgid ""
@@ -114,6 +114,10 @@ msgid ""
 "controlled with the ``FLASK_ENV`` environment variable, or the ``--env`` "
 "option when using the ``flask`` command, and defaults to ``production``."
 msgstr ""
+"El entorno de ejecución se utiliza para indicar a Flask, las extensiones y "
+"otros programas, como Sentry, en qué contexto se está ejecutando Flask. Se "
+"controla con la variable de entorno ``FLASK_ENV``, o la opción ``--env`` "
+"cuando se utiliza el comando ``flask``, y por defecto es ``production``."
 
 #: ../../config.rst:59
 msgid ""
@@ -122,18 +126,21 @@ msgid ""
 "this separately from the environment, use the ``--debug/--no-debug`` option "
 "or the ``FLASK_DEBUG`` environment variable."
 msgstr ""
+"Al establecer ``env development`` se habilitará el modo de depuración. "
+"``flask run`` utilizará el depurador interactivo y el recargador por defecto"
+" en modo de depuración. Para controlar esto por separado del entorno, "
+"utilice la opción ``--debug/--no-debug`` o la variable de entorno "
+"``FLASK_DEBUG``."
 
 #: ../../config.rst:65
-#, fuzzy
 msgid ""
 "To switch Flask to the development environment and enable debug mode, set "
 "``--env``:"
 msgstr ""
 "Para cambiar Flask al entorno de desarrollo y habilitar el modo de "
-"depuración, establezca :envvar:`FLASK_ENV`:"
+"depuración, establece ``--env``:"
 
 #: ../../config.rst:72
-#, fuzzy
 msgid ""
 "Using the options or environment variables as described above is "
 "recommended. While it is possible to set :data:`ENV` and :data:`DEBUG` in "
@@ -141,10 +148,10 @@ msgid ""
 "by the ``flask`` command, and some systems or extensions may have already "
 "configured themselves based on a previous value."
 msgstr ""
-"Se recomienda utilizar las variables de entorno como se ha descrito "
+"Se recomienda utilizar las opciones o variables de entorno descritas "
 "anteriormente. Aunque es posible establecer :data:`ENV` y :data:`DEBUG` en "
 "su configuración o código, se desaconseja encarecidamente hacerlo. No pueden"
-" ser leídas antes por el comando ``flask``, y algunos sistemas o extensiones"
+" ser leídos antes por el comando ``flask``, y algunos sistemas o extensiones"
 " pueden haberse configurado ya en base a un valor anterior."
 
 #: ../../config.rst:80
@@ -567,7 +574,7 @@ msgstr ""
 
 #: ../../config.rst:387
 msgid "Removed ``PRESERVE_CONTEXT_ON_EXCEPTION``."
-msgstr ""
+msgstr "Se ha eliminado ``PRESERVE_CONTEXT_ON_EXCEPTION``."
 
 #: ../../config.rst:375
 msgid ""
@@ -740,7 +747,6 @@ msgid "Configuring from Environment Variables"
 msgstr "Configuración desde las variables de entorno"
 
 #: ../../config.rst:485
-#, fuzzy
 msgid ""
 "In addition to pointing to configuration files using environment variables, "
 "you may find it useful (or necessary) to control your configuration values "
@@ -750,7 +756,10 @@ msgid ""
 msgstr ""
 "Además de apuntar a los archivos de configuración utilizando variables de "
 "entorno, puede resultar útil (o necesario) controlar sus valores de "
-"configuración directamente desde el entorno."
+"configuración directamente desde el entorno. Se puede instruir a Flask para "
+"que cargue todas las variables de entorno que comiencen con un prefijo "
+"específico en la configuración utilizando "
+":meth:`~flask.Config.from_prefixed_env`."
 
 #: ../../config.rst:491
 msgid ""
@@ -764,12 +773,16 @@ msgid ""
 "The variables can then be loaded and accessed via the config with a key "
 "equal to the environment variable name without the prefix i.e."
 msgstr ""
+"Las variables se pueden cargar y acceder a través de la configuración con "
+"una clave igual al nombre de la variable de entorno sin el prefijo, es decir"
 
 #: ../../config.rst:540
 msgid ""
 "The prefix is ``FLASK_`` by default. This is configurable via the ``prefix``"
 " argument of :meth:`~flask.Config.from_prefixed_env`."
 msgstr ""
+"El prefijo es ``FLASK_`` por defecto. Esto es configurable mediante el "
+"argumento ``prefix`` de :meth:`~flask.Config.from_prefixed_env`."
 
 #: ../../config.rst:543
 msgid ""
@@ -778,6 +791,11 @@ msgid ""
 " is possible, including lists and dicts. This is configurable via the "
 "``loads`` argument of :meth:`~flask.Config.from_prefixed_env`."
 msgstr ""
+"Los valores serán analizados para intentar convertirlos a un tipo más "
+"específico que las cadenas. Por defecto se utiliza :func:`json.loads`, por "
+"lo que cualquier valor JSON válido es posible, incluyendo listas y dicts. "
+"Esto es configurable mediante el argumento ``loads`` de "
+":meth:`~flask.Config.from_prefixed_env`."
 
 #: ../../config.rst:548
 msgid ""
@@ -785,6 +803,9 @@ msgid ""
 " \"false\", lowercase, are valid values. Keep in mind that any non-empty "
 "string is considered ``True`` by Python."
 msgstr ""
+"Cuando se añade un valor booleano con el análisis JSON por defecto, sólo "
+"\"true\" y \"false\", en minúsculas, son valores válidos. Ten en cuenta que "
+"cualquier cadena no vacía es considerada ``True`` por Python."
 
 #: ../../config.rst:552
 msgid ""
@@ -792,12 +813,18 @@ msgid ""
 "with double underscore (``__``). Any intermediate keys that don't exist on "
 "the parent dict will be initialized to an empty dict."
 msgstr ""
+"Es posible establecer claves en diccionarios anidados separando las claves "
+"con doble guión bajo (``__``). Las claves intermedias que no existan en el "
+"dictado padre se inicializarán con un dict vacío."
 
 #: ../../config.rst:564
 msgid ""
 "On Windows, environment variable keys are always uppercase, therefore the "
 "above example would end up as ``MYAPI__CREDENTIALS__USERNAME``."
 msgstr ""
+"En Windows, las claves de las variables de entorno son siempre mayúsculas, "
+"por lo que el ejemplo anterior terminaría como "
+"``MYAPI__CREDENTIALS__USERNAME``."
 
 #: ../../config.rst:567
 msgid ""
@@ -805,13 +832,17 @@ msgid ""
 "insensitive Windows support, try a dedicated library such as Dynaconf_, "
 "which includes integration with Flask."
 msgstr ""
+"Para obtener aún más características de carga de configuraciones, incluyendo"
+" la fusión y el soporte de Windows insensible a las mayúsculas y minúsculas,"
+" pruebe una biblioteca dedicada como Dynaconf_, que incluye la integración "
+"con Flask."
 
 #: ../../config.rst:575
 msgid "Configuration Best Practices"
 msgstr "Mejores prácticas de configuración"
 
 #: ../../config.rst:577
-#, python-format
+#, fuzzy, python-format
 msgid ""
 "The downside with the approach mentioned earlier is that it makes testing a "
 "little harder.  There is no single 100% solution for this problem in "
@@ -851,6 +882,8 @@ msgid ""
 "Make sure to load the configuration very early on, so that extensions can "
 "access the configuration when calling ``init_app``."
 msgstr ""
+"Asegúrate de cargar la configuración muy pronto, para que las extensiones "
+"puedan acceder a la configuración cuando llamen a ``init_app``."
 
 #: ../../config.rst:598
 msgid "Development / Production"
@@ -1107,80 +1140,3 @@ msgstr ""
 #: ../../config.rst:773
 msgid "Example usage for both::"
 msgstr "Ejemplo de uso de ambos::"
-
-#~ msgid ""
-#~ "While this approach is straightforward to use, it is important to remember "
-#~ "that environment variables are strings -- they are not automatically "
-#~ "deserialized into Python types."
-#~ msgstr ""
-#~ "Aunque este enfoque es sencillo de utilizar, es importante recordar que las "
-#~ "variables de entorno son cadenas de texto, no se deserializan "
-#~ "automáticamente en tipos de Python."
-
-#~ msgid ""
-#~ "Here is an example of a configuration file that uses environment variables::"
-#~ msgstr ""
-#~ "Este es un ejemplo de un archivo de configuración que utiliza variables de "
-#~ "entorno::"
-
-#~ msgid ""
-#~ "Notice that any value besides an empty string will be interpreted as a "
-#~ "boolean ``True`` value in Python, which requires care if an environment "
-#~ "explicitly sets values intended to be ``False``."
-#~ msgstr ""
-#~ "Tenga en cuenta que cualquier valor que no sea una cadena vacía se "
-#~ "interpretará como un valor booleano ``True`` en Python, lo que requiere "
-#~ "cuidado si un entorno establece explícitamente valores destinados a ser "
-#~ "``False``."
-
-#~ msgid ""
-#~ "Make sure to load the configuration very early on, so that extensions have "
-#~ "the ability to access the configuration when starting up.  There are other "
-#~ "methods on the config object as well to load from individual files.  For a "
-#~ "complete reference, read the :class:`~flask.Config` class documentation."
-#~ msgstr ""
-#~ "Asegúrese de cargar la configuración muy pronto, para que las extensiones "
-#~ "tengan la capacidad de acceder a la configuración cuando se inicie. También "
-#~ "hay otros métodos en el objeto config para cargar desde archivos "
-#~ "individuales. Para una referencia completa, lea la documentación de la clase"
-#~ " :class:`~flask.Config`."
-
-#~ msgid ""
-#~ "The environment is used to indicate to Flask, extensions, and other "
-#~ "programs, like Sentry, what context Flask is running in. It is controlled "
-#~ "with the :envvar:`FLASK_ENV` environment variable and defaults to "
-#~ "``production``."
-#~ msgstr ""
-#~ "El entorno se utiliza para indicar a Flask, las extensiones y otros "
-#~ "programas, como Sentry, en qué contexto se está ejecutando Flask. Se "
-#~ "controla con la variable de entorno :envvar:`FLASK_ENV` y por defecto es "
-#~ "``producción``."
-
-#~ msgid ""
-#~ "Setting :envvar:`FLASK_ENV` to ``development`` will enable debug mode. "
-#~ "``flask run`` will use the interactive debugger and reloader by default in "
-#~ "debug mode. To control this separately from the environment, use the "
-#~ ":envvar:`FLASK_DEBUG` flag."
-#~ msgstr ""
-#~ "Poniendo :envvar:`FLASK_ENV` en ``desarrollo`` se activará el modo de "
-#~ "depuración. ``flask run`` utilizará el depurador interactivo y el recargador"
-#~ " por defecto en modo de depuración. Para controlar esto por separado del "
-#~ "entorno, utilice la bandera :envvar:`FLASK_DEBUG`."
-
-#~ msgid ""
-#~ "Added :envvar:`FLASK_ENV` to control the environment separately from debug "
-#~ "mode. The development environment enables debug mode."
-#~ msgstr ""
-#~ "Se ha añadido :envvar:`FLASK_ENV` para controlar el entorno por separado del"
-#~ " modo de depuración. El entorno de desarrollo habilita el modo de "
-#~ "depuración."
-
-#~ msgid ""
-#~ "Don't pop the request context when an exception occurs. If not set, this is "
-#~ "true if ``DEBUG`` is true. This allows debuggers to introspect the request "
-#~ "data on errors, and should normally not need to be set directly."
-#~ msgstr ""
-#~ "No hacer saltar el contexto de la petición cuando se produce una excepción. "
-#~ "Si no se establece, es verdadero si ``DEBUG`` es verdadero. Esto permite a "
-#~ "los depuradores introspeccionar los datos de la petición en caso de error, y"
-#~ " normalmente no debería ser necesario establecerlo directamente."

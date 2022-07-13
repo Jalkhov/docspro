@@ -21,13 +21,15 @@ msgstr ""
 
 #: ../../views.rst:2
 msgid "Class-based Views"
-msgstr ""
+msgstr "Vistas basadas en las clases"
 
 #: ../../views.rst:6
 msgid ""
 "This page introduces using the :class:`View` and :class:`MethodView` classes"
 " to write class-based views."
 msgstr ""
+"Esta página presenta el uso de las clases :class:`View` y "
+":class:`MethodView` para escribir vistas basadas en clases."
 
 #: ../../views.rst:9
 msgid ""
@@ -36,22 +38,30 @@ msgid ""
 "arguments, to change the behavior of the view. This is also known as "
 "generic, reusable, or pluggable views."
 msgstr ""
+"Una vista basada en una clase es una clase que actúa como una función de la "
+"vista. Como es una clase, se pueden crear diferentes instancias de la clase "
+"con diferentes argumentos, para cambiar el comportamiento de la vista. Esto "
+"también se conoce como vistas genéricas, reutilizables o enchufables."
 
 #: ../../views.rst:14
 msgid ""
 "An example of where this is useful is defining a class that creates an API "
 "based on the database model it is initialized with."
 msgstr ""
+"Un ejemplo de que esto es útil es definir una clase que crea una API basada "
+"en el modelo de base de datos con el que se inicializa."
 
 #: ../../views.rst:17
 msgid ""
 "For more complex API behavior and customization, look into the various API "
 "extensions for Flask."
 msgstr ""
+"Para un comportamiento más complejo de la API y su personalización, busque "
+"las diversas extensiones de la API para Flask."
 
 #: ../../views.rst:22
 msgid "Basic Reusable View"
-msgstr ""
+msgstr "Vista básica reutilizable"
 
 #: ../../views.rst:24
 msgid ""
@@ -59,6 +69,9 @@ msgid ""
 " start with a view function that queries a list of users then renders a "
 "template to show the list."
 msgstr ""
+"Veamos un ejemplo de conversión de una función de vista a una clase de "
+"vista. Comenzamos con una función de vista que consulta una lista de "
+"usuarios y luego renderiza una plantilla para mostrar la lista."
 
 #: ../../views.rst:35
 msgid ""
@@ -67,6 +80,10 @@ msgid ""
 " even though the only thing that would change is the model and template "
 "name."
 msgstr ""
+"Esto funciona para el modelo de usuario, pero digamos que también tienes más"
+" modelos que necesitan páginas de lista. Tendrías que escribir otra función "
+"de vista para cada modelo, aunque lo único que cambiaría es el nombre del "
+"modelo y de la plantilla."
 
 #: ../../views.rst:40
 msgid ""
@@ -74,6 +91,9 @@ msgid ""
 "render a template. As the first step, we'll convert the view to a class "
 "without any customization."
 msgstr ""
+"En su lugar, puedes escribir una subclase :class:`View` que consultará un "
+"modelo y renderizará una plantilla. Como primer paso, convertiremos la vista"
+" en una clase sin ninguna personalización."
 
 #: ../../views.rst:55
 msgid ""
@@ -83,12 +103,19 @@ msgid ""
 " method. The first argument to ``as_view`` is the name to use to refer to "
 "the view with :func:`~flask.url_for`."
 msgstr ""
+"El método :meth:`View.dispatch_request` es el equivalente a la función de "
+"vista. La llamada al método :meth:`View.as_view` creará una función de vista"
+" que puede registrarse en la aplicación con su método "
+":meth:`~flask.Flask.add_url_rule`. El primer argumento de ``as_view`` es el "
+"nombre a utilizar para referirse a la vista con :func:`~flask.url_for`."
 
 #: ../../views.rst:64
 msgid ""
 "You can't decorate the class with ``@app.route()`` the way you'd do with a "
 "basic view function."
 msgstr ""
+"No puedes decorar la clase con ``@app.route()`` como lo harías con una "
+"función de vista básica."
 
 #: ../../views.rst:67
 msgid ""
@@ -98,6 +125,11 @@ msgid ""
 "``self``. Then ``dispatch_request`` can reference these instead of hard-"
 "coded values."
 msgstr ""
+"A continuación, tenemos que ser capaces de registrar la misma clase de vista"
+" para diferentes modelos y plantillas, para que sea más útil que la función "
+"original. La clase tomará dos argumentos, el modelo y la plantilla, y los "
+"almacenará en ``self``. Entonces ``dispatch_request`` puede hacer referencia"
+" a estos en lugar de valores codificados."
 
 #: ../../views.rst:84
 msgid ""
@@ -106,20 +138,27 @@ msgid ""
 "then passed when creating the class. Now we can register the same view to "
 "handle multiple models."
 msgstr ""
+"Recuerda que creamos la función vista con ``View.as_view()`` en lugar de "
+"crear la clase directamente. Cualquier argumento extra que se pase a "
+"``as_view`` se pasa al crear la clase. Ahora podemos registrar la misma "
+"vista para manejar múltiples modelos."
 
 #: ../../views.rst:102
 msgid "URL Variables"
-msgstr ""
+msgstr "Variables de la URL"
 
 #: ../../views.rst:104
 msgid ""
 "Any variables captured by the URL are passed as keyword arguments to the "
 "``dispatch_request`` method, as they would be for a regular view function."
 msgstr ""
+"Cualquier variable capturada por la URL se pasa como argumentos de palabra "
+"clave al método ``dispatch_request``, como lo harían en una función de vista"
+" normal."
 
 #: ../../views.rst:123
 msgid "View Lifetime and ``self``"
-msgstr ""
+msgstr "Ver Vida útil y ``self``"
 
 #: ../../views.rst:125
 msgid ""
@@ -128,6 +167,10 @@ msgid ""
 "during the request, since the next request will not see it, unlike other "
 "forms of global state."
 msgstr ""
+"Por defecto, se crea una nueva instancia de la clase view cada vez que se "
+"gestiona una petición. Esto significa que es seguro escribir otros datos en "
+"``self`` durante la petición, ya que la siguiente petición no lo verá, a "
+"diferencia de otras formas de estado global."
 
 #: ../../views.rst:130
 msgid ""
@@ -138,22 +181,32 @@ msgid ""
 " writing to ``self`` is not safe. If you need to store data during the "
 "request, use :data:`~flask.g` instead."
 msgstr ""
+"Sin embargo, si tu clase de vista necesita hacer mucha inicialización "
+"compleja, hacerla para cada petición es innecesario y puede ser ineficiente."
+" Para evitar esto, establece :attr:`View.init_every_request` a ``False``, "
+"que sólo creará una instancia de la clase y la utilizará para cada petición."
+" En este caso, escribir en ``self`` no es seguro. Si necesitas almacenar "
+"datos durante la petición, utiliza :data:`~flask.g` en su lugar."
 
 #: ../../views.rst:137
 msgid ""
 "In the ``ListView`` example, nothing writes to ``self`` during the request, "
 "so it is more efficient to create a single instance."
 msgstr ""
+"En el ejemplo de ``ListView``, nada se escribe en ``self`` durante la "
+"petición, por lo que es más eficiente crear una única instancia."
 
 #: ../../views.rst:153
 msgid ""
 "Different instances will still be created each for each ``as_view`` call, "
 "but not for each request to those views."
 msgstr ""
+"Se seguirán creando diferentes instancias para cada llamada a ``as_view``, "
+"pero no para cada petición a esas vistas."
 
 #: ../../views.rst:158
 msgid "View Decorators"
-msgstr ""
+msgstr "Decoradores de vista"
 
 #: ../../views.rst:160
 msgid ""
@@ -161,18 +214,26 @@ msgid ""
 "applied to the view function returned by ``as_view``, not the class itself. "
 "Set :attr:`View.decorators` to a list of decorators to apply."
 msgstr ""
+"La clase de la vista en sí misma no es la función de la vista. Los "
+"decoradores de la vista deben aplicarse a la función de la vista devuelta "
+"por ``as_view``, no a la propia clase. Establece :attr:`View.decorators` a "
+"una lista de decoradores a aplicar."
 
 #: ../../views.rst:171
 msgid ""
 "If you didn't set ``decorators``, you could apply them manually instead. "
 "This is equivalent to:"
 msgstr ""
+"Si no ha establecido ``decoradores``, puede aplicarlos manualmente en su "
+"lugar. Esto equivale a:"
 
 #: ../../views.rst:181
 msgid ""
 "Keep in mind that order matters. If you're used to ``@decorator`` style, "
 "this is equivalent to:"
 msgstr ""
+"Ten en cuenta que el orden es importante. Si estás acostumbrado al estilo "
+"``@decorador``, esto equivale a:"
 
 #: ../../views.rst:194
 msgid "Method Hints"
@@ -185,17 +246,22 @@ msgid ""
 ":attr:`View.methods` is equivalent to passing the list of methods to "
 "``add_url_rule`` or ``route``."
 msgstr ""
+"Un patrón común es registrar una vista con ``methods=[\"GET\", \"POST\"]``, "
+"y luego comprobar ``request.method == \"POST\"`` para decidir qué hacer. "
+"Establecer :attr:`View.methods` es equivalente a pasar la lista de métodos a"
+" ``add_url_rule`` o ``route``."
 
 #: ../../views.rst:213
 msgid ""
 "This is equivalent to the following, except further subclasses can inherit "
 "or change the methods."
 msgstr ""
+"Esto es equivalente a lo siguiente, excepto que otras subclases pueden "
+"heredar o cambiar los métodos."
 
 #: ../../views.rst:226
-#, fuzzy
 msgid "Method Dispatching and APIs"
-msgstr "Despacho basado en el método"
+msgstr "Envío de métodos y APIs"
 
 #: ../../views.rst:228
 msgid ""
@@ -204,6 +270,11 @@ msgid ""
 "different methods of the class based on the request method. Each HTTP method"
 " maps to a method of the class with the same (lowercase) name."
 msgstr ""
+"Para las APIs puede ser útil utilizar una función diferente para cada método"
+" HTTP. :class:`MethodView` extiende la clase básica :class:`View` para "
+"enviar a diferentes métodos de la clase basados en el método de solicitud. "
+"Cada método HTTP se asigna a un método de la clase con el mismo nombre (en "
+"minúsculas)."
 
 #: ../../views.rst:233
 msgid ""
@@ -211,6 +282,9 @@ msgid ""
 "methods defined by the class. It even knows how to handle subclasses that "
 "override or define other methods."
 msgstr ""
+":class:`MethodView` establece automáticamente :attr:`View.methods` basándose"
+" en los métodos definidos por la clase. Incluso sabe cómo manejar las "
+"subclases que sobrescriben o definen otros métodos."
 
 #: ../../views.rst:237
 msgid ""
@@ -218,10 +292,13 @@ msgid ""
 "(edit), and delete methods for a given model. A ``GroupAPI`` can provide get"
 " (list) and post (create) methods."
 msgstr ""
+"We can make a generic ``ItemAPI`` class that provides get (detail), patch "
+"(edit), and delete methods for a given model. A ``GroupAPI`` can provide get"
+" (list) and post (create) methods."
 
 #: ../../views.rst:304
 msgid "This produces the following views, a standard REST API!"
-msgstr ""
+msgstr "Esto produce las siguientes vistas, ¡una API REST estándar!"
 
 #: ../../views.rst:307
 msgid "URL"
@@ -245,77 +322,68 @@ msgid "``GET``"
 msgstr "``GET``"
 
 #: ../../views.rst:309
-#, fuzzy
 msgid "List all users"
-msgstr "Da una lista de todos los usuarios"
+msgstr "Listar todos los usuarios"
 
 #: ../../views.rst:310 ../../views.rst:315
 msgid "``POST``"
 msgstr "``POST``"
 
 #: ../../views.rst:310
-#, fuzzy
 msgid "Create a new user"
-msgstr "Crea un nuevo usuario"
+msgstr "Crear un nuevo usuario"
 
 #: ../../views.rst:311 ../../views.rst:312 ../../views.rst:313
 msgid "``/users/<id>``"
 msgstr "``/users/<id>``"
 
 #: ../../views.rst:311
-#, fuzzy
 msgid "Show a single user"
-msgstr "Muestra un solo usuario"
+msgstr "Mostrar un solo usuario"
 
 #: ../../views.rst:312 ../../views.rst:317
 msgid "``PATCH``"
-msgstr ""
+msgstr "``PATCH``"
 
 #: ../../views.rst:312
-#, fuzzy
 msgid "Update a user"
-msgstr "Actualiza un solo usuario"
+msgstr "Actualizar un usuario"
 
 #: ../../views.rst:313 ../../views.rst:318
 msgid "``DELETE``"
 msgstr "``DELETE``"
 
 #: ../../views.rst:313
-#, fuzzy
 msgid "Delete a user"
-msgstr "Elimina un solo usuario"
+msgstr "Eliminar un usuario"
 
 #: ../../views.rst:314 ../../views.rst:315
-#, fuzzy
 msgid "``/stories/``"
-msgstr "``/users/``"
+msgstr "``/stories/``"
 
 #: ../../views.rst:314
 msgid "List all stories"
-msgstr ""
+msgstr "Lista de todas las historias"
 
 #: ../../views.rst:315
-#, fuzzy
 msgid "Create a new story"
-msgstr "Crea un nuevo usuario"
+msgstr "Crear una nueva historia"
 
 #: ../../views.rst:316 ../../views.rst:317 ../../views.rst:318
-#, fuzzy
 msgid "``/stories/<id>``"
-msgstr "``/users/<id>``"
+msgstr "``/stories/<id>``"
 
 #: ../../views.rst:316
-#, fuzzy
 msgid "Show a single story"
-msgstr "Muestra un solo usuario"
+msgstr "Mostrar una sola historia"
 
 #: ../../views.rst:317
 msgid "Update a story"
-msgstr ""
+msgstr "Actualizar una historia"
 
 #: ../../views.rst:318
 msgid "Delete a story"
-msgstr ""
+msgstr "Eliminar una historia"
 
 #~ msgid "Pluggable Views"
 #~ msgstr "Vistas acoplables"

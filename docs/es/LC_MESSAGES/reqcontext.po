@@ -94,7 +94,6 @@ msgstr ""
 "el contexto de la aplicación aparecen."
 
 #: ../../reqcontext.rst:39
-#, fuzzy
 msgid ""
 "The context is unique to each thread (or other worker type). :data:`request`"
 " cannot be passed to another thread, the other thread has a different "
@@ -102,9 +101,9 @@ msgid ""
 "pointing to."
 msgstr ""
 "El contexto es único para cada hilo (u otro tipo de trabajador). "
-":data:`request` no puede ser pasado a otro hilo, el otro hilo tendrá una "
-"pila de contexto diferente y no sabrá sobre la petición que el hilo padre "
-"estaba apuntando."
+":data:`request` no puede ser pasado a otro hilo, el otro hilo tiene un "
+"espacio de contexto diferente y no sabrá sobre la solicitud que el hilo "
+"padre estaba apuntando."
 
 #: ../../reqcontext.rst:44
 msgid ""
@@ -113,6 +112,11 @@ msgid ""
 "of context vars automatically, and local proxy wraps that low-level "
 "interface to make the data easier to work with."
 msgstr ""
+"Los locales de contexto se implementan utilizando el :mod:`contextvars` de "
+"Python y el :class:`~werkzeug.local.LocalProxy` de Werkzeug. Python gestiona"
+" el tiempo de vida de las variables de contexto automáticamente, y el proxy "
+"local envuelve esa interfaz de bajo nivel para facilitar el trabajo con los "
+"datos."
 
 #: ../../reqcontext.rst:51
 msgid "Manually Push a Context"
@@ -163,7 +167,6 @@ msgid "How the Context Works"
 msgstr "Cómo funciona el contexto"
 
 #: ../../reqcontext.rst:90
-#, fuzzy
 msgid ""
 "The :meth:`Flask.wsgi_app` method is called to handle each request. It "
 "manages the contexts during the request. Internally, the request and "
@@ -173,10 +176,9 @@ msgid ""
 msgstr ""
 "El método :meth:`Flask.wsgi_app` es llamado para manejar cada solicitud. "
 "Gestiona los contextos durante la solicitud. Internamente, los contextos de "
-"solicitud y aplicación funcionan como pilas, :data:`_request_ctx_stack` y "
-":data:`_app_ctx_stack`. Cuando los contextos son empujados a la pila, los "
-"proxies que dependen de ellos están disponibles y apuntan a la información "
-"del contexto superior en la pila."
+"solicitud y aplicación funcionan como pilas. Cuando los contextos son "
+"empujados, los proxies que dependen de ellos están disponibles y apuntan a "
+"la información del elemento superior."
 
 #: ../../reqcontext.rst:96
 msgid ""
@@ -195,16 +197,15 @@ msgstr ""
 " original que maneja la solicitud."
 
 #: ../../reqcontext.rst:103
-#, fuzzy
 msgid ""
 "Other contexts may be pushed to change the proxies during a request. While "
 "this is not a common pattern, it can be used in advanced applications to, "
 "for example, do internal redirects or chain different applications together."
 msgstr ""
-"Debido a que los contextos son pilas, otros contextos pueden ser empujados "
-"para cambiar los proxies durante una solicitud. Aunque esto no es un patrón "
-"común, puede ser utilizado en aplicaciones avanzadas para, por ejemplo, "
-"hacer redirecciones internas o encadenar diferentes aplicaciones."
+"Otros contextos pueden ser empujados para cambiar los proxies durante una "
+"solicitud. Aunque no es un patrón común, se puede utilizar en aplicaciones "
+"avanzadas para, por ejemplo, hacer redirecciones internas o encadenar "
+"diferentes aplicaciones."
 
 #: ../../reqcontext.rst:108
 msgid ""

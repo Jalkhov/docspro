@@ -57,11 +57,17 @@ msgid ""
 "development server. Use the ``--app`` option to point to your application, "
 "and the ``--env development`` option to fully enable development mode."
 msgstr ""
+"El script de línea de comandos ``flask run`` es la forma recomendada para "
+"ejecutar el servidor de desarrollo. Utiliza la opción ``--app`` para apuntar"
+" a tu aplicación, y la opción ``--env development`` para activar "
+"completamente el modo de desarrollo."
 
 #: ../../server.rst:30
 msgid ""
 "These options (and any others) can also be set using environment variables."
 msgstr ""
+"Estas opciones (y cualquier otra) también pueden establecerse mediante "
+"variables de entorno."
 
 #: ../../server.rst:35
 msgid "Bash"
@@ -99,6 +105,10 @@ msgid ""
 "variable. This is how older versions of Flask worked. You should prefer "
 "setting the development environment as shown above."
 msgstr ""
+"El modo de depuración se puede controlar por separado del entorno de "
+"desarrollo con la opción ``--debug/--no-debug`` o la variable de entorno "
+"``FLASK_DEBUG``. Así es como funcionaban las versiones anteriores de Flask. "
+"Es preferible configurar el entorno de desarrollo como se muestra arriba."
 
 #: ../../server.rst:85
 msgid "Address already in use"

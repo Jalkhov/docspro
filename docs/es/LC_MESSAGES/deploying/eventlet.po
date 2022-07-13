@@ -1,9 +1,8 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2010 Pallets
 # This file is distributed under the same license as the Flask package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+# FIRST AUTHOR <pedrotorcattsoto@gmail.com>, 2021.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Flask 2.0.x\n"
@@ -22,7 +21,7 @@ msgstr ""
 
 #: ../../deploying/eventlet.rst:2
 msgid "eventlet"
-msgstr ""
+msgstr "eventlet"
 
 #: ../../deploying/eventlet.rst:4
 msgid ""
@@ -30,6 +29,9 @@ msgid ""
 "`eventlet`_ directly. Gunicorn provides a much more configurable and "
 "production-tested server."
 msgstr ""
+"Prefiero usar :doc:`gunicorn` con eventlet workers en lugar de usar "
+"`eventlet`_ directamente. Gunicorn proporciona un servidor mucho más "
+"configurable y probado en producción."
 
 #: ../../deploying/eventlet.rst:8
 msgid ""
@@ -37,6 +39,9 @@ msgid ""
 "like standard synchronous Python. It uses `greenlet`_ to enable task "
 "switching without writing ``async/await`` or using ``asyncio``."
 msgstr ""
+"`eventlet`_ permite escribir código asíncrono, basado en coroutinas, que se "
+"parece al Python síncrono estándar. Utiliza `greenlet`_ para permitir el "
+"cambio de tareas sin escribir ``async/await`` o utilizar ``asyncio``."
 
 #: ../../deploying/eventlet.rst:12
 msgid ""
@@ -44,6 +49,9 @@ msgid ""
 "dependencies you have, or other considerations, may affect which of the two "
 "you choose to use."
 msgstr ""
+":doc:`gevent` es otra biblioteca que hace lo mismo. Ciertas dependencias que"
+" tenga, u otras consideraciones, pueden afectar a cuál de las dos elija "
+"utilizar."
 
 #: ../../deploying/eventlet.rst:16
 msgid ""
@@ -51,10 +59,13 @@ msgid ""
 "instead of one per worker process. You must actually use eventlet in your "
 "own code to see any benefit to using the server."
 msgstr ""
+"eventlet proporciona un servidor WSGI que puede manejar muchas conexiones a "
+"la vez en lugar de una por proceso de trabajo. Debes usar eventlet en tu "
+"propio código para ver algún beneficio al usar el servidor."
 
 #: ../../deploying/eventlet.rst:25
 msgid "Installing"
-msgstr ""
+msgstr "Instalación"
 
 #: ../../deploying/eventlet.rst:27
 msgid ""
@@ -62,29 +73,35 @@ msgid ""
 "such as ``request`` will not work as expected. When using PyPy, PyPy>=7.3.7 "
 "is required."
 msgstr ""
+"Cuando se utiliza eventlet, se requiere greenlet>=1.0, de lo contrario los "
+"contextos locales como ``request`` no funcionarán como se espera. Cuando se "
+"utiliza PyPy, se requiere PyPy>=7.3.7."
 
 #: ../../deploying/eventlet.rst:31
 msgid ""
 "Create a virtualenv, install your application, then install ``eventlet``."
 msgstr ""
+"Crea un virtualenv, instala tu aplicación y luego instala ``eventlet``."
 
 #: ../../deploying/eventlet.rst:44
 msgid "Running"
-msgstr ""
+msgstr "Ejecutando"
 
 #: ../../deploying/eventlet.rst:46
 msgid ""
 "To use eventlet to serve your application, write a script that imports its "
 "``wsgi.server``, as well as your app or app factory."
 msgstr ""
+"Para usar eventlet para servir tu aplicación, escribe un script que importe "
+"su ``wsgi.server``, así como tu app o fábrica de apps."
 
 #: ../../deploying/eventlet.rst:49
 msgid "``wsgi.py``"
-msgstr ""
+msgstr "``wsgi.py``"
 
 #: ../../deploying/eventlet.rst:66
 msgid "Binding Externally"
-msgstr ""
+msgstr "Vinculación externa"
 
 #: ../../deploying/eventlet.rst:68
 msgid ""
@@ -93,6 +110,11 @@ msgid ""
 " possible to bind to port 80 or 443. Instead, a reverse proxy such as "
 ":doc:`nginx` or :doc:`apache-httpd` should be used in front of eventlet."
 msgstr ""
+"eventlet no debe ejecutarse como root porque provocaría que el código de su "
+"aplicación se ejecutara como root, lo cual no es seguro. Sin embargo, esto "
+"significa que no será posible enlazar con el puerto 80 o 443. En su lugar, "
+"debe utilizarse un proxy inverso como :doc:`nginx` o :doc:`apache-httpd` "
+"delante de eventlet."
 
 #: ../../deploying/eventlet.rst:74
 msgid ""
@@ -101,9 +123,15 @@ msgid ""
 "this when using a reverse proxy setup, otherwise it will be possible to "
 "bypass the proxy."
 msgstr ""
+"Puedes vincular todas las IPs externas en un puerto no privilegiado "
+"utilizando ``0.0.0.0`` en los argumentos del servidor mostrados en la "
+"sección anterior. No hagas esto cuando utilices una configuración de proxy "
+"inverso, de lo contrario será posible eludir el proxy."
 
 #: ../../deploying/eventlet.rst:79
 msgid ""
 "``0.0.0.0`` is not a valid address to navigate to, you'd use a specific IP "
 "address in your browser."
 msgstr ""
+"``0.0.0.0`` no es una dirección válida para navegar, sino que debes utilizar"
+" una dirección IP específica en tu navegador."

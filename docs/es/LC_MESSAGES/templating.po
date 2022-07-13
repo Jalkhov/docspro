@@ -361,7 +361,7 @@ msgstr ""
 
 #: ../../templating.rst:206
 msgid "Streaming"
-msgstr ""
+msgstr "Streaming"
 
 #: ../../templating.rst:208
 msgid ""
@@ -370,6 +370,11 @@ msgid ""
 "can be used for streaming HTML in chunks to speed up initial page load, or "
 "to save memory when rendering a very large template."
 msgstr ""
+"Puede ser útil no renderizar toda la plantilla como una cadena completa, "
+"sino renderizarla como un flujo, produciendo cadenas incrementales más "
+"pequeñas. Esto puede ser utilizado para el flujo de HTML en trozos para "
+"acelerar la carga inicial de la página, o para ahorrar memoria cuando se "
+"renderiza una plantilla muy grande."
 
 #: ../../templating.rst:214
 msgid ""
@@ -378,6 +383,10 @@ msgid ""
 ":func:`~flask.stream_template` and :func:`~flask.stream_template_string` "
 "functions to make this easier to use."
 msgstr ""
+"El motor de plantillas de Jinja2 soporta la representación de una plantilla "
+"pieza por pieza, devolviendo un iterador de cadenas. Flask proporciona las "
+"funciones :func:`~flask.stream_template` y "
+":func:`~flask.stream_template_string` para facilitar su uso."
 
 #: ../../templating.rst:227
 msgid ""
@@ -385,3 +394,6 @@ msgid ""
 "wrapper if a request is active, so that it remains available in the "
 "template."
 msgstr ""
+"Estas funciones aplican automáticamente la envoltura "
+":func:`~flask.stream_with_context` si una petición está activa, para que "
+"siga estando disponible en la plantilla."

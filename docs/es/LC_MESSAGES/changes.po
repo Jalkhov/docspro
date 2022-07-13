@@ -24,17 +24,16 @@ msgid "Changes"
 msgstr "Cambios"
 
 #: ../../../CHANGES.rst:4
-#, fuzzy
 msgid "Version 2.2.0"
-msgstr "Versión 2.0.0"
+msgstr "Versión 2.2.0"
 
 #: ../../../CHANGES.rst:6 ../../../CHANGES.rst:84
 msgid "Unreleased"
-msgstr ""
+msgstr "No publicado"
 
 #: ../../../CHANGES.rst:8 ../../../CHANGES.rst:120
 msgid "Remove previously deprecated code. :pr:`4337`"
-msgstr ""
+msgstr "Elimina el código previamente obsoleto. :pr:`4337`"
 
 #: ../../../CHANGES.rst:10
 msgid ""
@@ -43,11 +42,17 @@ msgid ""
 "``cache_timeout``, and ``etag`` replaces ``add_etags``. Additionally, "
 "``path`` replaces ``filename`` in ``send_from_directory``."
 msgstr ""
+"Se han eliminado los antiguos nombres de algunos parámetros de "
+"``send_file``. ``download_name`` sustituye a ``attachment_filename``, "
+"``max_age`` sustituye a ``cache_timeout``, y ``etag`` sustituye a "
+"``add_etags``. Además, ``path`` sustituye a ``filename`` en "
+"``send_from_directory``."
 
 #: ../../../CHANGES.rst:15
 msgid ""
 "The ``RequestContext.g`` property returning ``AppContext.g`` is removed."
 msgstr ""
+"Se elimina la propiedad ``RequestContext.g`` que devuelve ``AppContext.g``."
 
 #: ../../../CHANGES.rst:18
 msgid ""
@@ -55,6 +60,10 @@ msgid ""
 "rather than Werkzeug's ``LocalStack``. This should result in better "
 "performance and memory use. :pr:`4682`"
 msgstr ""
+"Los contextos de la aplicación y de la petición se gestionan utilizando "
+"directamente las varas de contexto de Python en lugar de la ``LocalStack`` "
+"de Werkzeug. Esto debería dar lugar a un mejor rendimiento y uso de la "
+"memoria. :pr:`4682`"
 
 #: ../../../CHANGES.rst:22
 msgid ""
@@ -62,32 +71,43 @@ msgid ""
 "``_request_ctx_stack.top`` are deprecated. Store data on ``g`` instead using"
 " a unique prefix, like ``g._extension_name_attr``."
 msgstr ""
+"Mantenedores de extensiones, tened en cuenta que ``_app_ctx_stack.top`` y "
+"``_request_ctx_stack.top`` están obsoletos. Almacena los datos en ``g`` en "
+"su lugar utilizando un prefijo único, como ``g._extension_name_attr``."
 
 #: ../../../CHANGES.rst:27
 msgid ""
 "Add new customization points to the ``Flask`` app object for many previously"
 " global behaviors."
 msgstr ""
+"Añade nuevos puntos de personalización al objeto de aplicación ``Flask`` "
+"para muchos comportamientos anteriormente globales."
 
 #: ../../../CHANGES.rst:30
 msgid "``flask.url_for`` will call ``app.url_for``. :issue:`4568`"
-msgstr ""
+msgstr "``flask.url_for`` llamará a ``app.url_for``. :issue:`4568`"
 
 #: ../../../CHANGES.rst:31
 msgid ""
 "``flask.abort`` will call ``app.aborter``. ``Flask.aborter_class`` and "
 "``Flask.make_aborter`` can be used to customize this aborter. :issue:`4567`"
 msgstr ""
+"``flask.abort`` llamará a ``app.aborter``. Se puede utilizar "
+"``Flask.aborter_class`` y ``Flask.make_aborter`` para personalizar este "
+"abortador. :issue:`4567`"
 
 #: ../../../CHANGES.rst:34
 msgid "``flask.redirect`` will call ``app.redirect``. :issue:`4569`"
-msgstr ""
+msgstr "``flask.redirect`` llamará a ``app.redirect``. :issue:`4569`"
 
 #: ../../../CHANGES.rst:36
 msgid ""
 "Refactor ``register_error_handler`` to consolidate error checking. Rewrite "
 "some error messages to be more consistent. :issue:`4559`"
 msgstr ""
+"Refactorizar ``register_error_handler`` para consolidar la comprobación de "
+"errores. Reescribir algunos mensajes de error para que sean más "
+"consistentes. :issue:`4559`"
 
 #: ../../../CHANGES.rst:38
 msgid ""
@@ -95,12 +115,18 @@ msgid ""
 "the blueprint will show a warning. In the next version, this will become an "
 "error just like the application setup methods. :issue:`4571`"
 msgstr ""
+"El uso de decoradores y funciones de Blueprint destinados a la configuración"
+" después de registrar el blueprint mostrará una advertencia. En la próxima "
+"versión, esto se convertirá en un error al igual que los métodos de "
+"configuración de la aplicación. :issue:`4571`"
 
 #: ../../../CHANGES.rst:42
 msgid ""
 "``before_first_request`` is deprecated. Run setup code when creating the "
 "application instead. :issue:`4605`"
 msgstr ""
+"``before_first_request`` está obsoleto. En su lugar, ejecute el código de "
+"configuración al crear la aplicación. :issue:`4605`"
 
 #: ../../../CHANGES.rst:44
 msgid ""
@@ -108,12 +134,17 @@ msgid ""
 "sets this to ``False``, the view will not create a new instance on every "
 "request. :issue:`2520`."
 msgstr ""
+"Se ha añadido el atributo de clase ``View.init_every_request``. Si una "
+"subclase de la vista lo establece en ``False``, la vista no creará una nueva"
+" instancia en cada petición. :issue:`2520`."
 
 #: ../../../CHANGES.rst:47
 msgid ""
 "A ``flask.cli.FlaskGroup`` Click group can be nested as a sub-command in a "
 "custom CLI. :issue:`3263`"
 msgstr ""
+"Un grupo de Click ``flask.cli.FlaskGroup`` puede anidarse como subcomando en"
+" una CLI personalizada. :issue:`3263`"
 
 #: ../../../CHANGES.rst:49
 msgid ""
@@ -121,12 +152,18 @@ msgid ""
 "instead of requiring that they are set through environment variables. "
 ":issue:`2836`"
 msgstr ""
+"Añadir las opciones ``--app``, ``--env`` y ``--debug`` a la CLI de "
+"``flask``, en lugar de requerir que se establezcan a través de variables de "
+"entorno. :issue:`2836`"
 
 #: ../../../CHANGES.rst:52
 msgid ""
 "Add ``--env-file`` option to the ``flask`` CLI. This allows specifying a "
 "dotenv file to load in addition to ``.env`` and ``.flaskenv``. :issue:`3108`"
 msgstr ""
+"Añadir la opción ``--env-file`` al CLI de ``flask``. Esto permite "
+"especificar un archivo dotenv para cargar además de ``.env`` y "
+"``.flaskenv``. :issue:`3108`"
 
 #: ../../../CHANGES.rst:55
 msgid ""
@@ -134,36 +171,50 @@ msgid ""
 "``blueprint.cli`` with ``@with_appcontext``, an app context will already be "
 "active at that point. :issue:`2410`"
 msgstr ""
+"Ya no es necesario decorar los comandos CLI personalizados en ``app.cli`` o "
+"``blueprint.cli`` con ``@with_appcontext``, un contexto de aplicación ya "
+"estará activo en ese punto. :issue:`2410`"
 
 #: ../../../CHANGES.rst:58
 msgid ""
 "``SessionInterface.get_expiration_time`` uses a timezone-aware value. "
 ":pr:`4645`"
 msgstr ""
+"``SessionInterface.get_expiration_time`` utiliza un valor que tiene en "
+"cuenta la zona horaria. :pr:`4645`"
 
 #: ../../../CHANGES.rst:60
 msgid ""
 "View functions can return generators directly instead of wrapping them in a "
 "``Response``. :pr:`4629`"
 msgstr ""
+"Las funciones de vista pueden devolver generadores directamente en lugar de "
+"envolverlos en una ``Response``. :pr:`4629`"
 
 #: ../../../CHANGES.rst:62
 msgid ""
 "Add ``stream_template`` and ``stream_template_string`` functions to render a"
 " template as a stream of pieces. :pr:`4629`"
 msgstr ""
+"Añade las funciones ``stream_template`` y ``stream_template_string`` para "
+"representar una plantilla como un flujo de piezas. :pr:`4629`"
 
 #: ../../../CHANGES.rst:64
 msgid ""
 "A new implementation of context preservation during debugging and testing. "
 ":pr:`4666`"
 msgstr ""
+"Una nueva implementación de la preservación del contexto durante la "
+"depuración y las pruebas. :pr:`4666`"
 
 #: ../../../CHANGES.rst:67
 msgid ""
 "``request``, ``g``, and other context-locals point to the correct data when "
 "running code in the interactive debugger console. :issue:`2836`"
 msgstr ""
+"``request``, ``g`` y otras localizaciones de contexto apuntan a los datos "
+"correctos cuando se ejecuta código en la consola del depurador interactivo. "
+":issue:`2836`"
 
 #: ../../../CHANGES.rst:70
 msgid ""
@@ -171,6 +222,9 @@ msgid ""
 "context is preserved. They are also run after the preserved context is "
 "popped."
 msgstr ""
+"Las funciones de desmontaje se ejecutan siempre al final de la solicitud, "
+"incluso si el contexto se conserva. También se ejecutan después de que el "
+"contexto preservado se desprenda."
 
 #: ../../../CHANGES.rst:73
 msgid ""
@@ -178,138 +232,145 @@ msgid ""
 "block. It will be cleaned up when ``response.get_data()`` or "
 "``response.close()`` is called."
 msgstr ""
+"``stream_with_context`` preserva el contexto por separado de un bloque "
+"``with client``. Se limpiará cuando se llame a ``response.get_data()`` o "
+"``response.close()``."
 
 #: ../../../CHANGES.rst:77
 msgid ""
 "Allow returning a list from a view function, to convert it to a JSON "
 "response like a dict is. :issue:`4672`"
 msgstr ""
+"Permitir la devolución de una lista desde una función de vista, para "
+"convertirla en una respuesta JSON como lo es un dict. :issue:`4672`"
 
 #: ../../../CHANGES.rst:82
-#, fuzzy
 msgid "Version 2.1.3"
-msgstr "Versión 2.0.3"
+msgstr "Versión 2.1.3"
 
 #: ../../../CHANGES.rst:86
+#, fuzzy
 msgid ""
 "Inline some optional imports that are only used for certain CLI commands. "
 ":pr:`4606`"
 msgstr ""
+"Inline algunas importaciones opcionales que sólo se utilizan para ciertos "
+"comandos de la CLI. :pr:`4606`"
 
 #: ../../../CHANGES.rst:88
-#, fuzzy
 msgid "Relax type annotation for ``after_request`` functions. :issue:`4600`"
 msgstr ""
-"Corrige la anotación de tipo para los métodos ``teardown_*``. :issue:`4093`"
+"Relaja la anotación de tipo para las funciones ``after_request``. "
+":issue:`4600`"
 
 #: ../../../CHANGES.rst:89
 msgid ""
 "``instance_path`` for namespace packages uses the path closest to the "
 "imported submodule. :issue:`4600`"
 msgstr ""
+"``instance_path`` para los paquetes del espacio de nombres utiliza la ruta "
+"más cercana al submódulo importado. :issue:`4600`"
 
 #: ../../../CHANGES.rst:94
-#, fuzzy
 msgid "Version 2.1.2"
-msgstr "Versión 2.0.2"
+msgstr "Versión 2.1.2"
 
 #: ../../../CHANGES.rst:96
-#, fuzzy
 msgid "Released 2022-04-28"
-msgstr "Publicado el 2022-02-14"
+msgstr "Lanzamiento 2022-04-28"
 
 #: ../../../CHANGES.rst:98
-#, fuzzy
 msgid ""
 "Fix type annotation for ``json.loads``, it accepts str or bytes. "
 ":issue:`4519`"
 msgstr ""
-"Corrige la anotación de tipo para el decorador ``errorhandler``. "
-":issue:`4295`"
+"Corrige la anotación de tipo para ``json.loads``, acepta str o bytes. "
+":issue:`4519`"
 
 #: ../../../CHANGES.rst:100
-#, fuzzy
 msgid ""
 "The ``--cert`` and ``--key`` options on ``flask run`` can be given in either"
 " order. :issue:`4459`"
 msgstr ""
-"Pasa las opciones ``--cert`` y ``--key`` a ``flask run`` para ejecutar el "
-"servidor de desarrollo sobre HTTPS. :pr:`2606`"
+"Las opciones ``--cert`` y ``--key`` en ``flask run`` pueden darse en "
+"cualquier orden. :issue:`4459`"
 
 #: ../../../CHANGES.rst:105
-#, fuzzy
 msgid "Version 2.1.1"
-msgstr "Versión 2.0.1"
+msgstr "Versión 2.1.1"
 
 #: ../../../CHANGES.rst:107
-#, fuzzy
 msgid "Released on 2022-03-30"
-msgstr "Publicado el 2022-02-14"
+msgstr "Lanzamiento 2022-03-30"
 
 #: ../../../CHANGES.rst:109
 msgid ""
 "Set the minimum required version of importlib_metadata to 3.6.0, which is "
 "required on Python < 3.10. :issue:`4502`"
 msgstr ""
+"Establece la versión mínima requerida de importlib_metadata a 3.6.0, que es "
+"necesaria en Python < 3.10. :issue:`4502`"
 
 #: ../../../CHANGES.rst:114
-#, fuzzy
 msgid "Version 2.1.0"
-msgstr "Versión 2.0.0"
+msgstr "Versión 2.1.0"
 
 #: ../../../CHANGES.rst:116
-#, fuzzy
 msgid "Released 2022-03-28"
-msgstr "Publicado el 2022-02-14"
+msgstr "Lanzamiento 2022-03-28"
 
 #: ../../../CHANGES.rst:118
-#, fuzzy
 msgid "Drop support for Python 3.6. :pr:`4335`"
-msgstr "Deja de ser compatible con Python 3.4."
+msgstr "Deja de ser compatible con Python 3.6. :pr:`4335`"
 
 #: ../../../CHANGES.rst:119
 msgid "Update Click dependency to >= 8.0. :pr:`4008`"
-msgstr ""
+msgstr "Actualizar la dependencia de Click a >= 8.0. :pr:`4008`"
 
 #: ../../../CHANGES.rst:122
 msgid "The CLI does not pass ``script_info`` to app factory functions."
 msgstr ""
+"La CLI no pasa ``script_info`` a las funciones de fábrica de la aplicación."
 
 #: ../../../CHANGES.rst:123
 msgid ""
 "``config.from_json`` is replaced by ``config.from_file(name, "
 "load=json.load)``."
 msgstr ""
+"``config.from_json`` se sustituye por ``config.from_file(name, "
+"load=json.load)``."
 
 #: ../../../CHANGES.rst:125
 msgid "``json`` functions no longer take an ``encoding`` parameter."
-msgstr ""
+msgstr "Las funciones ``json`` ya no toman el parámetro ``encoding``."
 
 #: ../../../CHANGES.rst:126
-#, fuzzy
 msgid "``safe_join`` is removed, use ``werkzeug.utils.safe_join`` instead."
 msgstr ""
-"``helpers.safe_join`` está obsoleto. Utiliza ``werkzeug.utils.safe_join`` en"
-" su lugar. :pr:`3828`"
+"Se ha eliminado ``safe_join``, utilice en su lugar "
+"``werkzeug.utils.safe_join``."
 
 #: ../../../CHANGES.rst:128
-#, fuzzy
 msgid "``total_seconds`` is removed, use ``timedelta.total_seconds`` instead."
 msgstr ""
-"``helpers.total_seconds()`` está obsoleto. Utilice "
-"``timedelta.total_seconds()`` en su lugar. :pr:`3962`"
+"Se ha eliminado ``total_seconds``, utilice ``timedelta.total_seconds`` en su"
+" lugar."
 
 #: ../../../CHANGES.rst:130
 msgid ""
 "The same blueprint cannot be registered with the same name. Use ``name=`` "
 "when registering to specify a unique name."
 msgstr ""
+"No se puede registrar el mismo plano con el mismo nombre. Utiliza ``name=`` "
+"cuando te registres para especificar un nombre único."
 
 #: ../../../CHANGES.rst:132
 msgid ""
 "The test client's ``as_tuple`` parameter is removed. Use "
 "``response.request.environ`` instead. :pr:`4417`"
 msgstr ""
+"Se elimina el parámetro ``as_tuple`` del cliente de prueba. Utiliza "
+"``response.request.environ`` en su lugar. :pr:`4417`"
 
 #: ../../../CHANGES.rst:135
 msgid ""
@@ -317,55 +378,64 @@ msgid ""
 " 2.0. The deprecation period for the old names is extended to 2.2. Be sure "
 "to test with deprecation warnings visible."
 msgstr ""
+"Algunos parámetros de ``send_file`` y ``send_from_directory`` fueron "
+"renombrados en la 2.0. El periodo de depreciación de los nombres antiguos se"
+" extiende hasta la 2.2. Asegúrese de probar con las advertencias de "
+"depreciación visibles."
 
 #: ../../../CHANGES.rst:139
 msgid "``attachment_filename`` is renamed to ``download_name``."
-msgstr ""
+msgstr "``attachment_filename`` es renombrado a ``download_name``."
 
 #: ../../../CHANGES.rst:140
 msgid "``cache_timeout`` is renamed to ``max_age``."
-msgstr ""
+msgstr "``cache_timeout`` es renombrado a ``max_age``."
 
 #: ../../../CHANGES.rst:141
 msgid "``add_etags`` is renamed to ``etag``."
-msgstr ""
+msgstr "``add_etags`` es renombrado a ``etag``."
 
 #: ../../../CHANGES.rst:142
 msgid "``filename`` is renamed to ``path``."
-msgstr ""
+msgstr "``filename`` es renombrado a ``path``."
 
 #: ../../../CHANGES.rst:144
 msgid ""
 "The ``RequestContext.g`` property is deprecated. Use ``g`` directly or "
 "``AppContext.g`` instead. :issue:`3898`"
 msgstr ""
+"La propiedad ``RequestContext.g`` está obsoleta. Utilice ``g`` directamente "
+"o ``AppContext.g`` en su lugar. :issue:`3898`"
 
 #: ../../../CHANGES.rst:146
 msgid ""
 "``copy_current_request_context`` can decorate async functions. :pr:`4303`"
 msgstr ""
+"``copy_current_request_context`` puede decorar funciones async. :pr:`4303`"
 
 #: ../../../CHANGES.rst:148
 msgid ""
 "The CLI uses ``importlib.metadata`` instead of ``setuptools`` to load "
 "command entry points. :issue:`4419`"
 msgstr ""
+"La CLI utiliza ``importlib.metadata`` en lugar de ``setuptools`` para cargar"
+" puntos de entrada de comandos. :issue:`4419`"
 
 #: ../../../CHANGES.rst:150
 msgid ""
 "Overriding ``FlaskClient.open`` will not cause an error on redirect. "
 ":issue:`3396`"
 msgstr ""
+"Anular ``FlaskClient.open`` no causará un error en la redirección. "
+":issue:`3396`"
 
 #: ../../../CHANGES.rst:152
-#, fuzzy
 msgid ""
 "Add an ``--exclude-patterns`` option to the ``flask run`` CLI command to "
 "specify patterns that will be ignored by the reloader. :issue:`4188`"
 msgstr ""
-"Añade una opción ``--extra-files`` al comando CLI ``flask run`` para "
-"especificar archivos extra que activarán el recargador al cambiar. "
-":issue:`2897`"
+"Añade una opción ``--exclude-patterns`` al comando CLI ``flask run`` para "
+"especificar patrones que serán ignorados por el recargador. :issue:`4188`"
 
 #: ../../../CHANGES.rst:155
 msgid ""
@@ -373,10 +443,15 @@ msgid ""
 "from the ``flask run`` command remains available in the loader thread. "
 ":issue:`4460`"
 msgstr ""
+"Cuando se utiliza la carga perezosa (por defecto con el depurador), el "
+"contexto Click del comando ``flask run`` permanece disponible en el hilo del"
+" cargador. :issue:`4460`"
 
 #: ../../../CHANGES.rst:158
 msgid "Deleting the session cookie uses the ``httponly`` flag. :issue:`4485`"
 msgstr ""
+"La eliminación de la cookie de sesión utiliza la bandera ``httponly``. "
+":issue:`4485`"
 
 #: ../../../CHANGES.rst:160
 msgid ""
@@ -384,18 +459,26 @@ msgid ""
 "types and decorate the same function multiple times. :issue:`4095, 4295, "
 "4297`"
 msgstr ""
+"Relajar la tipificación de ``errorhandler`` para permitir al usuario "
+"utilizar tipos más precisos y decorar la misma función varias veces. "
+":issue:`4095, 4295, 4297`"
 
 #: ../../../CHANGES.rst:163
 msgid ""
 "Fix typing for ``__exit__`` methods for better compatibility with "
 "``ExitStack``. :issue:`4474`"
 msgstr ""
+"Corregir la tipificación de los métodos ``__exit__`` para mejorar la "
+"compatibilidad con ``ExitStack``. :issue:`4474`"
 
 #: ../../../CHANGES.rst:165
 msgid ""
 "From Werkzeug, for redirect responses the ``Location`` header URL will "
 "remain relative, and exclude the scheme and domain, by default. :pr:`4496`"
 msgstr ""
+"Desde Werkzeug, para las respuestas de redirección la URL de la cabecera "
+"``Location`` seguirá siendo relativa, y excluirá el esquema y el dominio, "
+"por defecto. :pr:`4496`"
 
 #: ../../../CHANGES.rst:168
 msgid ""
@@ -403,6 +486,10 @@ msgid ""
 "variables that start with ``FLASK_`` or another prefix. This parses values "
 "as JSON by default, and allows setting keys in nested dicts. :pr:`4479`"
 msgstr ""
+"Añade ``Config.from_prefixed_env()`` para cargar los valores de "
+"configuración de las variables de entorno que comienzan con ``FLASK_`` u "
+"otro prefijo. Esto analiza los valores como JSON por defecto, y permite "
+"establecer claves en dictos anidados. :pr:`4479`"
 
 #: ../../../CHANGES.rst:175
 msgid "Version 2.0.3"
@@ -610,15 +697,14 @@ msgstr ""
 "``url_prefix``. :issue:`4037`"
 
 #: ../../../CHANGES.rst:239
-#, fuzzy
 msgid ""
 "Revert a change to the order that URL matching was done. The URL is again "
 "matched after the session is loaded, so the session is available in custom "
 "URL converters. :issue:`4053`"
 msgstr ""
-"Revierte un cambio en el orden en que se hizo la coincidencia de URL. La URL"
-" vuelve a coincidir después de que se cargue la sesión, por lo que la sesión"
-" está disponible en los convertidores de URL personalizados. :issue:`4053`"
+"Revertir un cambio en el orden en que se realizaba la coincidencia de URLs. "
+"La URL vuelve a coincidir después de cargar la sesión, por lo que la sesión "
+"está disponible en los conversores de URL personalizados. :issue:`4053`"
 
 #: ../../../CHANGES.rst:242
 msgid ""
@@ -2586,13 +2672,12 @@ msgstr ""
 "analizadores de HTML5."
 
 #: ../../../CHANGES.rst:917
-#, fuzzy
 msgid ""
 "``tojson`` used in templates is now safe by default. This was allowed due to"
 " the different escaping behavior."
 msgstr ""
-"El ``tojson`` utilizado en las plantillas es ahora seguro por defecto. Esto "
-"se permitía debido al diferente comportamiento de escape."
+"``tojson`` utilizado en las plantillas es ahora seguro por defecto. Esto se "
+"permitía debido al diferente comportamiento de escape."
 
 #: ../../../CHANGES.rst:919
 msgid ""
@@ -3120,14 +3205,12 @@ msgstr ""
 "código de la vista antes de tiempo."
 
 #: ../../../CHANGES.rst:1090
-#, fuzzy
 msgid ""
 "Added the ability to register callbacks that are only triggered once at the "
 "beginning of the first request. (``before_first_request``)"
 msgstr ""
 "Se ha añadido la posibilidad de registrar callbacks que sólo se activan una "
-"vez al principio de la primera petición. "
-"(:meth:`Flask.before_first_request`)"
+"vez al principio de la primera petición. (``before_first_request``)"
 
 #: ../../../CHANGES.rst:1092
 msgid ""
@@ -3901,6 +3984,3 @@ msgstr "Lanzamiento 2010-04-16"
 #: ../../../CHANGES.rst:1373
 msgid "First public preview release."
 msgstr "Primer lanzamiento público."
-
-#~ msgid "Unreleased"
-#~ msgstr "Sin publicar"

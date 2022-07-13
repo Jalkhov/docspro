@@ -24,7 +24,6 @@ msgid "Using ``async`` and ``await``"
 msgstr "Uso de ``async`` y ``await``"
 
 #: ../../async-await.rst:8
-#, fuzzy
 msgid ""
 "Routes, error handlers, before request, after request, and teardown "
 "functions can all be coroutine functions if Flask is installed with the "
@@ -32,10 +31,9 @@ msgid ""
 "defined with ``async def`` and use ``await``."
 msgstr ""
 "Las rutas, los manejadores de errores, las funciones antes de la solicitud, "
-"después de la solicitud y el desmontaje pueden ser funciones coroutine si "
-"Flask se instala con el extra ``async`` (``pip install flask[async]``). "
-"Requiere Python 3.7+ donde ``contextvars.ContextVar`` está disponible. Esto "
-"permite definir las vistas con ``async def`` y utilizar ``await``."
+"después de la solicitud y el desmontaje pueden ser funciones coroutinas si "
+"Flask se instala con el extra ``async`` (``pip install flask[async]``). Esto"
+" permite definir las vistas con ``async def`` y utilizar ``await``."
 
 #: ../../async-await.rst:20
 msgid ""
@@ -66,15 +64,17 @@ msgstr ""
 " actualiza a Python 3.9."
 
 #: ../../async-await.rst:32
-#, fuzzy
 msgid "Using ``async`` with greenlet"
-msgstr "Uso de ``async`` y ``await``"
+msgstr "Uso de ``async`` con greenlet"
 
 #: ../../async-await.rst:34
 msgid ""
 "When using gevent or eventlet to serve an application or patch the runtime, "
 "greenlet>=1.0 is required. When using PyPy, PyPy>=7.3.7 is required."
 msgstr ""
+"Cuando se utiliza gevent o eventlet para servir una aplicación o parchear el"
+" tiempo de ejecución, se requiere greenlet>=1.0. Cuando se utiliza PyPy, se "
+"requiere PyPy>=7.3.7."
 
 #: ../../async-await.rst:40
 msgid "Performance"
@@ -142,7 +142,6 @@ msgstr ""
 "tareas en segundo plano, por ejemplo a través de ``asyncio.create_task``."
 
 #: ../../async-await.rst:69
-#, fuzzy
 msgid ""
 "If you wish to use background tasks it is best to use a task queue to "
 "trigger background work, rather than spawn tasks in a view function. With "
@@ -155,8 +154,8 @@ msgstr ""
 "tareas para activar el trabajo en segundo plano, en lugar de generar tareas "
 "en una función de vista. Teniendo esto en cuenta, puedes generar tareas "
 "asyncio sirviendo a Flask con un servidor ASGI y utilizando el adaptador "
-"asgiref WsgiToAsgi como se describe en :ref:`asgi`. Esto funciona porque el "
-"adaptador crea un bucle de eventos que se ejecuta continuamente."
+"asgiref WsgiToAsgi como se describe en :doc:`deploying/asgi`. Esto funciona "
+"ya que el adaptador crea un bucle de eventos que se ejecuta continuamente."
 
 #: ../../async-await.rst:78
 msgid "When to use Quart instead"

@@ -28,34 +28,41 @@ msgid ""
 "`uWSGI`_ is a fast, compiled server suite with extensive configuration and "
 "capabilities beyond a basic server."
 msgstr ""
+"`uWSGI`_ es un conjunto de servidores rápidos y compilados con una amplia "
+"configuración y capacidades que van más allá de un servidor básico."
 
 #: ../../deploying/uwsgi.rst:7
 msgid "It can be very performant due to being a compiled program."
-msgstr ""
+msgstr "Puede ser muy eficiente debido a que es un programa compilado."
 
 #: ../../deploying/uwsgi.rst:8
 msgid ""
 "It is complex to configure beyond the basic application, and has so many "
 "options that it can be difficult for beginners to understand."
 msgstr ""
+"Es complejo de configurar más allá de la aplicación básica, y tiene tantas "
+"opciones que puede ser difícil de entender para los principiantes."
 
 #: ../../deploying/uwsgi.rst:10
 msgid "It does not support Windows (but does run on WSL)."
-msgstr ""
+msgstr "No es compatible con Windows (pero sí con WSL)."
 
 #: ../../deploying/uwsgi.rst:11
 msgid "It requires a compiler to install in some cases."
-msgstr ""
+msgstr "En algunos casos es necesario instalar un compilador."
 
 #: ../../deploying/uwsgi.rst:13
 msgid ""
 "This page outlines the basics of running uWSGI. Be sure to read its "
 "documentation to understand what features are available."
 msgstr ""
+"Esta página describe los aspectos básicos de la ejecución de uWSGI. "
+"Asegúrese de leer su documentación para entender qué características están "
+"disponibles."
 
 #: ../../deploying/uwsgi.rst:20
 msgid "Installing"
-msgstr ""
+msgstr "Instalación"
 
 #: ../../deploying/uwsgi.rst:22
 msgid ""
@@ -64,11 +71,16 @@ msgid ""
 "common platforms. However, it does not provide SSL support, which can be "
 "provided with a reverse proxy instead."
 msgstr ""
+"uWSGI tiene múltiples formas de instalarse. La más sencilla es instalar el "
+"paquete ``pyuwsgi``, que proporciona ruedas precompiladas para plataformas "
+"comunes. Sin embargo, no proporciona soporte SSL, que puede ser "
+"proporcionado con un proxy inverso en su lugar."
 
 #: ../../deploying/uwsgi.rst:27
 msgid ""
 "Create a virtualenv, install your application, then install ``pyuwsgi``."
 msgstr ""
+"Crea un virtualenv, instala tu aplicación y luego instala ``pyuwsgi``."
 
 #: ../../deploying/uwsgi.rst:37
 msgid ""
@@ -76,26 +88,33 @@ msgid ""
 "instead. Or install the ``pyuwsgi`` package from sdist instead of wheel. "
 "Either method will include SSL support."
 msgstr ""
+"Si tienes un compilador disponible, puedes instalar el paquete ``uwsgi`` en "
+"su lugar. O instalar el paquete ``pyuwsgi`` desde sdist en lugar de wheel. "
+"Cualquiera de los dos métodos incluirá soporte para SSL."
 
 #: ../../deploying/uwsgi.rst:50
 msgid "Running"
-msgstr ""
+msgstr "Ejecutando"
 
 #: ../../deploying/uwsgi.rst:52
 msgid ""
 "The most basic way to run uWSGI is to tell it to start an HTTP server and "
 "import your application."
 msgstr ""
+"La forma más básica de ejecutar uWSGI es decirle que inicie un servidor HTTP"
+" e importe su aplicación."
 
 #: ../../deploying/uwsgi.rst:69
 msgid ""
 "If you're using the app factory pattern, you'll need to create a small "
 "Python file to create the app, then point uWSGI at that."
 msgstr ""
+"Si utiliza el patrón de fábrica de aplicaciones, tendrá que crear un pequeño"
+" archivo de Python para crear la aplicación, y luego apuntar a uWSGI."
 
 #: ../../deploying/uwsgi.rst:72
 msgid "``wsgi.py``"
-msgstr ""
+msgstr "``wsgi.py``"
 
 #: ../../deploying/uwsgi.rst:83
 msgid ""
@@ -104,10 +123,14 @@ msgid ""
 " starts 4 worker processes; a starting value could be ``CPU * 2``. The "
 "``-w`` option tells uWSGI how to import your application"
 msgstr ""
+"La opción ``--http`` inicia un servidor HTTP en el puerto 8000 de 127.0.0.1."
+" La opción ``--master`` especifica el gestor de trabajadores estándar. La "
+"opción ``-p`` inicia 4 procesos de trabajo; un valor inicial podría ser "
+"``CPU * 2``. La opción ``-w`` indica a uWSGI cómo importar su aplicación"
 
 #: ../../deploying/uwsgi.rst:90
 msgid "Binding Externally"
-msgstr ""
+msgstr "Vinculación externa"
 
 #: ../../deploying/uwsgi.rst:92
 msgid ""
@@ -118,6 +141,13 @@ msgid ""
 "should be used in front of uWSGI. It is possible to run uWSGI as root "
 "securely, but that is beyond the scope of this doc."
 msgstr ""
+"uWSGI no debe ser ejecutado como root con la configuración mostrada en este "
+"documento porque causaría que el código de su aplicación se ejecute como "
+"root, lo cual no es seguro. Sin embargo, esto significa que no será posible "
+"enlazar con el puerto 80 o 443. En su lugar, debe utilizarse un proxy "
+"inverso como :doc:`nginx` o :doc:`apache-httpd` delante de uWSGI. Es posible"
+" ejecutar uWSGI como root de forma segura, pero eso está fuera del alcance "
+"de este documento."
 
 #: ../../deploying/uwsgi.rst:99
 msgid ""
@@ -126,6 +156,10 @@ msgid ""
 "HTTP proxy. That configuration is beyond the scope of this doc, see the "
 "links for more information."
 msgstr ""
+"uWSGI ha optimizado la integración con `Nginx uWSGI`_ y `Apache "
+"mod_proxy_uwsgi`_, y posiblemente otros servidores, en lugar de utilizar un "
+"proxy HTTP estándar. Esa configuración está más allá del alcance de este "
+"documento, vea los enlaces para más información."
 
 #: ../../deploying/uwsgi.rst:107
 msgid ""
@@ -133,16 +167,22 @@ msgid ""
 " 0.0.0.0:8000`` option. Don't do this when using a reverse proxy setup, "
 "otherwise it will be possible to bypass the proxy."
 msgstr ""
+"Puedes enlazar con todas las IPs externas en un puerto no privilegiado "
+"usando la opción ``--http 0.0.0.0:8000``. No hagas esto cuando utilices una "
+"configuración de proxy inverso, de lo contrario será posible eludir el "
+"proxy."
 
 #: ../../deploying/uwsgi.rst:115
 msgid ""
 "``0.0.0.0`` is not a valid address to navigate to, you'd use a specific IP "
 "address in your browser."
 msgstr ""
+"``0.0.0.0`` no es una dirección válida para navegar, sino que debes utilizar"
+" una dirección IP específica en tu navegador."
 
 #: ../../deploying/uwsgi.rst:120
 msgid "Async with gevent"
-msgstr ""
+msgstr "Async con gevent"
 
 #: ../../deploying/uwsgi.rst:122
 msgid ""
@@ -151,6 +191,11 @@ msgid ""
 "same as Python's ``async/await``, or the ASGI server spec. You must actually"
 " use gevent in your own code to see any benefit to using the worker."
 msgstr ""
+"El sync worker por defecto es apropiado para muchos casos de uso. Si "
+"necesitas soporte asíncrono, uWSGI proporciona un trabajador `gevent`_. Esto"
+" no es lo mismo que el ``async/await`` de Python, o la especificación del "
+"servidor ASGI. Debes usar gevent en tu propio código para ver algún "
+"beneficio al usar el worker."
 
 #: ../../deploying/uwsgi.rst:128
 msgid ""
@@ -158,6 +203,9 @@ msgid ""
 "as ``request`` will not work as expected. When using PyPy, PyPy>=7.3.7 is "
 "required."
 msgstr ""
+"Cuando se utiliza gevent, se requiere greenlet>=1.0, de lo contrario los "
+"contextos locales como ``request`` no funcionarán como se espera. Cuando se "
+"utiliza PyPy, se requiere PyPy>=7.3.7."
 
 #~ msgid ""
 #~ "uWSGI is a deployment option on servers like `nginx`_, `lighttpd`_, and "

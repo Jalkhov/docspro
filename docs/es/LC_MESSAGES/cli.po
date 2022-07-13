@@ -41,25 +41,23 @@ msgid "Application Discovery"
 msgstr "Descubrimiento de aplicaciones"
 
 #: ../../cli.rst:17
-#, fuzzy
 msgid ""
 "The ``flask`` command is installed by Flask, not your application; it must "
 "be told where to find your application in order to use it. The ``--app`` "
 "option is used to specify how to load the application."
 msgstr ""
 "El comando ``flask`` es instalado por Flask, no por tu aplicación; hay que "
-"decirle dónde encontrar tu aplicación para poder usarla. La variable de "
-"entorno ``FLASK_APP`` se utiliza para especificar cómo cargar la aplicación."
+"decirle dónde encontrar tu aplicación para poder usarla. La opción ``--app``"
+" se utiliza para especificar cómo cargar la aplicación."
 
 #: ../../cli.rst:21
-#, fuzzy
 msgid ""
 "While ``--app`` supports a variety of options for specifying your "
 "application, most use cases should be simple. Here are the typical values:"
 msgstr ""
-"Aunque ``FLASK_APP`` admite una variedad de opciones para especificar su "
-"aplicación, la mayoría de los casos de uso deberían ser simples. Estos son "
-"los valores típicos:"
+"Aunque ``--app`` admite una variedad de opciones para especificar su "
+"aplicación, la mayoría de los casos de uso deberían ser sencillos. Estos son"
+" los valores típicos:"
 
 #: ../../cli.rst:27
 msgid "(nothing)"
@@ -77,7 +75,7 @@ msgstr ""
 
 #: ../../cli.rst:31
 msgid "``--app hello``"
-msgstr ""
+msgstr "``--app hello``"
 
 #: ../../cli.rst:30
 msgid ""
@@ -88,7 +86,6 @@ msgstr ""
 "(``app`` o ``application``) o fábrica (``create_app`` o ``make_app``)."
 
 #: ../../cli.rst:35
-#, fuzzy
 msgid ""
 "``--app`` has three parts: an optional path that sets the current working "
 "directory, a Python file or dotted import path, and an optional variable "
@@ -96,16 +93,15 @@ msgid ""
 " be followed by arguments in parentheses. The following values demonstrate "
 "these parts:"
 msgstr ""
-"``FLASK_APP`` tiene tres partes: Una ruta opcional que establece el "
-"directorio de trabajo actual, un archivo de Python o una ruta de importación"
-" con puntos, y un nombre variable opcional de la instancia o fábrica. Si el "
+"``--app`` tiene tres partes: una ruta opcional que establece el directorio "
+"de trabajo actual, un archivo de Python o una ruta de importación con "
+"puntos, y un nombre variable opcional de la instancia o fábrica. Si el "
 "nombre es una fábrica, puede ir opcionalmente seguido de argumentos entre "
 "paréntesis. Los siguientes valores demuestran estas partes:"
 
 #: ../../cli.rst:42
-#, fuzzy
 msgid "``--app src/hello``"
-msgstr "``FLASK_APP=src/hello``"
+msgstr "``--app src/hello``"
 
 #: ../../cli.rst:42
 msgid "Sets the current working directory to ``src`` then imports ``hello``."
@@ -114,27 +110,24 @@ msgstr ""
 "``hello``."
 
 #: ../../cli.rst:45
-#, fuzzy
 msgid "``--app hello.web``"
-msgstr "``FLASK_APP=hello.web``"
+msgstr "``--app hello.web``"
 
 #: ../../cli.rst:45
 msgid "Imports the path ``hello.web``."
 msgstr "Imports the path ``hello.web``."
 
 #: ../../cli.rst:48
-#, fuzzy
 msgid "``--app hello:app2``"
-msgstr "``FLASK_APP=hello:app2``"
+msgstr "``--app hello:app2``"
 
 #: ../../cli.rst:48
 msgid "Uses the ``app2`` Flask instance in ``hello``."
 msgstr "Utiliza la instancia de Flask de ``app2`` en ``hello``."
 
 #: ../../cli.rst:52
-#, fuzzy
 msgid "``--app 'hello:create_app(\"dev\")'``"
-msgstr "``FLASK_APP=\"hello:create_app('dev')\"``"
+msgstr "``--app 'hello:create_app(\"dev\")'``"
 
 #: ../../cli.rst:51
 msgid ""
@@ -145,15 +138,14 @@ msgstr ""
 "como argumento."
 
 #: ../../cli.rst:54
-#, fuzzy
 msgid ""
 "If ``--app`` is not set, the command will try to import \"app\" or \"wsgi\" "
 "(as a \".py\" file, or package) and try to detect an application instance or"
 " factory."
 msgstr ""
-"Si ``FLASK_APP`` no está establecido, el comando intentará importar \"app\" "
-"o \"wsgi\" (como un archivo \".py\", o paquete) e intentará detectar una "
-"instancia o fábrica de aplicaciones."
+"Si ``--app`` no se establece, el comando tratará de importar \"app\" o "
+"\"wsgi\" (como un archivo \".py\", o paquete) y tratará de detectar una "
+"instancia de aplicación o fábrica."
 
 #: ../../cli.rst:58
 msgid ""
@@ -246,6 +238,12 @@ msgid ""
 "other recognized environment is ``development``. Flask and extensions may "
 "choose to enable behaviors based on the environment."
 msgstr ""
+"El entorno en el que se ejecuta la aplicación Flask se establece mediante la"
+" variable de entorno ``FLASK_ENV``. Cuando se utiliza el comando ``flask``, "
+"también se puede establecer con la opción ``--env``. Si no se establece, el "
+"valor por defecto es ``production``. El otro entorno reconocido es "
+"``development``. Flask y las extensiones pueden elegir habilitar "
+"comportamientos basados en el entorno."
 
 #: ../../cli.rst:117
 msgid ""
@@ -262,7 +260,6 @@ msgid "Watch Extra Files with the Reloader"
 msgstr "Vigilar los archivos extra con el Recargador"
 
 #: ../../cli.rst:136
-#, fuzzy
 msgid ""
 "When using development mode, the reloader will trigger whenever your Python "
 "code or imported modules change. The reloader can watch additional files "
@@ -270,15 +267,13 @@ msgid ""
 "or ``;`` on Windows."
 msgstr ""
 "Cuando se utiliza el modo de desarrollo, el recargador se activará cada vez "
-"que tu código Python o los módulos importados cambien. El recargador puede "
-"ver archivos adicionales con la opción ``--extra-files``, o la variable de "
-"entorno ``FLASK_RUN_EXTRA_FILES``. Las rutas múltiples se separan con ``:``,"
-" o ``;`` en Windows."
+"que el código Python o los módulos importados cambien. El recargador puede "
+"observar archivos adicionales con la opción ``--extra-files``. Las rutas "
+"múltiples se separan con ``:``, o ``;`` en Windows."
 
 #: ../../cli.rst:149
-#, fuzzy
 msgid "Ignore files with the Reloader"
-msgstr "Vigilar los archivos extra con el Recargador"
+msgstr "Ignorar archivos con el Reloader"
 
 #: ../../cli.rst:151
 msgid ""
@@ -286,6 +281,9 @@ msgid ""
 "``--exclude-patterns`` option. Multiple patterns are separated with ``:``, "
 "or ``;`` on Windows."
 msgstr ""
+"El recargador también puede ignorar los archivos que utilizan patrones "
+":mod:`fnmatch` con la opción ``--exclude-patterns``. Los patrones múltiples "
+"se separan con ``:``, o ``;`` en Windows."
 
 #: ../../cli.rst:157
 msgid "Debug Mode"
@@ -298,6 +296,10 @@ msgid ""
 "separately, use the ``--debug/--no-debug`` option or the ``FLASK_DEBUG`` "
 "environment variable."
 msgstr ""
+"El modo de depuración se activará cuando el entorno de ejecución sea "
+"``development``, como se ha descrito anteriormente. Si desea controlar el "
+"modo de depuración por separado, utilice la opción ``--debug/--no-debug`` o "
+"la variable de entorno ``FLASK_DEBUG``."
 
 #: ../../cli.rst:168
 msgid "Environment Variables From dotenv"
@@ -309,20 +311,23 @@ msgid ""
 "environment variables. The variables are named like ``FLASK_OPTION`` or "
 "``FLASK_COMMAND_OPTION``, for example ``FLASK_APP`` or ``FLASK_RUN_PORT``."
 msgstr ""
+"El comando ``flask`` permite establecer cualquier opción para cualquier "
+"comando con variables de entorno. Las variables se denominan "
+"``FLASK_OPTION`` o ``FLASK_COMMAND_OPTION``, por ejemplo ``FLASK_APP`` o "
+"``FLASK_RUN_PORT``."
 
 #: ../../cli.rst:175
-#, fuzzy
 msgid ""
 "Rather than passing options every time you run a command, or environment "
 "variables every time you open a new terminal, you can use Flask's dotenv "
 "support to set environment variables automatically."
 msgstr ""
-"En lugar de establecer ``FLASK_APP`` cada vez que abra un nuevo terminal, "
-"puede utilizar el soporte dotenv de Flask para establecer las variables de "
-"entorno automáticamente."
+"En lugar de pasar opciones cada vez que se ejecuta un comando, o variables "
+"de entorno cada vez que se abre un nuevo terminal, se puede utilizar el "
+"soporte dotenv de Flask para establecer variables de entorno "
+"automáticamente."
 
 #: ../../cli.rst:179
-#, fuzzy
 msgid ""
 "If `python-dotenv`_ is installed, running the ``flask`` command will set "
 "environment variables defined in the files ``.env`` and ``.flaskenv``. You "
@@ -331,12 +336,13 @@ msgid ""
 "manually, and to set configuration using environment variables similar to "
 "how some deployment services work."
 msgstr ""
-"Si `python-dotenv`_ está instalado, la ejecución del comando ``flask`` "
-"establecerá las variables de entorno definidas en los archivos :file:`.env` "
-"y :file:`.flaskenv`. Esto se puede utilizar para evitar tener que establecer"
-" ``FLASK_APP`` manualmente cada vez que se abre un nuevo terminal, y para "
-"establecer la configuración mediante variables de entorno de forma similar a"
-" como funcionan algunos servicios de despliegue."
+"Si `python-dotenv`_ está instalado, al ejecutar el comando ``flask`` se "
+"establecerán las variables de entorno definidas en los archivos ``.env`` y "
+"``.flaskenv``. También puedes especificar un archivo extra para cargar con "
+"la opción ``--env-file``. Los archivos Dotenv se pueden utilizar para evitar"
+" tener que establecer ``--app`` o ``FLASK_APP`` manualmente, y para "
+"establecer la configuración utilizando variables de entorno de forma similar"
+" a como funcionan algunos servicios de despliegue."
 
 #: ../../cli.rst:186
 msgid ""
@@ -357,6 +363,8 @@ msgid ""
 "Directories are scanned upwards from the directory you call ``flask`` from "
 "to locate the files."
 msgstr ""
+"Los directorios se exploran hacia arriba desde el directorio desde el que se"
+" llama a ``flask`` para localizar los archivos."
 
 #: ../../cli.rst:194
 msgid ""
@@ -564,6 +572,13 @@ msgid ""
 ":func:`~cli.with_appcontext` decorator can be used to get the same behavior,"
 " but is not needed in most cases."
 msgstr ""
+"Los comandos añadidos usando el decorador :attr:`~Flask.cli` o "
+":class:`~flask.cli.FlaskGroup` :meth:`~cli.AppGroup.command` de la "
+"aplicación se ejecutarán con un contexto de aplicación empujado, por lo que "
+"tus comandos y parámetros personalizados tienen acceso a la aplicación y su "
+"configuración. El decorador :func:`~cli.with_appcontext` puede utilizarse "
+"para obtener el mismo comportamiento, pero no es necesario en la mayoría de "
+"los casos."
 
 #: ../../cli.rst:461
 msgid "Plugins"
@@ -602,7 +617,6 @@ msgid "Custom Scripts"
 msgstr "Scripts personalizados"
 
 #: ../../cli.rst:500
-#, fuzzy
 msgid ""
 "When you are using the app factory pattern, it may be more convenient to "
 "define your own Click script. Instead of using ``--app`` and letting Flask "
@@ -610,9 +624,9 @@ msgid ""
 " a `console script`_ entry point."
 msgstr ""
 "Cuando se utiliza el patrón de fábrica de aplicaciones, puede ser más "
-"conveniente definir su propio script Click. En lugar de usar ``FLASK_APP`` y"
-" dejar que Flask cargue tu aplicación, puedes crear tu propio objeto Click y"
-" exportarlo como un punto de entrada de `console script`_."
+"conveniente definir su propio script Click. En lugar de usar ``--app`` y "
+"dejar que Flask cargue tu aplicación, puedes crear tu propio objeto Click y "
+"exportarlo como un punto de entrada de `script de consola`_."
 
 #: ../../cli.rst:505
 msgid ""
@@ -624,14 +638,13 @@ msgid "Define the entry point in :file:`setup.py`::"
 msgstr "Definir el entry point en :file:`setup.py`::"
 
 #: ../../cli.rst:534
-#, fuzzy
 msgid ""
 "Install the application in the virtualenv in editable mode and the custom "
 "script is available. Note that you don't need to set ``--app``. ::"
 msgstr ""
 "Instala la aplicación en el virtualenv en modo editable y el script "
 "personalizado estará disponible. Tenga en cuenta que no es necesario "
-"establecer ``FLASK_APP``. ::"
+"establecer ``--app``. ::"
 
 #: ../../cli.rst:540
 msgid "Errors in Custom Scripts"
@@ -680,7 +693,7 @@ msgstr ""
 " ve a *Edit Configurations*. Te aparecerá una pantalla similar a esta:"
 
 msgid "Screenshot of PyCharms's run configuration settings."
-msgstr ""
+msgstr "Captura de pantalla de la configuración de ejecución de PyCharms."
 
 #: ../../cli.rst:569
 msgid ""
@@ -774,72 +787,3 @@ msgstr ""
 "Ahora que tenemos una configuración que ejecuta ``flask run`` desde PyCharm,"
 " podemos copiar esa configuración y alterar el argumento *Script* para "
 "ejecutar un comando CLI diferente, por ejemplo ``flask shell``."
-
-#~ msgid ""
-#~ "Directories are scanned upwards from the directory you call ``flask`` from "
-#~ "to locate the files. The current working directory will be set to the "
-#~ "location of the file, with the assumption that that is the top level project"
-#~ " directory."
-#~ msgstr ""
-#~ "Los directorios se exploran hacia arriba desde el directorio desde el que se"
-#~ " llama a ``flask`` para localizar los archivos. El directorio de trabajo "
-#~ "actual se establecerá en la ubicación del archivo, con la suposición de que "
-#~ "ese es el directorio de nivel superior del proyecto."
-
-#~ msgid "Screenshot of PyCharms's run configuration settings."
-#~ msgstr "Captura de pantalla de la configuración de ejecución de PyCharms."
-
-#~ msgid "``FLASK_APP=hello``"
-#~ msgstr "``FLASK_APP=hello``"
-
-#~ msgid ""
-#~ "The environment in which the Flask app runs is set by the "
-#~ ":envvar:`FLASK_ENV` environment variable. If not set it defaults to "
-#~ "``production``. The other recognized environment is ``development``. Flask "
-#~ "and extensions may choose to enable behaviors based on the environment."
-#~ msgstr ""
-#~ "El entorno en el que se ejecuta la aplicación Flask se establece mediante la"
-#~ " variable de entorno :envvar:`FLASK_ENV`. Si no se establece, es por defecto"
-#~ " ``production``. El otro entorno reconocido es ``development``. Flask y las "
-#~ "extensiones pueden elegir habilitar comportamientos basados en el entorno."
-
-#~ msgid ""
-#~ "The reloader can also ignore files using :mod:`fnmatch` patterns with the "
-#~ "``--exclude-patterns`` option, or the ``FLASK_RUN_EXCLUDE_PATTERNS`` "
-#~ "environment variable. Multiple patterns are separated with ``:``, or ``;`` "
-#~ "on Windows."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Debug mode will be enabled when :envvar:`FLASK_ENV` is ``development``, as "
-#~ "described above. If you want to control debug mode separately, use "
-#~ ":envvar:`FLASK_DEBUG`. The value ``1`` enables it, ``0`` disables it."
-#~ msgstr ""
-#~ "El modo de depuración se activará cuando :envvar:`FLASK_ENV` sea "
-#~ "``development``, como se ha descrito anteriormente. Si desea controlar el "
-#~ "modo de depuración por separado, utilice :envvar:`FLASK_DEBUG`. El valor "
-#~ "``1`` lo activa, ``0`` lo desactiva."
-
-#~ msgid ""
-#~ "Commands added using the Flask app's :attr:`~Flask.cli` "
-#~ ":meth:`~cli.AppGroup.command` decorator will be executed with an application"
-#~ " context pushed, so your command and extensions have access to the app and "
-#~ "its configuration. If you create a command using the Click "
-#~ ":func:`~click.command` decorator instead of the Flask decorator, you can use"
-#~ " :func:`~cli.with_appcontext` to get the same behavior. ::"
-#~ msgstr ""
-#~ "Los comandos añadidos usando el decorador :attr:`~Flask.cli` "
-#~ ":meth:`~cli.AppGroup.command` de la aplicación se ejecutarán con un contexto"
-#~ " de aplicación empujado, por lo que tu comando y las extensiones tienen "
-#~ "acceso a la aplicación y su configuración. Si creas un comando usando el "
-#~ "decorador Click :func:`~click.command` en lugar del decorador Flask, puedes "
-#~ "usar :func:`~cli.with_appcontext` para obtener el mismo comportamiento. ::"
-
-#~ msgid ""
-#~ "If you're sure a command doesn't need the context, you can disable it::"
-#~ msgstr ""
-#~ "Si estás seguro de que un comando no necesita el contexto, puedes "
-#~ "desactivarlo::"
-
-#~ msgid "Captura de pantalla de la configuración de ejecución de PyCharms."
-#~ msgstr ""

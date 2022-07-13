@@ -24,7 +24,7 @@ msgid "Welcome to Flask"
 msgstr "Bienvenido a Flask"
 
 msgid "Flask: web development, one drop at a time"
-msgstr ""
+msgstr "Flask: desarrollo web, una gota a la vez"
 
 #: ../../index.rst:11
 msgid ""
@@ -96,9 +96,3 @@ msgid ""
 msgstr ""
 "Las notas de diseño, la información legal y el registro de cambios están "
 "aquí para los interesados."
-
-#~ msgid "Flask: web development, one drop at a time"
-#~ msgstr "Flask: desarrollo web, una gota a la vez"
-
-#~ msgid "Flask: desarrollo web, una gota a la vez"
-#~ msgstr ""

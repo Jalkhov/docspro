@@ -176,13 +176,12 @@ msgstr ""
 "`Waitress`_, primero instálalo en el entorno virtual:"
 
 #: ../../tutorial/deploy.rst:103
-#, fuzzy
 msgid ""
 "You need to tell Waitress about your application, but it doesn't use "
 "``--app`` like ``flask run`` does. You need to tell it to import and call "
 "the application factory to get an application object."
 msgstr ""
-"Necesitas decirle a Waitress sobre tu aplicación, pero no usa ``FLASK_APP`` "
+"Necesitas decirle a Waitress sobre tu aplicación, pero no utiliza ``--app`` "
 "como lo hace ``flask run``. Tienes que decirle que importe y llame a la "
 "fábrica de aplicaciones para obtener un objeto de aplicación."
 

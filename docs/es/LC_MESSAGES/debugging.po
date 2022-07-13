@@ -78,7 +78,7 @@ msgstr ""
 " durante el desarrollo."
 
 msgid "screenshot of debugger in action"
-msgstr ""
+msgstr "captura de pantalla del depurador en acción"
 
 #: ../../debugging.rst:37
 msgid ""
@@ -92,16 +92,15 @@ msgstr ""
 "entorno de producción."
 
 #: ../../debugging.rst:42
-#, fuzzy
 msgid ""
 "To enable the debugger, run the development server with the environment set "
 "to ``development``. This puts Flask in debug mode, which changes how it "
 "handles some errors, and enables the debugger and reloader."
 msgstr ""
-"Para habilitar el depurador, ejecuta el servidor de desarrollo con la "
-"variable de entorno ``FLASK_ENV`` establecida en ``development``. Esto pone "
-"a Flask en modo de depuración, lo que cambia la forma en que maneja algunos "
-"errores, y habilita el depurador y el recargador."
+"Para habilitar el depurador, ejecuta el servidor de desarrollo con el "
+"entorno establecido en ``development``. Esto pone a Flask en modo de "
+"depuración, lo que cambia la forma en que maneja algunos errores, y habilita"
+" el depurador y el recargador."
 
 #: ../../debugging.rst:50
 msgid ""
@@ -111,6 +110,11 @@ msgid ""
 "with the ``--debug/--no-debug`` option or the ``FLASK_DEBUG`` environment "
 "variable."
 msgstr ""
+"``FLASK_ENV`` también se puede establecer como una variable de entorno. "
+"Cuando se ejecuta desde el código de Python, pasar ``debug=True`` habilita "
+"el modo de depuración, que es mayormente equivalente. El modo de depuración "
+"se puede controlar por separado del entorno con la opción ``--debug/--no-"
+"debug`` o la variable de entorno ``FLASK_DEBUG``."
 
 #: ../../debugging.rst:60
 msgid ""
@@ -171,36 +175,3 @@ msgstr ""
 "depurador externo pueda hacerlo. Si el recargador no está deshabilitado, "
 "podría causar una recarga inesperada si el código cambia durante la "
 "depuración."
-
-#~ msgid "screenshot of debugger in action"
-#~ msgstr "captura de pantalla del depurador en acción"
-
-#~ msgid "captura de pantalla del depurador en acción"
-#~ msgstr ""
-
-#~ msgid "Bash"
-#~ msgstr "Bash"
-
-#~ msgid "Fish"
-#~ msgstr "Fish"
-
-#~ msgid "CMD"
-#~ msgstr "CMD"
-
-#~ msgid "Powershell"
-#~ msgstr "Powershell"
-
-#~ msgid ""
-#~ "``FLASK_ENV`` can only be set as an environment variable. When running from "
-#~ "Python code, passing ``debug=True`` enables debug mode, which is mostly "
-#~ "equivalent. Debug mode can be controlled separately from ``FLASK_ENV`` with "
-#~ "the ``FLASK_DEBUG`` environment variable as well."
-#~ msgstr ""
-#~ "``FLASK_ENV`` sólo puede establecerse como una variable de entorno. Cuando "
-#~ "se ejecuta desde el código de Python, al pasar ``debug=True`` se activa el "
-#~ "modo de depuración, que es mayormente equivalente. El modo de depuración se "
-#~ "puede controlar por separado de ``FLASK_ENV`` con la variable de entorno "
-#~ "``FLASK_DEBUG``."
-
-#~ msgid "When running from the command line:"
-#~ msgstr "Cuando se ejecuta desde la línea de comandos:"

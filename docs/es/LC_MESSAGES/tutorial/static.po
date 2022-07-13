@@ -85,7 +85,7 @@ msgstr ""
 "captura de pantalla de abajo."
 
 msgid "screenshot of login page"
-msgstr ""
+msgstr "captura de pantalla de la página de inicio de sesión"
 
 #: ../../tutorial/static.rst:66
 msgid ""
@@ -100,9 +100,3 @@ msgstr ""
 #: ../../tutorial/static.rst:72
 msgid "Continue to :doc:`blog`."
 msgstr "Continuar con :doc:`blog`."
-
-#~ msgid "screenshot of login page"
-#~ msgstr "captura de pantalla de la página de inicio de sesión"
-
-#~ msgid "captura de pantalla de la página de inicio de sesión"
-#~ msgstr ""

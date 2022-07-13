@@ -258,18 +258,16 @@ msgstr ""
 " anterior."
 
 #: ../../tutorial/database.rst:194
-#, fuzzy
 msgid ""
 "If you're still running the server from the previous page, you can either "
 "stop the server, or run this command in a new terminal. If you use a new "
 "terminal, remember to change to your project directory and activate the env "
 "as described in :doc:`/installation`."
 msgstr ""
-"Si todavía está ejecutando el servidor de la página anterior, puede detener "
-"el servidor o ejecutar este comando en un nuevo terminal. Si usas un nuevo "
-"terminal, recuerda cambiar al directorio de tu proyecto y activar la env "
-"como se describe en :doc:`/installation`. También necesitarás configurar "
-"``FLASK_APP`` y ``FLASK_ENV`` como se muestra en la página anterior."
+"Si todavía estás ejecutando el servidor de la página anterior, puedes parar "
+"el servidor o ejecutar este comando en un nuevo terminal. Si utilizas un "
+"nuevo terminal, recuerda cambiar al directorio de tu proyecto y activar el "
+"env como se describe en :doc:`/installation`."
 
 #: ../../tutorial/database.rst:199
 msgid "Run the ``init-db`` command:"

@@ -201,7 +201,7 @@ msgstr "|Y| [1]_"
 
 #: ../../htmlfaq.rst:111
 msgid "Yes"
-msgstr ""
+msgstr "Sí"
 
 #: ../../htmlfaq.rst:80 ../../htmlfaq.rst:82 ../../htmlfaq.rst:84
 #: ../../htmlfaq.rst:88 ../../htmlfaq.rst:91 ../../htmlfaq.rst:93
@@ -473,12 +473,3 @@ msgid ""
 msgstr ""
 "Para la mayoría de las aplicaciones, es sin duda mejor utilizar HTML5 que "
 "XTML."
-
-#~ msgid "Yes"
-#~ msgstr "Sí"
-
-#~ msgid "Si"
-#~ msgstr "Si"
-
-#~ msgid "Sí"
-#~ msgstr ""

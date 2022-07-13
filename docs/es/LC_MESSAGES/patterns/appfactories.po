@@ -144,23 +144,21 @@ msgstr ""
 ":command:`flask`:"
 
 #: ../../patterns/appfactories.rst:96
-#, fuzzy
 msgid ""
 "Flask will automatically detect the factory if it is named ``create_app`` or"
 " ``make_app`` in ``hello``. You can also pass arguments to the factory like "
 "this:"
 msgstr ""
-"Flask detectará automáticamente la fábrica (``create_app`` o ``make_app``) "
-"en ``miapp``. También puedes pasar argumentos a la fábrica así:"
+"Flask detectará automáticamente la fábrica si se llama ``create_app`` o "
+"``make_app`` en ``hello``. También puedes pasar argumentos a la fábrica así:"
 
 #: ../../patterns/appfactories.rst:104
-#, fuzzy
 msgid ""
 "Then the ``create_app`` factory in ``myapp`` is called with the keyword "
 "argument ``local_auth=True``. See :doc:`/cli` for more detail."
 msgstr ""
-"Entonces se llama a la fábrica ``create_app`` en ``miapp`` con la cadena "
-"``'dev'`` como argumento. Ver :doc:`/cli` para más detalles."
+"Entonces se llama a la fábrica ``create_app`` en ``myapp`` con el argumento "
+"clave ``local_auth=True``. Consulta :doc:`/cli` para más detalles."
 
 #: ../../patterns/appfactories.rst:108
 msgid "Factory Improvements"

@@ -95,11 +95,8 @@ msgstr ""
 "aplicación de Flask y enganchándolo con la configuración de Flask."
 
 #: ../../patterns/celery.rst:37
-#, fuzzy
 msgid "This is all that is necessary to integrate Celery with Flask:"
-msgstr ""
-"Esto es todo lo que se necesita para integrar adecuadamente Celery con "
-"Flask::"
+msgstr "Esto es todo lo que se necesita para integrar Celery con Flask:"
 
 #: ../../patterns/celery.rst:55
 msgid ""
@@ -118,6 +115,8 @@ msgid ""
 "Celery 5.x deprecated uppercase configuration keys, and 6.x will remove "
 "them. See their official `migration guide`_."
 msgstr ""
+"Celery 5.x desaprobó las claves de configuración en mayúsculas, y la 6.x las"
+" eliminará. Consulte su `guía de migración`_ oficial."
 
 #: ../../patterns/celery.rst:67
 msgid "An example task"

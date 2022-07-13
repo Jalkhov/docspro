@@ -312,7 +312,6 @@ msgstr ""
 "en Flask."
 
 #: ../../errorhandling.rst:154
-#, fuzzy
 msgid ""
 "Flask gives you the ability to raise any HTTP exception registered by "
 "Werkzeug. However, the default HTTP exceptions return simple exception "
@@ -321,8 +320,8 @@ msgid ""
 msgstr ""
 "Flask te da la posibilidad de lanzar cualquier excepción HTTP registrada por"
 " Werkzeug. Sin embargo, las excepciones HTTP por defecto devuelven simples "
-"páginas de excepción. Es posible que desee mostrar páginas de error "
-"personalizadas al usuario cuando se produce un error. Esto se puede hacer "
+"páginas de excepción. Es posible que quieras mostrar páginas de error "
+"personalizadas al usuario cuando se produzca un error. Esto se puede hacer "
 "registrando manejadores de error."
 
 #: ../../errorhandling.rst:159

@@ -93,30 +93,26 @@ msgstr ""
 "Flask."
 
 #: ../../quickstart.rst:42
-#, fuzzy
 msgid ""
 "To run the application, use the ``flask`` command or ``python -m flask``. "
 "You need to tell the Flask where your application is with the ``-app`` "
 "option."
 msgstr ""
-"Para ejecutar la aplicación, utiliza el comando :command:`flask` o "
-":command:`python -m flask`. Antes de que puedas hacer eso necesitas decirle "
-"a tu terminal la aplicación con la que debe trabajar exportando la variable "
-"de entorno ``FLASK_APP``:"
+"Para ejecutar la aplicación, utiliza el comando ``flask`` o ``python -m "
+"flask``. Tienes que decirle a Flask dónde está tu aplicación con la opción "
+"``-app``."
 
 #: ../../quickstart.rst:52
 msgid "Application Discovery Behavior"
 msgstr "Comportamiento del descubrimiento de aplicaciones"
 
 #: ../../quickstart.rst:54
-#, fuzzy
 msgid ""
 "As a shortcut, if the file is named ``app.py`` or ``wsgi.py``, you don't "
 "have to use ``--app``. See :doc:`/cli` for more details."
 msgstr ""
-"Como atajo, si el archivo se llama ``app.py`` o ``wsgi.py``, no es necesario"
-" establecer la variable de entorno ``FLASK_APP``. Para más detalles, véase "
-":doc:`/cli`."
+"Como atajo, si el archivo se llama ``app.py`` o ``wsgi.py``, no tienes que "
+"usar ``--app``. Consulta :doc:`/cli` para más detalles."
 
 #: ../../quickstart.rst:57
 msgid ""
@@ -194,7 +190,7 @@ msgstr ""
 "el navegador si se produce un error durante una solicitud."
 
 msgid "The interactive debugger in action."
-msgstr ""
+msgstr "El depurador interactivo en acción."
 
 #: ../../quickstart.rst:102
 msgid ""
@@ -208,13 +204,12 @@ msgstr ""
 "entorno de producción."
 
 #: ../../quickstart.rst:107
-#, fuzzy
 msgid ""
 "To enable all development features, set the ``--env`` option to "
 "``development``."
 msgstr ""
-"Para habilitar todas las funciones de desarrollo, establece la variable de "
-"entorno ``FLASK_ENV`` como ``development`` antes de llamar a ``flask run``."
+"Para habilitar todas las funciones de desarrollo, establezca la opción "
+"``--env`` como ``development``."
 
 #: ../../quickstart.rst:121
 msgid "See also:"
@@ -516,6 +511,8 @@ msgid ""
 "The example above keeps all methods for the route within one function, which"
 " can be useful if each part uses some common data."
 msgstr ""
+"El ejemplo anterior mantiene todos los métodos para la ruta dentro de una "
+"función, lo que puede ser útil si cada parte utiliza algunos datos comunes."
 
 #: ../../quickstart.rst:319
 msgid ""
@@ -524,6 +521,10 @@ msgid ""
 ":meth:`~flask.Flask.get`, :meth:`~flask.Flask.post`, etc. for each common "
 "HTTP method."
 msgstr ""
+"También puedes separar las vistas para diferentes métodos en diferentes "
+"funciones. Flask proporciona un atajo para decorar dichas rutas con "
+":meth:`~flask.Flask.get`, :meth:`~flask.Flask.post`, etc. para cada método "
+"HTTP común."
 
 #: ../../quickstart.rst:334
 msgid ""
@@ -1037,7 +1038,6 @@ msgid "About Responses"
 msgstr "Acerca de las respuestas"
 
 #: ../../quickstart.rst:680
-#, fuzzy
 msgid ""
 "The return value from a view function is automatically converted into a "
 "response object for you. If the return value is a string it's converted into"
@@ -1050,9 +1050,9 @@ msgstr ""
 "en un objeto de respuesta. Si el valor devuelto es una cadena, se convierte "
 "en un objeto de respuesta con la cadena como cuerpo de la respuesta, un "
 "código de estado ``200 OK`` y un mimetype:`text/html`. Si el valor de "
-"retorno es un dict, se llama a :func:`jsonify` para producir una respuesta. "
-"La lógica que aplica Flask para convertir los valores de retorno en objetos "
-"de respuesta es la siguiente:"
+"retorno es un dict o una lista, se llama a :func:`jsonify` para producir una"
+" respuesta. La lógica que aplica Flask para convertir los valores de retorno"
+" en objetos de respuesta es la siguiente:"
 
 #: ../../quickstart.rst:688
 msgid ""
@@ -1075,13 +1075,16 @@ msgid ""
 "If it's an iterator or generator returning strings or bytes, it is treated "
 "as a streaming response."
 msgstr ""
+"Si se trata de un iterador o generador que devuelve cadenas o bytes, se "
+"trata como una respuesta de flujo."
 
 #: ../../quickstart.rst:694
-#, fuzzy
 msgid ""
 "If it's a dict or list, a response object is created using "
 ":func:`~flask.json.jsonify`."
-msgstr "Si es un dict, se crea un objeto response usando ``jsonify``."
+msgstr ""
+"Si es un dict o una lista, se crea un objeto de respuesta utilizando "
+":func:`~flask.json.jsonify`."
 
 #: ../../quickstart.rst:696
 msgid ""
@@ -1132,15 +1135,14 @@ msgid "APIs with JSON"
 msgstr "APIs con JSON"
 
 #: ../../quickstart.rst:732
-#, fuzzy
 msgid ""
 "A common response format when writing an API is JSON. It's easy to get "
 "started writing such an API with Flask. If you return a ``dict`` or ``list``"
 " from a view, it will be converted to a JSON response."
 msgstr ""
 "Un formato de respuesta común al escribir una API es JSON. Es fácil empezar "
-"a escribir una API de este tipo con Flask. Si devuelves un ``dict`` desde "
-"una vista, se convertirá en una respuesta JSON."
+"a escribir una API de este tipo con Flask. Si devuelves un ``dict`` o "
+"``list`` desde una vista, se convertirá en una respuesta JSON."
 
 #: ../../quickstart.rst:752
 msgid ""
@@ -1148,6 +1150,10 @@ msgid ""
 "function, which will serialize any supported JSON data type. That means that"
 " all the data in the dict or list must be JSON serializable."
 msgstr ""
+"Este es un atajo para pasar los datos a la función "
+":func:`~flask.json.jsonify`, que serializará cualquier tipo de datos JSON "
+"soportado. Esto significa que todos los datos en el dict o la lista deben "
+"ser JSON serializable."
 
 #: ../../quickstart.rst:757
 msgid ""
@@ -1156,6 +1162,11 @@ msgid ""
 "are many serialization libraries and Flask API extensions maintained by the "
 "community that support more complex applications."
 msgstr ""
+"Para los tipos complejos, como los modelos de bases de datos, querrás "
+"utilizar una biblioteca de serialización para convertir los datos en tipos "
+"JSON válidos primero. Hay muchas bibliotecas de serialización y extensiones "
+"de la API de Flask mantenidas por la comunidad que soportan aplicaciones más"
+" complejas."
 
 #: ../../quickstart.rst:766
 msgid "Sessions"
@@ -1366,84 +1377,3 @@ msgid "Ready to deploy your new Flask app? See :doc:`deploying/index`."
 msgstr ""
 "¿Listo para desplegar tu nueva aplicación Flask? Consulte "
 ":doc:`deploying/index`."
-
-#~ msgid "The interactive debugger in action."
-#~ msgstr "El depurador interactivo en acción."
-
-#~ msgid "Bash"
-#~ msgstr "Bash"
-
-#~ msgid "Fish"
-#~ msgstr "Fish"
-
-#~ msgid "CMD"
-#~ msgstr "CMD"
-
-#~ msgid "Powershell"
-#~ msgstr "Powershell"
-
-#~ msgid "What to do if the Server does not Start"
-#~ msgstr "Qué hacer si el servidor no se inicia"
-
-#~ msgid ""
-#~ "In case the :command:`python -m flask` fails or :command:`flask` does not "
-#~ "exist, there are multiple reasons this might be the case. First of all you "
-#~ "need to look at the error message."
-#~ msgstr ""
-#~ "En caso de que el :command:`python -m flask` falle o el :command:`flask` no "
-#~ "exista, hay múltiples razones por las que puede ser así. En primer lugar hay"
-#~ " que mirar el mensaje de error."
-
-#~ msgid "Old Version of Flask"
-#~ msgstr "Versión antigua de Flask"
-
-#~ msgid ""
-#~ "Versions of Flask older than 0.11 used to have different ways to start the "
-#~ "application.  In short, the :command:`flask` command did not exist, and "
-#~ "neither did :command:`python -m flask`.  In that case you have two options: "
-#~ "either upgrade to newer Flask versions or have a look at :doc:`/server` to "
-#~ "see the alternative method for running a server."
-#~ msgstr ""
-#~ "Las versiones de Flask anteriores a la 0.11 solían tener diferentes formas "
-#~ "de iniciar la aplicación. En resumen, el comando :command:`flask` no "
-#~ "existía, y tampoco :command:`python -m flask`. En ese caso tienes dos "
-#~ "opciones: O actualizar a versiones más recientes de Flask o echar un vistazo"
-#~ " a :doc:`/server` para ver el método alternativo para ejecutar un servidor."
-
-#~ msgid "Invalid Import Name"
-#~ msgstr "Nombre de importación inválido"
-
-#~ msgid ""
-#~ "The ``FLASK_APP`` environment variable is the name of the module to import "
-#~ "at :command:`flask run`. In case that module is incorrectly named you will "
-#~ "get an import error upon start (or if debug is enabled when you navigate to "
-#~ "the application). It will tell you what it tried to import and why it "
-#~ "failed."
-#~ msgstr ""
-#~ "La variable de entorno ``FLASK_APP`` es el nombre del módulo a importar en "
-#~ ":command:`flask run`. En caso de que ese módulo tenga un nombre incorrecto, "
-#~ "obtendrá un error de importación al iniciarse (o si la depuración está "
-#~ "activada al navegar por la aplicación). Te dirá qué ha intentado importar y "
-#~ "por qué ha fallado."
-
-#~ msgid ""
-#~ "The most common reason is a typo or because you did not actually create an "
-#~ "``app`` object."
-#~ msgstr ""
-#~ "La razón más común es un error tipográfico o porque no has creado un objeto "
-#~ "``app``."
-
-#~ msgid "El depurador interactivo en acción."
-#~ msgstr ""
-
-#~ msgid ""
-#~ "Depending on your API design, you may want to create JSON responses for "
-#~ "types other than ``dict``. In that case, use the :func:`~flask.json.jsonify`"
-#~ " function, which will serialize any supported JSON data type. Or look into "
-#~ "Flask community extensions that support more complex applications."
-#~ msgstr ""
-#~ "Dependiendo del diseño de tu API, puede que quieras crear respuestas JSON "
-#~ "para otros tipos que no sean ``dict``. En ese caso, utiliza la función "
-#~ ":func:`~flask.json.jsonify`, que serializará cualquier tipo de datos JSON "
-#~ "soportado. O busca en las extensiones de la comunidad Flask que soportan "
-#~ "aplicaciones más complejas."

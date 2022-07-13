@@ -60,13 +60,12 @@ msgstr ""
 "etc.}``"
 
 #: ../../../CONTRIBUTING.rst:19
-#, fuzzy
 msgid ""
 "Ask on our `GitHub Discussions`_ for long term discussion or larger "
 "questions."
 msgstr ""
-"La lista de correo flask@python.org para discusiones a largo plazo o asuntos"
-" de mayor envergadura."
+"Pregunte en nuestro `GitHub Discussions`_ para discusiones a largo plazo o "
+"preguntas más amplias."
 
 #: ../../../CONTRIBUTING.rst:27
 msgid "Reporting issues"

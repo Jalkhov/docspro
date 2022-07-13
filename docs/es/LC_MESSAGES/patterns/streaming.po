@@ -76,12 +76,18 @@ msgid ""
 ":func:`~flask.stream_template` and :func:`~flask.stream_template_string` "
 "functions to make this easier to use."
 msgstr ""
+"El motor de plantillas de Jinja2 soporta la representación de una plantilla "
+"pieza por pieza, devolviendo un iterador de cadenas. Flask proporciona las "
+"funciones :func:`~flask.stream_template` y "
+":func:`~flask.stream_template_string` para facilitar su uso."
 
 #: ../../patterns/streaming.rst:45
 msgid ""
 "The parts yielded by the render stream tend to match statement blocks in the"
 " template."
 msgstr ""
+"Las partes producidas por el flujo de renderización tienden a coincidir con "
+"los bloques de declaraciones en la plantilla."
 
 #: ../../patterns/streaming.rst:50
 msgid "Streaming with Context"
@@ -93,6 +99,9 @@ msgid ""
 "running, because the view has already returned at that point. If you try to "
 "access ``request``, you'll get a ``RuntimeError``."
 msgstr ""
+"El :data:`~flask.request`` no estará activo mientras el generador se esté "
+"ejecutando, porque la vista ya ha regresado en ese momento. Si intentas "
+"acceder a ``request``, obtendrás un ``RuntimeError``."
 
 #: ../../patterns/streaming.rst:56
 msgid ""
@@ -100,10 +109,13 @@ msgid ""
 ":func:`~flask.stream_with_context` wrapper. This will keep the request "
 "context active during the generator."
 msgstr ""
+"If your generator function relies on data in ``request``, use the "
+":func:`~flask.stream_with_context` wrapper. This will keep the request "
+"context active during the generator."
 
 #: ../../patterns/streaming.rst:73
 msgid "It can also be used as a decorator."
-msgstr ""
+msgstr "También se puede utilizar como decorador."
 
 #: ../../patterns/streaming.rst:83
 msgid ""
@@ -111,6 +123,9 @@ msgid ""
 " functions automatically use :func:`~flask.stream_with_context` if a request"
 " is active."
 msgstr ""
+"Las funciones :func:`~flask.stream_template` y "
+":func:`~flask.stream_template_string` utilizan automáticamente "
+":func:`~flask.stream_with_context` si hay una petición activa."
 
 #~ msgid ""
 #~ "The Jinja2 template engine also supports rendering templates piece by piece."

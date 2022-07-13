@@ -79,20 +79,20 @@ msgstr ""
 
 #: ../../patterns/packages.rst:59
 msgid "Install your application so it is importable:"
-msgstr ""
+msgstr "Instala tu aplicación para que se pueda importar:"
 
 #: ../../patterns/packages.rst:65
-#, fuzzy
 msgid ""
 "To use the ``flask`` command and run your application you need to set the "
 "``--app`` option that tells Flask where to find the application instance:"
 msgstr ""
-"Para ejecutar la aplicación es necesario exportar una variable de entorno "
-"que indique a Flask dónde encontrar la instancia de la aplicación:"
+"Para usar el comando ``flask`` y ejecutar tu aplicación necesitas establecer"
+" la opción ``--app`` que le dice a Flask dónde encontrar la instancia de la "
+"aplicación:"
 
 #: ../../patterns/packages.rst:69
 msgid "$ flask --app yourapplication run"
-msgstr ""
+msgstr "$ flask --app tuaplicacion run"
 
 #: ../../patterns/packages.rst:71
 msgid ""

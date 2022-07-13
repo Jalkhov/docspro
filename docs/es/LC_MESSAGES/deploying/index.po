@@ -20,9 +20,8 @@ msgstr ""
 "X-Generator: Poedit 3.0\n"
 
 #: ../../deploying/index.rst:2
-#, fuzzy
 msgid "Deploying to Production"
-msgstr "Opciones de despliegue"
+msgstr "Despliegue en producción"
 
 #: ../../deploying/index.rst:4
 msgid ""
@@ -32,6 +31,12 @@ msgid ""
 "used in production. Instead, you should use a dedicated WSGI server or "
 "hosting platform, some of which will be described here."
 msgstr ""
+"Después de desarrollar tu aplicación, querrás hacerla disponible "
+"públicamente para otros usuarios. Cuando estás desarrollando localmente, "
+"probablemente estés usando el servidor de desarrollo, el depurador y el "
+"recargador incorporados. Estos no deben ser utilizados en producción. En su "
+"lugar, deberías utilizar un servidor WSGI dedicado o una plataforma de "
+"alojamiento, algunos de los cuales se describirán aquí."
 
 #: ../../deploying/index.rst:10
 msgid ""
@@ -41,9 +46,14 @@ msgid ""
 " to production. It is intended for use only during local development. It is "
 "not designed to be particularly secure, stable, or efficient.**"
 msgstr ""
+"\"Producción\" significa \"no desarrollo\", lo que se aplica tanto si estás "
+"sirviendo tu aplicación de forma pública a millones de usuarios como de "
+"forma privada / local a un solo usuario. **No utilice el servidor de "
+"desarrollo cuando se despliega a la producción. Está destinado a ser "
+"utilizado sólo durante el desarrollo local. No está diseñado para ser "
+"particularmente seguro, estable o eficiente.**"
 
 #: ../../deploying/index.rst:18
-#, fuzzy
 msgid "Self-Hosted Options"
 msgstr "Opciones de autoalojamiento"
 
@@ -53,6 +63,9 @@ msgid ""
 "application, converting incoming HTTP requests to the standard WSGI environ,"
 " and converting outgoing WSGI responses to HTTP responses."
 msgstr ""
+"Flask es una *aplicación* WSGI. Se utiliza un *servidor* WSGI para ejecutar "
+"la aplicación, convirtiendo las peticiones HTTP entrantes en el entorno WSGI"
+" estándar, y convirtiendo las respuestas WSGI salientes en respuestas HTTP."
 
 #: ../../deploying/index.rst:24
 msgid ""
@@ -63,6 +76,13 @@ msgid ""
 "servers, and show the basics of running each one. The next section discusses"
 " platforms that can manage this for you."
 msgstr ""
+"El objetivo principal de estos documentos es familiarizarte con los "
+"conceptos involucrados en la ejecución de una aplicación WSGI utilizando un "
+"servidor WSGI de producción y un servidor HTTP. Hay muchos servidores WSGI y"
+" servidores HTTP, con muchas posibilidades de configuración. Las páginas "
+"siguientes discuten los servidores más comunes, y muestran los fundamentos "
+"de la ejecución de cada uno. La siguiente sección discute las plataformas "
+"que pueden gestionar esto por ti."
 
 #: ../../deploying/index.rst:42
 msgid ""
@@ -70,6 +90,9 @@ msgid ""
 "may be safer, more efficient, or more capable. Putting an HTTP server in "
 "front of the WSGI server is called a \"reverse proxy.\""
 msgstr ""
+"Los servidores WSGI tienen servidores HTTP incorporados. Sin embargo, un "
+"servidor HTTP dedicado puede ser más seguro, más eficiente o más capaz. "
+"Poner un servidor HTTP delante del servidor WSGI se llama \"proxy inverso\"."
 
 #: ../../deploying/index.rst:53
 msgid ""
@@ -77,10 +100,13 @@ msgid ""
 " based on your application's needs. Different servers will have different "
 "capabilities, configuration, and support."
 msgstr ""
+"Esta lista no es exhaustiva, y debe evaluar estos y otros servidores en "
+"función de las necesidades de su aplicación. Los diferentes servidores "
+"tendrán diferentes capacidades, configuración y soporte."
 
 #: ../../deploying/index.rst:59
 msgid "Hosting Platforms"
-msgstr ""
+msgstr "Plataformas de alojamiento"
 
 #: ../../deploying/index.rst:61
 msgid ""
@@ -91,60 +117,59 @@ msgid ""
 "interface. The links below are for some of the most common platforms, which "
 "have instructions for Flask, WSGI, or Python."
 msgstr ""
+"Hay muchos servicios disponibles para alojar aplicaciones web sin necesidad "
+"de mantener tu propio servidor, red, dominio, etc. Algunos servicios pueden "
+"tener un nivel gratuito hasta un determinado tiempo o ancho de banda. Muchos"
+" de estos servicios utilizan uno de los servidores WSGI descritos "
+"anteriormente, o una interfaz similar. Los enlaces de abajo son para algunas"
+" de las plataformas más comunes, que tienen instrucciones para Flask, WSGI, "
+"o Python."
 
 #: ../../deploying/index.rst:68
-#, fuzzy
 msgid "`PythonAnywhere <https://help.pythonanywhere.com/pages/Flask/>`_"
-msgstr ""
-"`Despliegue en PythonAnywhere "
-"<https://help.pythonanywhere.com/pages/Flask/>`_"
+msgstr "`PythonAnywhere <https://help.pythonanywhere.com/pages/Flask/>`_"
 
 #: ../../deploying/index.rst:69
-#, fuzzy
 msgid ""
 "`Heroku <https://devcenter.heroku.com/articles/getting-started-with-"
 "python>`_"
 msgstr ""
-"`Despliegue de Flask en Heroku "
-"<https://devcenter.heroku.com/articles/getting-started-with-python>`_"
+"`Heroku <https://devcenter.heroku.com/articles/getting-started-with-"
+"python>`_"
 
 #: ../../deploying/index.rst:70
-#, fuzzy
 msgid ""
 "`Google App Engine "
 "<https://cloud.google.com/appengine/docs/standard/python3/building-app>`_"
 msgstr ""
-"`Despliegue de Flask en Google App Engine "
-"<https://cloud.google.com/appengine/docs/standard/python3/runtime>`_"
+"`Google App Engine "
+"<https://cloud.google.com/appengine/docs/standard/python3/building-app>`_"
 
 #: ../../deploying/index.rst:71
-#, fuzzy
 msgid ""
 "`Google Cloud Run <https://cloud.google.com/run/docs/quickstarts/build-and-"
 "deploy/deploy-python-service>`_"
 msgstr ""
-"`Despliegue de Flask en Google Cloud Run "
-"<https://cloud.google.com/run/docs/quickstarts/build-and-deploy/python>`_"
+"`Google Cloud Run <https://cloud.google.com/run/docs/quickstarts/build-and-"
+"deploy/deploy-python-service>`_"
 
 #: ../../deploying/index.rst:72
-#, fuzzy
 msgid ""
 "`AWS Elastic Beanstalk "
 "<https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-"
 "python-flask.html>`_"
 msgstr ""
-"`Implementación de Flask en AWS Elastic Beanstalk "
+"`AWS Elastic Beanstalk "
 "<https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-"
 "python-flask.html>`_"
 
 #: ../../deploying/index.rst:73
-#, fuzzy
 msgid ""
 "`Microsoft Azure <https://docs.microsoft.com/en-us/azure/app-"
 "service/quickstart-python>`_"
 msgstr ""
-"`Despliegue en Azure (IIS) <https://docs.microsoft.com/en-us/azure/app-"
-"service/containers/how-to-configure-python>`_"
+"`Microsoft Azure <https://docs.microsoft.com/en-us/azure/app-"
+"service/quickstart-python>`_"
 
 #: ../../deploying/index.rst:75
 msgid ""
@@ -152,11 +177,16 @@ msgid ""
 "services based on your application's needs. Different services will have "
 "different capabilities, configuration, pricing, and support."
 msgstr ""
+"Esta lista no es exhaustiva y debe evaluar estos y otros servicios en "
+"función de las necesidades de su aplicación. Los diferentes servicios "
+"tendrán diferentes capacidades, configuraciones, precios y soporte."
 
 #: ../../deploying/index.rst:79
 msgid ""
 "You'll probably need to :doc:`proxy_fix` when using most hosting platforms."
 msgstr ""
+"Probablemente necesitará :doc:`proxy_fix` cuando utilice la mayoría de las "
+"plataformas de alojamiento."
 
 #~ msgid ""
 #~ "While lightweight and easy to use, **Flask's built-in server is not suitable"

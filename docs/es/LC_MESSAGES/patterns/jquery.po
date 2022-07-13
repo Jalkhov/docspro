@@ -25,7 +25,7 @@ msgstr "AJAX con jQuery"
 
 #: ../../patterns/jquery.rst:6
 msgid "Obsolete, see :doc:`/patterns/javascript` instead."
-msgstr ""
+msgstr "Obsoleto, ver :doc:`/patterns/javascript` en su lugar."
 
 #~ msgid ""
 #~ "`jQuery`_ is a small JavaScript library commonly used to simplify working "
