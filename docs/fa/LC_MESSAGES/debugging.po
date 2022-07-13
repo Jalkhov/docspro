@@ -89,46 +89,27 @@ msgstr ""
 " محیط تولید اجرا نکنید."
 
 #: ../../debugging.rst:42
+#, fuzzy
 msgid ""
-"To enable the debugger, run the development server with the ``FLASK_ENV`` "
-"environment variable set to ``development``. This puts Flask in debug mode, "
-"which changes how it handles some errors, and enables the debugger and "
-"reloader."
+"To enable the debugger, run the development server with the environment set "
+"to ``development``. This puts Flask in debug mode, which changes how it "
+"handles some errors, and enables the debugger and reloader."
 msgstr ""
 "برای فعال کردن دیباگر، سرور توسعه را با متغیر محیطی ``FLASK_ENV``  که روی "
 "``development`` تنظیم شده است اجرا کنید. این فلاسک را در حالت اشکال زدایی "
 "قرار می دهد، که نحوه رسیدگی به برخی از خطاها را تغییر می دهد و اشکال زدا و "
 "بارگذاری مجدد را فعال می کند."
 
-#: ../../debugging.rst:49 ../../debugging.rst:109
-msgid "Bash"
-msgstr "بش(Bash)"
-
-#: ../../debugging.rst:56 ../../debugging.rst:116
-msgid "Fish"
-msgstr "Fish"
-
-#: ../../debugging.rst:63 ../../debugging.rst:123
-msgid "CMD"
-msgstr "سی ام دی(CMD)"
-
-#: ../../debugging.rst:70 ../../debugging.rst:130
-msgid "Powershell"
-msgstr "پاورشل(Powershell)"
-
-#: ../../debugging.rst:77
+#: ../../debugging.rst:50
 msgid ""
-"``FLASK_ENV`` can only be set as an environment variable. When running from "
+"``FLASK_ENV`` can also be set as an environment variable. When running from "
 "Python code, passing ``debug=True`` enables debug mode, which is mostly "
-"equivalent. Debug mode can be controlled separately from ``FLASK_ENV`` with "
-"the ``FLASK_DEBUG`` environment variable as well."
+"equivalent. Debug mode can be controlled separately from the environment "
+"with the ``--debug/--no-debug`` option or the ``FLASK_DEBUG`` environment "
+"variable."
 msgstr ""
-"``FLASK_ENV`` را فقط می توان به عنوان یک متغیر محیطی تنظیم کرد. هنگام اجرا "
-"از کد پایتون، ارسال ``debug=True`` حالت اشکال زدایی را فعال می کند، که "
-"اکثراً معادل است. حالت اشکال زدایی را می توان به طور جداگانه از "
-"``FLASK_ENV`` با متغیر محیطی ``FLASK_DEBUG`` نیز کنترل کرد."
 
-#: ../../debugging.rst:86
+#: ../../debugging.rst:60
 msgid ""
 ":doc:`/server` and :doc:`/cli` have more information about running the "
 "debugger, debug mode, and development mode. More information about the "
@@ -140,11 +121,11 @@ msgstr ""
 "«مستندات `مستندات Werkzeug <https://werkzeug.palletsprojects.com/debug/>`__ "
 "بیابید."
 
-#: ../../debugging.rst:93
+#: ../../debugging.rst:67
 msgid "External Debuggers"
 msgstr "اشکال زدای خارجی"
 
-#: ../../debugging.rst:95
+#: ../../debugging.rst:69
 msgid ""
 "External debuggers, such as those provided by IDEs, can offer a more "
 "powerful debugging experience than the built-in debugger. They can also be "
@@ -158,7 +139,7 @@ msgstr ""
 "بروز خطا استفاده کرد. برخی از آنها حتی یک حالت راه دور دارند تا بتوانید "
 "کدهای در حال اجرا روی دستگاه دیگری را اشکال زدایی کنید."
 
-#: ../../debugging.rst:101
+#: ../../debugging.rst:75
 msgid ""
 "When using an external debugger, the app should still be in debug mode, but "
 "it can be useful to disable the built-in debugger and reloader, which can "
@@ -168,15 +149,11 @@ msgstr ""
 " باشد، اما غیرفعال کردن اشکال‌زدای داخلی و بارگذاری مجدد، که می‌تواند تداخل "
 "ایجاد کند، می‌تواند مفید باشد."
 
-#: ../../debugging.rst:105
-msgid "When running from the command line:"
-msgstr "هنگام اجرا از خط فرمان:"
-
-#: ../../debugging.rst:137
+#: ../../debugging.rst:83
 msgid "When running from Python:"
 msgstr "هنگام اجرا از پایتون:"
 
-#: ../../debugging.rst:143
+#: ../../debugging.rst:89
 msgid ""
 "Disabling these isn't required, an external debugger will continue to work "
 "with the following caveats. If the built-in debugger is not disabled, it "
@@ -189,3 +166,29 @@ msgstr ""
 "اشکال‌زدای خارجی بتواند استثنائات کنترل نشده را پیدا کند. اگر بارگذاری مجدد "
 "غیرفعال نباشد، اگر کد در حین اشکال زدایی تغییر کند، می تواند بارگیری مجدد "
 "غیرمنتظره ایجاد کند."
+
+#~ msgid "Bash"
+#~ msgstr "بش(Bash)"
+
+#~ msgid "Fish"
+#~ msgstr "Fish"
+
+#~ msgid "CMD"
+#~ msgstr "سی ام دی(CMD)"
+
+#~ msgid "Powershell"
+#~ msgstr "پاورشل(Powershell)"
+
+#~ msgid ""
+#~ "``FLASK_ENV`` can only be set as an environment variable. When running from "
+#~ "Python code, passing ``debug=True`` enables debug mode, which is mostly "
+#~ "equivalent. Debug mode can be controlled separately from ``FLASK_ENV`` with "
+#~ "the ``FLASK_DEBUG`` environment variable as well."
+#~ msgstr ""
+#~ "``FLASK_ENV`` را فقط می توان به عنوان یک متغیر محیطی تنظیم کرد. هنگام اجرا "
+#~ "از کد پایتون، ارسال ``debug=True`` حالت اشکال زدایی را فعال می کند، که "
+#~ "اکثراً معادل است. حالت اشکال زدایی را می توان به طور جداگانه از "
+#~ "``FLASK_ENV`` با متغیر محیطی ``FLASK_DEBUG`` نیز کنترل کرد."
+
+#~ msgid "When running from the command line:"
+#~ msgstr "هنگام اجرا از خط فرمان:"

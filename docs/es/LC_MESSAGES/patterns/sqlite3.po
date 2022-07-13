@@ -54,20 +54,10 @@ msgstr ""
 "se terminará."
 
 #: ../../patterns/sqlite3.rst:33
-msgid ""
-"Note: if you use Flask 0.9 or older you need to use "
-"``flask._app_ctx_stack.top`` instead of ``g`` as the :data:`flask.g` object "
-"was bound to the request and not application context."
-msgstr ""
-"Nota: si usas Flask 0.9 o anterior debes usar ``flask._app_ctx_stack.top`` "
-"en lugar de ``g`` ya que el objeto :data:`flask.g` estaba ligado a la "
-"petición y no al contexto de la aplicación."
-
-#: ../../patterns/sqlite3.rst:37
 msgid "Example::"
 msgstr "Ejemplo::"
 
-#: ../../patterns/sqlite3.rst:47
+#: ../../patterns/sqlite3.rst:43
 msgid ""
 "Please keep in mind that the teardown request and appcontext functions are "
 "always executed, even if a before-request handler failed or was never "
@@ -79,11 +69,11 @@ msgstr ""
 "Debido a esto tenemos que asegurarnos aquí de que la base de datos está ahí "
 "antes de cerrarla."
 
-#: ../../patterns/sqlite3.rst:53
+#: ../../patterns/sqlite3.rst:49
 msgid "Connect on Demand"
 msgstr "Conectar a la carta"
 
-#: ../../patterns/sqlite3.rst:55
+#: ../../patterns/sqlite3.rst:51
 msgid ""
 "The upside of this approach (connecting on first use) is that this will only"
 " open the connection if truly necessary.  If you want to use this code "
@@ -95,11 +85,11 @@ msgstr ""
 "fuera de un contexto de petición puedes usarlo en un shell de Python "
 "abriendo el contexto de aplicación a mano::"
 
-#: ../../patterns/sqlite3.rst:65
+#: ../../patterns/sqlite3.rst:61
 msgid "Easy Querying"
 msgstr "Consulta fácil"
 
-#: ../../patterns/sqlite3.rst:67
+#: ../../patterns/sqlite3.rst:63
 msgid ""
 "Now in each request handling function you can access `get_db()` to get the "
 "current open database connection.  To simplify working with SQLite, a row "
@@ -116,7 +106,7 @@ msgstr ""
 "esto podría ser insertado en la función ``get_db`` que creamos "
 "anteriormente::"
 
-#: ../../patterns/sqlite3.rst:80
+#: ../../patterns/sqlite3.rst:76
 msgid ""
 "This will make the sqlite3 module return dicts for this database connection,"
 " which are much nicer to deal with. Even more simply, we could place this in"
@@ -126,7 +116,7 @@ msgstr ""
 " datos, que son mucho más agradables de manejar. Incluso más simple, "
 "podríamos colocar esto en ``get_db`` en su lugar::"
 
-#: ../../patterns/sqlite3.rst:84
+#: ../../patterns/sqlite3.rst:80
 msgid ""
 "This would use Row objects rather than dicts to return the results of "
 "queries. These are ``namedtuple`` s, so we can access them either by index "
@@ -139,7 +129,7 @@ msgstr ""
 "``sqlite3.Row`` llamado ``r`` para las filas ``id``, ``FirstName``, "
 "``LastName``, y ``MiddleInitial``::"
 
-#: ../../patterns/sqlite3.rst:100
+#: ../../patterns/sqlite3.rst:96
 msgid ""
 "Additionally, it is a good idea to provide a query function that combines "
 "getting the cursor, executing and fetching the results::"
@@ -147,7 +137,7 @@ msgstr ""
 "Además, es una buena idea proporcionar una función de consulta que combine "
 "la obtención del cursor, la ejecución y la obtención de los resultados::"
 
-#: ../../patterns/sqlite3.rst:109
+#: ../../patterns/sqlite3.rst:105
 msgid ""
 "This handy little function, in combination with a row factory, makes working"
 " with the database much more pleasant than it is by just using the raw "
@@ -157,15 +147,15 @@ msgstr ""
 "hace que el trabajo con la base de datos sea mucho más agradable de lo que "
 "es utilizando sólo los objetos de cursor y conexión en bruto."
 
-#: ../../patterns/sqlite3.rst:113
+#: ../../patterns/sqlite3.rst:109
 msgid "Here is how you can use it::"
 msgstr "Así es como se puede utilizar::"
 
-#: ../../patterns/sqlite3.rst:118
+#: ../../patterns/sqlite3.rst:114
 msgid "Or if you just want a single result::"
 msgstr "O si sólo quieres un único resultado::"
 
-#: ../../patterns/sqlite3.rst:127
+#: ../../patterns/sqlite3.rst:123
 msgid ""
 "To pass variable parts to the SQL statement, use a question mark in the "
 "statement and pass in the arguments as a list.  Never directly add them to "
@@ -179,11 +169,11 @@ msgstr ""
 "hace posible atacar la aplicación usando `Inyecciones SQL "
 "<https://en.wikipedia.org/wiki/SQL_injection>`_."
 
-#: ../../patterns/sqlite3.rst:134
+#: ../../patterns/sqlite3.rst:130
 msgid "Initial Schemas"
 msgstr "Esquemas iniciales"
 
-#: ../../patterns/sqlite3.rst:136
+#: ../../patterns/sqlite3.rst:132
 msgid ""
 "Relational databases need schemas, so applications often ship a `schema.sql`"
 " file that creates the database.  It's a good idea to provide a function "
@@ -195,7 +185,16 @@ msgstr ""
 "datos. Es una buena idea proporcionar una función que cree la base de datos "
 "basada en ese esquema.  Esta función puede hacerlo por ti::"
 
-#: ../../patterns/sqlite3.rst:148
+#: ../../patterns/sqlite3.rst:144
 msgid "You can then create such a database from the Python shell:"
 msgstr ""
 "A continuación, puede crear dicha base de datos desde el shell de Python:"
+
+#~ msgid ""
+#~ "Note: if you use Flask 0.9 or older you need to use "
+#~ "``flask._app_ctx_stack.top`` instead of ``g`` as the :data:`flask.g` object "
+#~ "was bound to the request and not application context."
+#~ msgstr ""
+#~ "Nota: si usas Flask 0.9 o anterior debes usar ``flask._app_ctx_stack.top`` "
+#~ "en lugar de ``g`` ya que el objeto :data:`flask.g` estaba ligado a la "
+#~ "petición y no al contexto de la aplicación."

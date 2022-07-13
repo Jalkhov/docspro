@@ -160,11 +160,11 @@ msgid "You can observe that the project is now installed with ``pip list``."
 msgstr "Se puede observar que el proyecto se instala ahora con ``pip list``."
 
 #: ../../tutorial/install.rst:111
+#, fuzzy
 msgid ""
-"Nothing changes from how you've been running your project so far. "
-"``FLASK_APP`` is still set to ``flaskr`` and ``flask run`` still runs the "
-"application, but you can call it from anywhere, not just the ``flask-"
-"tutorial`` directory."
+"Nothing changes from how you've been running your project so far. ``--app`` "
+"is still set to ``flaskr`` and ``flask run`` still runs the application, but"
+" you can call it from anywhere, not just the ``flask-tutorial`` directory."
 msgstr ""
 "Nada cambia de cómo has estado ejecutando tu proyecto hasta ahora. "
 "``FLASK_APP`` sigue siendo ``flaskr`` y ``flask run`` sigue ejecutando la "

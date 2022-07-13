@@ -94,10 +94,11 @@ msgstr ""
 "el contexto de la aplicación aparecen."
 
 #: ../../reqcontext.rst:39
+#, fuzzy
 msgid ""
 "The context is unique to each thread (or other worker type). :data:`request`"
-" cannot be passed to another thread, the other thread will have a different "
-"context stack and will not know about the request the parent thread was "
+" cannot be passed to another thread, the other thread has a different "
+"context space and will not know about the request the parent thread was "
 "pointing to."
 msgstr ""
 "El contexto es único para cada hilo (u otro tipo de trabajador). "
@@ -107,17 +108,17 @@ msgstr ""
 
 #: ../../reqcontext.rst:44
 msgid ""
-"Context locals are implemented in Werkzeug. See :doc:`werkzeug:local` for "
-"more information on how this works internally."
+"Context locals are implemented using Python's :mod:`contextvars` and "
+"Werkzeug's :class:`~werkzeug.local.LocalProxy`. Python manages the lifetime "
+"of context vars automatically, and local proxy wraps that low-level "
+"interface to make the data easier to work with."
 msgstr ""
-"Los locales de contexto se implementan en Werkzeug. Ver "
-":doc:`werkzeug:local` para más información sobre cómo funciona internamente."
 
-#: ../../reqcontext.rst:49
+#: ../../reqcontext.rst:51
 msgid "Manually Push a Context"
 msgstr "Empujar manualmente un contexto"
 
-#: ../../reqcontext.rst:51
+#: ../../reqcontext.rst:53
 msgid ""
 "If you try to access :data:`request`, or anything that uses it, outside a "
 "request context, you'll get this error message:"
@@ -125,7 +126,7 @@ msgstr ""
 "Si intentas acceder a :data:`request`, o a cualquier cosa que lo utilice, "
 "fuera de un contexto de petición, obtendrás este mensaje de error:"
 
-#: ../../reqcontext.rst:62
+#: ../../reqcontext.rst:64
 msgid ""
 "This should typically only happen when testing code that expects an active "
 "request. One option is to use the :meth:`test client <Flask.test_client>` to"
@@ -140,7 +141,7 @@ msgstr ""
 "ejecute en el bloque tendrá acceso a :data:`request`, poblado con tus datos "
 "de prueba. ::"
 
-#: ../../reqcontext.rst:77
+#: ../../reqcontext.rst:79
 msgid ""
 "If you see that error somewhere else in your code not related to testing, it"
 " most likely indicates that you should move that code into a view function."
@@ -149,7 +150,7 @@ msgstr ""
 "pruebas, lo más probable es que indique que debes mover ese código a una "
 "función de la vista."
 
-#: ../../reqcontext.rst:81
+#: ../../reqcontext.rst:83
 msgid ""
 "For information on how to use the request context from the interactive "
 "Python shell, see :doc:`/shell`."
@@ -157,18 +158,18 @@ msgstr ""
 "Para obtener información sobre cómo utilizar el contexto de petición desde "
 "el shell interactivo de Python, consulte :doc:`/shell`."
 
-#: ../../reqcontext.rst:86
+#: ../../reqcontext.rst:88
 msgid "How the Context Works"
 msgstr "Cómo funciona el contexto"
 
-#: ../../reqcontext.rst:88
+#: ../../reqcontext.rst:90
+#, fuzzy
 msgid ""
 "The :meth:`Flask.wsgi_app` method is called to handle each request. It "
 "manages the contexts during the request. Internally, the request and "
-"application contexts work as stacks, :data:`_request_ctx_stack` and "
-":data:`_app_ctx_stack`. When contexts are pushed onto the stack, the proxies"
+"application contexts work like stacks. When contexts are pushed, the proxies"
 " that depend on them are available and point at information from the top "
-"context on the stack."
+"item."
 msgstr ""
 "El método :meth:`Flask.wsgi_app` es llamado para manejar cada solicitud. "
 "Gestiona los contextos durante la solicitud. Internamente, los contextos de "
@@ -177,7 +178,7 @@ msgstr ""
 "proxies que dependen de ellos están disponibles y apuntan a la información "
 "del contexto superior en la pila."
 
-#: ../../reqcontext.rst:95
+#: ../../reqcontext.rst:96
 msgid ""
 "When the request starts, a :class:`~ctx.RequestContext` is created and "
 "pushed, which creates and pushes an :class:`~ctx.AppContext` first if a "
@@ -193,19 +194,19 @@ msgstr ""
 ":data:`g`, :data:`request`, y :data:`session` están disponibles para el hilo"
 " original que maneja la solicitud."
 
-#: ../../reqcontext.rst:102
+#: ../../reqcontext.rst:103
+#, fuzzy
 msgid ""
-"Because the contexts are stacks, other contexts may be pushed to change the "
-"proxies during a request. While this is not a common pattern, it can be used"
-" in advanced applications to, for example, do internal redirects or chain "
-"different applications together."
+"Other contexts may be pushed to change the proxies during a request. While "
+"this is not a common pattern, it can be used in advanced applications to, "
+"for example, do internal redirects or chain different applications together."
 msgstr ""
 "Debido a que los contextos son pilas, otros contextos pueden ser empujados "
 "para cambiar los proxies durante una solicitud. Aunque esto no es un patrón "
 "común, puede ser utilizado en aplicaciones avanzadas para, por ejemplo, "
 "hacer redirecciones internas o encadenar diferentes aplicaciones."
 
-#: ../../reqcontext.rst:107
+#: ../../reqcontext.rst:108
 msgid ""
 "After the request is dispatched and a response is generated and sent, the "
 "request context is popped, which then pops the application context. "
@@ -220,11 +221,11 @@ msgstr ""
 ":meth:`~Flask.teardown_appcontext`. Éstas se ejecutan incluso si se ha "
 "producido una excepción no controlada durante el envío."
 
-#: ../../reqcontext.rst:117
+#: ../../reqcontext.rst:118
 msgid "Callbacks and Errors"
 msgstr "Callbacks y errores"
 
-#: ../../reqcontext.rst:119
+#: ../../reqcontext.rst:120
 msgid ""
 "Flask dispatches a request in multiple stages which can affect the request, "
 "response, and how errors are handled. The contexts are active during all of "
@@ -234,7 +235,7 @@ msgstr ""
 "petición, a la respuesta y a cómo se manejan los errores. Los contextos "
 "están activos durante todas estas etapas."
 
-#: ../../reqcontext.rst:123
+#: ../../reqcontext.rst:124
 msgid ""
 "A :class:`Blueprint` can add handlers for these events that are specific to "
 "the blueprint. The handlers for a blueprint will run if the blueprint owns "
@@ -244,7 +245,7 @@ msgstr ""
 "específicos del blueprint. Los manejadores de un blueprint se ejecutarán si "
 "el blueprint posee la ruta que coincide con la solicitud."
 
-#: ../../reqcontext.rst:127
+#: ../../reqcontext.rst:128
 msgid ""
 "Before each request, :meth:`~Flask.before_request` functions are called. If "
 "one of these functions return a value, the other functions are skipped. The "
@@ -255,7 +256,7 @@ msgstr ""
 "se saltan las demás funciones. El valor devuelto se trata como la respuesta "
 "y no se llama a la función de vista."
 
-#: ../../reqcontext.rst:132
+#: ../../reqcontext.rst:133
 msgid ""
 "If the :meth:`~Flask.before_request` functions did not return a response, "
 "the view function for the matched route is called and returns a response."
@@ -264,7 +265,7 @@ msgstr ""
 "se llama a la función de vista de la ruta coincidente y devuelve una "
 "respuesta."
 
-#: ../../reqcontext.rst:136
+#: ../../reqcontext.rst:137
 msgid ""
 "The return value of the view is converted into an actual response object and"
 " passed to the :meth:`~Flask.after_request` functions. Each function returns"
@@ -274,7 +275,7 @@ msgstr ""
 "y se pasa a las funciones :meth:`~Flask.after_request`. Cada función "
 "devuelve un objeto de respuesta modificado o nuevo."
 
-#: ../../reqcontext.rst:140
+#: ../../reqcontext.rst:141
 msgid ""
 "After the response is returned, the contexts are popped, which calls the "
 ":meth:`~Flask.teardown_request` and :meth:`~Flask.teardown_appcontext` "
@@ -286,7 +287,7 @@ msgstr ""
 ":meth:`~Flask.teardown_appcontext`. Estas funciones son llamadas incluso si "
 "una excepción no manejada fue lanzada en cualquier punto anterior."
 
-#: ../../reqcontext.rst:145
+#: ../../reqcontext.rst:146
 msgid ""
 "If an exception is raised before the teardown functions, Flask tries to "
 "match it with an :meth:`~Flask.errorhandler` function to handle the "
@@ -302,7 +303,7 @@ msgstr ""
 "una respuesta genérica ``500 Internal Server Error``. Las funciones de "
 "desmontaje siguen siendo llamadas, y se les pasa el objeto de excepción."
 
-#: ../../reqcontext.rst:152
+#: ../../reqcontext.rst:153
 msgid ""
 "If debug mode is enabled, unhandled exceptions are not converted to a "
 "``500`` response and instead are propagated to the WSGI server. This allows "
@@ -314,11 +315,11 @@ msgstr ""
 "WSGI. Esto permite al servidor de desarrollo presentar el depurador "
 "interactivo con el rastreo."
 
-#: ../../reqcontext.rst:159
+#: ../../reqcontext.rst:160
 msgid "Teardown Callbacks"
 msgstr "Teardown Callbacks"
 
-#: ../../reqcontext.rst:161
+#: ../../reqcontext.rst:162
 msgid ""
 "The teardown callbacks are independent of the request dispatch, and are "
 "instead called by the contexts when they are popped. The functions are "
@@ -336,7 +337,7 @@ msgstr ""
 "Asegúrate de escribir estas funciones de forma que no dependan de otras "
 "llamadas de retorno y no fallen."
 
-#: ../../reqcontext.rst:169
+#: ../../reqcontext.rst:170
 msgid ""
 "During testing, it can be useful to defer popping the contexts after the "
 "request ends, so that their data can be accessed in the test function. Use "
@@ -349,11 +350,11 @@ msgstr ""
 "bloque ``with`` para conservar los contextos hasta que el bloque ``with`` "
 "salga."
 
-#: ../../reqcontext.rst:203
+#: ../../reqcontext.rst:204
 msgid "Signals"
 msgstr "Señales"
 
-#: ../../reqcontext.rst:205
+#: ../../reqcontext.rst:206
 msgid ""
 "If :data:`~signals.signals_available` is true, the following signals are "
 "sent:"
@@ -361,7 +362,7 @@ msgstr ""
 "Si :data:`~signals.signals_available` es verdadero, se envían las siguientes"
 " señales:"
 
-#: ../../reqcontext.rst:208
+#: ../../reqcontext.rst:209
 msgid ""
 ":data:`request_started` is sent before the :meth:`~Flask.before_request` "
 "functions are called."
@@ -369,7 +370,7 @@ msgstr ""
 ":data:`request_started` se envía antes de llamar a las funciones "
 ":meth:`~Flask.before_request`."
 
-#: ../../reqcontext.rst:211
+#: ../../reqcontext.rst:212
 msgid ""
 ":data:`request_finished` is sent after the :meth:`~Flask.after_request` "
 "functions are called."
@@ -377,7 +378,7 @@ msgstr ""
 ":data:`request_finished` se envía después de llamar a las funciones "
 ":meth:`~Flask.after_request`."
 
-#: ../../reqcontext.rst:214
+#: ../../reqcontext.rst:215
 msgid ""
 ":data:`got_request_exception` is sent when an exception begins to be "
 "handled, but before an :meth:`~Flask.errorhandler` is looked up or called."
@@ -386,7 +387,7 @@ msgstr ""
 "excepción, pero antes de que se busque o llame a un "
 ":meth:`~Flask.errorhandler`."
 
-#: ../../reqcontext.rst:218
+#: ../../reqcontext.rst:219
 msgid ""
 ":data:`request_tearing_down` is sent after the "
 ":meth:`~Flask.teardown_request` functions are called."
@@ -394,54 +395,11 @@ msgstr ""
 ":data:`request_tearing_down` se envía después de llamar a las funciones "
 ":meth:`~Flask.teardown_request`.."
 
-#: ../../reqcontext.rst:223
-msgid "Context Preservation on Error"
-msgstr "Preservación del contexto en caso de error"
-
-#: ../../reqcontext.rst:225
-msgid ""
-"At the end of a request, the request context is popped and all data "
-"associated with it is destroyed. If an error occurs during development, it "
-"is useful to delay destroying the data for debugging purposes."
-msgstr ""
-"Al final de una solicitud, el contexto de la solicitud se vacía y todos los "
-"datos asociados a ella se destruyen. Si se produce un error durante el "
-"desarrollo, es útil retrasar la destrucción de los datos para fines de "
-"depuración."
-
-#: ../../reqcontext.rst:229
-msgid ""
-"When the development server is running in development mode (the "
-"``FLASK_ENV`` environment variable is set to ``'development'``), the error "
-"and data will be preserved and shown in the interactive debugger."
-msgstr ""
-"Cuando el servidor de desarrollo se ejecuta en modo de desarrollo (la "
-"variable de entorno ``FLASK_ENV`` se establece en ``'desarrollo'``), el "
-"error y los datos se conservarán y se mostrarán en el depurador interactivo."
-
-#: ../../reqcontext.rst:233
-msgid ""
-"This behavior can be controlled with the "
-":data:`PRESERVE_CONTEXT_ON_EXCEPTION` config. As described above, it "
-"defaults to ``True`` in the development environment."
-msgstr ""
-"Este comportamiento puede controlarse con la configuración "
-":data:`PRESERVE_CONTEXT_ON_EXCEPTION`. Como se ha descrito anteriormente, el"
-" valor predeterminado es ``True`` en el entorno de desarrollo."
-
-#: ../../reqcontext.rst:237
-msgid ""
-"Do not enable :data:`PRESERVE_CONTEXT_ON_EXCEPTION` in production, as it "
-"will cause your application to leak memory on exceptions."
-msgstr ""
-"No habilite :data:`PRESERVE_CONTEXT_ON_EXCEPTION` en producción, ya que hará"
-" que su aplicación pierda memoria en las excepciones."
-
-#: ../../reqcontext.rst:244
+#: ../../reqcontext.rst:226
 msgid "Notes On Proxies"
 msgstr "Notas sobre los apoderados"
 
-#: ../../reqcontext.rst:246
+#: ../../reqcontext.rst:228
 msgid ""
 "Some of the objects provided by Flask are proxies to other objects. The "
 "proxies are accessed in the same way for each worker thread, but point to "
@@ -453,7 +411,7 @@ msgstr ""
 "trabajo, pero apuntan al objeto único vinculado a cada trabajador detrás de "
 "las escenas como se describe en esta página."
 
-#: ../../reqcontext.rst:251
+#: ../../reqcontext.rst:233
 msgid ""
 "Most of the time you don't have to care about that, but there are some "
 "exceptions where it is good to know that this object is actually a proxy:"
@@ -462,7 +420,7 @@ msgstr ""
 " excepciones en las que es bueno saber que este objeto es realmente un "
 "proxy:"
 
-#: ../../reqcontext.rst:254
+#: ../../reqcontext.rst:236
 msgid ""
 "The proxy objects cannot fake their type as the actual object types. If you "
 "want to perform instance checks, you have to do that on the object being "
@@ -472,7 +430,7 @@ msgstr ""
 " Si quieres realizar comprobaciones de instancia, tienes que hacerlo en el "
 "objeto proxy."
 
-#: ../../reqcontext.rst:257
+#: ../../reqcontext.rst:239
 msgid ""
 "The reference to the proxied object is needed in some situations, such as "
 "sending :doc:`signals` or passing data to a background thread."
@@ -480,10 +438,55 @@ msgstr ""
 "La referencia al objeto proxy es necesaria en algunas situaciones, como el "
 "envío de :doc:`signals` o el paso de datos a un hilo de fondo."
 
-#: ../../reqcontext.rst:261
+#: ../../reqcontext.rst:243
 msgid ""
 "If you need to access the underlying object that is proxied, use the "
 ":meth:`~werkzeug.local.LocalProxy._get_current_object` method::"
 msgstr ""
 "Si necesita acceder al objeto subyacente que se proxy, utilice el método "
 ":meth:`~werkzeug.local.LocalProxy._get_current_object`::"
+
+#~ msgid ""
+#~ "Context locals are implemented in Werkzeug. See :doc:`werkzeug:local` for "
+#~ "more information on how this works internally."
+#~ msgstr ""
+#~ "Los locales de contexto se implementan en Werkzeug. Ver "
+#~ ":doc:`werkzeug:local` para más información sobre cómo funciona internamente."
+
+#~ msgid "Context Preservation on Error"
+#~ msgstr "Preservación del contexto en caso de error"
+
+#~ msgid ""
+#~ "At the end of a request, the request context is popped and all data "
+#~ "associated with it is destroyed. If an error occurs during development, it "
+#~ "is useful to delay destroying the data for debugging purposes."
+#~ msgstr ""
+#~ "Al final de una solicitud, el contexto de la solicitud se vacía y todos los "
+#~ "datos asociados a ella se destruyen. Si se produce un error durante el "
+#~ "desarrollo, es útil retrasar la destrucción de los datos para fines de "
+#~ "depuración."
+
+#~ msgid ""
+#~ "When the development server is running in development mode (the "
+#~ "``FLASK_ENV`` environment variable is set to ``'development'``), the error "
+#~ "and data will be preserved and shown in the interactive debugger."
+#~ msgstr ""
+#~ "Cuando el servidor de desarrollo se ejecuta en modo de desarrollo (la "
+#~ "variable de entorno ``FLASK_ENV`` se establece en ``'desarrollo'``), el "
+#~ "error y los datos se conservarán y se mostrarán en el depurador interactivo."
+
+#~ msgid ""
+#~ "This behavior can be controlled with the "
+#~ ":data:`PRESERVE_CONTEXT_ON_EXCEPTION` config. As described above, it "
+#~ "defaults to ``True`` in the development environment."
+#~ msgstr ""
+#~ "Este comportamiento puede controlarse con la configuración "
+#~ ":data:`PRESERVE_CONTEXT_ON_EXCEPTION`. Como se ha descrito anteriormente, el"
+#~ " valor predeterminado es ``True`` en el entorno de desarrollo."
+
+#~ msgid ""
+#~ "Do not enable :data:`PRESERVE_CONTEXT_ON_EXCEPTION` in production, as it "
+#~ "will cause your application to leak memory on exceptions."
+#~ msgstr ""
+#~ "No habilite :data:`PRESERVE_CONTEXT_ON_EXCEPTION` en producción, ya que hará"
+#~ " que su aplicación pierda memoria en las excepciones."

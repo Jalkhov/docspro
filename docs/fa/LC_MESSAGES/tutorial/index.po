@@ -39,6 +39,9 @@ msgstr ""
 " را ویرایش یا حذف کنند. شما قادر خواهید بود برنامه را بر روی رایانه های دیگر"
 " بسته بندی و نصب کنید."
 
+msgid "اسکرین شات صفحه اصلی"
+msgstr ""
+
 #: ../../tutorial/index.rst:30
 msgid ""
 "It's assumed that you're already familiar with Python. The `official "
@@ -63,6 +66,9 @@ msgstr ""
 "پروژه ها شما میتوانید تصمیم بگیرید که از :doc:`/extensions` یا سایر کتابخانه"
 " ها اندک ساخته شده استفاده کنید."
 
+msgid "اسکرین شات صفحه ورود"
+msgstr ""
+
 #: ../../tutorial/index.rst:47
 msgid ""
 "Flask is flexible. It doesn't require you to use any particular project or "
@@ -80,6 +86,9 @@ msgstr ""
 " شوند انجام می شود و پروژه ای را ایجاد می کند که به راحتی می توان آن را "
 "گسترش داد. هنگامی که با فلاسک راحت تر شدید، می توانید از این ساختار خارج "
 "شوید و از انعطاف پذیری فلاسک نهایت استفاده را ببرید."
+
+msgid "اسکرین شات صفحه ویرایش"
+msgstr ""
 
 #: ../../tutorial/index.rst:60
 msgid ""

@@ -82,6 +82,9 @@ msgid ""
 msgstr ""
 "به http://127.0.0.1:5000/auth/login بروید و صفحه باید مانند تصویر زیر باشد."
 
+msgid "اسکرین شات صفحه ورود"
+msgstr ""
+
 #: ../../tutorial/static.rst:66
 msgid ""
 "You can read more about CSS from `Mozilla's documentation <CSS_>`_. If you "

@@ -98,23 +98,7 @@ msgstr ""
 "Como se trata de una máquina diferente, es necesario ejecutar ``init-db`` de"
 " nuevo para crear la base de datos en la carpeta de la instancia."
 
-#: ../../tutorial/deploy.rst:53
-msgid "Bash"
-msgstr "Bash"
-
-#: ../../tutorial/deploy.rst:60
-msgid "Fish"
-msgstr "Fish"
-
-#: ../../tutorial/deploy.rst:67
-msgid "CMD"
-msgstr "CMD"
-
-#: ../../tutorial/deploy.rst:74
-msgid "Powershell"
-msgstr "Powershell"
-
-#: ../../tutorial/deploy.rst:81
+#: ../../tutorial/deploy.rst:55
 msgid ""
 "When Flask detects that it's installed (not in editable mode), it uses a "
 "different directory for the instance folder. You can find it at "
@@ -124,11 +108,11 @@ msgstr ""
 "directorio diferente para la carpeta de la instancia. Puedes encontrarla en "
 "``venv/var/flaskr-instance`` en su lugar."
 
-#: ../../tutorial/deploy.rst:87
+#: ../../tutorial/deploy.rst:61
 msgid "Configure the Secret Key"
 msgstr "Configurar la clave secreta"
 
-#: ../../tutorial/deploy.rst:89
+#: ../../tutorial/deploy.rst:63
 msgid ""
 "In the beginning of the tutorial that you gave a default value for "
 ":data:`SECRET_KEY`. This should be changed to some random bytes in "
@@ -141,13 +125,13 @@ msgstr ""
 "pública ``'dev'`` para modificar la cookie de sesión, o cualquier otra cosa "
 "que utilice la clave secreta."
 
-#: ../../tutorial/deploy.rst:94
+#: ../../tutorial/deploy.rst:68
 msgid "You can use the following command to output a random secret key:"
 msgstr ""
 "Puede utilizar el siguiente comando para obtener una clave secreta "
 "aleatoria:"
 
-#: ../../tutorial/deploy.rst:102
+#: ../../tutorial/deploy.rst:76
 msgid ""
 "Create the ``config.py`` file in the instance folder, which the factory will"
 " read from if it exists. Copy the generated value into it."
@@ -155,11 +139,11 @@ msgstr ""
 "Crea el archivo ``config.py`` en la carpeta de la instancia, que la fábrica "
 "leerá si existe. Copie el valor generado en él."
 
-#: ../../tutorial/deploy.rst:105
+#: ../../tutorial/deploy.rst:79
 msgid "``venv/var/flaskr-instance/config.py``"
 msgstr "``venv/var/flaskr-instance/config.py``"
 
-#: ../../tutorial/deploy.rst:110
+#: ../../tutorial/deploy.rst:84
 msgid ""
 "You can also set any other necessary configuration here, although "
 "``SECRET_KEY`` is the only one needed for Flaskr."
@@ -167,11 +151,11 @@ msgstr ""
 "También puedes establecer aquí cualquier otra configuración necesaria, "
 "aunque ``SECRET_KEY`` es la única necesaria para Flaskr."
 
-#: ../../tutorial/deploy.rst:115
+#: ../../tutorial/deploy.rst:89
 msgid "Run with a Production Server"
 msgstr "Ejecutar con un servidor de producción"
 
-#: ../../tutorial/deploy.rst:117
+#: ../../tutorial/deploy.rst:91
 msgid ""
 "When running publicly rather than in development, you should not use the "
 "built-in development server (``flask run``). The development server is "
@@ -183,7 +167,7 @@ msgstr ""
 "desarrollo es proporcionado por Werkzeug por conveniencia, pero no está "
 "diseñado para ser particularmente eficiente, estable o seguro."
 
-#: ../../tutorial/deploy.rst:122
+#: ../../tutorial/deploy.rst:96
 msgid ""
 "Instead, use a production WSGI server. For example, to use `Waitress`_, "
 "first install it in the virtual environment:"
@@ -191,17 +175,18 @@ msgstr ""
 "En su lugar, utilice un servidor WSGI de producción. Por ejemplo, para usar "
 "`Waitress`_, primero instálalo en el entorno virtual:"
 
-#: ../../tutorial/deploy.rst:129
+#: ../../tutorial/deploy.rst:103
+#, fuzzy
 msgid ""
 "You need to tell Waitress about your application, but it doesn't use "
-"``FLASK_APP`` like ``flask run`` does. You need to tell it to import and "
-"call the application factory to get an application object."
+"``--app`` like ``flask run`` does. You need to tell it to import and call "
+"the application factory to get an application object."
 msgstr ""
 "Necesitas decirle a Waitress sobre tu aplicación, pero no usa ``FLASK_APP`` "
 "como lo hace ``flask run``. Tienes que decirle que importe y llame a la "
 "fábrica de aplicaciones para obtener un objeto de aplicación."
 
-#: ../../tutorial/deploy.rst:139
+#: ../../tutorial/deploy.rst:113
 msgid ""
 "See :doc:`/deploying/index` for a list of many different ways to host your "
 "application. Waitress is just an example, chosen for the tutorial because it"
@@ -213,6 +198,18 @@ msgstr ""
 "tutorial porque soporta tanto Windows como Linux. Hay muchos más servidores "
 "WSGI y opciones de despliegue que puedes elegir para tu proyecto."
 
-#: ../../tutorial/deploy.rst:146
+#: ../../tutorial/deploy.rst:120
 msgid "Continue to :doc:`next`."
 msgstr "Continuar con :doc:`next`."
+
+#~ msgid "Bash"
+#~ msgstr "Bash"
+
+#~ msgid "Fish"
+#~ msgstr "Fish"
+
+#~ msgid "CMD"
+#~ msgstr "CMD"
+
+#~ msgid "Powershell"
+#~ msgstr "Powershell"

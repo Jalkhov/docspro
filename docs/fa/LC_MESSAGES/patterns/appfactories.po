@@ -140,44 +140,31 @@ msgid "To run such an application, you can use the :command:`flask` command:"
 msgstr ""
 "برای اجرای چنین برنامه ای می توانید از دستور :command:`flask` استفاده کنید:"
 
-#: ../../patterns/appfactories.rst:94 ../../patterns/appfactories.rst:127
-msgid "Bash"
-msgstr "Bash"
-
-#: ../../patterns/appfactories.rst:101 ../../patterns/appfactories.rst:134
-msgid "Fish"
-msgstr "Fish"
-
-#: ../../patterns/appfactories.rst:108 ../../patterns/appfactories.rst:141
-msgid "CMD"
-msgstr "CMD"
-
-#: ../../patterns/appfactories.rst:115 ../../patterns/appfactories.rst:148
-msgid "Powershell"
-msgstr "Powershell"
-
-#: ../../patterns/appfactories.rst:122
+#: ../../patterns/appfactories.rst:96
+#, fuzzy
 msgid ""
-"Flask will automatically detect the factory (``create_app`` or ``make_app``)"
-" in ``myapp``. You can also pass arguments to the factory like this:"
+"Flask will automatically detect the factory if it is named ``create_app`` or"
+" ``make_app`` in ``hello``. You can also pass arguments to the factory like "
+"this:"
 msgstr ""
 "فلاسک به طور خودکار کارخانه (``create_app`` یا ``make_app``) را در ``myapp``"
 " شناسایی می کند. همچنین می توانید آرگومان هایی را به این صورت به کارخانه "
 "ارسال کنید:"
 
-#: ../../patterns/appfactories.rst:155
+#: ../../patterns/appfactories.rst:104
+#, fuzzy
 msgid ""
-"Then the ``create_app`` factory in ``myapp`` is called with the string "
-"``'dev'`` as the argument. See :doc:`/cli` for more detail."
+"Then the ``create_app`` factory in ``myapp`` is called with the keyword "
+"argument ``local_auth=True``. See :doc:`/cli` for more detail."
 msgstr ""
 "سپس کارخانه ``create_app`` در ``myapp`` با رشته ``'dev'`` به عنوان آرگومان "
 "فراخوانی می شود. برای جزئیات بیشتر به :doc:`/cli` مراجعه کنید."
 
-#: ../../patterns/appfactories.rst:159
+#: ../../patterns/appfactories.rst:108
 msgid "Factory Improvements"
 msgstr "بهبود کارخانه"
 
-#: ../../patterns/appfactories.rst:161
+#: ../../patterns/appfactories.rst:110
 msgid ""
 "The factory function above is not very clever, but you can improve it. The "
 "following changes are straightforward to implement:"
@@ -185,7 +172,7 @@ msgstr ""
 "عملکرد کارخانه بالا خیلی هوشمندانه نیست، اما می توانید آن را بهبود ببخشید. "
 "تغییرات زیر برای پیاده سازی سراست‌تر است:"
 
-#: ../../patterns/appfactories.rst:164
+#: ../../patterns/appfactories.rst:113
 msgid ""
 "Make it possible to pass in configuration values for unit tests so that you "
 "don't have to create config files on the filesystem."
@@ -193,7 +180,7 @@ msgstr ""
 "امکان رد کردن مقادیر پیکربندی برای تست های واحد را فراهم کنید تا مجبور "
 "نباشید فایل های پیکربندی را در سیستم فایل ایجاد کنید."
 
-#: ../../patterns/appfactories.rst:166
+#: ../../patterns/appfactories.rst:115
 msgid ""
 "Call a function from a blueprint when the application is setting up so that "
 "you have a place to modify attributes of the application (like hooking in "
@@ -203,9 +190,21 @@ msgstr ""
 "تا جایی برای تغییر ویژگی های برنامه (مانند قلاب کردن کنترل کننده های درخواست"
 " قبل/بعد و غیره) داشته باشید."
 
-#: ../../patterns/appfactories.rst:169
+#: ../../patterns/appfactories.rst:118
 msgid ""
 "Add in WSGI middlewares when the application is being created if necessary."
 msgstr ""
 "در صورت لزوم، زمانی که برنامه در حال ایجاد است، میان افزارهای WSGI را اضافه "
 "کنید."
+
+#~ msgid "Bash"
+#~ msgstr "Bash"
+
+#~ msgid "Fish"
+#~ msgstr "Fish"
+
+#~ msgid "CMD"
+#~ msgstr "CMD"
+
+#~ msgid "Powershell"
+#~ msgstr "Powershell"

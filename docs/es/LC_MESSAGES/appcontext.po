@@ -245,24 +245,10 @@ msgstr ""
 " funciona :data:`current_app`."
 
 #: ../../appcontext.rst:141
-msgid ""
-"If you're writing an extension, :data:`g` should be reserved for user code. "
-"You may store internal data on the context itself, but be sure to use a "
-"sufficiently unique name. The current context is accessed with "
-":data:`_app_ctx_stack.top <_app_ctx_stack>`. For more information see "
-":doc:`/extensiondev`."
-msgstr ""
-"Si estás escribiendo una extensión, :data:`g` debería reservarse para el "
-"código de usuario. Puedes almacenar datos internos en el propio contexto, "
-"pero asegúrate de utilizar un nombre suficientemente único. Se accede al "
-"contexto actual con :data:`_app_ctx_stack.top <_app_ctx_stack>`. Para más "
-"información, véase :doc:`/extensiondev`."
-
-#: ../../appcontext.rst:149
 msgid "Events and Signals"
 msgstr "Eventos y señales"
 
-#: ../../appcontext.rst:151
+#: ../../appcontext.rst:143
 msgid ""
 "The application will call functions registered with "
 ":meth:`~Flask.teardown_appcontext` when the application context is popped."
@@ -271,7 +257,7 @@ msgstr ""
 ":meth:`~Flask.teardown_appcontext` cuando el contexto de la aplicación sea "
 "expulsado."
 
-#: ../../appcontext.rst:155
+#: ../../appcontext.rst:147
 msgid ""
 "If :data:`~signals.signals_available` is true, the following signals are "
 "sent: :data:`appcontext_pushed`, :data:`appcontext_tearing_down`, and "
@@ -280,3 +266,16 @@ msgstr ""
 "Si :data:`~signals.signals_available` es verdadero, se envían las siguientes"
 " señales: :data:`appcontext_pushed`, :data:`appcontext_tearing_down`, y "
 ":data:`appcontext_popped`."
+
+#~ msgid ""
+#~ "If you're writing an extension, :data:`g` should be reserved for user code. "
+#~ "You may store internal data on the context itself, but be sure to use a "
+#~ "sufficiently unique name. The current context is accessed with "
+#~ ":data:`_app_ctx_stack.top <_app_ctx_stack>`. For more information see "
+#~ ":doc:`/extensiondev`."
+#~ msgstr ""
+#~ "Si estás escribiendo una extensión, :data:`g` debería reservarse para el "
+#~ "código de usuario. Puedes almacenar datos internos en el propio contexto, "
+#~ "pero asegúrate de utilizar un nombre suficientemente único. Se accede al "
+#~ "contexto actual con :data:`_app_ctx_stack.top <_app_ctx_stack>`. Para más "
+#~ "información, véase :doc:`/extensiondev`."
