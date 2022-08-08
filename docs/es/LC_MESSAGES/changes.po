@@ -249,13 +249,12 @@ msgid "Version 2.1.3"
 msgstr "Versión 2.1.3"
 
 #: ../../../CHANGES.rst:86
-#, fuzzy
 msgid ""
 "Inline some optional imports that are only used for certain CLI commands. "
 ":pr:`4606`"
 msgstr ""
-"Inline algunas importaciones opcionales que sólo se utilizan para ciertos "
-"comandos de la CLI. :pr:`4606`"
+"Importaciones inline opcionales que sólo se utilizan para ciertos comandos "
+"de la CLI. :pr:`4606`"
 
 #: ../../../CHANGES.rst:88
 msgid "Relax type annotation for ``after_request`` functions. :issue:`4600`"

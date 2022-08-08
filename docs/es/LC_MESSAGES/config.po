@@ -774,7 +774,8 @@ msgid ""
 "equal to the environment variable name without the prefix i.e."
 msgstr ""
 "Las variables se pueden cargar y acceder a través de la configuración con "
-"una clave igual al nombre de la variable de entorno sin el prefijo, es decir"
+"una clave igual al nombre de la variable de entorno sin el prefijo, por "
+"ejemplo:"
 
 #: ../../config.rst:540
 msgid ""
@@ -842,7 +843,7 @@ msgid "Configuration Best Practices"
 msgstr "Mejores prácticas de configuración"
 
 #: ../../config.rst:577
-#, fuzzy, python-format
+#, python-format
 msgid ""
 "The downside with the approach mentioned earlier is that it makes testing a "
 "little harder.  There is no single 100% solution for this problem in "
