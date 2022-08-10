@@ -1133,7 +1133,6 @@ msgstr "Por defecto: ``'producción'``"
 
 #: ../../docstring flask.Blueprint.error_handler_spec:1
 #: flask.Flask.error_handler_spec:1 of
-#, fuzzy
 msgid ""
 "A data structure of registered error handlers, in the format ``{scope: "
 "{code: {class: handler}}}``. The ``scope`` key is the name of a blueprint "
@@ -1143,12 +1142,11 @@ msgid ""
 "functions."
 msgstr ""
 "Una estructura de datos de los gestores de errores registrados, con el "
-"formato ``ámbito: {código: {class: handler}}``. La clave ``scope`` es el "
-"nombre de un plano para el que los manejadores están activos, o ``None`` "
-"para todas las peticiones. La clave ``code`` es el código de estado HTTP "
-"para ``HTTPException``, o ``None`` para otras excepciones. El diccionario "
-"más interno asigna las clases de excepción a las funciones de los "
-"manejadores."
+"formato ``scope: {code: {class: handler}}``. La clave ``scope`` es el nombre"
+" de un plano para el que los manejadores están activos, o ``None`` para "
+"todas las peticiones. La clave ``code`` es el código de estado HTTP para "
+"``HTTPException``, o ``None`` para otras excepciones. El diccionario más "
+"interno asigna las clases de excepción a las funciones de los manejadores."
 
 #: ../../docstring flask.Blueprint.error_handler_spec:9
 #: flask.Flask.error_handler_spec:9 of
@@ -1400,11 +1398,8 @@ msgid "The endpoint being built."
 msgstr "El punto final que se construye."
 
 #: flask.app.Flask.handle_url_build_error:13 of
-#, fuzzy
 msgid "The keyword arguments passed to ``url_for``."
-msgstr ""
-"otros argumentos de palabra clave pasados a "
-":class:`~werkzeug.test.EnvironBuilder`."
+msgstr "Los argumentos de la palabra clave pasada a ``url_for``."
 
 #: flask.app.Flask.handle_user_exception:1 of
 msgid ""
@@ -1605,7 +1600,6 @@ msgstr ""
 " :attr:`response_class`."
 
 #: flask.app.Flask.make_response:4 of
-#, fuzzy
 msgid ""
 "the return value from the view function. The view function must return a "
 "response. Returning ``None``, or the view ending without returning, is not "
@@ -1630,18 +1624,19 @@ msgstr ""
 "devolver una respuesta. No se permite devolver ``None``, o que la vista "
 "termine sin devolver. Se permiten los siguientes tipos para ``view_rv``: "
 "``str`` Se crea un objeto de respuesta con la cadena codificada en UTF-8 "
-"como cuerpo.  Se crea un objeto de respuesta con los bytes como cuerpo.  "
-"``dict`` Un diccionario que será jsonificado antes de ser devuelto.  Una "
-"tupla puede ser ``(body, status, headers)``, ``(body, status)``, o ``(body, "
-"headers)``, donde ``body`` es cualquiera de los otros tipos permitidos, "
-"`status`` es una cadena o un entero, y ``status`` es un diccionario o una "
-"lista de tuplas ``(key, value)``. Si ``body`` es una instancia de "
-":attr:`response_class`, ``status`` sobrescribe el valor de salida y "
-"``headers`` se extiende. :attr:`response_class` El objeto se devuelve sin "
-"cambios. other :class:`~werkzeug.wrappers.Response` class El objeto se "
-"coacciona a :attr:`response_class`. :func:`callable` La función se llama "
-"como una aplicación WSGI. El resultado se utiliza para crear un objeto de "
-"respuesta."
+"como cuerpo. Se crea un objeto de respuesta con los bytes como cuerpo. "
+"``dict`` Un diccionario que será jsonificado antes de ser devuelto. Una "
+"lista que será jsonificada antes de ser devuelta. Un generador que devuelve "
+"``str`` o ``bytes`` para ser transmitido como respuesta. Una tupla puede ser"
+" ``(body, status, header)``, ``(body, status)``, o ``(body, header)``, donde"
+" ``body`` es cualquiera de los otros tipos permitidos, ``state`` es una "
+"cadena o un entero, y ``header`` es un diccionario o una lista de tuplas "
+"``(key, value)``. Si ``body`` es una instancia de :attr:`response_class`, "
+"``status`` sobrescribe el valor de salida y ``headers`` se extiende. "
+":attr:`response_class` El objeto se devuelve sin cambios. other "
+":class:`~werkzeug.wrappers.Response` class El objeto se coacciona a "
+":attr:`response_class`. :func:`callable` La función se llama como una "
+"aplicación WSGI. El resultado se utiliza para crear un objeto de respuesta."
 
 #: flask.app.Flask.make_response:4 of
 msgid ""
@@ -1682,9 +1677,8 @@ msgid "A dictionary that will be jsonify'd before being returned."
 msgstr "Un diccionario que será jsonificado antes de ser devuelto."
 
 #: flask.app.Flask.make_response:20 of
-#, fuzzy
 msgid "``list``"
-msgstr "`int`"
+msgstr "``list``"
 
 #: flask.app.Flask.make_response:20 of
 msgid "A list that will be jsonify'd before being returned."
@@ -1759,9 +1753,8 @@ msgstr ""
 "convertirá en una respuesta JSON."
 
 #: flask.app.Flask.make_response:49 of
-#, fuzzy
 msgid "A dict will be converted to a JSON response."
-msgstr "Un objeto que debe convertirse en una cadena y escaparse."
+msgstr "Un diccionario se convertirá en una respuesta JSON."
 
 #: flask.app.Flask.make_response:52 of
 msgid ""
@@ -1947,9 +1940,8 @@ msgid "Shortcut for :meth:`route` with ``methods=[\"PUT\"]``."
 msgstr "Acceso directo a :meth:`route` con ``methods=[\"PUT\"]``."
 
 #: flask.app.Flask.redirect:1 flask.helpers.redirect:1 of
-#, fuzzy
 msgid "Create a redirect response object."
-msgstr "un objeto de respuesta."
+msgstr "Crea un objeto de respuesta de redirección."
 
 #: flask.app.Flask.redirect:3 of
 msgid ""
@@ -1960,14 +1952,12 @@ msgstr ""
 " también."
 
 #: flask.app.Flask.redirect:6 flask.helpers.redirect:7 of
-#, fuzzy
 msgid "The URL to redirect to."
-msgstr "la ubicación a la que debe redirigirse la respuesta."
+msgstr "La URL a la que se redirige."
 
 #: flask.app.Flask.redirect:7 flask.helpers.redirect:8 of
-#, fuzzy
 msgid "The status code for the redirect."
-msgstr "El código de estado HTTP como un número."
+msgstr "El código de estado de la redirección."
 
 #: flask.app.Flask.redirect:9 of
 msgid "Moved from ``flask.redirect``, which calls this method."
@@ -2369,16 +2359,17 @@ msgstr ""
 "o después de que un contexto empujado manualmente termine."
 
 #: flask.app.Flask.teardown_appcontext:11 of
-#, fuzzy
 msgid ""
 "When the ``with`` block exits (or ``ctx.pop()`` is called), the teardown "
 "functions are called just before the app context is made inactive. Since a "
 "request context typically also manages an application context it would also "
 "be called when you pop a request context."
 msgstr ""
-"Dado que un contexto de solicitud normalmente también gestiona un contexto "
-"de aplicación, también sería llamado cuando se abre un contexto de "
-"solicitud."
+"Cuando el bloque ``with`` sale (o se llama a ``ctx.pop()``), las funciones "
+"de desmontaje son llamadas justo antes de que el contexto de aplicación se "
+"vuelva inactivo. Dado que un contexto de petición normalmente también "
+"gestiona un contexto de aplicación, también se llamará cuando se haga "
+"desaparecer un contexto de petición."
 
 #: flask.app.Flask.teardown_appcontext:17
 #: flask.scaffold.Scaffold.teardown_request:14 of
@@ -2394,15 +2385,14 @@ msgstr ""
 
 #: flask.app.Flask.teardown_appcontext:22
 #: flask.scaffold.Scaffold.teardown_request:19 of
-#, fuzzy
 msgid ""
 "Teardown functions must avoid raising exceptions. If they execute code that "
 "might fail they must surround that code with a ``try``/``except`` block and "
 "log any errors."
 msgstr ""
-"Las funciones de desmontaje deben evitar levantar excepciones. Si ejecutan "
-"código que puede fallar tendrán que rodear la ejecución de este código con "
-"sentencias try/except y registrar los errores que se produzcan."
+"Las funciones de desmontaje deben evitar lanzar excepciones. Si ejecutan "
+"código que puede fallar deben rodear ese código con un bloque "
+"``try``/``except`` y registrar cualquier error."
 
 #: flask.app.Flask.teardown_appcontext:26
 #: flask.scaffold.Scaffold.teardown_request:23 of
@@ -2862,9 +2852,8 @@ msgstr ""
 " y los valores y debe actualizar los valores pasados en su lugar."
 
 #: flask.app.Flask.url_for:1 flask.helpers.url_for:1 of
-#, fuzzy
 msgid "Generate a URL to the given endpoint with the given values."
-msgstr "Genera una URL al endpoint dado con el método proporcionado."
+msgstr "Genera una URL al endpoint dado con los valores indicados."
 
 #: flask.app.Flask.url_for:3 of
 msgid ""
@@ -2933,9 +2922,8 @@ msgstr ""
 " utilizará el nombre del plano actual (si lo hay)."
 
 #: flask.app.Flask.url_for:31 flask.helpers.url_for:10 of
-#, fuzzy
 msgid "If given, append this as ``#anchor`` to the URL."
-msgstr "si se proporciona, se añade como ancla a la URL."
+msgstr "Si se proporciona, se añade como ``#anchor`` a la URL."
 
 #: flask.app.Flask.url_for:32 flask.helpers.url_for:11 of
 msgid ""
@@ -3220,13 +3208,12 @@ msgstr ""
 "fallar, por lo que la ruta puede ser especificada manualmente en su lugar."
 
 #: flask.blueprints.Blueprint:44 of
-#, fuzzy
 msgid ""
 "The name of the blueprint's CLI group. If not set, the blueprint name will "
 "be used."
 msgstr ""
-"el nombre opcional del global, de lo contrario se utilizará el nombre de la "
-"función."
+"El nombre del grupo CLI del blueprint. Si no se establece, se utilizará el "
+"nombre del plano."
 
 #: flask.blueprints.Blueprint:47 of
 msgid ""
@@ -3964,9 +3951,10 @@ msgid "Ignore the mimetype and always try to parse JSON."
 msgstr "Ignora el mimetype e intenta siempre parsear JSON."
 
 #: of werkzeug.wrappers.request.Request.get_json:10
-#, fuzzy
 msgid "Silence mimetype and parsing errors, and return ``None`` instead."
-msgstr "Silencia los errores de análisis y devuelve ``None`` en su lugar."
+msgstr ""
+"Silencia los errores de mimetype y de parsing, y devuelve ``None`` en su "
+"lugar."
 
 #: of werkzeug.wrappers.request.Request.get_json:12
 msgid "Store the parsed JSON to return for subsequent calls."
@@ -4147,15 +4135,13 @@ msgid "Called if :meth:`get_json` fails and isn't silenced."
 msgstr "Se llama si :meth:`get_json` falla y no se silencia."
 
 #: flask.wrappers.Request.on_json_loading_failed:3 of
-#, fuzzy
 msgid ""
 "If this method returns a value, it is used as the return value for "
 ":meth:`get_json`. The default implementation raises "
 ":exc:`~werkzeug.exceptions.BadRequest`."
 msgstr ""
-"Se llama si el análisis sintáctico de :meth:`get_json` falla y no se "
-"silencia. Si este método devuelve un valor, se utiliza como valor de retorno"
-" para :meth:`get_json`. La implementación por defecto lanza "
+"Si este método devuelve un valor, se utiliza como valor de retorno para "
+":meth:`get_json`. La implementación por defecto lanza "
 ":exc:`~werkzeug.exceptions.BadRequest`."
 
 #: flask.wrappers.Request.on_json_loading_failed:7 of
@@ -4862,9 +4848,8 @@ msgid "Generate an ``ETag`` header if one is not already set."
 msgstr "Genera una cabecera ``ETag`` si aún no se ha establecido una."
 
 #: of werkzeug.wrappers.response.Response.freeze:10
-#, fuzzy
 msgid "Removed the ``no_etag`` parameter."
-msgstr "Se ha añadido el parámetro ``follow_redirects``."
+msgstr "Se ha eliminado el parámetro ``no_etag``."
 
 #: of werkzeug.wrappers.response.Response.freeze:13
 msgid ""
@@ -6247,30 +6232,25 @@ msgstr ""
 "comportamiento."
 
 #: flask.helpers.url_for:27 of
-#, fuzzy
 msgid "The ``_scheme`` parameter was added."
-msgstr "Se ha añadido el parámetro `_scheme`."
+msgstr "Se ha añadido el parámetro ``scheme``."
 
 #: flask.helpers.url_for:30 of
-#, fuzzy
 msgid "The ``_anchor`` and ``_method`` parameters were added."
-msgstr "Se han añadido los parámetros `_anchor` y `_method`."
+msgstr "Se han añadido los parámetros ``_anchor`` y ``_method``."
 
 #: flask.helpers.url_for:33 of
-#, fuzzy
 msgid "Calls ``app.handle_url_build_error`` on build errors."
 msgstr ""
-"Llama a :meth:`Flask.handle_build_error` en "
-":exc:`~werkzeug.routing.BuildError`."
+"Llama a ``app.handle_url_build_error`` en los errores de construcción."
 
 #: flask.helpers.abort:1 of
-#, fuzzy
 msgid ""
 "Raise an :exc:`~werkzeug.exceptions.HTTPException` for the given status "
 "code."
 msgstr ""
-"Lanza una :py:exc:`HTTPException` para el código de estado dado o la "
-"aplicación WSGI."
+"Lanza una :exc:`~werkzeug.exceptions.HTTPException` para el código de estado"
+" dado."
 
 #: flask.helpers.abort:4 of
 msgid ""
@@ -6308,18 +6288,25 @@ msgid ""
 ":meth:`~flask.Flask.redirect` method, otherwise it will use "
 ":func:`werkzeug.utils.redirect`."
 msgstr ""
+"Si :data:`~flask.current_app` está disponible, utilizará su método "
+":meth:`~flask.Flask.redirect`, en caso contrario utilizará "
+":func:`werkzeug.utils.redirect`."
 
 #: flask.helpers.redirect:9 of
 msgid ""
 "The response class to use. Not used when ``current_app`` is active, which "
 "uses ``app.response_class``."
 msgstr ""
+"La clase de respuesta a utilizar. No se utiliza cuando está activa "
+"``current_app``, que utiliza ``app.response_class``."
 
 #: flask.helpers.redirect:12 of
 msgid ""
 "Calls ``current_app.redirect`` if available instead of always using "
 "Werkzeug's default ``redirect``."
 msgstr ""
+"Llama a ``current_app.redirect`` si está disponible en lugar de usar siempre"
+" el ``redirect`` por defecto de Werkzeug."
 
 #: flask.helpers.make_response:1 of
 msgid ""
@@ -6646,11 +6633,12 @@ msgstr ""
 "404 :exc:`~werkzeug.exceptions.NotFound`."
 
 #: flask.helpers.send_from_directory:19 of
-#, fuzzy
 msgid ""
 "The directory that ``path`` must be located under, relative to the current "
 "application's root path."
-msgstr "El directorio en el que debe encontrarse ``path``."
+msgstr ""
+"El directorio en el que ``path`` debe estar ubicado, relativo a la ruta raíz"
+" de la aplicación actual."
 
 #: flask.helpers.send_from_directory:21 of
 msgid "The path to the file to send, relative to ``directory``."
@@ -6876,9 +6864,8 @@ msgstr ""
 " :rfc:`822`. Esto es lo mismo que el formato de fecha HTTP."
 
 #: ../../api.rst:245 flask.json.JSONEncoder:7 of
-#, fuzzy
 msgid ":class:`decimal.Decimal` is serialized to a string."
-msgstr ":class:`uuid.UUID` se serializa en una cadena."
+msgstr ":class:`decimal.Decimal` se serializa en una cadena."
 
 #: ../../api.rst:246 flask.json.JSONEncoder:8 of
 msgid ":class:`uuid.UUID` is serialized to a string."
@@ -7334,40 +7321,34 @@ msgid "Template Rendering"
 msgstr "Renderizado de plantillas"
 
 #: flask.templating.render_template:1 of
-#, fuzzy
 msgid "Render a template by name with the given context."
-msgstr ""
-"Renderiza una plantilla de la carpeta de plantillas con el contexto dado."
+msgstr "Renderiza una plantilla por nombre con el contexto dado."
 
 #: flask.templating.render_template:3 flask.templating.stream_template:5 of
-#, fuzzy
 msgid ""
 "The name of the template to render. If a list is given, the first name to "
 "exist will be rendered."
 msgstr ""
-"el nombre de la plantilla que se va a renderizar, o un iterable con nombres "
-"de plantillas de las que se renderizará la primera que exista"
+"El nombre de la plantilla a renderizar. Si se da una lista, se renderizará "
+"el primer nombre que exista."
 
 #: flask.templating.render_template:5
 #: flask.templating.render_template_string:5
 #: flask.templating.stream_template:7
 #: flask.templating.stream_template_string:6 of
-#, fuzzy
 msgid "The variables to make available in the template."
-msgstr ""
-"las variables que deben estar disponibles en el contexto de la plantilla."
+msgstr "Las variables que deben estar disponibles en la plantilla."
 
 #: flask.templating.render_template_string:1 of
-#, fuzzy
 msgid "Render a template from the given source string with the given context."
 msgstr ""
-"Renderiza una plantilla de la carpeta de plantillas con el contexto dado."
+"Renderiza una plantilla a partir de la cadena fuente dada con el contexto "
+"dado."
 
 #: flask.templating.render_template_string:4
 #: flask.templating.stream_template_string:5 of
-#, fuzzy
 msgid "The source code of the template to render."
-msgstr "el código fuente de la plantilla que se va a renderizar"
+msgstr "El código fuente de la plantilla a renderizar."
 
 #: flask.templating.stream_template:1 of
 msgid ""
@@ -7375,16 +7356,19 @@ msgid ""
 "an iterator of strings, which can be used as a streaming response from a "
 "view."
 msgstr ""
+"Renderiza una plantilla por nombre con el contexto dado como un flujo. Esto "
+"devuelve un iterador de cadenas, que puede ser utilizado como una respuesta "
+"de flujo de una vista."
 
 #: flask.templating.stream_template_string:1 of
-#, fuzzy
 msgid ""
 "Render a template from the given source string with the given context as a "
 "stream. This returns an iterator of strings, which can be used as a "
 "streaming response from a view."
 msgstr ""
-"Renderiza una plantilla a partir de la cadena de origen de la plantilla con "
-"el contexto dado. Las variables de la plantilla serán autoescapadas."
+"Renderiza una plantilla a partir de la cadena de origen dada con el contexto"
+" dado como un flujo. Esto devuelve un iterador de cadenas, que puede ser "
+"utilizado como una respuesta de flujo desde una vista."
 
 #: flask.helpers.get_template_attribute:1 of
 msgid ""
@@ -7625,16 +7609,22 @@ msgid ""
 "loading function to attempt to convert them to more specific types than "
 "strings."
 msgstr ""
+"Carga cualquier variable de entorno que empiece por ``FLASK_``, eliminando "
+"el prefijo de la clave env para la clave config. Los valores se pasan a "
+"través de una función de carga para intentar convertirlos en tipos más "
+"específicos que las cadenas."
 
 #: flask.config.Config.from_prefixed_env:6 of
 msgid "Keys are loaded in :func:`sorted` order."
-msgstr ""
+msgstr "Las claves se cargan en orden :func:`sorted`."
 
 #: flask.config.Config.from_prefixed_env:8 of
 msgid ""
 "The default loading function attempts to parse values as any valid JSON "
 "type, including dicts and lists."
 msgstr ""
+"La función de carga por defecto intenta analizar los valores como cualquier "
+"tipo JSON válido, incluyendo dicts y listas."
 
 #: flask.config.Config.from_prefixed_env:11 of
 msgid ""
@@ -7642,12 +7632,17 @@ msgid ""
 " underscores (``__``). If an intermediate key doesn't exist, it will be "
 "initialized to an empty dict."
 msgstr ""
+"Se pueden establecer elementos específicos en los dicts anidados separando "
+"las claves con doble guión bajo (``__``). Si una clave intermedia no existe,"
+" se inicializará con un dict vacío."
 
 #: flask.config.Config.from_prefixed_env:15 of
 msgid ""
 "Load env vars that start with this prefix, separated with an underscore "
 "(``_``)."
 msgstr ""
+"Cargar los env vars que comienzan con este prefijo, separados por un guión "
+"bajo (``_``)."
 
 #: flask.config.Config.from_prefixed_env:17 of
 msgid ""
@@ -7655,6 +7650,9 @@ msgid ""
 "config value. If any error is raised it is ignored and the value remains a "
 "string. The default is :func:`json.loads`."
 msgstr ""
+"Pase cada valor de cadena a esta función y utilice el valor devuelto como "
+"valor de configuración. Si se produce algún error se ignora y el valor sigue"
+" siendo una cadena. El valor por defecto es :func:`json.loads`."
 
 #: flask.config.Config.from_pyfile:1 of
 msgid ""
@@ -7755,17 +7753,16 @@ msgid "Useful Internals"
 msgstr "Internos útiles"
 
 #: flask.ctx.RequestContext:1 of
-#, fuzzy
 msgid ""
 "The request context contains per-request information. The Flask app creates "
 "and pushes it at the beginning of the request, then pops it at the end of "
 "the request. It will create the URL adapter and request object for the WSGI "
 "environment provided."
 msgstr ""
-"El contexto de la petición contiene toda la información relevante de la "
-"misma. Se crea al principio de la petición y se empuja a la "
-"`_request_ctx_stack` y se elimina al final de la misma.Creará el adaptador "
-"de URL y el objeto de solicitud para el entorno WSGI proporcionado."
+"El contexto de solicitud contiene información por solicitud. La aplicación "
+"Flask lo crea y empuja al principio de la petición, y luego lo saca al final"
+" de la misma. Creará el adaptador de URL y el objeto de solicitud para el "
+"entorno WSGI proporcionado."
 
 #: flask.ctx.RequestContext:6 of
 msgid ""
@@ -7795,6 +7792,12 @@ msgid ""
 "after the request ends. However, teardown functions may already have closed "
 "some resources such as database connections."
 msgstr ""
+"El contexto de la petición es automáticamente extraído al final de la "
+"petición. Cuando se utiliza el depurador interactivo, el contexto será "
+"restaurado para que ``request`` siga siendo accesible. Del mismo modo, el "
+"cliente de prueba puede preservar el contexto después de que la solicitud "
+"termine. Sin embargo, las funciones de desmontaje pueden haber cerrado ya "
+"algunos recursos, como las conexiones a la base de datos."
 
 #: flask.ctx.RequestContext.copy:1 of
 msgid ""
@@ -7844,6 +7847,9 @@ msgid ""
 "The current :class:`~flask.ctx.RequestContext`. If a request context is not "
 "active, accessing attributes on this proxy will raise a ``RuntimeError``."
 msgstr ""
+"La :class:`~flask.ctx.RequestContext` actual. Si un contexto de solicitud no"
+" está activo, el acceso a los atributos de este proxy generará un "
+"``RuntimeError``."
 
 #: ../../api.rst:321
 msgid ""
@@ -7851,6 +7857,10 @@ msgid ""
 "Accessing this should not be needed in most cases. Most likely you want "
 ":data:`request` and :data:`session` instead."
 msgstr ""
+"Este es un objeto interno que es esencial para la forma en que Flask maneja "
+"las solicitudes. En la mayoría de los casos no debería ser necesario acceder"
+" a él. Lo más probable es que quieras :data:`request` y :data:`session` en "
+"su lugar."
 
 #: flask.ctx.AppContext:1 of
 msgid ""
@@ -7858,6 +7868,10 @@ msgid ""
 " created and pushed at the beginning of each request if one is not already "
 "active. An app context is also pushed when running CLI commands."
 msgstr ""
+"El contexto de la aplicación contiene información específica de la "
+"aplicación. Se crea un contexto de aplicación y se envía al principio de "
+"cada solicitud si no hay uno activo. También se envía un contexto de "
+"aplicación cuando se ejecutan comandos CLI."
 
 #: flask.ctx.AppContext.pop:1 of
 msgid "Pops the app context."
@@ -7872,6 +7886,9 @@ msgid ""
 "The current :class:`~flask.ctx.AppContext`. If an app context is not active,"
 " accessing attributes on this proxy will raise a ``RuntimeError``."
 msgstr ""
+"La actual :class:`~flask.ctx.AppContext`. Si un contexto de aplicación no "
+"está activo, el acceso a los atributos de este proxy generará un "
+"``RuntimeError``."
 
 #: ../../api.rst:334
 msgid ""
@@ -7879,6 +7896,10 @@ msgid ""
 "Accessing this should not be needed in most cases. Most likely you want "
 ":data:`current_app` and :data:`g` instead."
 msgstr ""
+"Este es un objeto interno que es esencial para la forma en que Flask maneja "
+"las solicitudes. En la mayoría de los casos no debería ser necesario acceder"
+" a él. Lo más probable es que quieras :data:`current_app` y :data:`g` en su "
+"lugar."
 
 #: flask.blueprints.BlueprintSetupState:1 of
 msgid ""
@@ -8154,15 +8175,21 @@ msgid ""
 "that creates an instance of the class with the given arguments and calls its"
 " ``dispatch_request`` method with any URL variables."
 msgstr ""
+"Subclase de esta clase y anular :meth:`dispatch_request` para crear una "
+"vista genérica basada en la clase. Llame a :meth:`as_view` para crear una "
+"función de vista que cree una instancia de la clase con los argumentos dados"
+" y llame a su método ``dispatch_request`` con cualquier variable de la URL."
 
 #: flask.views.MethodView:10 flask.views.View:7 of
 msgid "See :doc:`views` for a detailed guide."
-msgstr ""
+msgstr "Consulte :doc:`views` para obtener una guía detallada."
 
 #: flask.views.View:21 of
 msgid ""
 "Set :attr:`methods` on the class to change what methods the view accepts."
 msgstr ""
+"Establezca :attr:`methods` en la clase para cambiar los métodos que acepta "
+"la vista."
 
 #: flask.views.View:24 of
 msgid ""
@@ -8170,17 +8197,24 @@ msgid ""
 "generated view function. Decorators applied to the class itself will not be "
 "applied to the generated view function!"
 msgstr ""
+"Establezca :attr:`decorators` en la clase para aplicar una lista de "
+"decoradores a la función de vista generada ¡Los decoradores aplicados a la "
+"propia clase no se aplicarán a la función de vista generada!"
 
 #: flask.views.View:28 of
 msgid ""
 "Set :attr:`init_every_request` to ``False`` for efficiency, unless you need "
 "to store request-global data on ``self``."
 msgstr ""
+"Establece :attr:`init_every_request` a ``False`` para mayor eficiencia, a "
+"menos que necesites almacenar datos globales de la solicitud en ``self``."
 
 #: flask.views.View.as_view:1 of
 msgid ""
 "Convert the class into a view function that can be registered for a route."
 msgstr ""
+"Convierte la clase en una función de vista que puede ser registrada para una"
+" ruta."
 
 #: flask.views.View.as_view:4 of
 msgid ""
@@ -8189,19 +8223,22 @@ msgid ""
 "class sets :attr:`init_every_request` to ``False``, the same instance will "
 "be used for every request."
 msgstr ""
+"Por defecto, la vista generada creará una nueva instancia de la clase view "
+"para cada petición y llamará a su método :meth:`dispatch_request`. Si la "
+"clase de vista establece :attr:`init_every_request` a ``False``, se "
+"utilizará la misma instancia para cada solicitud."
 
 #: flask.views.View.as_view:10 of
-#, fuzzy
 msgid ""
 "The arguments passed to this method are forwarded to the view class "
 "``__init__`` method."
 msgstr ""
-"Los argumentos pasados a :meth:`as_view` son enviados al constructor de la "
-"clase."
+"Los argumentos pasados a este método son enviados al método ``__init__`` de "
+"la clase view."
 
 #: flask.views.View.as_view:13 of
 msgid "Added the ``init_every_request`` class attribute."
-msgstr ""
+msgstr "Añadido el atributo de clase ``init_every_request``."
 
 #: ../../docstring flask.views.View.decorators:1 of
 msgid ""
@@ -8209,6 +8246,10 @@ msgid ""
 "Remember that ``@decorator`` syntax is applied bottom to top, so the first "
 "decorator in the list would be the bottom decorator."
 msgstr ""
+"Una lista de decoradores para aplicar, en orden, a la función de vista "
+"generada. Recuerda que la sintaxis ``@decorator`` se aplica de abajo a "
+"arriba, por lo que el primer decorador de la lista sería el decorador "
+"inferior."
 
 #: flask.views.MethodView.dispatch_request:1
 #: flask.views.View.dispatch_request:1 of
@@ -8217,6 +8258,9 @@ msgid ""
 "a valid response. Any variables from the URL rule are passed as keyword "
 "arguments."
 msgstr ""
+"El comportamiento real de la función de la vista. Las subclases deben anular"
+" esto y devolver una respuesta válida. Cualquier variable de la regla de la "
+"URL se pasa como argumento de la palabra clave."
 
 #: ../../docstring flask.views.View.init_every_request:1 of
 msgid ""
@@ -8224,6 +8268,9 @@ msgid ""
 "view subclass sets this to ``False``, the same instance is used for every "
 "request."
 msgstr ""
+"Crea una nueva instancia de esta clase de vista para cada solicitud por "
+"defecto. Si una subclase de la vista establece esto como ``False``, se "
+"utiliza la misma instancia para cada solicitud."
 
 #: ../../docstring flask.views.View.init_every_request:5 of
 msgid ""
@@ -8231,39 +8278,50 @@ msgid ""
 "during init. However, storing data on ``self`` is no longer safe across "
 "requests, and :data:`~flask.g` should be used instead."
 msgstr ""
+"Una sola instancia es más eficiente, especialmente si se realiza una "
+"configuración compleja durante el init. Sin embargo, el almacenamiento de "
+"datos en ``self`` ya no es seguro a través de las solicitudes, y "
+":data:`~flask.g` debe ser utilizado en su lugar."
 
 #: ../../docstring flask.views.View.methods:1 of
 msgid ""
 "The methods this view is registered for. Uses the same default (``[\"GET\", "
 "\"HEAD\", \"OPTIONS\"]``) as ``route`` and ``add_url_rule`` by default."
 msgstr ""
+"Los métodos para los que se registra esta vista. Utiliza el mismo valor por "
+"defecto (``[\"GET\", \"HEAD\", \"OPTIONS\"]``) que ``route`` y "
+"``add_url_rule`` por defecto."
 
 #: ../../docstring flask.views.View.provide_automatic_options:1 of
 msgid ""
 "Control whether the ``OPTIONS`` method is handled automatically. Uses the "
 "same default (``True``) as ``route`` and ``add_url_rule`` by default."
 msgstr ""
+"Controla si el método ``OPTIONS`` se maneja automáticamente. Utiliza el "
+"mismo valor por defecto (``True``) que ``route`` y ``add_url_rule`` por "
+"defecto."
 
 #: flask.views.MethodView:1 of
-#, fuzzy
 msgid ""
 "Dispatches request methods to the corresponding instance methods. For "
 "example, if you implement a ``get`` method, it will be used to handle "
 "``GET`` requests."
 msgstr ""
-"Una vista basada en una clase que envía los métodos de solicitud a los "
-"métodos correspondientes de la clase. Por ejemplo, si se implementa un "
-"método ``get``, se utilizará para gestionar las peticiones ``GET``. ::"
+"Envía los métodos de solicitud a los métodos de instancia correspondientes. "
+"Por ejemplo, si implementas un método ``get``, se utilizará para gestionar "
+"las peticiones ``GET``."
 
 #: flask.views.MethodView:5 of
 msgid "This can be useful for defining a REST API."
-msgstr ""
+msgstr "Esto puede ser útil para definir una API REST."
 
 #: flask.views.MethodView:7 of
 msgid ""
 ":attr:`methods` is automatically set based on the methods defined on the "
 "class."
 msgstr ""
+":attr:`methods` se establece automáticamente en función de los métodos "
+"definidos en la clase."
 
 #: ../../api.rst:572
 msgid "URL Route Registrations"
@@ -8653,12 +8711,16 @@ msgid ""
 "Added the ``-A/--app``, ``-E/--env``, ``--debug/--no-debug``, and "
 "``-e/--env-file`` options."
 msgstr ""
+"Se han añadido las opciones ``-A/--app``, ``-E/--env``, ``--debug/--no-"
+"debug``, y ``-e/--env-file``."
 
 #: flask.cli.FlaskGroup:22 of
 msgid ""
 "An app context is pushed when running ``app.cli`` commands, so "
 "``@with_appcontext`` is no longer required for those commands."
 msgstr ""
+"Al ejecutar los comandos ``app.cli`` se envía un contexto de aplicación, por"
+" lo que ``@with_appcontext`` ya no es necesario para esos comandos."
 
 #: flask.cli.FlaskGroup.get_command:1 of
 msgid ""
@@ -8680,12 +8742,17 @@ msgid ""
 "parsing and create a new :class:`Context`.  It does not invoke the actual "
 "command callback though."
 msgstr ""
+"Esta función, cuando se le da un nombre de información y argumentos, "
+"iniciará el análisis y creará un nuevo :class:`Context`. Sin embargo, no "
+"invoca la llamada de retorno del comando real."
 
 #: flask.cli.FlaskGroup.make_context:5 of
 msgid ""
 "To quickly customize the context class used without overriding this method, "
 "set the :attr:`context_class` attribute."
 msgstr ""
+"Para personalizar rápidamente la clase de contexto utilizada sin "
+"sobrescribir este método, establezca el atributo :attr:`context_class`."
 
 #: flask.cli.FlaskGroup.make_context:8 of
 msgid ""
@@ -8693,26 +8760,26 @@ msgid ""
 "name for the script or command.  For the toplevel script it's usually the "
 "name of the script, for commands below it it's the name of the command."
 msgstr ""
+"el nombre informativo de esta invocación. Generalmente este es el nombre más"
+" descriptivo para el script o comando. Para el script de nivel superior "
+"suele ser el nombre del script, para los comandos inferiores es el nombre "
+"del comando."
 
 #: flask.cli.FlaskGroup.make_context:13 of
 msgid "the arguments to parse as list of strings."
-msgstr ""
+msgstr "los argumentos a analizar como lista de cadenas."
 
 #: flask.cli.FlaskGroup.make_context:14 of
 msgid "the parent context if available."
-msgstr ""
+msgstr "el contexto padre si está disponible."
 
 #: flask.cli.FlaskGroup.make_context:15 of
-#, fuzzy
 msgid "extra keyword arguments forwarded to the context constructor."
-msgstr ""
-"los argumentos adicionales de la palabra clave se envían al constructor del "
-"contexto. Para más información, véase :class:`Context`."
+msgstr "argumentos clave extras enviados al constructor del contexto."
 
 #: flask.cli.FlaskGroup.make_context:18 of
-#, fuzzy
 msgid "Added the :attr:`context_class` attribute."
-msgstr "un objeto :attr:`response_class`."
+msgstr "Se ha añadido el atributo :attr:`context_class`."
 
 #: flask.cli.FlaskGroup.parse_args:1 of
 msgid ""
@@ -8720,6 +8787,9 @@ msgid ""
 "the arguments, then modifies the context as necessary. This is automatically"
 " invoked by :meth:`make_context`."
 msgstr ""
+"Dado un contexto y una lista de argumentos, crea el analizador y analiza los"
+" argumentos, luego modifica el contexto según sea necesario. Esto es "
+"invocado automáticamente por :meth:`make_context`."
 
 #: flask.cli.AppGroup:1 of
 msgid ""
@@ -8828,7 +8898,7 @@ msgstr "``True`` si se ha cargado un archivo."
 #: flask.cli.load_dotenv:13 of
 msgid ""
 "The current directory is not changed to the location of the loaded file."
-msgstr ""
+msgstr "El directorio actual no se cambia a la ubicación del archivo cargado."
 
 #: flask.cli.load_dotenv:17 of
 msgid "When loading the env files, set the default encoding to UTF-8."
@@ -8848,6 +8918,8 @@ msgid ""
 "Wraps a callback so that it's guaranteed to be executed with the script's "
 "application context."
 msgstr ""
+"Envuelve una llamada de retorno para que se garantice su ejecución con el "
+"contexto de la aplicación del script."
 
 #: flask.cli.with_appcontext:4 of
 msgid ""
@@ -8855,6 +8927,9 @@ msgid ""
 "``blueprint.cli`` will always have an app context available, this decorator "
 "is not required in that case."
 msgstr ""
+"Los comandos personalizados (y sus opciones) registrados en ``app.cli`` o "
+"``blueprint.cli`` siempre tendrán un contexto de aplicación disponible, este"
+" decorador no es necesario en ese caso."
 
 #: flask.cli.with_appcontext:8 of
 msgid ""
@@ -8862,6 +8937,10 @@ msgid ""
 " The app context is always available to ``app.cli`` command and parameter "
 "callbacks."
 msgstr ""
+"El contexto de la aplicación está activo para los subcomandos, así como para"
+" la devolución de llamada decorada. El contexto de la aplicación siempre "
+"está disponible para las devoluciones de llamada de comandos y parámetros de"
+" ``app.cli``."
 
 #: ../../api.rst:745
 msgid ""
@@ -8884,13 +8963,12 @@ msgstr ""
 "estabilidad, seguridad o rendimiento de los servidores WSGI de producción."
 
 #: ../../docstring flask.cli.run_command:6 of
-#, fuzzy
 msgid ""
 "The reloader and debugger are enabled by default with the '--env "
 "development' or '--debug' options."
 msgstr ""
-"El recargador y el depurador están habilitados por defecto si "
-"FLASK_ENV=development o FLASK_DEBUG=1."
+"El recargador y el depurador se activan por defecto con las opciones '--env "
+"development' o '--debug'."
 
 #: ../../docstring flask.cli.shell_command:1 of
 msgid ""
