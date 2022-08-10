@@ -30,6 +30,11 @@ msgid ""
 "fits your need. If this is the case, you can create your own, and publish it"
 " for others to use as well."
 msgstr ""
+"Las extensiones son paquetes adicionales que añaden funcionalidad a una "
+"aplicación Flask. Aunque `PyPI`_ contiene muchas extensiones de Flask, puede"
+" que no encuentres ninguna que se ajuste a tus necesidades. Si este es el "
+"caso, puedes crear la tuya propia, y publicarla para que otros la usen "
+"también."
 
 #: ../../extensiondev.rst:11
 msgid ""
@@ -37,6 +42,9 @@ msgid ""
 " patterns and requirements involved. Since extensions can do anything, this "
 "guide won't be able to cover every possibility."
 msgstr ""
+"Esta guía mostrará cómo crear una extensión de Flask, y algunos de los "
+"patrones y requisitos comunes involucrados. Como las extensiones pueden "
+"hacer cualquier cosa, esta guía no podrá cubrir todas las posibilidades."
 
 #: ../../extensiondev.rst:15
 msgid ""
@@ -44,6 +52,10 @@ msgid ""
 "you use are written, and discuss with others. Discuss your design ideas with"
 " others on our `Discord Chat`_ or `GitHub Discussions`_."
 msgstr ""
+"La mejor manera de aprender sobre las extensiones es mirar cómo están "
+"escritas otras extensiones que utilizas, y discutir con otros. Discute tus "
+"ideas de diseño con otros en nuestro `Discord Chat`_ o `GitHub "
+"Discussions`_."
 
 #: ../../extensiondev.rst:20
 msgid ""
@@ -51,10 +63,14 @@ msgid ""
 "using one extension won't feel completely lost with another. This can only "
 "work if collaboration happens early."
 msgstr ""
+"Las mejores extensiones comparten patrones comunes, de modo que quien esté "
+"familiarizado con el uso de una extensión no se sienta completamente perdido"
+" con otra. Esto sólo puede funcionar si la colaboración se produce desde el "
+"principio."
 
 #: ../../extensiondev.rst:26
 msgid "Naming"
-msgstr ""
+msgstr "Nombramiento"
 
 #: ../../extensiondev.rst:28
 msgid ""
@@ -63,6 +79,10 @@ msgid ""
 "This makes it easy to search for extensions, and makes their purpose "
 "clearer."
 msgstr ""
+"Una extensión de Flask normalmente tiene ``flask`` en su nombre como prefijo"
+" o sufijo. Si envuelve otra biblioteca, debería incluir el nombre de la "
+"biblioteca también. Esto facilita la búsqueda de extensiones, y hace que su "
+"propósito sea más claro."
 
 #: ../../extensiondev.rst:33
 msgid ""
@@ -73,30 +93,37 @@ msgid ""
 " dashes (``-``). If it wraps another library, prefer using the same case as "
 "that library's name."
 msgstr ""
+"Una recomendación general de empaquetado de Python es que el nombre de "
+"instalación del índice del paquete y el nombre utilizado en las "
+"declaraciones ``import`` deben estar relacionados. El nombre de importación "
+"está en minúsculas, con palabras separadas por guiones bajos (``_``). El "
+"nombre de instalación va en minúsculas o en mayúsculas, con las palabras "
+"separadas por guiones (``-``). Si envuelve a otra biblioteca, es preferible "
+"utilizar el mismo caso que el nombre de esa biblioteca."
 
 #: ../../extensiondev.rst:40
 msgid "Here are some example install and import names:"
-msgstr ""
+msgstr "Estos son algunos ejemplos de nombres de instalación e importación:"
 
 #: ../../extensiondev.rst:42
 msgid "``Flask-Name`` imported as ``flask_name``"
-msgstr ""
+msgstr "``Flask-Name`` importado como ``flask_name``"
 
 #: ../../extensiondev.rst:43
 msgid "``flask-name-lower`` imported as ``flask_name_lower``"
-msgstr ""
+msgstr "``flask-name-lower`` importado como ``flask_name_lower``"
 
 #: ../../extensiondev.rst:44
 msgid "``Flask-ComboName`` imported as ``flask_comboname``"
-msgstr ""
+msgstr "``Flask-ComboName`` importado como ``flask_comboname``"
 
 #: ../../extensiondev.rst:45
 msgid "``Name-Flask`` imported as ``name_flask``"
-msgstr ""
+msgstr "``Name-Flask`` importado como ``name_flask``"
 
 #: ../../extensiondev.rst:49
 msgid "The Extension Class and Initialization"
-msgstr ""
+msgstr "La clase de extensión y la inicialización"
 
 #: ../../extensiondev.rst:51
 msgid ""
@@ -105,6 +132,11 @@ msgid ""
 "represents the extension's configuration and behavior, with an ``init_app`` "
 "method to apply the extension instance to the given application instance."
 msgstr ""
+"Todas las extensiones necesitarán algún punto de entrada que inicialice la "
+"extensión con la aplicación. El patrón más común es crear una clase que "
+"represente la configuración y el comportamiento de la extensión, con un "
+"método ``init_app`` para aplicar la instancia de la extensión a la instancia"
+" de la aplicación dada."
 
 #: ../../extensiondev.rst:67
 msgid ""
@@ -112,6 +144,10 @@ msgid ""
 "``self.app = app``. The only time the extension should have direct access to"
 " an app is during ``init_app``, otherwise it should use :data:`current_app`."
 msgstr ""
+"Es importante que la aplicación no se almacene en la extensión, no hagas "
+"``self.app = app``. La única vez que la extensión debe tener acceso directo "
+"a una aplicación es durante ``init_app``, de lo contrario debe utilizar "
+":data:`current_app``."
 
 #: ../../extensiondev.rst:72
 msgid ""
@@ -119,6 +155,10 @@ msgid ""
 " circular import issues when importing the extension instance elsewhere in a"
 " user's code, and makes testing with different configurations easier."
 msgstr ""
+"Esto permite que la extensión sea compatible con el patrón de fábrica de la "
+"aplicación, evita problemas de importación circular cuando se importa la "
+"instancia de la extensión en otra parte del código de un usuario, y facilita"
+" las pruebas con diferentes configuraciones."
 
 #: ../../extensiondev.rst:86
 msgid ""
@@ -127,6 +167,10 @@ msgid ""
 " project import hello`` and use the extension in blueprints before the app "
 "exists."
 msgstr ""
+"Arriba, la instancia de la extensión ``hello`` existe independientemente de "
+"la aplicación. Esto significa que otros módulos en el proyecto de un usuario"
+" pueden hacer ``from project import hello`` y utilizar la extensión en los "
+"blueprints antes de que la aplicación exista."
 
 #: ../../extensiondev.rst:91
 msgid ""
@@ -136,10 +180,15 @@ msgid ""
 "to your extension, such as the extension's name without the \"flask\" "
 "prefix."
 msgstr ""
+"El dict :attr:`Flask.extensions` puede utilizarse para almacenar una "
+"referencia a la extensión en la aplicación, o algún otro estado específico "
+"de la aplicación. Ten en cuenta que se trata de un espacio de nombres único,"
+" así que utiliza un nombre único para tu extensión, como el nombre de la "
+"extensión sin el prefijo \"flask\"."
 
 #: ../../extensiondev.rst:99
 msgid "Adding Behavior"
-msgstr ""
+msgstr "Añadir comportamiento"
 
 #: ../../extensiondev.rst:101
 msgid ""
@@ -147,6 +196,10 @@ msgid ""
 "that are available on the :class:`Flask` object can be used during an "
 "extension's ``init_app`` method."
 msgstr ""
+"Hay muchas maneras de que una extensión pueda añadir comportamiento. "
+"Cualquier método de configuración que esté disponible en el objeto "
+":class:`Flask` puede utilizarse durante el método ``init_app`` de una "
+"extensión."
 
 #: ../../extensiondev.rst:105
 msgid ""
@@ -155,6 +208,10 @@ msgid ""
 ":meth:`~Flask.teardown_request` to clean it up at the end. This can be "
 "stored on :data:`g`, discussed more below."
 msgstr ""
+"Un patrón común es utilizar :meth:`~Flask.before_request` para inicializar "
+"algunos datos o una conexión al principio de cada petición, y luego "
+":meth:`~Flask.teardown_request` para limpiarla al final. Esto puede ser "
+"almacenado en :data:`g`, discutido más adelante."
 
 #: ../../extensiondev.rst:110
 msgid ""
@@ -163,6 +220,10 @@ msgid ""
 "database connection the first time it's called, so that a view that doesn't "
 "use the database doesn't create a connection."
 msgstr ""
+"Un enfoque más perezoso es proporcionar un método que inicialice y almacene "
+"en caché los datos o la conexión. Por ejemplo, un método ``ext.get_db`` "
+"podría crear una conexión a la base de datos la primera vez que se llama, "
+"para que una vista que no utilice la base de datos no cree una conexión."
 
 #: ../../extensiondev.rst:115
 msgid ""
@@ -171,16 +232,23 @@ msgid ""
 ":class:`Blueprint`, then call :meth:`~Flask.register_blueprint` during "
 "``init_app`` to add the blueprint to the app."
 msgstr ""
+"Además de hacer algo antes y después de cada vista, tu extensión podría "
+"querer añadir también algunas vistas específicas. En este caso, podrías "
+"definir un :class:`Blueprint`, y luego llamar a "
+":meth:`~Flask.register_blueprint` durante ``init_app`` para añadir el "
+"blueprint a la aplicación."
 
 #: ../../extensiondev.rst:122
 msgid "Configuration Techniques"
-msgstr ""
+msgstr "Técnicas de configuración"
 
 #: ../../extensiondev.rst:124
 msgid ""
 "There can be multiple levels and sources of configuration for an extension. "
 "You should consider what parts of your extension fall into each one."
 msgstr ""
+"Puede haber múltiples niveles y fuentes de configuración para una extensión."
+" Debes considerar qué partes de tu extensión entran en cada uno de ellos."
 
 #: ../../extensiondev.rst:128
 msgid ""
@@ -190,6 +258,12 @@ msgid ""
 "database. Configuration keys should start with the extension's name so that "
 "they don't interfere with other extensions."
 msgstr ""
+"Configuración por instancia de aplicación, a través de los valores de "
+"``app.config``. Se trata de una configuración que podría cambiar "
+"razonablemente en cada despliegue de una aplicación. Un ejemplo común es una"
+" URL a un recurso externo, como una base de datos. Las claves de "
+"configuración deben comenzar con el nombre de la extensión para que no "
+"interfieran con otras extensiones."
 
 #: ../../extensiondev.rst:134
 msgid ""
@@ -197,6 +271,9 @@ msgid ""
 "configuration usually affects how the extension is used, such that it "
 "wouldn't make sense to change it per deployment."
 msgstr ""
+"Configuración por instancia de la extensión, a través de los argumentos "
+"``__init__``. Esta configuración suele afectar al uso de la extensión, por "
+"lo que no tendría sentido cambiarla por cada despliegue."
 
 #: ../../extensiondev.rst:138
 msgid ""
@@ -205,6 +282,10 @@ msgid ""
 " use a ``@ext.register`` decorator to register a function, after the "
 "extension instance has been created."
 msgstr ""
+"Configuración por instancia de extensión, a través de atributos de instancia"
+" y métodos de decorador. Podría ser más ergonómico asignar a ``ext.value``, "
+"o utilizar un decorador ``@ext.register`` para registrar una función, "
+"después de que la instancia de la extensión haya sido creada."
 
 #: ../../extensiondev.rst:142
 msgid ""
@@ -213,6 +294,10 @@ msgid ""
 "a subclass. This could be combined per-extension configuration to override "
 "defaults."
 msgstr ""
+"Configuración global a través de atributos de clase. Cambiando un atributo "
+"de clase como ``Ext.connection_class`` se puede personalizar el "
+"comportamiento por defecto sin hacer una subclase. Esto podría combinarse "
+"con la configuración por extensión para anular los valores predeterminados."
 
 #: ../../extensiondev.rst:146
 msgid ""
@@ -220,16 +305,21 @@ msgid ""
 "extension itself something that can be overridden provides a very powerful "
 "tool for advanced customization."
 msgstr ""
+"Subclasificación y anulación de métodos y atributos. Hacer que la API de la "
+"propia extensión sea algo que se pueda sobrescribir proporciona una "
+"herramienta muy poderosa para la personalización avanzada."
 
 #: ../../extensiondev.rst:150
 msgid "The :class:`~flask.Flask` object itself uses all of these techniques."
-msgstr ""
+msgstr "El propio objeto :class:`~flask.Flask` utiliza todas estas técnicas."
 
 #: ../../extensiondev.rst:152
 msgid ""
 "It's up to you to decide what configuration is appropriate for your "
 "extension, based on what you need and what you want to support."
 msgstr ""
+"Depende de ti decidir qué configuración es la adecuada para tu extensión, en"
+" función de lo que necesites y de lo que quieras soportar."
 
 #: ../../extensiondev.rst:155
 msgid ""
@@ -237,10 +327,14 @@ msgid ""
 "complete and the server begins handling requests. Configuration is global, "
 "any changes to it are not guaranteed to be visible to other workers."
 msgstr ""
+"La configuración no debe ser modificada una vez que la fase de configuración"
+" de la aplicación se ha completado y el servidor comienza a manejar las "
+"solicitudes. La configuración es global, cualquier cambio en ella no se "
+"garantiza que sea visible para otros trabajadores."
 
 #: ../../extensiondev.rst:162
 msgid "Data During a Request"
-msgstr ""
+msgstr "Datos durante una solicitud"
 
 #: ../../extensiondev.rst:164
 msgid ""
@@ -251,6 +345,14 @@ msgid ""
 " namespace, extensions must use unique names that won't collide with user "
 "data. For example, use the extension name as a prefix, or as a namespace."
 msgstr ""
+"Al escribir una aplicación Flask, el objeto :data:`~flask.g` se utiliza para"
+" almacenar información durante una petición. Por ejemplo el :doc:`tutorial "
+"<tutorial/database>` almacena una conexión a una base de datos SQLite como "
+"``g.db``. Las extensiones también pueden usar esto, con cierto cuidado. Dado"
+" que ``g`` es un único espacio de nombres global, las extensiones deben "
+"utilizar nombres únicos que no colisionen con los datos del usuario. Por "
+"ejemplo, utilizar el nombre de la extensión como prefijo, o como espacio de "
+"nombres."
 
 #: ../../extensiondev.rst:182
 msgid ""
@@ -262,10 +364,17 @@ msgid ""
 "or would not be used in the CLI outside a reqeust, use "
 ":meth:`~flask.Flask.teardown_request`."
 msgstr ""
+"Los datos de ``g`` duran para un contexto de aplicación. Un contexto de "
+"aplicación está activo cuando un contexto de solicitud lo está, o cuando se "
+"ejecuta un comando CLI. Si estás almacenando algo que debe ser cerrado, "
+"utiliza :meth:`~flask.Flask.teardown_appcontext` para asegurarte de que se "
+"cierra cuando el contexto de aplicación termina. Si sólo debe ser válido "
+"durante una solicitud, o no se utilizará en la CLI fuera de una solicitud, "
+"utilice :meth:`~flask.Flask.teardown_request`."
 
 #: ../../extensiondev.rst:192
 msgid "Views and Models"
-msgstr ""
+msgstr "Vistas y modelos"
 
 #: ../../extensiondev.rst:194
 msgid ""
@@ -275,6 +384,11 @@ msgid ""
 "Flask-SQLAlchemy to provide a ``Post`` model and views to write and read "
 "posts."
 msgstr ""
+"Las vistas de tu extensión pueden querer interactuar con modelos específicos"
+" de tu base de datos, o con alguna otra extensión o datos conectados a tu "
+"aplicación. Por ejemplo, consideremos una extensión ``Flask-SimpleBlog`` que"
+" trabaja con Flask-SQLAlchemy para proporcionar un modelo ``Post`` y vistas "
+"para escribir y leer posts."
 
 #: ../../extensiondev.rst:200
 msgid ""
@@ -283,6 +397,11 @@ msgid ""
 "extension, not when your extension is defining its views. So how can the "
 "view code, defined before the model exists, access the model?"
 msgstr ""
+"El modelo ``Post`` necesita subclasificar el objeto ``db.Model`` de Flask-"
+"SQLAlchemy, pero eso sólo está disponible una vez que has creado una "
+"instancia de esa extensión, no cuando tu extensión está definiendo sus "
+"vistas. Entonces, ¿cómo puede el código de la vista, definido antes de que "
+"el modelo exista, acceder al modelo?"
 
 #: ../../extensiondev.rst:205
 msgid ""
@@ -290,6 +409,9 @@ msgid ""
 "model, then create the views by passing the model to the view class's "
 ":meth:`~views.View.as_view` method."
 msgstr ""
+"Un método podría ser utilizar :doc:`views`. Durante ``__init__``, crea el "
+"modelo, luego crea las vistas pasando el modelo al método "
+":meth:`~views.View.as_view` de la clase vista."
 
 #: ../../extensiondev.rst:235
 msgid ""
@@ -298,6 +420,10 @@ msgid ""
 "``init_app``, then access "
 "``current_app.extensions[\"simple_blog\"].post_model`` from views."
 msgstr ""
+"Otra técnica podría ser utilizar un atributo en la extensión, como "
+"``self.post_model`` de arriba. Añade la extensión a ``app.extensions`` en "
+"``init_app``, y luego accede a "
+"``current_app.extensions[\"simple_blog\"].post_model`` desde views."
 
 #: ../../extensiondev.rst:240
 msgid ""
@@ -306,6 +432,10 @@ msgid ""
 "could implement ``class Post(blog.BasePost)``, then set it as "
 "``blog.post_model``."
 msgstr ""
+"También puede querer proporcionar clases base para que los usuarios puedan "
+"proporcionar su propio modelo ``Post`` que se ajuste a la API que su "
+"extensión espera. Así que podrían implementar ``class Post(blog.BasePost)``,"
+" y luego establecerlo como ``blog.post_model``."
 
 #: ../../extensiondev.rst:245
 msgid ""
@@ -316,10 +446,16 @@ msgid ""
 "if you need help with design, ask on our `Discord Chat`_ or `GitHub "
 "Discussions`_."
 msgstr ""
+"Como puedes ver, esto puede ser un poco complejo. Desafortunadamente, no hay"
+" una solución perfecta aquí, sólo diferentes estrategias y compensaciones "
+"dependiendo de tus necesidades y de cuánta personalización quieras ofrecer. "
+"Afortunadamente, este tipo de dependencia de recursos no es una necesidad "
+"común para la mayoría de las extensiones. Recuerda, si necesitas ayuda con "
+"el diseño, pregunta en nuestro `Chat de Discord`_ o `GitHub Discussions`_."
 
 #: ../../extensiondev.rst:254
 msgid "Recommended Extension Guidelines"
-msgstr ""
+msgstr "Directrices de extensión recomendadas"
 
 #: ../../extensiondev.rst:256
 msgid ""
@@ -330,6 +466,13 @@ msgid ""
 "maintained and developed today, as they help the Flask ecosystem remain "
 "consistent and compatible."
 msgstr ""
+"Anteriormente, Flask tenía el concepto de \"extensiones aprobadas\", donde "
+"los mantenedores de Flask evaluaban la calidad, el soporte y la "
+"compatibilidad de las extensiones antes de listarlas. Aunque la lista se "
+"volvió demasiado difícil de mantener con el tiempo, las directrices siguen "
+"siendo relevantes para todas las extensiones mantenidas y desarrolladas hoy "
+"en día, ya que ayudan a que el ecosistema de Flask siga siendo consistente y"
+" compatible."
 
 #: ../../extensiondev.rst:263
 msgid ""
@@ -339,6 +482,12 @@ msgid ""
 "services. The `Pallets-Eco`_ organization on GitHub allows for community "
 "maintenance with oversight from the Pallets maintainers."
 msgstr ""
+"Una extensión requiere un mantenedor. En el caso de que el autor de una "
+"extensión quiera dejar el proyecto, el proyecto debe encontrar un nuevo "
+"mantenedor y transferir el acceso al repositorio, la documentación, PyPI y "
+"cualquier otro servicio. La organización `Pallets-Eco`_ en GitHub permite el"
+" mantenimiento comunitario con la supervisión de los mantenedores de "
+"Pallets."
 
 #: ../../extensiondev.rst:269
 msgid ""
@@ -350,13 +499,13 @@ msgstr ""
 "``nombre_de_la_extensión``."
 
 #: ../../extensiondev.rst:272
-#, fuzzy
 msgid ""
 "The extension must use an open source license. The Python web ecosystem "
 "tends to prefer BSD or MIT. It must be open source and publicly available."
 msgstr ""
-"La extensión debe tener licencia BSD o MIT. Debe ser de código abierto y "
-"estar disponible públicamente."
+"La extensión debe utilizar una licencia de código abierto. El ecosistema web"
+" de Python tiende a preferir BSD o MIT. Debe ser de código abierto y estar "
+"disponible públicamente."
 
 #: ../../extensiondev.rst:275
 msgid "The extension's API must have the following characteristics:"
@@ -381,13 +530,12 @@ msgstr ""
 "Utiliza el patrón ``ext.init_app()``."
 
 #: ../../extensiondev.rst:283
-#, fuzzy
 msgid ""
 "From a clone of the repository, an extension with its dependencies must be "
 "installable in editable mode with ``pip install -e .``."
 msgstr ""
 "Desde un clon del repositorio, una extensión con sus dependencias debe ser "
-"instalable con ``pip install -e .``."
+"instalable en modo editable con ``pip install -e .``."
 
 #: ../../extensiondev.rst:285
 msgid ""
@@ -396,6 +544,10 @@ msgid ""
 "dependencies should be specified in a requirements file. The tests must be "
 "part of the sdist distribution."
 msgstr ""
+"Debe enviar pruebas que puedan ser invocadas con una herramienta común como "
+"``tox -e py``, ``nox -s test`` o ``pytest``. Si no se utiliza ``tox``, las "
+"dependencias de las pruebas deben especificarse en un archivo de requisitos."
+" Las pruebas deben formar parte de la distribución de sdist."
 
 #: ../../extensiondev.rst:289
 msgid ""
@@ -403,6 +555,9 @@ msgid ""
 "or the readme. The documentation should use the Flask theme from the "
 "`Official Pallets Themes`_."
 msgstr ""
+"Debe haber un enlace a la documentación o al sitio web del proyecto en los "
+"metadatos de PyPI o en el readme. La documentación debe utilizar el tema de "
+"Flask de los `Temas Oficiales de Pallets`_."
 
 #: ../../extensiondev.rst:292
 msgid ""
@@ -410,6 +565,10 @@ msgid ""
 "particular version scheme, but should use lower bounds to indicate minimum "
 "compatibility support. For example, ``sqlalchemy>=1.4``."
 msgstr ""
+"Las dependencias de la extensión no deben usar límites superiores ni asumir "
+"ningún esquema de versión en particular, sino que deben usar límites "
+"inferiores para indicar el soporte mínimo de compatibilidad. Por ejemplo, "
+"``sqlalchemy>=1.4``."
 
 #: ../../extensiondev.rst:296
 msgid ""
@@ -417,6 +576,9 @@ msgid ""
 "``python_requires=\">=version\"``. Flask itself supports Python >=3.7 as of "
 "December 2021, but this will update over time."
 msgstr ""
+"Indicar las versiones de Python soportadas usando "
+"``python_requires=\">=version\"``. Flask soporta Python >=3.7 desde "
+"diciembre de 2021, pero esto se actualizará con el tiempo."
 
 #~ msgid ""
 #~ "Flask, being a microframework, often requires some repetitive steps to get a"
