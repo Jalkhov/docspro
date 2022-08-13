@@ -8,8 +8,6 @@ The information provided here is synchronized on a daily basis.
 
 Visit the `translation_data` branch to see all the files.
 
-This project is a small temporary whim and will be archived when the translation repositories are officially part of the Flask documentation.
-
 Image codes for badges:
 
 | Lang | Preview                                                              |                                  Code                                  |
