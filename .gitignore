@@ -1,5 +1,9 @@
+test_langs
+octodirr
+docspro
 for_deploy
 test.py
+STEPS.md
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

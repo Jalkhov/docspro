@@ -26,55 +26,11 @@ jobs:
       - name: Install requirements ⚙️
         run: python -m pip install -r requirements.txt
 
-      - name: Download folders ⬇️
+      - name: Install Octodir
+        run: pip install git+https://github.com/Jalkhov/octodir.git#egg=octodir
+
+      - name: Execute main script
         run: python main.py --download
-
-      # CHECK ES COVERAGE
-      - name: Check ES coverage 🇪🇸
-        id: esCoverage
-        uses: alexkiro/i18n-coverage@v1.0.0
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          translations-path: 'for_deploy/docs/es/**/**.po'
-
-      # CHECK FR COVERAGE
-      - name: Check FR coverage 🇫🇷
-        id: frCoverage
-        uses: alexkiro/i18n-coverage@v1.0.0
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          translations-path: 'for_deploy/docs/fr/**/**.po'
-
-      # CHECK ZH COVERAGE
-      - name: Check ZH coverage 🇨🇳
-        id: zhCoverage
-        uses: alexkiro/i18n-coverage@v1.0.0
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          translations-path: 'for_deploy/docs/zh_CN/**/**.po'
-
-      # CHECK FA COVERAGE
-      - name: Check FA coverage 🇮🇷
-        id: faCoverage
-        uses: alexkiro/i18n-coverage@v1.0.0
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          translations-path: 'for_deploy/docs/fa/**/**.po'
-
-      - name: Generate ES .json & badge 🇪🇸
-        run: python main.py --gen es ${{ steps.esCoverage.outputs.coverage }}
-
-      - name: Generate FR .json & badge 🇫🇷
-        run: python main.py --gen fr ${{ steps.frCoverage.outputs.coverage }}
-
-      - name: Generate ZH .json & badge 🇨🇳
-        run: python main.py --gen zh ${{ steps.zhCoverage.outputs.coverage }}
-
-      - name: Generate FA .json & badge 🇮🇷
-        run: python main.py --gen fa ${{ steps.faCoverage.outputs.coverage }}
-
-      - name: Build README.md & index.html 🔨
-        run: python main.py --build
 
       - name: Update README.md 🔄
         run: |
