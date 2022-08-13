@@ -12,9 +12,9 @@ This project is a small temporary whim and will be archived when the translation
 
 Image codes for badges:
 
-| Lang |                               Preview                                |                                  Code                                  |
-|:----:|:--------------------------------------------------------------------:|:----------------------------------------------------------------------:|
-|  zh  | ![Progress](https://jalkhov.github.io/docspro/badge/zh_progress.svg) | `![Progress](https://jalkhov.github.io/docspro/badge/zh_progress.svg)` |
-|  fa  | ![Progress](https://jalkhov.github.io/docspro/badge/fa_progress.svg) | `![Progress](https://jalkhov.github.io/docspro/badge/fa_progress.svg)` |
+| Lang | Preview                                                              |                                  Code                                  |
+|------|----------------------------------------------------------------------|------------------------------------------------------------------------|
 |  es  | ![Progress](https://jalkhov.github.io/docspro/badge/es_progress.svg) | `![Progress](https://jalkhov.github.io/docspro/badge/es_progress.svg)` |
+|  fa  | ![Progress](https://jalkhov.github.io/docspro/badge/fa_progress.svg) | `![Progress](https://jalkhov.github.io/docspro/badge/fa_progress.svg)` |
 |  fr  | ![Progress](https://jalkhov.github.io/docspro/badge/fr_progress.svg) | `![Progress](https://jalkhov.github.io/docspro/badge/fr_progress.svg)` |
+|  zh  | ![Progress](https://jalkhov.github.io/docspro/badge/zh_progress.svg) | `![Progress](https://jalkhov.github.io/docspro/badge/zh_progress.svg)` |
