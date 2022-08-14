@@ -34,7 +34,7 @@ jobs:
           python octodir/setup.py install
 
       - name: Execute main script
-        run: python main.py --download
+        run: python main.py
 
       - name: Update README.md 🔄
         run: |
