@@ -26,13 +26,6 @@ jobs:
       - name: Install requirements ⚙️
         run: python -m pip install -r requirements.txt
 
-      - name: Install Octodir
-        run: pip install git+https://github.com/Jalkhov/octodir.git#egg=octodir
-      # - name: Install Octodir
-      #   run: |
-      #     git clone https://github.com/Jalkhov/octodir.git
-      #     python octodir/setup.py install
-
       - name: Execute main script
         run: python main.py
 

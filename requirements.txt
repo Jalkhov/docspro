@@ -1,5 +1,3 @@
 polib==1.1.1
 prettytable==2.3.0
-tqdm==4.54.0
-requests==2.25.1
-click==8.0.0
+octodir==1.0.0
