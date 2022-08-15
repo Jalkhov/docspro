@@ -145,10 +145,11 @@ def main():
 
     # DOWNLOAD TRANSLATION REPOS LOCALE/<LANG> FOLDER
     for lang in langs:
-        repo_code = lang[0]
-        locl_code = lang[1]
+        repo_code = lang
+        locl_code = langs[lang]
 
         url = base_repo_url.format(repo_code=repo_code, locl_code=locl_code)
+
         Octo = Octodir(url, 'docs')
         Octo.dowload_folder()
 
