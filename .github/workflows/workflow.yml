@@ -38,6 +38,9 @@ jobs:
             git commit -m "Update README.md"
             git push
           fi
+          
+      - name: Delete docs/ folder
+        run: rm -r docs
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.3
