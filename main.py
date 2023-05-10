@@ -8,6 +8,8 @@ import requests
 from octodir import Octodir
 from prettytable import MARKDOWN, PrettyTable
 
+API_KEY = os.environ['PERSONAL_API_KEY']
+
 base_repo_url = 'https://github.com/flaskcwg/flask-docs-{repo_code}/tree/main/docs/locales/{locl_code}'
 badge_url = 'https://shields.io/badge/translated-{percent}%25-blue'
 img_badge_prev = '![Progress](https://jalkhov.github.io/docspro/badge/{img})'
@@ -150,7 +152,7 @@ def main():
 
         url = base_repo_url.format(repo_code=repo_code, locl_code=locl_code)
         echo(f'\n> Fetching: {url}')
-        Octo = Octodir(url, 'docs')
+        Octo = Octodir(url, 'docs', api_key=API_KEY)
         Octo.dowload_folder()
 
     # CALCULATE TRANSLATION PERCENTAGE
