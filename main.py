@@ -149,7 +149,7 @@ def main():
         locl_code = langs[lang]
 
         url = base_repo_url.format(repo_code=repo_code, locl_code=locl_code)
-
+        echo(f'\n> Fetching: {url}')
         Octo = Octodir(url, 'docs')
         Octo.dowload_folder()
 
@@ -172,6 +172,8 @@ def main():
 
         if int(percent) == 100:
             percent = 100
+
+        echo(f'\tTranslation percentage: {percent}')
 
         # GENERATE AND DOWNLOAD THE BADGES
         echo("\tGenerating and downloading badge")
