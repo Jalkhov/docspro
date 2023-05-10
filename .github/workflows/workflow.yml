@@ -1,6 +1,4 @@
 name: Build and Deploy
-env:
-  PERSONAL_API_KEY: ${{ secrets.PERSONAL_API_KEY }}
 on:
   workflow_dispatch:
   schedule:
