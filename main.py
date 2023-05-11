@@ -116,7 +116,7 @@ def main():
         echo(f'\n> Fetching: {BASE_REPO_URL.format(repo_code=repo_code, local_code=lang_code)}')
         url = BASE_REPO_URL.format(repo_code=repo_code, local_code=lang_code)
         octo = Octodir(url, 'docs', API_KEY)
-        octo.clone_repo()
+        octo.dowload_folder()
 
         echo(f'\n> Calculating translation percentage for {lang_code}')
         pofiles = list(Path(f'flask-docs-{repo_code}/docs/locales/{lang_code}/LC_MESSAGES').rglob('*.po'))
