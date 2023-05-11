@@ -43,7 +43,9 @@ def get_docs_version(lang_code):
     file_contents = get_file_contents(file_path)
     for line in lang_code.split('\n'):
         if line.startswith('__version__'):
+            echo(f'> Flask version line: {line}')
             version = file_contents.split('=')[1].strip().strip('"')
+            echo(f'> Flask version: {version}')
             version_parts = version.split('.')
             if len(version_parts) == 3:
                 version_parts[2] = '*'
