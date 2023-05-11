@@ -124,7 +124,7 @@ def main():
         octo = Octodir(url, 'docs', API_KEY)
         octo.dowload_folder()
 
-        print(os.system('ls'))
+        print(os.system('ls docs'))
 
         echo(f'\n> Calculating translation percentage for {lang_code}')
         
