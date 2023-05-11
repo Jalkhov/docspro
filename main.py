@@ -125,7 +125,14 @@ def main():
         octo.dowload_folder()
 
         echo(f'\n> Calculating translation percentage for {lang_code}')
-        pofiles = list(Path(f'flask-docs-{repo_code}/docs/locales/{lang_code}/LC_MESSAGES').rglob('*.po'))
+        
+        pofiles = []
+        for root, dirs, files in os.walk(f'docs/{local_code}'):
+            for file in files:
+                if file.endswith(".po"):
+                    file_path = os.path.join(root, file)
+                    pofiles.append(Path(file_path))
+
         percent_translated = calculate_translation(pofiles)
 
         echo(f'\n> Generating badge for {lang_code}')
