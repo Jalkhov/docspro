@@ -114,7 +114,8 @@ def main():
 
     for lang_code, repo_code in TRANSLATION_REPOS.items():
         echo(f'\n> Fetching: {BASE_REPO_URL.format(repo_code=repo_code, local_code=lang_code)}')
-        octo = Octodir(BASE_REPO_URL.format(repo_code=repo_code, local_code=lang_code), API_KEY)
+        url = BASE_REPO_URL.format(repo_code=repo_code, local_code=lang_code)
+        octo = Octodir(url, 'docs', API_KEY)
         octo.clone_repo()
 
         echo(f'\n> Calculating translation percentage for {lang_code}')
