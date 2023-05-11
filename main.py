@@ -10,7 +10,7 @@ API_KEY = os.environ['PERSONAL_API_KEY']
 
 BASE_REPO_URL = 'https://github.com/flaskcwg/flask-docs-{repo_code}/tree/main'
 
-BADGE_URL = ('https://img.shields.io/badge/Docs_{docs_version}_progress-{percent}%25-blue'
+BADGE_URL = ('https://img.shields.io/badge/Docs_{docs_version}-{percent}%25-blue'
              '?logo=read-the-docs&logoColor=white')
 
 IMG_BADGE_PREV = '![Progress](https://jalkhov.github.io/docspro/badge/{img})'
@@ -41,10 +41,15 @@ def get_file_contents(file_path):
 def get_docs_version(lang_code):
     file_path = Path(f'repos/{lang_code}/src/flask/__init__.py')
     file_contents = get_file_contents(file_path)
-    for line in file_contents.split('\n'):
+    for line in lang_code.split('\n'):
         if line.startswith('__version__'):
-            version = line.split('=')[1].strip().strip("'")
-            return version[:-1] + '*'
+            version = file_contents.split('=')[1].strip().strip('"')
+            version_parts = version.split('.')
+            if len(version_parts) == 3:
+                version_parts[2] = '*'
+            elif len(version_parts) > 3:
+                version_parts[-2] = '*'
+            return '.'.join(version_parts)
 
 
 def generate_badge(lang, percent, docs_version):
