@@ -39,7 +39,7 @@ def get_file_contents(file_path):
 
 
 def get_docs_version(lang_code):
-    file_path = Path(f'docs/{lang_code}/src/flask/__init__.py')
+    file_path = Path(f'repos/{lang_code}/src/flask/__init__.py')
     file_contents = get_file_contents(file_path)
     for line in file_contents.split('\n'):
         if line.startswith('__version__'):
