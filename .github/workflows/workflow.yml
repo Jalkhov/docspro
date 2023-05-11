@@ -39,7 +39,7 @@ jobs:
           if [[ "$(git status --porcelain)" != "" ]]; then
             git config user.name "GitHub Action"
             git config user.email "action@github.com"
-            git add .
+            git add README.md
             git commit -m "Update README.md"
             git push
           fi
