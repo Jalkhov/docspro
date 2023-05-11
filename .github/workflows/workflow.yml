@@ -31,8 +31,8 @@ jobs:
           PERSONAL_API_KEY: ${{ secrets.PERSONAL_API_KEY }}
         run: python main.py
 
-      - name: Delete docs/ folder
-        run: rm -r docs
+      - name: Delete repos/ folder
+        run: rm -r repos
 
       - name: Update README.md 🔄
         run: |
