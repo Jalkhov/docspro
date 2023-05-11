@@ -117,18 +117,22 @@ def calculate_translation(pofiles):
 
 def main():
     ensure_dirs()
+    langs = translation_repos
 
-    for lang_code, repo_code in TRANSLATION_REPOS.items():
-        echo(f'\n> Fetching: {BASE_REPO_URL.format(repo_code=repo_code, local_code=lang_code)}')
-        os.makedirs(f'repos/{lang_code}', exist_ok=True)
-        url = BASE_REPO_URL.format(repo_code=repo_code, local_code=lang_code)
-        octo = Octodir(url, f'repos/{lang_code}', API_KEY)
+    for lang in langs:
+        repo_code = lang
+        local_code = langs[lang]
+        
+        echo(f'\n> Fetching: {BASE_REPO_URL.format(repo_code=repo_code, local_code=local_code)}')
+        os.makedirs(f'repos/{local_code}', exist_ok=True)
+        url = BASE_REPO_URL.format(repo_code=repo_code, local_code=local_code)
+        octo = Octodir(url, f'repos/{local_code}', API_KEY)
         octo.dowload_folder()
 
-        echo(f'\n> Calculating translation percentage for {lang_code}')
+        echo(f'\n> Calculating translation percentage for {local_code}')
         
         pofiles = []
-        for root, dirs, files in os.walk(f'repos/{lang_code}/docs/locales/{lang_code}'):
+        for root, dirs, files in os.walk(f'repos/{local_code}/docs/locales/{local_code}'):
             for file in files:
                 if file.endswith(".po"):
                     file_path = os.path.join(root, file)
@@ -136,12 +140,12 @@ def main():
 
         percent_translated = calculate_translation(pofiles)
 
-        echo(f'\n> Generating badge for {lang_code}')
-        docs_version = get_docs_version(lang_code)
-        generate_badge(lang_code, percent_translated, docs_version)
+        echo(f'\n> Generating badge for {local_code}')
+        docs_version = get_docs_version(local_code)
+        generate_badge(local_code, percent_translated, docs_version)
 
-        echo(f'\n> Generating JSON with data for {lang_code}')
-        generate_jsons(lang_code, percent_translated, docs_version)
+        echo(f'\n> Generating JSON with data for {local_code}')
+        generate_jsons(local_code, percent_translated, docs_version)
 
     generate_main_files()
 
