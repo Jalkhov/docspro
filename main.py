@@ -127,7 +127,7 @@ def main():
         echo(f'\n> Calculating translation percentage for {lang_code}')
         
         pofiles = []
-        for root, dirs, files in os.walk(f'docs/{local_code}'):
+        for root, dirs, files in os.walk(f'docs/{lang_code}'):
             for file in files:
                 if file.endswith(".po"):
                     file_path = os.path.join(root, file)
