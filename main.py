@@ -8,7 +8,7 @@ from prettytable import MARKDOWN, PrettyTable
 
 API_KEY = os.environ['PERSONAL_API_KEY']
 
-BASE_REPO_URL = 'https://github.com/flaskcwg/flask-docs-{repo_code}/tree/main/docs/locales/{local_code}'
+BASE_REPO_URL = 'https://github.com/flaskcwg/flask-docs-{repo_code}/tree/main'
 
 BADGE_URL = ('https://img.shields.io/badge/Docs_{docs_version}_progress-{percent}%25-blue'
              '?logo=read-the-docs&logoColor=white')
@@ -30,7 +30,7 @@ def echo(msg):
 def ensure_dirs():
     os.makedirs('for_deploy/data', exist_ok=True)
     os.makedirs('for_deploy/badge', exist_ok=True)
-    os.makedirs('docs', exist_ok=True)
+    os.makedirs('repos', exist_ok=True)
 
 
 def get_file_contents(file_path):
@@ -120,16 +120,15 @@ def main():
 
     for lang_code, repo_code in TRANSLATION_REPOS.items():
         echo(f'\n> Fetching: {BASE_REPO_URL.format(repo_code=repo_code, local_code=lang_code)}')
+        os.makedirs(f'repos/{lang_code}', exist_ok=True)
         url = BASE_REPO_URL.format(repo_code=repo_code, local_code=lang_code)
-        octo = Octodir(url, 'docs', API_KEY)
+        octo = Octodir(url, f'repos/{lang_code}', API_KEY)
         octo.dowload_folder()
-
-        print(os.system('ls docs/es'))
 
         echo(f'\n> Calculating translation percentage for {lang_code}')
         
         pofiles = []
-        for root, dirs, files in os.walk(f'docs/{lang_code}'):
+        for root, dirs, files in os.walk(f'repos/{lang_code}/docs/locales/{lang_code}'):
             for file in files:
                 if file.endswith(".po"):
                     file_path = os.path.join(root, file)
