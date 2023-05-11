@@ -105,7 +105,7 @@ def calculate_translation(pofiles):
     for popath in pofiles:
         pofile = polib.pofile(popath)
         total_strings += [e for e in pofile if not e.obsolete]
-    percent_translated = polib.pgettext('Plural-Forms', total_strings[0].msgstr).split('/')[0]
+    percent_translated = polib.percent_translated('Plural-Forms', total_strings[0].msgstr).split('/')[0]
     return round(int(percent_translated) / len(total_strings), 2) * 100
 
 
