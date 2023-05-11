@@ -117,7 +117,7 @@ def calculate_translation(pofiles):
 
 def main():
     ensure_dirs()
-    langs = translation_repos
+    langs = TRANSLATION_REPOS
 
     for lang in langs:
         repo_code = lang
