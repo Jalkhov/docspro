@@ -2,7 +2,7 @@
 
 # Docspro
 
-This repository provides information on the translation process of the Flask documentation, which will be conveniently used in some places in the Flask Community Work Group. As an extra, some badges are also provided to be used in the README.md to show the percentage of translation.
+This repository provides information on the translation process of the Flask documentation, which will be conveniently used in some places in the Flask Community Work Group. As an extra, some badges are also provided to be used in the README.md to show the percentage of translation and the Documentation version of the repository.
 
 The information provided here is synchronized on a daily basis.
 
