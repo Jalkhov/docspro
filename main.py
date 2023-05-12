@@ -41,16 +41,15 @@ def get_file_contents(file_path):
 def get_docs_version(lang_code):
     file_path = Path(f'repos/{lang_code}/src/flask/__init__.py')
     file_contents = get_file_contents(file_path)
-    for line in file_contents.split('\n'):
-        if line.startswith('__version__'):
-            version = file_contents.split('=')[1].strip().strip('"')
-            echo(f'\t> Flask version: {version}')
-            version_parts = version.split('.')
-            if len(version_parts) == 3:
-                version_parts[2] = '*'
-            elif len(version_parts) > 3:
-                version_parts[-2] = '*'
-            return '.'.join(version_parts)
+    start = file_contents.find('__version__ = "') + len('__version__ = "')
+    end = file_contents.find('"', start)
+    version = file_contents[start:end]
+    version_parts = version.split('.')
+    if len(version_parts) == 3:
+        version_parts[2] = '*'
+    elif len(version_parts) > 3:
+        version_parts[-2] = '*' # in case of *.*.*.dev0
+    return '.'.join(version_parts)
 
 
 def generate_badge(lang, percent, docs_version):
@@ -150,7 +149,7 @@ def main():
 
         docs_version = get_docs_version(local_code)
         echo(f'\t> Docs version: {docs_version}')
-        
+
         generate_badge(local_code, percent_translated, docs_version)
 
         echo(f'\t> Generating JSON with data for {local_code}')
