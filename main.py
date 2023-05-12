@@ -147,8 +147,10 @@ def main():
         percent_translated = calculate_translation(pofiles)
 
         echo(f'\t> Generating badge for {local_code}')
+
         docs_version = get_docs_version(local_code)
-        echo(f'\t> Docs version: {version}')
+        echo(f'\t> Docs version: {docs_version}')
+        
         generate_badge(local_code, percent_translated, docs_version)
 
         echo(f'\t> Generating JSON with data for {local_code}')
