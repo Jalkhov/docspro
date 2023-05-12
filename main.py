@@ -40,14 +40,11 @@ def get_file_contents(file_path):
 
 def get_docs_version(lang_code):
     file_path = Path(f'repos/{lang_code}/src/flask/__init__.py')
-    echo(f'> Flask __init__ path: {file_path}')
     file_contents = get_file_contents(file_path)
-    echo(f'> Flask __init__ content: {file_contents}')
-    for line in lang_code.split('\n'):
+    for line in file_contents.split('\n'):
         if line.startswith('__version__'):
-            echo(f'> Flask version line: {line}')
             version = file_contents.split('=')[1].strip().strip('"')
-            echo(f'> Flask version: {version}')
+            echo(f'\t> Flask version: {version}')
             version_parts = version.split('.')
             if len(version_parts) == 3:
                 version_parts[2] = '*'
@@ -138,7 +135,7 @@ def main():
         octo = Octodir(url, f'repos/{local_code}', API_KEY)
         octo.dowload_folder()
 
-        echo(f'\n> Calculating translation percentage for {local_code}')
+        echo(f'\n# Processing {local_code.upper()} #')
         
         pofiles = []
         for root, dirs, files in os.walk(f'repos/{local_code}/docs/locales/{local_code}'):
@@ -149,11 +146,12 @@ def main():
 
         percent_translated = calculate_translation(pofiles)
 
-        echo(f'\n> Generating badge for {local_code}')
+        echo(f'\t> Generating badge for {local_code}')
         docs_version = get_docs_version(local_code)
+        echo(f'\t> Docs version: {version}')
         generate_badge(local_code, percent_translated, docs_version)
 
-        echo(f'\n> Generating JSON with data for {local_code}')
+        echo(f'\t> Generating JSON with data for {local_code}')
         generate_jsons(local_code, percent_translated, docs_version)
 
     generate_main_files()
