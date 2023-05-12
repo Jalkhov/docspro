@@ -153,7 +153,7 @@ def main():
         generate_badge(repo_code, percent_translated, docs_version)
 
         echo(f'\t> Generating JSON with data for {local_code}')
-        generate_jsons(local_code, percent_translated, docs_version)
+        generate_jsons(repo_code, percent_translated, docs_version)
 
     generate_main_files()
 
