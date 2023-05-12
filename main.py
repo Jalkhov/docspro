@@ -128,7 +128,7 @@ def main():
         repo_code = lang
         local_code = langs[lang]
         
-        echo(f'\n> Fetching: {BASE_REPO_URL.format(repo_code=repo_code, local_code=local_code)}')
+        echo(f'\t> Fetching: {BASE_REPO_URL.format(repo_code=repo_code, local_code=local_code)}')
         os.makedirs(f'repos/{local_code}', exist_ok=True)
         url = BASE_REPO_URL.format(repo_code=repo_code, local_code=local_code)
         octo = Octodir(url, f'repos/{local_code}', API_KEY)
