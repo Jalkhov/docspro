@@ -1,1 +1,1 @@
-{"trans_percent": 22.19, "docs_version": null}
+{"trans_percent": 22.19, "docs_version": "2.3.*.dev\"\n\n\ndef __getattr__(name):\n    if name"}
