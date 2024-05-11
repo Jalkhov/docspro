@@ -6,6 +6,7 @@ import requests
 from octodir import Octodir
 from prettytable import MARKDOWN, PrettyTable
 import importlib.metadata
+import toml
 
 API_KEY = os.environ['PERSONAL_API_KEY']
 
