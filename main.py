@@ -70,7 +70,8 @@ def get_docs_version(lang_code):
             version_parts[2] = '*'
         elif len(version_parts) > 3:
             version_parts[-2] = '*' # in case of *.*.*.dev0
-        
+
+    echo(version)
     return version
 
 
