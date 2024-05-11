@@ -130,18 +130,18 @@ def generate_main_files():
 
 
 def calculate_translation(pofiles):
-    total_translated = 0
-    total_strings = 0
-
+    left = 0
+    right = 0
     for popath in pofiles:
         pofile = polib.pofile(popath)
-        total_strings += len([e for e in pofile if not e.obsolete])
-        total_translated += len([e for e in pofile.translated_entries()])
 
-    if total_strings == 0:
-        return 0.0
+        total_strings = [e for e in pofile if not e.obsolete]
+        percent_translated = pofile.percent_translated()
 
-    return round(total_translated / total_strings, 2)
+        left += len(total_strings) * percent_translated
+        right += len(total_strings)
+
+    return round(left / right, 2)
 
 
 def main():
