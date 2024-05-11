@@ -5,6 +5,7 @@ import polib
 import requests
 from octodir import Octodir
 from prettytable import MARKDOWN, PrettyTable
+import importlib.metadata
 
 API_KEY = os.environ['PERSONAL_API_KEY']
 
@@ -41,15 +42,20 @@ def get_file_contents(file_path):
 def get_docs_version(lang_code):
     file_path = Path(f'repos/{lang_code}/src/flask/__init__.py')
     file_contents = get_file_contents(file_path)
-    start = file_contents.find('__version__ = "') + len('__version__ = "')
-    end = file_contents.find('"', start)
-    version = file_contents[start:end]
-    version_parts = version.split('.')
-    if len(version_parts) == 3:
-        version_parts[2] = '*'
-    elif len(version_parts) > 3:
-        version_parts[-2] = '*' # in case of *.*.*.dev0
-    return '.'.join(version_parts)
+    try:
+        version = importlib.metadata.version("flask")
+    except importlib.metadata.PackageNotFoundError:
+        # Si no se encuentra la versión, intenta extraerla manualmente
+        start = file_contents.find('__version__ = "') + len('__version__ = "')
+        end = file_contents.find('"', start)
+        version = file_contents[start:end]
+        version_parts = version.split('.')
+        if len(version_parts) == 3:
+            version_parts[2] = '*'
+        elif len(version_parts) > 3:
+            version_parts[-2] = '*'  # en caso de *.*.*.dev0
+        version = '.'.join(version_parts)
+    return version
 
 
 def generate_badge(lang, percent, docs_version):
