@@ -52,7 +52,8 @@ warnings.warn(
 In __init__.py from flask source, some day will search a solution ;)
 """
 def get_docs_version(lang_code):
-    file_path = Path(f'pyproject.toml')
+    file_path = Path(f'repos/{lang_code}/pyproject.toml')
+    # file_path = Path(f'pyproject.toml')
     try:
         # Lee el contenido del archivo pyproject.toml
         with open(file_path, 'r') as toml_file:
