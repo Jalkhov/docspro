@@ -1,3 +1,4 @@
 polib==1.1.1
 prettytable==2.3.0
 octodir==1.1.0
+importlib-metadata==7.1.0
