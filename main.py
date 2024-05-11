@@ -156,7 +156,7 @@ def main():
         os.makedirs(f'repos/{local_code}', exist_ok=True)
         url = BASE_REPO_URL.format(repo_code=repo_code, local_code=local_code)
         octo = Octodir(url, f'repos/{local_code}', API_KEY)
-        octo.download_folder()
+        octo.dowload_folder()
 
         print(f'\n# Processing {local_code.upper()} #')
 
