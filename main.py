@@ -54,36 +54,38 @@ In __init__.py from flask source, some day will search a solution ;)
 """
 def get_docs_version(lang_code):
     try:
-        file_path = Path(f'repos/{lang_code}/pyproject.toml')
-        with open(file_path, 'r') as toml_file:
+        toml_path = Path(f'repos/{lang_code}/pyproject.toml')
+        with open(toml_path, 'r') as toml_file:
             toml_contents = toml.load(toml_file)
-            # Busca la clave 'version' en la sección '[project]'
             version = toml_contents.get('project', {}).get('version', '')
     except FileNotFoundError:
-        file_path = Path(f'repos/{lang_code}/src/flask/__init__.py')
-        file_contents = get_file_contents(file_path)
-        start = file_contents.find('__version__ = "') + len('__version__ = "')
-        end = file_contents.find('"', start)
-        version = file_contents[start:end]
-        version_parts = version.split('.')
-        if len(version_parts) == 3:
-            version_parts[2] = '*'
-        elif len(version_parts) > 3:
-            version_parts[-2] = '*' # in case of *.*.*.dev0
+        init_path = Path(f'repos/{lang_code}/src/flask/__init__.py')
+        with open(init_path, 'r') as init_file:
+            file_contents = init_file.read()
+            start = file_contents.find('__version__ = "') + len('__version__ = "')
+            end = file_contents.find('"', start)
+            version = file_contents[start:end]
+            version_parts = version.split('.')
+            if len(version_parts) == 3:
+                version_parts[2] = '*'
+            elif len(version_parts) > 3:
+                version_parts[-2] = '*'  # in case of *.*.*.dev0
 
-    echo(version)
     return version
 
 
 def generate_badge(lang, percent, docs_version):
-    svg_data = requests.get(BADGE_URL.format(percent=percent, docs_version=docs_version)).text
-    with open(f'for_deploy/badge/{lang}_progress.svg', 'w') as file:
+    badge_url = BADGE_URL.format(percent=percent, docs_version=docs_version)
+    svg_data = requests.get(badge_url).text
+    badge_path = Path(f'for_deploy/badge/{lang}_progress.svg')
+    with open(badge_path, 'w') as file:
         file.write(svg_data)
 
 
 def generate_jsons(lang, percent, docs_version):
     data = {'trans_percent': percent, 'docs_version': docs_version}
-    with open(f'for_deploy/data/{lang}_data.json', 'w') as outfile:
+    json_path = Path(f'for_deploy/data/{lang}_data.json')
+    with open(json_path, 'w') as outfile:
         json.dump(data, outfile)
 
 
@@ -124,23 +126,23 @@ def generate_main_files():
         readme_md.write(readme_content)
 
     with open('for_deploy/index.html', 'w') as outfile:
-        outfile.write("<p>This site os only a mirror for host badges, please go to <a "
-                      "href='https://github.com/Jalkhov/docspro'>REPO</a> for full  info.</p>")
+        outfile.write("<p>This site is only a mirror for hosting badges. Please go to <a "
+                      "href='https://github.com/Jalkhov/docspro'>the repository</a> for full information.</p>")
 
 
 def calculate_translation(pofiles):
-    left = 0
-    right = 0
+    total_translated = 0
+    total_strings = 0
+
     for popath in pofiles:
         pofile = polib.pofile(popath)
+        total_strings += len([e for e in pofile if not e.obsolete])
+        total_translated += len([e for e in pofile.translated_entries()])
 
-        total_strings = [e for e in pofile if not e.obsolete]
-        percent_translated = pofile.percent_translated()
+    if total_strings == 0:
+        return 0.0
 
-        left += len(total_strings) * percent_translated
-        right += len(total_strings)
-
-    return round(left / right, 2)
+    return round(total_translated / total_strings, 2)
 
 
 def main():
@@ -150,15 +152,15 @@ def main():
     for lang in langs:
         repo_code = lang
         local_code = langs[lang]
-        
-        echo(f'\t> Fetching: {BASE_REPO_URL.format(repo_code=repo_code, local_code=local_code)}')
+
+        print(f'\t> Fetching: {BASE_REPO_URL.format(repo_code=repo_code, local_code=local_code)}')
         os.makedirs(f'repos/{local_code}', exist_ok=True)
         url = BASE_REPO_URL.format(repo_code=repo_code, local_code=local_code)
         octo = Octodir(url, f'repos/{local_code}', API_KEY)
-        octo.dowload_folder()
+        octo.download_folder()
 
-        echo(f'\n# Processing {local_code.upper()} #')
-        
+        print(f'\n# Processing {local_code.upper()} #')
+
         pofiles = []
         for root, dirs, files in os.walk(f'repos/{local_code}/docs/locales/{local_code}'):
             for file in files:
@@ -168,14 +170,14 @@ def main():
 
         percent_translated = calculate_translation(pofiles)
 
-        echo(f'\t> Generating badge for {local_code}')
+        print(f'\t> Generating badge for {local_code}')
 
         docs_version = get_docs_version(local_code)
-        echo(f'\t> Docs version: {docs_version}')
+        print(f'\t> Docs version: {docs_version}')
 
         generate_badge(repo_code, percent_translated, docs_version)
 
-        echo(f'\t> Generating JSON with data for {local_code}')
+        print(f'\t> Generating JSON with data for {local_code}')
         generate_jsons(repo_code, percent_translated, docs_version)
 
     generate_main_files()
