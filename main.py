@@ -53,19 +53,24 @@ warnings.warn(
 In __init__.py from flask source, some day will search a solution ;)
 """
 def get_docs_version(lang_code):
-    file_path = Path(f'repos/{lang_code}/pyproject.toml')
-    # file_path = Path(f'pyproject.toml')
     try:
-        # Lee el contenido del archivo pyproject.toml
+        file_path = Path(f'repos/{lang_code}/pyproject.toml')
         with open(file_path, 'r') as toml_file:
             toml_contents = toml.load(toml_file)
             # Busca la clave 'version' en la sección '[project]'
             version = toml_contents.get('project', {}).get('version', '')
     except FileNotFoundError:
-        # Si no se encuentra el archivo, maneja la excepción apropiadamente
-        version = 'No se encontró el archivo pyproject.toml'
-
-    echo(version)
+        file_path = Path(f'repos/{lang_code}/src/flask/__init__.py')
+        file_contents = get_file_contents(file_path)
+        start = file_contents.find('__version__ = "') + len('__version__ = "')
+        end = file_contents.find('"', start)
+        version = file_contents[start:end]
+        version_parts = version.split('.')
+        if len(version_parts) == 3:
+            version_parts[2] = '*'
+        elif len(version_parts) > 3:
+            version_parts[-2] = '*' # in case of *.*.*.dev0
+        
     return version
 
 
