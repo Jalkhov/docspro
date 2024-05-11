@@ -62,6 +62,8 @@ def get_docs_version(lang_code):
     except FileNotFoundError:
         # Si no se encuentra el archivo, maneja la excepción apropiadamente
         version = 'No se encontró el archivo pyproject.toml'
+
+    echo(version)
     return version
 
 
