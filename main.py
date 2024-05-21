@@ -18,7 +18,12 @@ IMG_BADGE_PREV = '![Progress](https://jalkhov.github.io/docspro/badge/{img})'
 
 IMG_BADGE_CODE = f'`{IMG_BADGE_PREV}`'
 
-TRANSLATION_REPOS = {'es': 'es', 'fr': 'fr', 'fa': 'fa', 'zh': 'zh_CN'}
+TRANSLATION_REPOS = {
+    'es': 'es',
+    'fr': 'fr',
+    'fa': 'fa',
+    'zh': 'zh_CN',
+    'ko': 'ko'}
 
 VERBOSE = True
 
