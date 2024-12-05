@@ -1,3 +1,5 @@
+# ⚠️ ARCHIVED DUE TO MIGRATION TO WEBLATE
+
 [![Build and Deploy](https://github.com/Jalkhov/docspro/actions/workflows/workflow.yml/badge.svg)](https://github.com/Jalkhov/docspro/actions/workflows/workflow.yml)
 
 # Docspro
